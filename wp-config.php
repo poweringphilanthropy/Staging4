@@ -103,7 +103,8 @@ function md($debug_var, $mode = 'print_r', $force = false) {
         echo '</pre>';
     }
 
-}
+} 
+
 define('WP_HOME', 'https://www.' . $_SERVER['SERVER_NAME']);
 define('WP_SITEURL', WP_HOME . '/');
 
