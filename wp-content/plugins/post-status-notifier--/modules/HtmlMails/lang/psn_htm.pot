@@ -1,0 +1,131 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/HtmlMails\n"
+"POT-Creation-Date: 2014-03-22 19:12:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: bootstrap.php:100
+msgid "None"
+msgstr ""
+
+#: bootstrap.php:110
+msgid "Mail template"
+msgstr ""
+
+#: bootstrap.php:111
+msgid "Select mail template to be used as text."
+msgstr ""
+
+#: bootstrap.php:130 controllers/PsnHtmlmailsController.php:72
+msgid "Mail templates"
+msgstr ""
+
+#: controllers/PsnHtmlmailsController.php:98
+msgid "Mail template \"%s\" has been saved successfully."
+msgstr ""
+
+#: controllers/PsnHtmlmailsController.php:131
+msgid "Mail template \"%s\" has been updated successfully."
+msgstr ""
+
+#: controllers/PsnHtmlmailsController.php:227
+msgid "Placeholders"
+msgstr ""
+
+#: controllers/PsnHtmlmailsController.php:233
+msgid "Create new mail template"
+msgstr ""
+
+#: controllers/PsnHtmlmailsController.php:235
+msgid "Edit mail template"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:40 lib/ListTable/MailTemplates.php:40
+msgid "Name"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:41
+msgid "Internal identifier"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:51
+msgid "Mail type"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:57 lib/ListTable/MailTemplates.php:74
+msgid "Plain text"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:58
+msgid "HTML"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:66
+msgid "Mail body"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:67
+msgid ""
+"The main mail body. Insert your HTML source code here if you chose type HTML."
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:77
+msgid "Alternative body"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:78
+msgid ""
+"If you choose type HTML, insert an alternative plain text here for mail "
+"clients not capable of HTML mails."
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:91
+msgid "Add template"
+msgstr ""
+
+#: lib/ListTable/MailTemplates.php:41
+msgid "Type"
+msgstr ""
+
+#: lib/ListTable/MailTemplates.php:176
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: lib/ListTable/MailTemplates.php:184
+msgid "Do you want to copy this template?"
+msgstr ""
+
+#: lib/Test/MailTemplateField.php:22
+msgid "Mail template field"
+msgstr ""
+
+#: lib/Test/MailTemplateModel.php:22
+msgid "Mail template table"
+msgstr ""
+
+msgid "Looking for email templates?"
+msgstr ""
+
+msgid "Find your email template on themeforest.net"
+msgstr ""
+
+msgid "Mail template could not be deleted. It is still in use by a notification rule."
+msgstr ""
+
+msgid "Some mail templates could not be deleted. They are still in use by a notification rule."
+msgstr ""
+
+msgid "To get some HTML email example templates, visit the <a href=\"%s\" class=\"%s\" target=\"_blank\">PSN resources website</a>."
+msgstr ""
+
+msgid "Learn more about HTML emails with our list of recommendable <a href=\"%s\" class=\"%s\" target=\"_blank\">HTML email resources</a>."
+msgstr ""
+

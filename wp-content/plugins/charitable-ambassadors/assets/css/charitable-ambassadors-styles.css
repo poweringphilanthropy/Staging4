@@ -1,0 +1,109 @@
+.charitable-creator-donations {
+  width: 100%; }
+  .charitable-creator-donations td,
+  .charitable-creator-donations th {
+    padding: 0.5em;
+    border-bottom: 1px solid #e6e6e6; }
+  .charitable-creator-donations tr:last-child td,
+  .charitable-creator-donations tr:last-child th {
+    border: none; }
+
+.widget_campaign_creator_widget .charitable-campaign-creator {
+  *zoom: 1; }
+  .widget_campaign_creator_widget .charitable-campaign-creator:before, .widget_campaign_creator_widget .charitable-campaign-creator:after {
+    content: " ";
+    display: table; }
+  .widget_campaign_creator_widget .charitable-campaign-creator:after {
+    clear: both; }
+  .widget_campaign_creator_widget .charitable-campaign-creator .avatar {
+    float: left;
+    margin: 0 1em 0.5em 0; }
+  .widget_campaign_creator_widget .charitable-campaign-creator .creator-name {
+    margin: 0 0 1em;
+    padding: 0; }
+  .widget_campaign_creator_widget .charitable-campaign-creator .creator-summary,
+  .widget_campaign_creator_widget .charitable-campaign-creator .creator-bio,
+  .widget_campaign_creator_widget .charitable-campaign-creator .creator-links {
+    float: left;
+    margin: 0 0 1em 0; }
+
+ul.charitable-user-campaigns {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0; }
+  ul.charitable-user-campaigns .charitable-campaign {
+    *zoom: 1;
+    margin-bottom: 1em;
+    padding: 0;
+    border: 1px solid #e6e6e6;
+    list-style: none; }
+    ul.charitable-user-campaigns .charitable-campaign:before, ul.charitable-user-campaigns .charitable-campaign:after {
+      content: " ";
+      display: table; }
+    ul.charitable-user-campaigns .charitable-campaign:after {
+      clear: both; }
+  ul.charitable-user-campaigns .wp-post-image {
+    float: left;
+    margin: 1em 0 1em 1em; }
+  ul.charitable-user-campaigns .campaign-summary {
+    float: left;
+    padding: 1em;
+    margin: 0;
+    border: none; }
+    ul.charitable-user-campaigns .campaign-summary .campaign-title {
+      padding-top: 0;
+      margin-top: 0; }
+  ul.charitable-user-campaigns .campaign-stats li {
+    margin: 0; }
+  ul.charitable-user-campaigns .campaign-actions {
+    float: left;
+    clear: both;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    padding: 1em 0; }
+  ul.charitable-user-campaigns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    ul.charitable-user-campaigns ul li {
+      list-style: none; }
+  ul.charitable-user-campaigns .actions li {
+    display: inline-block;
+    margin-right: 1em; }
+  ul.charitable-user-campaigns .actions {
+    padding-left: 1em; }
+  ul.charitable-user-campaigns .campaign-summary .campaign-raised .amount,
+  ul.charitable-user-campaigns .campaign-summary .campaign-figures .amount {
+    display: inline;
+    font-size: 1em; }
+
+.charitable-ambassadors-campaign-creator-toolbar {
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 1em; }
+  .charitable-ambassadors-campaign-creator-toolbar .status {
+    font-style: italic; }
+  .charitable-ambassadors-campaign-creator-toolbar .edit-link {
+    float: right; }
+
+.charitable-campaign-form-table .suggested-donation td {
+  width: 100%; }
+
+#charitable_field_recipient .charitable-recipient-type-options {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+#charitable_field_recipient .charitable-recipient-type {
+  list-style: none;
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0; }
+  #charitable_field_recipient .charitable-recipient-type input[type=radio] {
+    position: absolute;
+    left: 0;
+    top: 4px; }
+  #charitable_field_recipient .charitable-recipient-type h4 {
+    line-height: 1em;
+    margin-bottom: 0.5em; }
+
+/*# sourceMappingURL=charitable-ambassadors-styles.css.map */

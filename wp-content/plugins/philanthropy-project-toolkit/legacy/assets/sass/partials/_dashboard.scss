@@ -1,0 +1,37 @@
+.get-started-container {
+	.get-started-text {
+	    font-size: 22px;
+	    display: block;
+	    text-align: center;
+	    padding: 10px;
+	    background: #000;
+	    color: #fff;
+	    clear: both;
+	    // border-bottom: dashed 1px #2f2f2f;
+	    text-transform: uppercase;
+
+	    a {
+	    	text-decoration: none;
+	    	color: #fff;
+
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+	    }
+	}
+}
+
+#dashboard-report {
+	.dashboard-report-stat-image {
+		max-width: 220px;
+	    float: right;
+	}
+
+	.section-content{
+		.report-table {
+			td.link a {
+				color: #000;
+			}
+		}
+	}  
+}

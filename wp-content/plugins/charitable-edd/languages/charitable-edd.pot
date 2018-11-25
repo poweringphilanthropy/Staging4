@@ -1,0 +1,550 @@
+# Copyright (C) 2017 WP Charitable
+# This file is distributed under the same license as the Charitable - Easy Digital Downloads Connect package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Easy Digital Downloads Connect 1.1.4\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2017-11-28 10:51:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: includes/admin/class-charitable-edd-admin.php:70
+#: includes/admin/class-charitable-edd-admin.php:103
+msgid "EDD Connect"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:99
+msgid "Easy Digital Downloads - Contributions from Purchases"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:114
+msgid "Show product contributing options in donation form"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:122
+msgid "Contributions options header"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:124
+msgid "Other ways to contribute"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:130
+msgid "Contributions options explanation"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:132
+msgid ""
+"When you purchase one of these products, a contribution will be made to "
+"this fundraising campaign."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:232
+#: includes/admin/class-charitable-edd-admin.php:319
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:237
+msgid "Show Contribution Amount on Downloads"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:240
+msgid "Show how much each download contributes to fundraising campaigns."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:243
+msgid "Enable Sync Tool on Donation Detail Pages"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:246
+msgid ""
+"Enabling this will allow you to re-sync individual donations with the "
+"payment they are linked to."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:272
+msgid ""
+"You're currently using Easy Digital Downloads Connect. All donations are "
+"made through the Easy Digital Downloads checkout. You can manage your "
+"payment gateways in the %1$sEasy Digital Downloads settings area%2$s."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:314
+msgid "Sync Donation with Payment"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:316
+msgid "Re-sync"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:331
+#: includes/admin/class-charitable-edd-admin.php:363
+msgid "Donation synced with payment."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:377
+msgid "Donation #%d was deleted after syncing. All campaign donations were removed."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:406
+msgid "Re-sync Donations with EDD Payments"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:447
+msgid "%d donations synced and %d deleted"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:449
+msgid "%d donations synced."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:451
+msgid "%d donations deleted."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:475
+msgid ""
+"Version 1.1.0 of Charitable Easy Digital Downloads Connect fixes an "
+"important bug and improves how donations are recorded. <a href='%s'>Read "
+"more</a>."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-admin.php:548
+#: includes/admin/views/metaboxes/donation/resync-donation.php:19
+msgid "Re-sync Donation"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:41
+msgid "Payment ID"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:42
+msgid "Payment Number"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:43
+msgid "Donation ID"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:44
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:45
+msgid "First Name"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:46
+msgid "Last Name"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:47
+msgid "Address"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:48
+msgid "Address (Line 2)"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:49
+msgid "City"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:50
+msgid "State"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:51
+msgid "Country"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:52
+msgid "Zip Code"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:53
+msgid "Campaign ID"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:54
+msgid "Campaign Name"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:55
+msgid "Campaign Donation Amount"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:56
+#: templates/payment-receipt/products.php:20
+msgid "Products"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:57
+#: templates/payment-receipt/products.php:29
+msgid "Quantity"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:58
+msgid "SKUs"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:59
+msgid "Total Payment Amount"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:60
+msgid "Tax"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:61
+msgid "Discount Code"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:62
+msgid "Total Discount"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:63
+#: includes/admin/views/metaboxes/donation/donation-overview.php:88
+msgid "Payment Method"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:64
+msgid "Transaction ID"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:65
+msgid "Purchase Key"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:66
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:67
+msgid "User"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:68
+#: includes/admin/views/metaboxes/donation/donation-overview.php:48
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:223
+msgid "none"
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:229
+msgid "guest"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:45
+#: includes/admin/class-edd-extension-activation.php:45
+msgid "This plugin"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:81
+#: includes/admin/class-edd-extension-activation.php:81
+msgid "activate it"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:84
+#: includes/admin/class-edd-extension-activation.php:84
+msgid "install it"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:87
+msgid " requires Charitable! Please %s to continue!"
+msgstr ""
+
+#: includes/admin/class-edd-extension-activation.php:87
+msgid " requires Easy Digital Downloads! Please %s to continue!"
+msgstr ""
+
+#: includes/admin/donations/class-charitable-edd-donation-view.php:88
+#: includes/admin/views/metaboxes/donation/donation-overview.php:65
+msgid "From purchase of %s - %s"
+msgstr ""
+
+#: includes/admin/donations/class-charitable-edd-donation-view.php:93
+#: includes/admin/views/metaboxes/donation/donation-overview.php:70
+msgid "From purchase of %s"
+msgstr ""
+
+#: includes/admin/upgrades/class-charitable-edd-upgrade.php:86
+msgid ""
+"Charitable needs to deactivate campaign benefactor relationships for "
+"inactive campaigns."
+msgstr ""
+
+#: includes/admin/upgrades/class-charitable-edd-upgrade.php:115
+msgid "Charitable Easy Digital Downloads Connect was installed."
+msgstr ""
+
+#: includes/admin/upgrades/class-charitable-edd-upgrade.php:139
+msgid "You do not have permission to do Charitable upgrades"
+msgstr ""
+
+#: includes/admin/upgrades/class-charitable-edd-upgrade.php:139
+#: includes/libraries/EDD_SL_Plugin_Updater.php:323
+msgid "Error"
+msgstr ""
+
+#: includes/admin/views/export-box.php:12
+msgid "Export Campaign Purchases"
+msgstr ""
+
+#: includes/admin/views/export-box.php:14
+msgid "Download a CSV of purchases for a Charitable campaign."
+msgstr ""
+
+#: includes/admin/views/export-box.php:18
+msgid "All Campaigns"
+msgstr ""
+
+#: includes/admin/views/export-box.php:36
+msgid "Choose start date"
+msgstr ""
+
+#: includes/admin/views/export-box.php:42
+msgid "Choose end date"
+msgstr ""
+
+#: includes/admin/views/export-box.php:46
+msgid "All Statuses"
+msgstr ""
+
+#: includes/admin/views/export-box.php:60
+msgid "Generate CSV"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-benefactor-settings.php:38
+msgid "When You Purchase:"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-benefactor-settings.php:40
+msgid "Any Download"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-benefactor-settings.php:44
+msgid "Downloads in these categories"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-benefactor-settings.php:54
+msgid "One of these downloads"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:44
+#: templates/payment-receipt/donations.php:20
+msgid "Donation"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:54
+#: templates/payment-receipt/donations.php:19
+msgid "Campaign"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:55
+#: includes/admin/views/metaboxes/donation/donation-overview.php:84
+msgid "Total"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:92
+msgid "EDD Payment ID"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:104
+msgid "EDD Payment Total"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:108
+msgid "Change Status"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/donation-overview.php:119
+msgid "Update Status"
+msgstr ""
+
+#: includes/admin/views/metaboxes/donation/resync-donation.php:14
+msgid ""
+"Re-syncing your donation will update it based on the Easy Digital Downloads "
+"payment that it is linked to and any current contribution rules you have in "
+"place for your campaigns."
+msgstr ""
+
+#: includes/class-charitable-edd.php:554 includes/class-charitable-edd.php:565
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/donations/class-charitable-edd-donation-form.php:131
+msgid "Donation Amount"
+msgstr ""
+
+#: includes/donations/class-charitable-edd-donation-form.php:259
+msgid ""
+"There was an error with processing your form submission. Please reload the "
+"page and try again."
+msgstr ""
+
+#: includes/donations/class-charitable-edd-donation-form.php:284
+msgid "You must donate more than %s."
+msgstr ""
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:176
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:183
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a "
+"href=\"%4$s\">update now</a>."
+msgstr ""
+
+#: includes/libraries/EDD_SL_Plugin_Updater.php:323
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:34
+msgid "Campaign EDD Downloads"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:36
+msgid ""
+"Display the Easy Digital Downloads downloads that can be purchased to "
+"contribute to a campaign's goal."
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:86
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:91
+msgid "Campaign:"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:93
+msgid "Campaign currently viewed"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:94
+msgid "Specific campaigns"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:103
+msgid "Category:"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:114
+msgid "Show Download Featured Image"
+msgstr ""
+
+#: includes/widgets/class-charitable-edd-campaign-downloads.php:120
+msgid "Show Download Title"
+msgstr ""
+
+#: templates/checkout-notice.php:14
+msgid "Donation included in total"
+msgstr ""
+
+#: templates/donation-form/no-download.php:15
+msgid "No Reward"
+msgstr ""
+
+#: templates/donation-form/no-download.php:19
+msgid "I just want to make a donation."
+msgstr ""
+
+#: templates/donation-form.php:53
+msgid "Donate"
+msgstr ""
+
+#: templates/donation-form.php:55
+msgid "Loading&hellip;"
+msgstr ""
+
+#: templates/payment-receipt/donations.php:16
+msgid "Donations"
+msgstr ""
+
+#: templates/payment-receipt/products.php:24
+msgid "Name"
+msgstr ""
+
+#: templates/payment-receipt/products.php:26
+msgid "SKU"
+msgstr ""
+
+#: templates/payment-receipt/products.php:31
+msgid "Price"
+msgstr ""
+
+#: templates/payment-receipt/products.php:103
+msgid "No downloadable files found for this bundled item."
+msgstr ""
+
+#: tests/helpers/edd/class-helper-payment.php:120
+msgid "PayPal Transaction ID: %s"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Raise money for your campaigns with your Easy Digital Downloads store."
+msgstr ""
+
+#: includes/admin/class-charitable-edd-batch-export-campaign-payments.php:168
+msgctxt "$ donation to campaign"
+msgid "%s donation to %s"
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:114
+msgctxt "contribution amount of every product purchased"
+msgid "%1$s of every product purchased goes towards %2$s."
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:121
+msgctxt "contribution amount of every purchase"
+msgid "%1$s of every purchase goes towards %2$s."
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:144
+msgctxt "Contribution amount for every product purchased"
+msgid "%1$s of every %2$s purchased goes towards %3$s."
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:153
+msgctxt "Contribution amount for every purchase including product"
+msgid "%1$s of every purchase with %2$s goes towards %3$s."
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:176
+msgctxt "Contribution amount for every item in category"
+msgid "%1$s of every item in %2$s category goes towards %3$s."
+msgstr ""
+
+#: includes/class-charitable-edd-benefactor.php:184
+msgctxt "Contribution amount for every item in category"
+msgid "%1$s of every purchase with item in %2$s category goes towards %3$s."
+msgstr ""
+
+#: includes/donations/class-charitable-edd-cart.php:337
+msgctxt "donation to campaign"
+msgid "Donation to"
+msgstr ""

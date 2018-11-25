@@ -1,0 +1,61 @@
+<h3>{{ text.__('List of placeholders available for notification subject and text', 'psn') }}</h3>
+
+{% set counter = 1 %}
+<h4>{{ text.__('Static placeholders', 'psn') }}</h4>
+<p>{% autoescape false %}{{ text.__('For more details please check the <a href=\"%s\" target=\"_blank\">placeholders help</a>.', 'psn')|replace({'%s': 'http://docs.ifeelweb.de/post-status-notifier/placeholders.html'}) }}{% endautoescape %}</p>
+
+<div class="psn_placeholder_warning"><p>{% autoescape false %}{{ text.__('Be careful with user placeholders if your blog has very much users (several hundrets or even thousands) like <b>[recipient_all_users]</b> or <b>[recipient_role_*]</b> if the role has very much members. These could cause server load!', 'psn') }}{% endautoescape %}</p></div>
+
+<div>
+    <div style="float: left; width: 33%;">
+        <ul>
+            {% for ph in placeholders %}
+            <li>{{ ph }}</li>
+                {% if counter >= placeholders|length / 3 %}
+                    {% set counter = 1 %}
+                    </ul></div><div style="float: left; width: 33%;"><ul>
+                {% else %}
+                    {% set counter = counter+1 %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+<h4>{{ text.__('Array placeholders', 'psn') }}</h4>
+<p>{{ text.__('These placeholders contain PHP arrays. They can be used with filters and functions (see <a %s>Conditions</a>) to retrieve the data.', 'psn')|format('href="javascript:void(0)" class="conditions_help"')|raw }}</p>
+<div class="psn_placeholder_warning"><p>{% autoescape false %}{{ text.__('Be careful with user placeholders if your blog has very much users (several hundrets or even thousands) like <b>[recipient_all_users_array]</b> or <b>[recipient_role_*_array]</b> if the role has very much members. These could cause server load!', 'psn') }}{% endautoescape %}</p></div>
+
+<div>
+    {% for part in placeholdersArray|divide(3) %}
+        <div style="float: left; width: 33%;"><ul>
+                {% for column in part %}
+                    <li>{{ column }}</li>
+                {% endfor %}
+            </ul></div>
+    {% endfor %}
+    <div style="clear: both;"></div>
+</div>
+
+<h4>{{ text.__('Dynamic placeholders', 'psn') }}</h4>
+
+<p>{{ text.__('These placeholders are unique to this WordPress installation. They use the names of custom categories and tags.', 'psn') }}</p>
+
+<div>
+    {% for part in placeholdersDynamic|divide(3) %}
+        <div style="float: left; width: 33%;"><ul>
+            {% for column in part %}
+                <li>{{ column }}</li>
+            {% endfor %}
+        </ul></div>
+    {% endfor %}
+    <div style="clear: both;"></div>
+</div>
+
+
+
+<h4>{{ text.__('Custom fields', 'psn') }}</h4>
+<p>{{ text.__('To retrieve the contents of custom post fields use this placeholder', 'psn') }}:</p>
+<ul><li>[post_custom_field-*]</li></ul>
+<p>{{ text.__('The * stands for the name of the custom field.<br>Example: If you have a custom post field "actors" you should call your placeholder <b>[post_custom_field-actors]</b>', 'psn')|raw }}</p>

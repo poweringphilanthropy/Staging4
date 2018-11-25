@@ -1,0 +1,111 @@
+.site-header {
+	.layout-wrapper {
+		// padding-bottom: 10px;
+		.site-navigation {
+			margin-top: 65px;
+		}
+	}
+}
+.site-branding {
+	.custom-logo-link {
+		img {
+    		width: 90px;
+			height: auto;
+		}
+	}
+}
+
+.site-navigation {
+
+	-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    float: left;
+
+	.menu-button {
+
+		&.toggle-button {
+			right: 0rem;
+		    // top: 60px;
+		    padding: 0;
+		}
+	}
+
+	&.toggled .menu-site .account-links {
+		a {
+			&:hover {
+				color: inherit;
+				opacity: 0.7;
+			}
+			&.button:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.account-links {
+	-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-top: 55px;
+    margin-right: 0px;
+
+    a {
+    	color: #000;
+    	text-transform: none;
+    	text-decoration: none;
+    	margin: 0 5px;
+    	font-family: "Raleway Bold", Raleway, monospace;
+    	font-size: 14px;
+    	font-weight: bold;
+		
+		&:hover {
+			color: $base_color;
+		}
+
+    	&.button {
+	    	background: $base_color;
+	    	border-color: $base_color;
+	    	color: #fff;
+	    	border-radius: 1px;
+	    	font-weight: bold;
+
+	    	&:hover {
+	    		color: #fff;
+	    		opacity: 0.7;
+	    	}
+	    	&::after{
+	    		display: none;
+	    	}
+	    }
+    }
+}
+
+
+@media (min-width: 37.5em){
+	.site-navigation {
+		.menu-button {
+
+			&.toggle-button {
+				top: -7rem;
+				color: $base_color;
+			}
+		}
+	}
+
+	.account-links {
+		margin-right: 30px;
+	}
+}
+
+
+@media (max-width: 410px){
+	.account-links {
+		a.button {
+			background: inherit;
+    		color: $base_color;
+		}
+		margin-top:85px;
+	}
+}

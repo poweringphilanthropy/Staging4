@@ -1,0 +1,38 @@
+<h1><?php echo $this->langHeadline; ?></h1>
+<h2><?php echo $this->message ?></h2>
+
+<a href="javascript:void(0);" onclick="jQuery('#error_details').toggle();return false;">Show details</a>
+<div id="error_details" style="display: none;">
+<p><b>Message:</b> <?php echo $this->exception->getMessage() ?></p>
+<p><b>Code:</b> <?php echo $this->exception->getCode(); ?></p>
+<p><b>File:</b> <?php echo $this->exception->getFile(); ?></p>
+<p><b>Line:</b> <?php echo $this->exception->getLine(); ?></p>
+<p><b>Traceroute:</b><br>
+<?php 
+$traceroute = array_reverse($this->exception->getTrace());
+for($i=0; $i<count($traceroute); $i++) {
+    if (!empty($traceroute[$i]['file'])) {
+        echo '<b>' . $i . ':</b> ' . $traceroute[$i]['file'] . ':' . $traceroute[$i]['line'] .'<br>';
+    }
+} ?>
+</p>
+</div>
+
+<?php if ($this->displayExceptions): ?>
+
+<h3>Exception information:</h3>
+<p>
+  <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+</p>
+
+<h3>Stack trace:</h3>
+<pre><?php echo $this->exception->getTraceAsString() ?>
+</pre>
+
+<h3>Request Parameters:</h3>
+<?php foreach($this->request->getParams() as $key => $value): ?>
+    <?php if (!is_string($value)) continue; ?>
+    <?php echo $this->escape($key); ?>: <?php echo $this->escape($value); ?><br>
+<?php endforeach; ?>
+
+<?php endif ?>

@@ -1,0 +1,194 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/DeferredSending\n"
+"POT-Creation-Date: 2014-12-08 21:54:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: bootstrap.php:143
+msgid "Deferred sending (Mail queue)"
+msgstr ""
+
+#: bootstrap.php:145
+msgid ""
+"If you are facing page loading issues on post updates due to large amounts "
+"of emails sent in realtime, use the deferred sending feature."
+msgstr ""
+
+#: bootstrap.php:152
+msgid "Activate"
+msgstr ""
+
+#: bootstrap.php:153
+msgid ""
+"Activates the deferred sending functionallity (new section \"Mail queue\" "
+"will show up)"
+msgstr ""
+
+#: bootstrap.php:157
+msgid "Max amount"
+msgstr ""
+
+#: bootstrap.php:159
+msgid ""
+"Determines how many emails should be processed on each mail queue run "
+"(Integer, default: 10).<br>Read the <a href=\"%s\" target=\"_blank\">manual "
+"page</a> for an example."
+msgstr ""
+
+#: bootstrap.php:174 bootstrap.php:182
+msgid "Manually"
+msgstr ""
+
+#: bootstrap.php:178
+msgid "Recurrence"
+msgstr ""
+
+#: bootstrap.php:179
+msgid ""
+"How often the mail queue should be run. Uses WordPress's built-in cron API "
+"(default: Once Hourly). To create custom intervals (like every 5 minutes) "
+"please use a Cronjob plugin like <a href=\"%s\" target=\"_blank\">WP "
+"Crontrol</a> (read the <a href=\"%s\" target=\"_blank\">manual page</a>)."
+"<br>Select \"%s\" if you just want to run the mail queue manually by hitting "
+"the button."
+msgstr ""
+
+#: bootstrap.php:192
+msgid "Max tries"
+msgstr ""
+
+#: bootstrap.php:193
+msgid ""
+"Determines how often the mail queue should try to send an email in case of "
+"an error (Integer, default: 10)."
+msgstr ""
+
+#: bootstrap.php:201
+msgid "Log sent emails"
+msgstr ""
+
+#: bootstrap.php:202
+msgid ""
+"Successfully sent emails get deleted from the mail queue to keep the "
+"database table lean. You may activate this option to store successfully sent "
+"emails in another table to obtain insight in outgoing emails."
+msgstr ""
+
+#: bootstrap.php:207
+msgid "Run after add"
+msgstr ""
+
+#: bootstrap.php:208
+msgid ""
+"If you want the mail queue to be run once immediately after emails got "
+"added, select this option. This will send the first bunch of the configured "
+"max amount directly without having to wait for the next scheduled cron run."
+msgstr ""
+
+#: bootstrap.php:233 controllers/PsnDeferredsendingController.php:34
+#: controllers/PsnDeferredsendinglogController.php:48
+msgid "Mail queue"
+msgstr ""
+
+#: controllers/PsnDeferredsendingAbstractController.php:55
+msgid "Items per page"
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:107
+#: controllers/PsnDeferredsendinglogController.php:94
+msgid ""
+"Please consider the documentation page <a href=\"%s\" target=\"_blank\">%s</"
+"a> for more information."
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:109
+#: controllers/PsnDeferredsendinglogController.php:96
+msgid "Mailqueue"
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:118
+#: controllers/PsnDeferredsendinglogController.php:105
+msgid "For more information:"
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:119
+#: controllers/PsnDeferredsendinglogController.php:106
+msgid "Plugin homepage"
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:122
+#: controllers/PsnDeferredsendinglogController.php:109
+msgid "Documentation"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:40 lib/ListTable/MailQueueLog.php:40
+msgid "ID"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:41 lib/ListTable/MailQueueLog.php:41
+msgid "Subject"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:42 lib/ListTable/MailQueueLog.php:42
+msgid "TO"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:43 lib/ListTable/MailQueueLog.php:43
+msgid "Added"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:45 lib/ListTable/MailQueueLog.php:45
+msgid "Tries"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:101 lib/ListTable/MailQueueLog.php:101
+msgid "Show details"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:104 lib/ListTable/MailQueue.php:167
+#: lib/ListTable/MailQueueLog.php:104 lib/ListTable/MailQueueLog.php:167
+msgid "Delete"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:143 lib/ListTable/MailQueueLog.php:143
+msgid "Search"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:168 lib/ListTable/MailQueueLog.php:168
+msgid "Reset (delete all)"
+msgstr ""
+
+#: lib/ListTable/MailQueue.php:198 lib/ListTable/MailQueueLog.php:198
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: lib/ListTable/MailQueueLog.php:44
+msgid "Sent"
+msgstr ""
+
+#: lib/Test/MailQueueLogModel.php:22 lib/Test/MailQueueModel.php:22
+msgid "Mailqueue table"
+msgstr ""
+
+#: lib/Test/MailQueueLogModel.php:31 lib/Test/MailQueueModel.php:31
+msgid "Checks if the database table exists"
+msgstr ""
+
+#: lib/Test/MailQueueLogModel.php:62 lib/Test/MailQueueModel.php:62
+msgid "The database table could not be found"
+msgstr ""
+
+#: lib/Test/MailQueueLogModel.php:83 lib/Test/MailQueueModel.php:83
+msgid "Trying to create the table..."
+msgstr ""
+
+msgid "Mail Queue"
+msgstr ""

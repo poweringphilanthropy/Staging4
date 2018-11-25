@@ -1,0 +1,29 @@
+.misc-pub-psn-notifications:before {
+    font: 400 20px/1 dashicons;
+    speak: none;
+    display: inline-block;
+    padding: 0 2px 0 0;
+    top: 0;
+    left: -1px;
+    position: relative;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none!important;
+    content: '\f466';
+    color: #888;
+}
+
+#psn-options-page img.options_teaser {
+    display: block;
+    margin-top: 20px;
+}
+#psn-options-page #psn_option_psn_mandrill_api_key {
+    width: 300px;
+}
+#psn_option_license_code {
+    width: 100%;
+}
+#psn_form_license input#license {
+    width: 400px;
+}

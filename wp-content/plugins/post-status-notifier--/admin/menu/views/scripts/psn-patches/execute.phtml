@@ -1,0 +1,37 @@
+<?php
+if ($this->patcher->isPatchesAvailable()):
+
+    $this->patcher->run();
+?>
+
+    <h1><?php _e('Patches executed', 'ifw'); ?></h1>
+
+    <?php if ($this->patcher->hasExecutionErrors()): ?>
+
+        <p class="ifw-patch-fail"><?php _e('Error(s) occured', 'ifw'); ?></p>
+
+        <ul>
+        <?php foreach ($this->patcher->getExecutionErrors() as $error): ?>
+            <li><?php echo $error; ?></li>
+        <?php endforeach; ?>
+        </ul>
+
+        <p>&nbsp;</p>
+        <p><?php echo sprintf(__('You should report the error(s) to the <a href="%s" target="_blank">plugin support</a>. Proceeding could lead to errors during the working process.', 'ifw'), $this->pm->getConfig()->plugin->premiumUrl); ?></p>
+
+        <a href="<?php echo $this->proceedUrl; ?>" class="button button-primary"><?php _e('Proceed anyway', 'ifw'); ?></a>
+
+    <?php else: ?>
+
+        <?php $this->updateManager->refreshPresentVersion(); ?>
+        <p class="ifw-patch-success"><?php _e('Patches have been executed successfully!', 'ifw'); ?></p>
+        <p>&nbsp;</p>
+        <a href="<?php echo $this->continueUrl; ?>" class="button button-primary"><?php _e('Continue', 'ifw'); ?></a>
+
+    <?php endif; ?>
+
+<?php else: ?>
+
+    <h1><?php _e('Nothing to patch', 'ifw'); ?></h1>
+
+<?php endif; ?>

@@ -1,0 +1,126 @@
+<?php
+/**
+ * PP_Chapters Class.
+ *
+ * @class       PP_Chapters
+ * @version     1.0
+ * @author lafif <hello@lafif.me>
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+
+/**
+ * PP_Chapters class.
+ */
+class PP_Chapters {
+
+    /**
+     * Singleton method
+     *
+     * @return self
+     */
+    public static function init() {
+        static $instance = false;
+
+        if ( ! $instance ) {
+            $instance = new PP_Chapters();
+        }
+
+        return $instance;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        $this->includes();
+
+        add_action( 'on_pp_toolkit_install', array($this, 'create_table') );
+
+        add_action( 'template_redirect', array($this, 'catch_save_chapter_service_hours') );
+
+        // add_action( 'wp_ajax_nopriv_save_chapter_service_hours', array($this, 'save_chapter_service_hours') );
+        // add_action( 'wp_ajax_save_chapter_service_hours', array($this, 'save_chapter_service_hours') );
+    }
+
+    public function create_table(){
+        global $wpdb;
+
+        $installed_db_version = get_option( 'chapters_database_version', '1.0' );
+        if(version_compare($installed_db_version, '1.1', '<') ){
+
+            $charset_collate = $wpdb->get_charset_collate();
+
+            // create the chapters database table
+            // $tbl_chapters = $wpdb->prefix . 'chapters';
+            // $sql = "CREATE TABLE " . $tbl_chapters . " (
+            //     `id` int(11) NOT NULL AUTO_INCREMENT,
+            //     `dashboard_id` bigint(20) DEFAULT '0',
+            //     `name` varchar(128) DEFAULT NULL,
+            //     PRIMARY KEY (`id`)
+            // ) {$charset_collate};";
+     
+            // require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            // dbDelta($sql);
+
+            // create chapter_service_hours database table
+            $tbl_service_hours = $wpdb->prefix . 'chapter_service_hours';
+            $sql = "CREATE TABLE " . $tbl_service_hours . " (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `chapter_id` bigint(20) DEFAULT '0',
+                `first_name` varchar(128) DEFAULT NULL,
+                `last_name` varchar(128) DEFAULT NULL,
+                `description` text,
+                `parent` int(11) DEFAULT '0',
+                `service_hours` int(11) DEFAULT '0',
+                `service_date` date DEFAULT NULL,
+                PRIMARY KEY (`id`)
+            ) {$charset_collate};";
+     
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            dbDelta($sql);
+
+            update_option( 'chapters_database_version', '1.1' );
+        }
+    }
+
+    public function save_chapter_service_hours(){
+
+    }
+
+    public function catch_save_chapter_service_hours(){
+        if (! isset( $_POST['_save_service_hours_nonce'] ) || ! wp_verify_nonce( $_POST['_save_service_hours_nonce'], 'save_service_hours' ) )
+            return;
+
+        if(!isset($_POST['dashboard_id']) || empty($_POST['dashboard_id'])){
+            charitable_get_notices()->add_error( __( 'Not on valid dashboard page', 'pp-toolkit' ) );
+            return;
+        }
+
+        if( !isset($_POST['chapter_id']) && (!isset($_POST['chapter_name']) || empty($_POST['chapter_name']) ) ){
+            charitable_get_notices()->add_error( __( 'Chapter name is required for add service hours.', 'pp-toolkit' ) );
+            return;
+        }
+
+        if(!isset($_POST['service_hours']) || empty($_POST['service_hours'])){
+            charitable_get_notices()->add_error( __( 'Please fill in the number of service hours', 'pp-toolkit' ) );
+            return;
+        }
+
+        $save_hours = pp_save_chapter_service_hours($_POST);
+        if($save_hours){
+            charitable_get_notices()->add_success( __( 'Service hours added.', 'pp-toolkit' ) );
+        } else {
+            charitable_get_notices()->add_error( __( 'Failed to save service hours', 'pp-toolkit' ) );
+        }
+    }
+
+    public function includes(){
+
+    }
+
+}
+
+PP_Chapters::init();

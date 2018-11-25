@@ -1,0 +1,925 @@
+/*
+	Use this stylesheet to override the default styles
+	in Franklin. 
+
+	For more information about how child themes work, 
+	see http://codex.wordpress.org/Child_Themes
+*/
+@font-face {
+  font-family: 'Throw My Hands Up In The Air Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/throw_my_hands _up_in_the_aireot_bold.eot');
+  src: url('../fonts/throw_my_hands _up_in_the_aireot_bold_embedded.eot') format('embedded-opentype'),
+  url('../fonts/throw_my_hands _up_in_the_aireot_bold.woff') format('woff'),
+  url('../fonts/throw_my_hands _up_in_the_aireot_bold.ttf') format('truetype');
+}
+
+
+*, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  font-family: "Raleway Bold", Raleway, monospace;
+}
+
+body {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.site-tagline {
+  font-size: 20px;
+  font-family: 'Throw My Hands Up In The Air Bold', Helvetica, sans-serif;;
+}
+
+.home .campaign-categories > .block-title {
+  display: none;
+}
+
+.page-template-page-featured-campaigns-php .campaigns-grid .campaign {
+  width: 48%;
+  margin-right: 1.9%;
+  /* float: left; */
+  border: none !important;
+  /*padding: 0 !important;*/
+}
+
+.page-template-page-featured-campaigns-php .status-publish {
+  display: none;
+}
+
+.page-template-page-featured-campaigns-php .campaigns-grid-wrapper {
+  padding-top: 0;
+  margin-left: 1px;
+}
+
+/* Homepage */
+.page-template-page-template-home-slider .page.entry-block .page-title {
+  margin-bottom: 0;
+}
+
+#login-form {
+  z-index: 999;
+}
+
+/* Campaign Submission */
+
+.pp-tickets,
+.pp-tickets .ticket-form.repeatable-field,
+.pp-edd-variable-prices,
+.pp-edd-variable-prices .variable-price.repeatable-field {
+  background: #fff;
+}
+
+.widget, .sidebar-bloc {
+  padding-top: 12px;
+}
+
+.campaign-image .campaign-unsuccessful,
+.campaign-image .campaign-successful {
+  display: none;
+}
+
+@media all and (min-width: 50em) {
+  .menu-site a {
+    padding: 6px 0px;
+    font-size: 14px;
+  }
+}
+
+.shadow-wrapper .page-title {
+  padding: 10px 0 !important;
+  border: none !important;
+  margin-top: 0 !important;
+}
+
+.shadow-wrapper .entry {
+  display: none !important;
+}
+
+.home article.feature-block {
+  padding: 0px !important;
+}
+
+#site-footer .footer-right .footer-widget {
+  padding-left: 3.6rem;
+  width: 30%;
+}
+
+#site-footer .footer-right .footer-widget.widget_charitable_campaign_terms_widget {
+  width: 40%;
+}
+
+.mce-path {
+  display: none !important;
+}
+
+.alert {
+  color: #d95b43;
+}
+
+.ui-datepicker {
+  width: 300px;
+}
+
+#ui-datepicker-div {
+  background-color: #f1efee;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar th {
+  padding: 5px;
+}
+
+.ui-datepicker-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+  clear: both;
+  float: none;
+
+  select {
+    margin: 0px;
+    margin-right: 0px!important;
+  }
+}
+
+.ui-datepicker-prev {
+  padding: 10px;
+  display: inline-block;
+  color: #fff;
+}
+
+.ui-datepicker-next {
+  padding: 10px;
+  float: right;
+  display: inline-block;
+  color: #fff;
+}
+
+.ui-datepicker-year,
+.ui-datepicker-month {
+  width: 50%;
+  // width: 25%;
+}
+
+.ui-datepicker-header {
+  background: $base_color;
+}
+
+.ui-datepicker-buttonpane button {
+  box-shadow: none;
+  border: 2px solid #7d6e63;
+  background: transparent;
+  color: #7d6e63;
+  margin: 0 4px;
+}
+
+.ui-datepicker-buttonpane {
+  padding: 6px 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.campaign-title h1 {
+  text-align: center;
+  margin: 2.4rem 0px 0px;
+}
+
+span.error {
+  display: block;
+}
+
+.form-allowed-tags {
+  display: none;
+}
+
+.pp-coppa {
+  font-weight: bold;
+}
+
+/* Product Submission page */
+
+/* Checkout */
+.charitable-edd-download-benefits {
+  display: block;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.profile_pass-wrap input, .text-wrap.label-above input, .text-wrap.label-below input, .text-wrap.label-inside input, .textarea-wrap.label-above textarea, .textarea-wrap.label-below textarea, .textarea-wrap.label-inside textarea, .list-dropdown-wrap.label-above select, .list-dropdown-wrap.label-below select {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* my */
+.custom-title {
+  color: #fff;
+  background-color: #d95b43;
+  text-align: center;
+  padding: 1.5rem 0rem 1rem 0rem !important;
+  margin: 0;
+  display: none;
+}
+
+#site-footer {
+  color: #7a7a7a;
+  background-color: #eee;
+  float: left;
+  width: 100%;
+}
+
+.custom_content {
+  background: #fff !important;
+}
+
+.home .custom-title {
+  // display: block;
+  color: $base_color;
+  background-color: #fff;
+}
+
+.page-template-page-template-fullwidth #page {
+  /* width: 100%; */
+}
+
+.page-template-page-template-fullwidth .site-main {
+  /* width: 90%;
+  margin: 0 auto; */
+}
+
+.header_image {
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.header_image img {
+  width: 100%;
+}
+
+.staticBanner, .tp-shadow1 {
+  z-index: 9;
+  top: 0;
+  bottom: 0px;
+  display: none;
+}
+
+.banner {
+  padding: 0;
+  height: auto;
+  min-height: auto;
+}
+
+h1.banner-title {
+  padding: 1.5rem 0rem 1.5rem 0rem !important;
+  display: none;
+}
+
+#page .block {
+  border: none;
+}
+
+#header {
+  background-color: #fff;
+  padding: 0 36px;
+}
+
+#site-footer {
+  padding: 0 3.6rem;
+}
+
+.site-branding.site-identity {
+  // padding: 0;
+}
+
+.site-branding.site-identity img {
+  display: block;
+}
+
+@media (min-width: 50em) {
+  .banner {
+    left: -47px;
+    width: calc(100% + 94px);
+  }
+
+  .layout-boxed .shadow-wrapper::before, .layout-boxed .shadow-wrapper::after {
+    border: 0;
+  }
+}
+
+/* CAMPAIGN RECIPIENT SELECTION */
+.charitable-recipient-type {
+  text-align: center;
+}
+
+.charitable-recipient-type-options h4 {
+  color: #d95b43;
+}
+
+/* PHILANTHROPY PROJECT CUSTOM CAMPAIGN */
+body.tpp-campaign .campaign-summary .campaign-image-full {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+body.tpp-campaign .campaign-summary .campaign-details {
+  display: none;
+}
+
+body.tpp-campaign .campaign-summary .campaign-sharing {
+  float: none;
+  width: 100%;
+  padding-top: 0;
+  border: none;
+  text-align: center;
+}
+
+/*
+body.tpp-campaign .campaign-summary .campaign-sharing h6,
+body.tpp-campaign .campaign-summary .campaign-sharing li {
+    display: inline;
+}*/
+
+abbr.required {
+  font-size: 20px;
+  font-weight: 500;
+  border-width: 0 !important;
+  color: #d95b43;
+  text-decoration: none;
+  cursor: default;
+}
+
+.pp-tickets .ticket-form.repeatable-field textarea, .pp-tickets .ticket-form.repeatable-field input {
+  background-color: #f1efee !important;
+  border: none !important;
+}
+
+/* Leaderboard */
+.leaderboard-title {
+  margin: 36px 0px 12px !important;
+  margin: 3.6rem 0rem 1.2rem !important;
+  text-align: center !important;
+}
+
+.leaderboard-image {
+  width: 60%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.leaderboard-image img {
+  border-width: 5px;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  width: 95.3%;
+  width: -moz-calc(100% - 1.8rem);
+  width: -webkit-calc(100% - 1.8rem);
+  width: calc(100% - 1.8rem);
+}
+
+.leaderboard-stats {
+  float: right;
+  text-align: right;
+  list-style: none;
+  padding-left: 0;
+  width: -webkit-calc(100% - 156px);
+  width: -moz-calc(100% - 156px);
+  width: calc(100% - 156px);
+  max-width: 180px;
+  max-width: 18rem;
+  margin-bottom: 0;
+}
+
+.leaderboard-stats li {
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.leaderboard-stats li span {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  display: block;
+  font-style: normal;
+}
+
+.leaderboard-stats li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.leaderboard-details {
+  padding: 36px 0px 0px;
+  padding: 3.6rem 0rem 0rem;
+  margin: 40px auto 20px auto;
+  max-width: 100%;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.leaderboard-sharing li {
+  width: auto !important;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.leaderboard-sharing .icon {
+  padding: 0px 10px;
+  padding: 0rem 1rem;
+  font-size: 22px;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.leaderboard-stat-figure {
+  font-size: 300% !important;
+  font-family: inherit;
+}
+
+.leaderboard-stat-label {
+  font-size: 120%;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+[data-icon]:before {
+  color: #fff;
+}
+
+.leaderboard-sharing h6 {
+  margin: 0px 10px;
+  margin: 0rem 1rem;
+  line-height: 22 pxpx;
+  line-height: 2.2 pxrem;
+}
+
+.leaderboard-details p {
+  margin-bottom: 20px;
+}
+
+.single-leaderboard .site-content {
+  padding: 0 !important;
+}
+
+.single-leaderboard article {
+  padding: 5px;
+}
+
+.single-leaderboard .leaderboard-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.single-leaderboard .custom_search {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.single-leaderboard .widget_charitable_campaign_terms_widget {
+  margin-bottom: 0;
+}
+
+.searchform-controls {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.custom_search .searchform-label {
+  float: none;
+  width: 100%;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.custom_search select {
+  border: 1px solid #a5a5a5;
+  border-radius: 0;
+  padding: 5px;
+  position: static;
+}
+
+.custom_search input {
+  padding: 5px;
+}
+
+.custom_search .searchform-input-wrapper {
+  width: 100%;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.single-leaderboard .campaigns-grid .campaign {
+  width: 28%;
+  margin-right: 5% !important;
+}
+
+.single-leaderboard .campaign-description {
+  word-wrap: break-word;
+}
+
+@media only screen and (min-width: 45em) {
+  .single-leaderboard .sidebar {
+    width: 22%;
+  }
+
+  .single-leaderboard .content-area {
+    width: 78%;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 76.7em) {
+  .leaderboard-image {
+    width: 100%;
+    float: none;
+  }
+
+  .single-leaderboard .campaigns-grid .campaign {
+    width: 100%;
+    margin-right: auto !important;
+  }
+}
+
+@media only screen and (min-width: 55em) {
+  .leaderboard-details {
+    float: left;
+    padding-left: 0;
+    padding-top: 0.3rem;
+    margin-left: 3rem;
+    margin-right: 0;
+    width: 37%;
+  }
+}
+
+/* Fix Padding Issues above Footer */
+body #main {
+  padding: 0;
+}
+
+body .entry {
+  padding: 0;
+}
+
+.menu-site a {
+  border: none !important;
+}
+
+.campaign-summary .campaign-sharing .icon::before {
+  color: inherit;
+}
+
+.campaign-details .campaign-donation .donate-button,
+#charitable-donation-form .charitable-form-field .button.button-primary {
+  border-color: $base_color;
+  background-color: $base_color;
+  color: #fff;
+}
+
+.campaign-details .campaign-donation .donate-button:hover,
+#charitable-donation-form .charitable-form-field .button.button-primary:hover {
+  border-color: $base_color;
+  background-color: #fff;
+  color: $base_color;
+}
+/* GUM EDIT
+.site-navigation .menu-button.menu-toggle {
+  top: -16px;
+}
+*/
+
+@media (max-width: 37.5em) {
+    .layout-wide .site-navigation {
+        top: -2.3rem;
+    }
+}
+
+@media all and (max-width: 600px) {
+  .site-navigation .account-links .button.button-alt {
+    background-color: $base_color;
+    color: #fff;
+  }
+}
+.site-navigation.toggled .menu-site a:hover {
+  color: $base_color;
+}
+
+.hero--light {
+  color: #fff;
+  text-shadow: 1px 1px 0 #0004;
+}
+
+
+
+/* Volunteer Modal */
+.widget-volunteer .widget-volunteer__list,
+.widget-collaborator .widget-collaborator__list {
+  font-style: normal;
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+.widget-volunteer__modal,
+.widget-collaborator__modal {
+  padding: 2em 1em;
+}
+
+.widget-volunteer__button,
+.widget-collaborator__button {
+  cursor: pointer;
+  color: #ddd;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.modal-content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+
+/* Modify Error Messages for Campaign Submission */
+.charitable-form-errors.charitable-notice {
+  border-color: #B00;
+}
+.charitable-form-errors.charitable-notice .errors {
+  font-weight: 600;
+  color: #d00;
+}
+
+
+/* Modify Checkout Page */
+.stripped #edd_checkout_wrap fieldset, .stripped #edd_checkout_wrap #edd_payment_mode_select {
+  border-width: 0;
+  margin: 0 0 2em;
+}
+
+.tribe-tickets-remaining {
+  color: #aaa;
+  width: 100%;
+  display: block;
+}
+
+/* Campaign Page Featured Image */
+.campaign-summary .campaign-image {
+  max-height: 440px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+/* GUM Edits */
+/* Single Campaigns */
+
+.single-campaign #charitable-donation-amount-form .donation-amounts .donation-amount.selected {
+	color: inherit;
+}
+
+.single-campaign #charitable-donation-amount-form .charitable-form-field .button:hover,
+.widget.widget_charitable_donate_widget .charitable-submit-field .button:hover,
+.single-campaign .donation-amount-form .charitable-form-field .button:hover {
+	background: $base_color;
+	background-color: $base_color;
+}
+
+.single-campaign .edd_download_purchase_form:after,
+.modal .edd_download_purchase_form:after {
+	clear: both;
+    content: " ";
+    display: table;
+}
+
+.single-campaign .edd_download_purchase_form,
+.modal .edd_download_purchase_form {
+	display: block;
+}
+
+.single-campaign .campaign-event-ticket-form .event-ticket-description:before,
+.single-campaign .campaign-event-ticket-form .event-ticket-description:after {
+	clear: both;
+	content: " ";
+    display: table;
+}
+
+.single-campaign .campaign-event-ticket-form .event-ticket-description {
+	display: block;
+	width: 100%;
+}
+
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form ul li {
+	border-color: #e2dedb;
+	border-width: 1px 1px 1px 1px;
+    border-width: 0.1rem 0.1rem 0.1rem 0.1rem;
+    border-style: solid;
+    padding: 1rem 1rem 1rem 0;
+    height: 65px;
+}
+
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form ul li:nth-child(even) {
+	border-top: 0;
+}
+/*
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options li {
+	border-bottom: none;
+}
+*/
+
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_price_options label {
+	display: inline;
+}
+.single-campaign .widget.widget_charitable_edd_campaign_downloads input[type="number"].edd-item-quantity,
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd-item-quantity {
+	/*padding: 0.5em;*/
+}
+
+.single-campaign .campaign-event-ticket-form .edd_download_quantity_wrapper,
+.single-campaign .widget.widget_charitable_edd_campaign_downloads .edd_download_purchase_form .edd_download_quantity_wrapper,
+.single-campaign .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_download_quantity_wrapper,
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper {
+    display: block !important;
+    float: left;
+    clear: none;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode {
+	
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode .edd_price_option_sep {
+	display: none;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode ul li {
+	list-style: none;
+	padding-bottom: 2.2em;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode .edd-price-option label,
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode > ul li label {
+	float: right;
+	padding: 0.5rem 0;
+    width: 70%;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode .edd_price_option_name {
+	padding-left: 1rem;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_multi_mode .edd_price_option_price {
+	float: right;
+}
+
+
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper .edd_price_option_sep, {
+	display: none;
+}
+
+.modal .charitable-edd-download-details .edd_price_options.edd_single_mode > ul {
+	margin-bottom: 1rem;
+	margin-left: 0;
+}
+
+
+
+.single-campaign .campaign-event-ticket-form .download-price,
+.modal .charitable-edd-download-details .download-price {
+	padding: 0.3em 0.5em 0;
+    margin: 0;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_download_quantity_wrapper,
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper {
+	float: left;
+}
+
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper,
+.modal .charitable-edd-download-details .download-price {
+	display: inline;
+	float: left;
+	width: auto;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_download_quantity_wrapper label,
+.single-campaign .widget.widget_pp_campaign_events .edd_download_purchase_form .edd_download_quantity_wrapper label,
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper label {
+	display: none;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_download_quantity_wrapper .edd-input.edd-item-quantity,
+.modal .charitable-edd-download-details .edd_download_quantity_wrapper .edd-input.edd-item-quantity {
+	margin-left: 0.5em;
+	max-width: 60px;
+    max-width: 6rem;
+    padding: 0.5em;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_purchase_submit_wrapper {
+	float: right;
+}
+
+.modal .charitable-edd-download-details .edd_purchase_submit_wrapper {
+	display: block;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_go_to_checkout.button,
+.modal .charitable-edd-download-details .edd_go_to_checkout.edd-submit {
+	display: none !important;
+}
+
+.single-campaign .edd_purchase_submit_wrapper a.edd-add-to-cart {
+	float: right;
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-left: 7px;
+    padding-left: 0.7rem;
+    padding-right: 7px;
+    padding-right: 0.7rem;
+}
+
+.single-campaign .edd_purchase_submit_wrapper .edd-add-to-cart.button .edd-add-to-cart-label {
+	font-family: "Oswald", Helvetica, sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1em;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    padding: 10px 20px;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+
+.single-campaign .campaign-event-ticket-form .edd_purchase_submit_wrapper .edd_go_to_checkout.button {
+	/* display: none; */
+	margin-left: 0.5em;
+}
+
+.single-campaign .content-area .campaign-video {
+	margin-bottom: 2em;
+}
+
+#charitable-profile-form .charitable-form-fields .charitable-fieldset:nth-child(3) {
+	display: none;
+}
+
+.pp-notice-wrapper {
+  .pp-notices {
+    margin: 0;
+    list-style: none;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: solid 1px #dadada;
+    background: #f5f5f5;
+    border-left: solid 3px $base_color;
+
+    &.error {
+      border-left: solid 3px #d81f1f;
+    }
+    &.success {
+      border-left: solid 3px #0ab718;
+    }
+  }
+}
+
+.form-service-hours {
+  .additional-hours-title {
+    text-align: center;
+  }
+  .remove-repeatable-fields {
+    text-align: right;
+  }
+}
+
+table#charitable-edd-donations .donation-amount {
+  width: 150px;
+}
+
+.campaign-summary .barometer.large span {
+  left: 1.7rem;
+  top: 6.2rem;
+}
+.bolder {
+  font-weight: bolder;
+}

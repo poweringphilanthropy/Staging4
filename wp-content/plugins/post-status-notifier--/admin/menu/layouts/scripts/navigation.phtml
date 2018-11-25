@@ -1,0 +1,7 @@
+<?php if (count($this->navigation) > 1): ?>
+    <h2 class="nav-tab-wrapper">
+        <?php foreach ($this->navigation as $page): ?>
+            <a class="nav-tab <?php if ($page->isActive()): ?>nav-tab-active<?php endif;?>" href="<?php echo $page->getHref(); ?>" id="nav-<?php echo $page->getController(); ?>"><?php echo $page->label; ?></a>
+        <?php endforeach; ?>
+    </h2>
+<?php endif; ?>

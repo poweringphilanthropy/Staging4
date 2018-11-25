@@ -1,0 +1,661 @@
+# Copyright (C) 2017 WP Charitable
+# This file is distributed under the same license as the Charitable - Ambassadors package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Ambassadors 1.1.18\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2017-12-12 06:05:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: includes/admin/class-charitable-ambassadors-admin.php:88
+msgid "Funds Recipient"
+msgstr ""
+
+#: includes/admin/class-charitable-ambassadors-admin.php:97
+msgid "Campaign Parent"
+msgstr ""
+
+#: includes/admin/class-charitable-ambassadors-admin.php:138
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:71
+msgid "Ambassadors"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:104
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:109
+msgid "What Can Ambassadors Raise Money For?"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:116
+msgid "How Will You Send Money to Ambassadors"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:126
+msgid "Campaign Submission Form"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:131
+msgid "Require User Account"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:135
+msgid "Require users to be logged in before they can submit a campaign."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:138
+msgid "Automatically Approve Campaigns"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:142
+msgid ""
+"If you enable this, campaigns will be automatically published once the user "
+"has submitted it."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:145
+msgid "Minimum Campaign Length"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:151
+msgid ""
+"The minimum number of days that a user-submitted campaign can run for. "
+"Leave empty or set to 0 for no minimum length."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:155
+msgid "Maximum Campaign Length"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:160
+msgid ""
+"The maximum number of days that a user-submitted campaign can run for. "
+"Leave blank to allow users to choose any end date."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:164
+msgid "Allow Campaign Creators to Export Donation History"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:169
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:184
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:170
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:185
+msgid "No"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:173
+msgid ""
+"Allow campaign creators to export a CSV file containing the donor name, "
+"email address and amount of all donations made to their campaign."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:179
+msgid "Allow Campaign Creators to Accept Recurring Donations for their Campaigns"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:188
+msgid ""
+"Allow campaign creators to enable recurring donation options for their "
+"campaign."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:194
+msgid "This setting is only applied when funds are raised for Personal Causes."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:211
+msgid "Campaign Submission Page"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:215
+msgid ""
+"The static page should contain the "
+"<code>[charitable_submit_campaign]</code> shortcode."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:218
+msgid "Campaign Submission Success Page"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:222
+msgid "Homepage"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:225
+msgid "Choose a Static Page"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:228
+msgid "This is the page to which users are redirected after submitting a campaign."
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:264
+msgid "Manual"
+msgstr ""
+
+#: includes/admin/settings/class-charitable-ambassadors-settings.php:266
+msgid "PayPal"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-funds-recipient.php:17
+msgid "Type of Campaign"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-parent.php:20
+msgid "No parent campaign"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-ambassador.php:33
+msgid "Our Organization"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-ambassador.php:34
+msgid ""
+"You are raising money for us. All donations to your fundraising campaign "
+"will help our cause."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-ambassador.php:35
+msgid "Your Organization"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-ambassador.php:36
+msgid ""
+"Campaign creators raise money for your organization. Every donation they "
+"receive will support your cause."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:325
+msgid "Campaign Name"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:335
+msgid "Short Description"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:340
+msgid "A short, snappy description of your campaign"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:345
+msgid "Fundraising Goal"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:356
+msgid "Full Description"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:365
+msgid "Featured Image"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:387
+msgid "Categories"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:401
+msgid "Tags"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:432
+msgid ""
+"When people make a donation to your campaign, they will be able to donate "
+"any amount they choose. You can also provide suggested donation amounts in "
+"the table below."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:454
+msgid "Allow your donors to give with monthly recurring donations."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:480
+msgid "First name"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:488
+msgid "Last name"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:496
+msgid "Email"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:504
+msgid "City"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:512
+msgid "State"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:520
+msgid "Country"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:529
+msgid "Bio"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:537
+msgid "Organization"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:561
+msgid "Campaign Details"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:568
+msgid "Donation Options"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:575
+msgid "Your Details"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:714
+msgid "Save & Continue"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:734
+msgid "Submit Campaign"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:736
+msgid "Update Campaign"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:739
+msgid "Save &amp; Preview"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:1203
+msgid "There was an error uploading your campaign image."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-form.php:1411
+msgid "Length in Days"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-campaign-recipient-form.php:98
+msgid "Who Are You Raising Money For?"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:34
+msgid "Your Cause"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:35
+msgid "You are raising money for a personal cause. You will receive the donations."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:36
+msgid "Personal Causes"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:37
+msgid ""
+"Campaign creators raise money for their own cause. You will send them the "
+"funds raised by their campaign."
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:63
+msgid "Payment Details"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:94
+msgid "Not set"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:99
+msgid "PayPal Account"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:125
+msgid "Your PayPal Account"
+msgstr ""
+
+#: includes/campaign-form/class-charitable-ambassadors-personal-cause.php:126
+msgid "When the campaign is finished, you will be paid with your PayPal account."
+msgstr ""
+
+#: includes/class-charitable-ambassadors-roles.php:31
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:33
+msgid "Campaign Creator"
+msgstr ""
+
+#: includes/class-charitable-ambassadors.php:532
+#: includes/class-charitable-ambassadors.php:543
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:45
+msgid "This plugin"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:81
+msgid "activate it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:84
+msgid "install it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:87
+msgid " requires Charitable! Please %s to continue!"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:38
+msgid "Campaign Creator: Campaign Ending"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:66
+msgid "Number of Days Before Campaign Ends"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:67
+msgid ""
+"The email will be sent this number of days <em>before</em> the end of the "
+"campaign. Set it to 0 to send it on the day the campaign ends."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:83
+msgid "Your campaign is ending soon"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:94
+msgid "Your Campaign is Ending Soon"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:107
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:180
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:371
+msgid "Dear [charitable_email show=campaign_creator],"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:108
+msgid ""
+"Your campaign, &ldquo;[charitable_email show=campaign_title]&rdquo;, is "
+"ending on [charitable_email show=campaign_end_date]."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:109
+msgid "So far, you have raised [charitable_email show=campaign_donated_amount]."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:109
+msgid "Well done for already surpassing your fundraising target!"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:109
+msgid ""
+"You haven't quite reached your fundraising target yet, but there's still "
+"time!"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-ending.php:110
+msgid ""
+"Give your campaign a final push by sharing it with your network. Your "
+"campaign is online at %s."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:56
+msgid "Campaign Creator: New Campaign"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:92
+msgid "The link to edit the campaign"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:156
+msgid "Thank you for submitting your campaign"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:167
+msgid "Thanks for Submitting Your Campaign"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:181
+msgid ""
+"Thank you for submitting your campaign, &ldquo;[charitable_email "
+"show=campaign_title]&rdquo;."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:182
+msgid ""
+"You can view your campaign online at <a href=\"[charitable_email "
+"show=campaign_url]\">[charitable_email show=campaign_url]</a>,"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-campaign-submitted.php:183
+msgid ""
+"If you would like to edit it, go to <a href=\"[charitable_email "
+"show=campaign_edit_url]\">[charitable_email show=campaign_edit_url]</a>,"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:72
+msgid "Campaign Creator: Donation Notification"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:149
+msgid ""
+"You cannot send a creator donation notification without a Charitable_User "
+"object for the campaign creator."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:158
+msgid ""
+"You cannot send a creator donation notification without an array of "
+"campaign donations."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:248
+msgid "The name of the campaign creator"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:349
+msgid "You have received a new donation"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:359
+msgid "New Donation"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:372
+msgid ""
+"Congratulations! [charitable_email show=donor] has just made a donation to "
+"your campaign."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-creator-donation-notification.php:373
+msgid "<strong>Summary</strong>"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-new-campaign.php:56
+msgid "Admin: New Campaign Notification"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-new-campaign.php:90
+msgid "A new campaign has been submitted"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-new-campaign.php:101
+msgid "New Campaign"
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-new-campaign.php:114
+msgid ""
+"[charitable_email show=campaign_creator] has just submitted a new campaign: "
+"&ldquo;[charitable_email show=campaign_title]&rdquo;."
+msgstr ""
+
+#: includes/emails/class-charitable-ambassadors-email-new-campaign.php:115
+msgid "Check it out:"
+msgstr ""
+
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:34
+msgid "Display the campaign creator's details."
+msgstr ""
+
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:74
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:80
+msgid "Campaign:"
+msgstr ""
+
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:82
+msgid "Campaign currently viewed"
+msgstr ""
+
+#: includes/widgets/class-charitable-ambassadors-campaign-creator-widget.php:83
+msgid "Specific campaigns"
+msgstr ""
+
+#: templates/edit-campaign-link.php:18
+#: templates/shortcodes/creator-donations.php:53
+msgid "Status"
+msgstr ""
+
+#: templates/edit-campaign-link.php:19
+msgid "Edit campaign"
+msgstr ""
+
+#: templates/form-fields/suggested-donation-row.php:26
+#: templates/shortcodes/creator-donations.php:52
+msgid "Amount"
+msgstr ""
+
+#: templates/form-fields/suggested-donation-row.php:36
+msgid "Description (optional)"
+msgstr ""
+
+#: templates/form-fields/suggested-donations.php:40
+msgid "Add a suggested amount"
+msgstr ""
+
+#: templates/shortcodes/creator-donations.php:22
+#: templates/shortcodes/my-campaigns.php:78
+msgid "You have not created any campaigns yet."
+msgstr ""
+
+#: templates/shortcodes/creator-donations.php:42
+msgid "You have not received any donations yet."
+msgstr ""
+
+#: templates/shortcodes/creator-donations.php:49
+msgid "Date"
+msgstr ""
+
+#: templates/shortcodes/creator-donations.php:50
+msgid "Donor"
+msgstr ""
+
+#: templates/shortcodes/creator-donations.php:51
+msgid "Campaign"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-actions.php:19
+msgid "Edit Campaign"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-actions.php:29
+msgid "Export CSV file with the donations made to this campaign."
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-actions.php:29
+msgid "Export Donations (csv)"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns.php:84
+msgid "Create a new campaign"
+msgstr ""
+
+#: templates/shortcodes/submit-campaign.php:18
+msgid "You do not have permission to edit this campaign."
+msgstr ""
+
+#: templates/widget-campaign-creator.php:36
+msgid "profile"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:40
+msgid "%d campaign"
+msgid_plural "%d campaigns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/widget-campaign-creator.php:51
+msgid "Visit %s's website"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:51
+msgid "Website"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:56
+msgid "Visit %s's Twitter profile"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:56
+msgid "Twitter"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:62
+msgid "Visit %s's Facebook profile"
+msgstr ""
+
+#: templates/widget-campaign-creator.php:62
+msgid "Facebook"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Transform your website into a platform for peer to peer fundraising or "
+"crowdfunding."
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-summary.php:21
+msgctxt "percentage raised"
+msgid "%s Raised"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-summary.php:27
+msgctxt "amount donated of goal"
+msgid "%s donated of %s goal"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-summary.php:35
+msgctxt "amount donated"
+msgid "%s Donated"
+msgstr ""
+
+#: templates/shortcodes/my-campaigns/campaign-summary.php:42
+msgctxt "number of donors"
+msgid "%s Donors"
+msgstr ""

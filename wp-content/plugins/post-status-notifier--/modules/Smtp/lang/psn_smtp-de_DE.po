@@ -1,0 +1,120 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-08-21 20:39+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: bootstrap.php:94
+msgid "SMTP Debug information"
+msgstr "SMTP Debug Information"
+
+#: bootstrap.php:106
+msgid "SMTP"
+msgstr ""
+
+#: bootstrap.php:111
+msgid "Activate SMTP"
+msgstr "SMTP aktivieren"
+
+#: bootstrap.php:112
+msgid ""
+"When activated the plugins tries to send the notification emails via an SMTP "
+"server using the following connection settings"
+msgstr ""
+"Wenn aktiviert, versucht das Plugin die Benachrichtigungsmails über einen "
+"SMTP Server mit den im Folgenden gesetzten Verbindungsdaten zu versenden."
+
+#: bootstrap.php:116
+msgid "SMTP host"
+msgstr "SMTP Host"
+
+#: bootstrap.php:117
+msgid ""
+"Sets the SMTP hosts. If left blank, default is \"localhost\". All hosts must "
+"be separated by a semicolon. You can also specify a different port for each "
+"host by using this format: [hostname:port] (e.g. \"smtp1.example.com:25;"
+"smtp2.example.com\"). Hosts will be tried in order."
+msgstr ""
+"Setzt den/die SMTP Hosts. Wenn leer gelassen, ist der Default \"localhost\". "
+"Alle Hosts müssen mit Semikolon getrennt werden. Mit diesem Format können "
+"unterschiedliche Ports angegeben werden: [hostname:port] (z.B. \"smtp1."
+"example.com:25;smtp2.example.com\"). Hosts werden der Reihe nach "
+"abgearbeitet."
+
+#: bootstrap.php:121
+msgid "SMTP port"
+msgstr "SMTP Port"
+
+#: bootstrap.php:122
+msgid "Sets the SMTP port. If left blank, default is 25."
+msgstr "Setzt den SMTP Port. Wenn leer, ist Default 25."
+
+#: bootstrap.php:126
+msgid "Secure"
+msgstr ""
+
+#: bootstrap.php:127
+msgid ""
+"Sets connection prefix. Options are \"\", \"ssl\" or \"tls\". Default is \"\""
+msgstr ""
+"Setzt den Connection Prefix. Optionen sind \"\", \"ssl\" oder \"tls\". "
+"Default ist \"\""
+
+#: bootstrap.php:131
+msgid "Authentication"
+msgstr "Authentifikation"
+
+#: bootstrap.php:132
+msgid "Sets SMTP authentication. Utilizes the Username and Password variables."
+msgstr ""
+"Aktiviert SMTP Authentifikation. Verwendet die Werte für Benutzername und "
+"Passwort."
+
+#: bootstrap.php:136
+msgid "Username"
+msgstr "Benutzername"
+
+#: bootstrap.php:137
+msgid "SMTP username"
+msgstr "SMTP Benutzername"
+
+#: bootstrap.php:141
+msgid "Password"
+msgstr "Passwort"
+
+#: bootstrap.php:142
+msgid "SMTP password"
+msgstr "SMTP Passwort"
+
+#: bootstrap.php:146
+msgid "Timeout"
+msgstr ""
+
+#: bootstrap.php:147
+msgid "Sets the SMTP server timeout in seconds. (Default is 10)."
+msgstr "Setzt den SMTP Server Timeout in Sekunden. (Default ist 10)."
+
+#: bootstrap.php:151
+msgid "HELO"
+msgstr ""
+
+#: bootstrap.php:152
+msgid "Sets the SMTP HELO of the message (Default is \"\")."
+msgstr "Setzt das SMTP HELO der Nachricht (Default ist \"\")."
+
+#: bootstrap.php:156
+msgid "SMTP Debug"
+msgstr ""
+
+#: bootstrap.php:157
+msgid "Stores SMTP debug information in a log entry."
+msgstr "Speichert SMTP Debug Informationen in einem Log Eintrag."

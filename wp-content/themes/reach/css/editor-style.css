@@ -1,0 +1,353 @@
+/* Background colours */
+/* Accent colour */
+/* Text colour */
+/* Borders */
+/* Miscellaneous */
+/*-------------------------------------------------------------- 
+0.1 Palette
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Body
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 14px 28px;
+  margin: 1.4rem 2.8rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+  color: #70777c;
+  font-weight: 400;
+  vertical-align: baseline; }
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6, th, legend, button, input[type=submit], input[type=reset], cite {
+  font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+
+/*--------------------------------------------------------------
+    Headings
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 28px 0px 14px;
+  margin: 2.8rem 0rem 1.4rem; }
+
+h1 {
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 38px;
+  line-height: 3.8rem; }
+
+h2 {
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 34px;
+  line-height: 3.4rem; }
+
+h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 30px;
+  line-height: 3rem; }
+
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 28px;
+  line-height: 2.8rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 22px;
+  line-height: 2.2rem; }
+
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem; }
+
+.title-wrapper {
+  display: block;
+  text-align: center;
+  overflow: hidden; }
+  .title-wrapper h1,
+  .title-wrapper h2,
+  .title-wrapper h3,
+  .title-wrapper h4 {
+    display: inline-block;
+    padding: 0px 12px;
+    padding: 0rem 1.2rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+/*--------------------------------------------------------------
+4.0 Copy
+--------------------------------------------------------------*/
+p {
+  padding-bottom: 14px;
+  padding-bottom: 1.4rem; }
+
+p:focus {
+  outline: none; }
+
+b, strong {
+  font-weight: 600; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  position: relative;
+  left: 0;
+  width: 100%;
+  padding: 28px;
+  padding: 2.8rem;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  background-color: #f9f9fa; }
+  @media (min-width: 50em) {
+    blockquote {
+      padding-left: 42px;
+      padding-left: 4.2rem;
+      padding-right: 42px;
+      padding-right: 4.2rem; } }
+  blockquote p:last-child {
+    padding-bottom: 0; }
+  blockquote cite {
+    position: relative;
+    left: -42px;
+    width: -webkit-calc( 100% + 84px );
+    width: -moz-calc( 100% + 84px );
+    width: calc( 100% + 84px );
+    padding: 14px 42px;
+    padding: 1.4rem 4.2rem;
+    margin: 14px 0px -28px;
+    margin: 1.4rem 0rem -2.8rem;
+    background-color: #ffffff; }
+
+cite {
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+address {
+  font-weight: 400;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem; }
+
+pre {
+  max-width: 100%;
+  padding: 14px;
+  padding: 1.4rem;
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background-color: #f9f9fa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-pre-wrap;
+  white-space: -o-pre-wrap; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+
+abbr, acronym {
+  border-bottom-width: 1px;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dotted;
+  cursor: help; }
+
+mark, ins {
+  text-decoration: none; }
+
+sup,
+sub {
+  font-size: 83%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  bottom: 1ex; }
+
+sub {
+  top: .5ex; }
+
+small {
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+big {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+p {
+  margin: 0; }
+
+blockquote {
+  left: -28px;
+  width: -webkit-calc( 100% + 56px );
+  width: -moz-calc( 100% + 56px );
+  width: calc( 100% + 56px ); }
+
+cite {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem; }
+
+a {
+  color: #7bb4e0;
+  text-decoration: none; }
+
+/*--------------------------------------------------------------
+5.0 Elements
+--------------------------------------------------------------*/
+hr {
+  width: 100%;
+  height: 2px;
+  height: 0.2rem;
+  border: none; }
+
+ul,
+ol,
+dd {
+  margin: 0px 0px 14px;
+  margin: 0rem 0rem 1.4rem; }
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin: 7px 0px 0px 20px;
+  margin: 0.7rem 0rem 0rem 2rem; }
+
+li {
+  margin-bottom: 7px;
+  margin-bottom: 0.7rem; }
+
+ul {
+  padding-left: 17px;
+  padding-left: 1.7rem;
+  list-style: disc; }
+  ul ul {
+    list-style: circle; }
+
+ol {
+  padding-left: 22px;
+  padding-left: 2.2rem;
+  list-style: decimal; }
+  ol ol {
+    list-style: upper-roman; }
+    ol ol ol {
+      list-style: lower-roman; }
+
+dt {
+  font-weight: 600; }
+
+/* Horizontal lists */
+.horizontal {
+  padding-left: 0; }
+  .horizontal li {
+    display: inline-block;
+    list-style: none; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+  -ms-interpolation-mode: bicubic; }
+
+figure {
+  margin: 0; }
+
+table {
+  width: 100%;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  border-width: 0px 0px 1px 1px;
+  border-width: 0rem 0rem 0.1rem 0.1rem;
+  border-style: solid;
+  border-color: #e3e5e6;
+  word-break: normal; }
+  table caption {
+    padding: 4px 0px;
+    padding: 0.4rem 0rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 400; }
+
+th,
+td {
+  padding: 7px 10px;
+  padding: 0.7rem 1rem;
+  border-width: 1px 1px 0px 0px;
+  border-width: 0.1rem 0.1rem 0rem 0rem;
+  border-style: solid;
+  border-color: #e3e5e6;
+  vertical-align: top; }
+
+th {
+  background-color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  white-space: nowrap; }
+
+td {
+  border-right-width: 1px;
+  border-right-width: 0.1rem; }
+
+th p:last-child,
+th ul:last-child,
+th ol:last-child,
+th dl:last-child,
+td p:last-child,
+td ul:last-child,
+td ol:last-child,
+td dl:last-child {
+  margin-bottom: 0; }
+
+table.mce-item-table {
+  border-spacing: 0;
+  border-width: 0px 0px 1px 1px;
+  border-width: 0rem 0rem 0.1rem 0.1rem;
+  border-style: solid;
+  border-color: #e3e5e6; }
+  table.mce-item-table th {
+    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif; }
+  table.mce-item-table td, table.mce-item-table th {
+    border-width: 1px 1px 0px 0px;
+    border-width: 0.1rem 0.1rem 0rem 0rem;
+    border-style: solid;
+    border-color: #e3e5e6; }
+
+address, var {
+  font-style: normal; }
+
+/*# sourceMappingURL=editor-style.css.map */

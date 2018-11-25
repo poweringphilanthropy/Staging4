@@ -1,0 +1,17 @@
+<?php if (!$this->dbModel->exists()): ?>
+    <div class="updated error inline below-h2"><p><?php printf(__('There seems to be a <b>database mismatch</b>. This could result in problems when saving rules. Please run the selftests on the overview page. If this warning persists, <a href="%s" target="_blank">please contact the support.</a>', 'psn'), $this->pm->getConfig()->plugin->supportUrl); ?></p></div>
+<?php endif; ?>
+<?php if ($this->isLog): ?>
+<div id="mailqueue_subnav">
+    <?php _e('Scheduled', 'psn_def'); ?> | <a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'deferredsendinglog', 'mod' => 'deferredsending', 'action' => 'index'), 'requestVars', true) ?>">Log</a>
+</div>
+<?php endif; ?>
+<h3><?php _e('Mail queue: Scheduled items', 'psn_def'); ?></h3>
+<div id="mailqueue_actions">
+    <a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'deferredsending', 'mod' => 'deferredsending', 'action' => 'run', 'nonce' => wp_create_nonce('mailqueue-run')), 'requestVars', true) ?>" id="mailqueue_run" class="button button-primary"><?php _e('Run mail queue now!', 'psn_def'); ?></a>
+    <a href="javascript:void(0);" class="ifw-wp-icon-help" id="mailqueue_run_help_toggle"></a>
+    <p id="mailqueue_run_help" style="display: none;"><?php printf(__('Hit the button to send the next %d scheduled emails.', 'psn_def'), $this->pm->getOption('psn_deferred_sending_max_amount')); ?></p>
+</div>
+<?php
+echo $this->listTable->display();
+?>

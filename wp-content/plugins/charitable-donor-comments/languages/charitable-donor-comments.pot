@@ -1,0 +1,112 @@
+# Copyright (C) 2017 WP Charitable
+# This file is distributed under the same license as the Charitable - Donor Comments package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Donor Comments 1.0.0\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2017-12-12 22:27:21+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: includes/admin/class-charitable-donor-comments-admin.php:74
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-charitable-donor-comments-admin.php:93
+msgid "Donor Comments"
+msgstr ""
+
+#: includes/admin/class-charitable-donor-comments-admin.php:98
+msgid "Show donor comments in campaign comments"
+msgstr ""
+
+#: includes/admin/class-charitable-donor-comments-admin.php:102
+msgid ""
+"By enabling this option, the comments your donors leave when they donate "
+"will automatically be included in the comments section on your campaign "
+"page."
+msgstr ""
+
+#: includes/admin/class-charitable-donor-comments-admin.php:168
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/class-charitable-donor-comments-admin.php:170
+msgid "Approve"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:53
+msgid "This plugin"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:92
+msgid "activate it"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:95
+msgid "install it"
+msgstr ""
+
+#: includes/admin/customizer/class-charitable-donor-comments-customizer.php:69
+#: includes/donations/class-charitable-donor-comments-donation.php:85
+msgid "Leave a Comment"
+msgstr ""
+
+#: includes/admin/customizer/class-charitable-donor-comments-customizer.php:74
+msgid "Comment field label"
+msgstr ""
+
+#: includes/admin/customizer/class-charitable-donor-comments-customizer.php:82
+#: includes/donations/class-charitable-donor-comments-donation.php:89
+msgid ""
+"Share why you are donating, your story, or just a word of encouragement. "
+"Your comment will be displayed publicly."
+msgstr ""
+
+#: includes/admin/customizer/class-charitable-donor-comments-customizer.php:87
+msgid "Comment field placeholder"
+msgstr ""
+
+#: includes/class-charitable-donor-comments.php:302
+#: includes/class-charitable-donor-comments.php:317
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/donations/class-charitable-donor-comments-donation.php:301
+msgid "Anonymous"
+msgstr ""
+
+#: includes/donations/class-charitable-donor-comments-donation.php:318
+msgid "The donor's comment"
+msgstr ""
+
+#: includes/donations/class-charitable-donor-comments-donation.php:319
+msgid "This is my comment."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Make giving personal. Give your donors the ability to share a message when "
+"they donate."
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:98
+msgctxt "Plugin requires Charitable! Please install/activate it to continue!"
+msgid "%s requires Charitable! Please %s to continue!"
+msgstr ""

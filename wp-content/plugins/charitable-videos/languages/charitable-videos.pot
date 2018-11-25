@@ -1,0 +1,67 @@
+# Copyright (C) 2016 WP Charitable
+# This file is distributed under the same license as the Charitable - Videos package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Videos 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/charitable-videos\n"
+"POT-Creation-Date: 2016-11-01 06:57:40+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+#: includes/admin/class-charitable-extension-activation.php:52
+msgid "This plugin"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:91
+msgid "activate it"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:94
+msgid "install it"
+msgstr ""
+
+#: includes/admin/class-charitable-videos-admin.php:68
+#: includes/ambassadors/class-charitable-videos-ambassadors.php:67
+msgid "Video"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-video.php:23
+#: includes/admin/views/metaboxes/campaign-video.php:25
+msgid "Upload Video"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-video.php:23
+msgid "Insert"
+msgstr ""
+
+#: includes/ambassadors/class-charitable-videos-ambassadors.php:71
+msgid "Link or embed code for a video of your campaign"
+msgstr ""
+
+#: includes/class-charitable-videos.php:293
+#: includes/class-charitable-videos.php:304
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Charitable - Videos"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP Charitable"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.wpcharitable.com"
+msgstr ""
+
+#: includes/admin/class-charitable-extension-activation.php:97
+msgctxt "Plugin requires Charitable! Please install/activate it to continue!"
+msgid "%s requires Charitable! Please %s to continue!"
+msgstr ""

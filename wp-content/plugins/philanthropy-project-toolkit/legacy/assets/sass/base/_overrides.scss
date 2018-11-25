@@ -1,0 +1,18 @@
+#charitable-campaign-submission-form {
+	.sw-theme-default > ul.step-anchor > li.clickable > a:hover {
+		color: $base_color;
+	}
+
+	.sw-theme-default > ul.step-anchor > li > a::after {
+	    background: $base_color; /* #5bc0de $base_color*/
+	}
+
+	.sw-theme-default > ul.step-anchor > li.active > a {
+		color: $base_color;
+	}
+
+	.sw-theme-default > ul.step-anchor > li.loading:before {
+		border-left-color: $base_color;
+    	border-right-color: $base_color;
+	}
+}

@@ -1,0 +1,12 @@
+<?php if (!$this->dbModel->exists()): ?>
+    <div class="updated error inline below-h2"><p><?php printf(__('There seems to be a <b>database mismatch</b>. This could result in problems when saving rules. Please run the selftests on the overview page. If this warning persists, <a href="%s" target="_blank">please contact the support.</a>', 'psn'), $this->pm->getConfig()->plugin->supportUrl); ?></p></div>
+<?php endif; ?>
+<?php if ($this->isLog): ?>
+<div id="mailqueue_subnav">
+    <a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'deferredsending', 'mod' => 'deferredsending', 'action' => 'index'), 'requestVars', true) ?>"><?php _e('Scheduled', 'psn_def'); ?></a> | Log
+</div>
+<?php endif; ?>
+<h3><?php _e('Mail queue: Sent log', 'psn_def'); ?></h3>
+<?php
+echo $this->listTable->display();
+?>

@@ -1,0 +1,71 @@
+
+This is a list of assets used in this plugin and their licenses.
+
+PHP
+---
+
+Zend Framework classes: New BSD License (http://framework.zend.com/license/new-bsd)
+Twig: New BSD License (http://twig.sensiolabs.org/license)
+
+
+
+Images
+------
+
+The following is a list of image paths included in this plugin with footnotes to their license.
+
+skin/default/icons/cross.png: (1)
+skin/default/icons/mail.png: (1)
+skin/default/icons/pencil.png: (1)
+skin/default/icons/premium.png: (1)
+skin/default/icons/tick.png: (1)
+
+skin/default/icons/false.png: (2)
+skin/default/icons/help.png: (2)
+skin/default/icons/info.png: (2)
+skin/default/icons/minus.png: (2)
+skin/default/icons/plus.png: (2)
+skin/default/icons/reload.png: (2)
+skin/default/icons/true.png: (2)
+
+skin/default/icons/warning_16.png: (3)
+
+skin/default/icons/warning_16.png: (3)
+
+skin/default/icons/ajax-loader.gif: (5)
+skin/default/icons/ajax-loader-bar.gif: (5)
+
+skin/default/icons/external-link.png: (6)
+
+skin/default/icons/handshake.png: (7)
+
+skin/default/icons/lifesaver.png: (8)
+
+admin/img/icon-32-grey.png: (9)
+
+admin/img/happy_author.png (10)
+admin/img/pedantic_admin.png (10)
+admin/img/pending_post.png (10)
+admin/img/plugin_status_bad.png (11)
+admin/img/plugin_status_good.png (11)
+admin/img/plugin_status_unknown.png (11)
+
+(1): Pixlsby.me (http://pixlsby.me/): All sets can be used both commercially and for personal use.
+(2): Icons4Coffee (http://www.icons4coffee.com/): All icons are Royalty Free and can be used for both commercial and personal purposes.
+(3): WooFunction: 178 Amazing Web Design Icons (http://www.woothemes.com/2009/09/woofunction-178-amazing-web-design-icons/): GNU General Public License.
+(4): WooCons #1: 170 Free Web Icons (http://www.woothemes.com/2010/08/woocons1/): GNU General Public License.
+(5): http://www.ajaxload.info/ Generated gifs are totally free for use
+(6): Shapes4FREE: 100 External Link Web Icons (http://www.shapes4free.com/vector-icons/external-link-icons/): free for personal and commercial use (http://www.shapes4free.com/license/)
+(7): 24x24 Free Pixel Icons by IP Ivlichev Victor Petrovich, License: Creative Commons (Attribution 3.0 Unported) (http://www.iconfinder.com/icondetails/132302/24/handshake_icon)
+(8): Elegant Themes Icon Pack (http://www.elegantthemes.com/blog/resources/elegant-themes-icon-pack-for-free): dual licensed under the GPL and MIT
+(9): Communication icons by Dutch Icon (http://www.dutchicon.com/): Basic License (http://www.iconfinder.com/licenses/basic)
+(10): Lin by Everaldo Coelho (http://www.iconfinder.com/iconsets/lin#readme): GPL
+(11): Professional Cartoon Characters (http://tooncharacters.com/)
+
+
+
+Documentation
+-------------
+
+Sphinx Bootstrap Theme: MIT license (https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/LICENSE.txt)
+Twitter Bootstrap: Apache license (https://github.com/twitter/bootstrap/blob/master/LICENSE).

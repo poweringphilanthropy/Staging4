@@ -1,0 +1,43 @@
+[12-Oct-2018 14:21:43 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[12-Oct-2018 14:21:52 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:02:22 UTC] Aq_Resize.process() error: $url parameter is required
+[13-Oct-2018 01:16:55 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:16:57 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:18:28 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:18:31 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:26:07 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:26:09 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 01:28:25 UTC] Aq_Resize.process() error: $url parameter is required
+[13-Oct-2018 01:35:36 UTC] Aq_Resize.process() error: $url parameter is required
+[13-Oct-2018 01:36:12 UTC] Aq_Resize.process() error: $url parameter is required
+[13-Oct-2018 02:14:41 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 02:14:43 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:31:58 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:32:02 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:32:26 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:32:29 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:41:00 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:41:04 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:42:42 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:42:51 UTC] PHP Parse error:  syntax error, unexpected '$merge' (T_VARIABLE) in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/helpers/cuztom/src/Cuztom.php on line 515
+[13-Oct-2018 08:42:52 UTC] PHP Parse error:  syntax error, unexpected '$merge' (T_VARIABLE) in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/helpers/cuztom/src/Cuztom.php on line 515
+[13-Oct-2018 08:43:25 UTC] PHP Parse error:  syntax error, unexpected '$merge' (T_VARIABLE) in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/helpers/cuztom/src/Cuztom.php on line 515
+[13-Oct-2018 08:43:52 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 08:43:58 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:15:31 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:15:36 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:25:09 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:25:14 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:29:12 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:29:17 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:29:46 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:29:49 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:30:32 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:30:37 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:31:05 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:31:09 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:31:40 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[13-Oct-2018 09:31:43 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/poweri33/staging/4/wp-includes/formatting.php on line 442
+[16-Oct-2018 09:24:16 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 27000907 bytes) in /home/poweri33/staging/4/wp-content/plugins/ninja-forms/deprecated/includes/libraries/wp-session.php on line 158
+[02-Nov-2018 09:29:49 CST6CDT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/poweri33/staging/4/calculations.php on line 38
+[10-Nov-2018 05:22:38 CST6CDT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/poweri33/staging/4/calculations.php on line 35

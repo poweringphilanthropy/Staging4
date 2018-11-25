@@ -1,0 +1,8 @@
+<?php
+echo Psn_Admin_Options_Handler::getOptionsDescriptionBox(
+    '<span class="dashicons dashicons-info"></span> ' .
+    sprintf(__('Please insert your PSN license code here to be able to receive updates. You get your license code in the <a %s>CodeCanyon "Downloads" section</a>. Click the "Download" button and select "License certificate & purchase code".', 'psn_prm'), 'href="http://codecanyon.net/downloads" target="_blank"') . '<br><br>' .
+    sprintf( '<img src="%s" class="options_teaser">', $this->module->getEnv()->getUrlImg() . 'license.png')
+);
+echo $this->form;
+?>

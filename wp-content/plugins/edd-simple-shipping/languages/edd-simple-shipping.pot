@@ -1,0 +1,533 @@
+# Copyright (C) 2018 Easy Digital Downloads
+# This file is distributed under the same license as the Easy Digital Downloads - Simple Shipping package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Digital Downloads - Simple Shipping 2.3.6\n"
+"Report-Msgid-Bugs-To: https://easydigitaldownloads.com/support\n"
+"POT-Creation-Date: 2018-04-19 20:19:40+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: edd-simple-shipping.php:491
+msgid "%s Shipping"
+msgstr ""
+
+#: edd-simple-shipping.php:710
+msgid "Ship to Different Address?"
+msgstr ""
+
+#: edd-simple-shipping.php:717
+msgid "Shipping Details"
+msgstr ""
+
+#: edd-simple-shipping.php:750
+msgid "Add new address"
+msgstr ""
+
+#: edd-simple-shipping.php:757 edd-simple-shipping.php:1078
+#: edd-simple-shipping.php:1224
+msgid "Shipping Address"
+msgstr ""
+
+#: edd-simple-shipping.php:758
+msgid "The address to ship your purchase to."
+msgstr ""
+
+#: edd-simple-shipping.php:759
+msgid "Address line 1"
+msgstr ""
+
+#: edd-simple-shipping.php:762
+msgid "Shipping Address Line 2"
+msgstr ""
+
+#: edd-simple-shipping.php:763
+msgid "The suite, apt no, PO box, etc, associated with your shipping address."
+msgstr ""
+
+#: edd-simple-shipping.php:764
+msgid "Address line 2"
+msgstr ""
+
+#: edd-simple-shipping.php:767
+msgid "Shipping City"
+msgstr ""
+
+#: edd-simple-shipping.php:768
+msgid "The city for your shipping address."
+msgstr ""
+
+#: edd-simple-shipping.php:769 includes/admin/class-shipping-export.php:43
+msgid "City"
+msgstr ""
+
+#: edd-simple-shipping.php:772
+msgid "Shipping Country"
+msgstr ""
+
+#: edd-simple-shipping.php:773
+msgid "The country for your shipping address."
+msgstr ""
+
+#: edd-simple-shipping.php:784
+msgid "Shipping State / Province"
+msgstr ""
+
+#: edd-simple-shipping.php:785
+msgid "The state / province for your shipping address."
+msgstr ""
+
+#: edd-simple-shipping.php:786 includes/admin/class-shipping-export.php:44
+msgid "State / Province"
+msgstr ""
+
+#: edd-simple-shipping.php:805
+msgid "Shipping Zip / Postal Code"
+msgstr ""
+
+#: edd-simple-shipping.php:806
+msgid "The zip / postal code for your shipping address."
+msgstr ""
+
+#: edd-simple-shipping.php:807
+msgid "Zip / Postal code"
+msgstr ""
+
+#: edd-simple-shipping.php:841 edd-simple-shipping.php:876
+msgid "Please enter a shipping address"
+msgstr ""
+
+#: edd-simple-shipping.php:845 edd-simple-shipping.php:880
+msgid "Please enter a city for shipping"
+msgstr ""
+
+#: edd-simple-shipping.php:849 edd-simple-shipping.php:884
+msgid "Please enter a zip/postal code for shipping"
+msgstr ""
+
+#: edd-simple-shipping.php:853
+msgid "Please select your country"
+msgstr ""
+
+#: edd-simple-shipping.php:859 edd-simple-shipping.php:890
+msgid "Please select your state"
+msgstr ""
+
+#: edd-simple-shipping.php:865 edd-simple-shipping.php:896
+msgid "Please select your province"
+msgstr ""
+
+#: edd-simple-shipping.php:1088
+msgid "Street Address Line 1:"
+msgstr ""
+
+#: edd-simple-shipping.php:1092
+msgid "Street Address Line 2:"
+msgstr ""
+
+#: edd-simple-shipping.php:1143
+msgid "Check if this purchase has been shipped."
+msgstr ""
+
+#: edd-simple-shipping.php:1176
+msgid "Shipping Details:"
+msgstr ""
+
+#: edd-simple-shipping.php:1177
+msgid "Address:"
+msgstr ""
+
+#: edd-simple-shipping.php:1178
+msgid "Address Line 2:"
+msgstr ""
+
+#: edd-simple-shipping.php:1179
+msgid "City:"
+msgstr ""
+
+#: edd-simple-shipping.php:1180
+msgid "Zip/Postal Code:"
+msgstr ""
+
+#: edd-simple-shipping.php:1181
+msgid "Country:"
+msgstr ""
+
+#: edd-simple-shipping.php:1182
+msgid "State:"
+msgstr ""
+
+#: edd-simple-shipping.php:1221 includes/admin/admin.php:161
+msgid "Mark as not shipped"
+msgstr ""
+
+#: edd-simple-shipping.php:1221 includes/admin/admin.php:161
+msgid "Mark as shipped"
+msgstr ""
+
+#: edd-simple-shipping.php:1259
+msgid ""
+"<div><strong>%1$s %2$s</strong></div><div>%3$s</div><div>%4$s</div>%5$s, "
+"%6$s %7$s</div><div>%8$s</div>"
+msgstr ""
+
+#: edd-simple-shipping.php:1419
+msgid "Shipping Addresses"
+msgstr ""
+
+#: edd-simple-shipping.php:1438
+msgid "Remove"
+msgstr ""
+
+#: edd-simple-shipping.php:1513
+msgid "Error removing shipping address from profile. Please try again later."
+msgstr ""
+
+#: includes/admin/admin.php:28
+msgid "Shipped?"
+msgstr ""
+
+#: includes/admin/admin.php:29
+msgid "Status"
+msgstr ""
+
+#: includes/admin/admin.php:80 includes/admin/admin.php:141
+msgid "No"
+msgstr ""
+
+#: includes/admin/admin.php:82 includes/admin/admin.php:143
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/admin.php:84 includes/admin/admin.php:145
+msgid "N/A"
+msgstr ""
+
+#: includes/admin/admin.php:99
+msgid "Set as Shipped"
+msgstr ""
+
+#: includes/admin/admin.php:126 includes/tracking.php:386
+msgid "Shipped"
+msgstr ""
+
+#: includes/admin/admin.php:180
+msgid "Export Unshipped Orders to CSV"
+msgstr ""
+
+#: includes/admin/admin.php:182
+msgid "Download a CSV of all unshipped orders."
+msgstr ""
+
+#: includes/admin/admin.php:183
+msgid "Generate CSV"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:36
+msgid "Order ID"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:37
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:38
+msgid "First Name"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:39
+msgid "Last Name"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:40
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:41
+msgid "Address"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:42
+msgid "Address Line 2"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:45
+msgid "Zip / Postal Code"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:46
+msgid "Country"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:47
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:48
+msgid "Tax"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:49
+msgid "Payment Method"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:50
+msgid "Purchase Key"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:51
+msgid "Products"
+msgstr ""
+
+#: includes/admin/class-shipping-export.php:52
+msgid "Payment Status"
+msgstr ""
+
+#: includes/admin/metabox.php:67
+msgid "Shipping Options"
+msgstr ""
+
+#: includes/admin/metabox.php:71
+msgid "Enable shipping for this %s"
+msgstr ""
+
+#: includes/admin/metabox.php:78
+msgid "Domestic Rate:"
+msgstr ""
+
+#: includes/admin/metabox.php:88
+msgid "International Rate:"
+msgstr ""
+
+#: includes/admin/metabox.php:148 includes/integrations/edd-fes.php:27
+#: includes/integrations/edd-fes.php:40 includes/tracking.php:362
+msgid "Shipping"
+msgstr ""
+
+#: includes/admin/metabox.php:180
+#: includes/integrations/edd-fes-shipping-field.php:110
+#: includes/integrations/edd-fes.php:132
+msgid "Domestic"
+msgstr ""
+
+#: includes/admin/metabox.php:189
+#: includes/integrations/edd-fes-shipping-field.php:111
+#: includes/integrations/edd-fes.php:133
+msgid "International"
+msgstr ""
+
+#: includes/admin/settings.php:22 includes/admin/settings.php:35
+#: includes/admin/settings.php:51
+msgid "Simple Shipping"
+msgstr ""
+
+#: includes/admin/settings.php:58
+msgid "Base Region"
+msgstr ""
+
+#: includes/admin/settings.php:59
+msgid "Choose the country your store is based in"
+msgstr ""
+
+#: includes/admin/settings.php:65
+msgid "Disable tax on shipping fees"
+msgstr ""
+
+#: includes/admin/settings.php:66
+msgid ""
+"By default, Simple Shipping charges tax on shipping costs. Check this box "
+"to avoid charging tax on shipping costs."
+msgstr ""
+
+#: includes/admin/settings.php:90
+msgid "Simple Shipping Emails"
+msgstr ""
+
+#: includes/admin/settings.php:97
+msgid "Tracking ID Email Subject Line"
+msgstr ""
+
+#: includes/admin/settings.php:98
+msgid ""
+"The subject line used when sending shipment tracking information to "
+"customers."
+msgstr ""
+
+#: includes/admin/settings.php:101 includes/admin/settings.php:109
+#: includes/tracking.php:240 includes/tracking.php:241
+msgid "Your order has shipped!"
+msgstr ""
+
+#: includes/admin/settings.php:105
+msgid "Tracking ID Email Heading"
+msgstr ""
+
+#: includes/admin/settings.php:106
+msgid ""
+"The heading used in the email body content when sending shipment tracking "
+"information to customers."
+msgstr ""
+
+#: includes/admin/settings.php:113
+msgid "Tracking ID Email"
+msgstr ""
+
+#: includes/admin/settings.php:114
+msgid ""
+"Enter the text that is used when sending shipment tracking information to "
+"customers. HTML is accepted. Available template tags:"
+msgstr ""
+
+#: includes/admin/upgrades.php:22
+msgid ""
+"Easy Digital Downloads - Simple Shipping needs to update customer records, "
+"click <a href=\"%s\">here</a> to start the upgrade."
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:106
+#: includes/integrations/edd-fes.php:129
+msgid "Enable Shipping"
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:112
+#: includes/integrations/edd-fes.php:134
+msgid "Enter the domestic shipping charge amount"
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:113
+#: includes/integrations/edd-fes.php:135
+msgid "Enter the international shipping charge amount"
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:187
+#: includes/integrations/edd-fes-shipping-field.php:195
+msgid "Please enter your domestic shipping price."
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:190
+#: includes/integrations/edd-fes-shipping-field.php:198
+msgid "Please enter your international shipping price."
+msgstr ""
+
+#: includes/tracking.php:44
+msgid "Tracking Info"
+msgstr ""
+
+#: includes/tracking.php:50
+msgid "Parcel Name"
+msgstr ""
+
+#: includes/tracking.php:51 includes/tracking.php:123
+msgid "Tracking ID"
+msgstr ""
+
+#: includes/tracking.php:52
+msgid "View Tracking"
+msgstr ""
+
+#: includes/tracking.php:76
+msgid "Add New Tracking ID"
+msgstr ""
+
+#: includes/tracking.php:85
+msgid "Send Tracking Info"
+msgstr ""
+
+#: includes/tracking.php:85
+msgid "Resend Tracking Info"
+msgstr ""
+
+#: includes/tracking.php:107
+msgid "Parcel %s"
+msgstr ""
+
+#: includes/tracking.php:114
+msgid "Package Name"
+msgstr ""
+
+#: includes/tracking.php:130
+msgid "Track Parcel"
+msgstr ""
+
+#: includes/tracking.php:135
+msgid "Remove tracking ID %s"
+msgstr ""
+
+#: includes/tracking.php:172
+msgid "Show saved tracking ids for payment."
+msgstr ""
+
+#: includes/tracking.php:267
+msgid "Email sent."
+msgstr ""
+
+#: includes/tracking.php:267
+msgid "Error sending email. Try again later."
+msgstr ""
+
+#: includes/tracking.php:271
+msgid "Tracking information sent to %s."
+msgstr ""
+
+#: includes/tracking.php:386
+msgid "Shipment Pending"
+msgstr ""
+
+#: includes/tracking.php:403
+msgid ""
+"Dear {name},\n"
+"\n"
+"Your recent order {payment_id} has been shipped. Your tracking information "
+"is below.\n"
+"\n"
+"{tracking_ids}\n"
+"\n"
+"{sitename}"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Provides the ability to charge simple shipping fees for physical products "
+"in EDD"
+msgstr ""
+
+#: edd-simple-shipping.php:1099
+msgctxt "Address City"
+msgid "City:"
+msgstr ""
+
+#: edd-simple-shipping.php:1104
+msgctxt "Zip / Postal code of address"
+msgid "Zip / Postal Code:"
+msgstr ""
+
+#: edd-simple-shipping.php:1111
+msgctxt "Address country"
+msgid "Country:"
+msgstr ""
+
+#: edd-simple-shipping.php:1123
+msgctxt "State / province of address"
+msgid "State / Province:"
+msgstr ""
+
+#: includes/integrations/edd-fes-shipping-field.php:53
+msgctxt "FES Field title translation"
+msgid "Shipping"
+msgstr ""

@@ -1,0 +1,86 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgid "SMTP Debug information"
+msgstr ""
+
+msgid "SMTP"
+msgstr ""
+
+msgid "Activate SMTP"
+msgstr ""
+
+msgid ""
+"When activated the plugins tries to send the notification emails via an SMTP "
+"server using the following connection settings"
+msgstr ""
+
+msgid "SMTP host"
+msgstr ""
+
+msgid ""
+"Sets the SMTP hosts. If left blank, default is \"localhost\". All hosts must "
+"be separated by a semicolon. You can also specify a different port for each "
+"host by using this format: [hostname:port] (e.g. \"smtp1.example.com:25;"
+"smtp2.example.com\"). Hosts will be tried in order."
+msgstr ""
+
+msgid "SMTP port"
+msgstr ""
+
+msgid "Sets the SMTP port. If left blank, default is 25."
+msgstr ""
+
+msgid "Secure"
+msgstr ""
+
+msgid ""
+"Sets connection prefix. Options are \"\", \"ssl\" or \"tls\". Default is \"\""
+msgstr ""
+
+msgid "Authentication"
+msgstr ""
+
+msgid "Sets SMTP authentication. Utilizes the Username and Password variables."
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "SMTP username"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "SMTP password"
+msgstr ""
+
+msgid "Timeout"
+msgstr ""
+
+msgid "Sets the SMTP server timeout in seconds. (Default is 10)."
+msgstr ""
+
+msgid "HELO"
+msgstr ""
+
+msgid "Sets the SMTP HELO of the message (Default is \"\")."
+msgstr ""
+
+msgid "SMTP Debug"
+msgstr ""
+
+msgid "Stores SMTP debug information in a log entry."
+msgstr ""

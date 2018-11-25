@@ -1,0 +1,7 @@
+<div id="<?php echo $this->pm->getPathinfo()->getDirname(); ?>-general" class="wrap">
+    <h2><?php echo $this->pm->getEnv()->getName(); ?></h2>
+    <?php echo $this->render('announcements.phtml'); ?>
+    <?php echo $this->render('messages.phtml'); ?>
+    <?php echo $this->render('navigation.phtml'); ?>
+    <?php echo $this->layout()->content; ?>
+</div>

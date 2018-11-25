@@ -1,0 +1,26 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+
+msgid "TO loop timeout"
+msgstr ""
+
+msgid "If you are using the \"One email per TO recipient\" option, you may want to adjust the PHP maximum execution time limit value here. In seconds. It will only be used before the TO loop starts. Has no effect if PHP safe mode is active. If set to 0 (zero), no time limit is imposed. Use with caution! Default is 30 depending on your server configuration. See <a href=\"%s\" target=\"_blank\">PHP manual</a>"
+msgstr ""
+
+msgid "One email per TO recipient"
+msgstr ""
+
+msgid "If activated, a single email will be sent to each TO recipient disregarding the CC and BCC settings."
+msgstr ""

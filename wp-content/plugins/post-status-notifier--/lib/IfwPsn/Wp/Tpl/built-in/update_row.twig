@@ -1,0 +1,7 @@
+<tr class="plugin-update-tr">
+    <td class="plugin-update colspanchange" colspan="3">
+        <div class="update-message">
+            {% autoescape false %}{{ text.__('There is a new version of %1$s available. <a href="%2$s">Open Download Page of Version %3$s</a>.', 'ifw')|replace({'%1$s': name, '%2$s': update_url, '%3$s': remote_version}) }}{% endautoescape %}
+        </div>
+    </td>
+</tr>

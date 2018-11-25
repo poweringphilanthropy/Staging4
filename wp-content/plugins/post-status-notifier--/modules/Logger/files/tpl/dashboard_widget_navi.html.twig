@@ -1,0 +1,4 @@
+{{ text.__('Jump to Plugin menu', 'ifw') }}:
+{% for page in nav %}
+    <a href="{{ admin_url }}{{ page.href|slice(1) }}">{{ page.label }}</a> {% if loop.last == false %}|{% endif %}
+{% endfor %}

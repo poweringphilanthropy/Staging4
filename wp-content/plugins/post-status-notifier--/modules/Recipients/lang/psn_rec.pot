@@ -1,0 +1,92 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+
+msgid "All members of role: "
+msgstr ""
+
+msgid "All users"
+msgstr ""
+
+msgid "Individual e-mail"
+msgstr ""
+
+msgid "Enter an individual e-mail address as recipient here. Supports placeholders."
+msgstr ""
+
+msgid "To field"
+msgstr ""
+
+msgid "FROM"
+msgstr ""
+
+msgid "Enter an e-mail address to use as sender. Leave blank for default sender. Supports placeholders."
+msgstr ""
+
+msgid "Custom recipient"
+msgstr ""
+
+msgid "Custom recipient (text field below)"
+msgstr ""
+
+msgid "If you select one or more roles, a notification will only be generated, if the editor of the post is a member of one of the selected roles. Leave blank for no editor restriction. To select multiple roles hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "Editor restriction field"
+msgstr ""
+
+msgid "Import recipients lists"
+msgstr ""
+
+msgid "Recipients lists"
+msgstr ""
+
+msgid "Recipients list"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Internal identifier"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid "A list of comma separated email addresses"
+msgstr ""
+
+msgid "Add recipients list"
+msgstr ""
+
+msgid "Create new recipients list"
+msgstr ""
+
+msgid "Edit recipients list"
+msgstr ""
+
+msgid "Recipient list <b>%s</b> has been saved successfully."
+msgstr ""
+
+msgid "Recipient list <b>%s</b> has been updated successfully."
+msgstr ""
+
+msgid "Recipients list could not be deleted. It is still in use by a notification rule."
+msgstr ""
+
+msgid "Some recipients lists could not be deleted. They are still in use by a notification rule."
+msgstr ""
+
+msgid "Enter an individual e-mail address to use as recipient."
+msgstr ""

@@ -1,0 +1,134 @@
+table.pp-edd-variable-prices {
+	border:none;
+	border-collapse: separate;
+	border-spacing: 0 1em;
+}
+
+.pp-fundraising-table {
+	&.charitable-repeatable-form-field-table {
+		// margin-bottom: 1em!important;
+		border:none;
+		border-collapse: separate;
+    	border-spacing: 0 1em;
+	}
+
+	.charitable-form-content {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+	thead {
+		td {
+			vertical-align: middle;
+			border: none;
+		}
+		td.icon {
+			width: 100px;
+			img {
+				max-width: 100px;
+			}
+
+		}
+		td.desc {
+			display: inline-block;
+			h3 {
+				text-transform: uppercase;
+				color: $base_color;
+				margin: 0px;
+				font-weight: 800;
+    			letter-spacing: 0.7px;
+			}
+			p {
+				font-weight: 300;
+			    line-height: 1.4;
+			    margin-top: 5px;
+			}
+		}
+		td.button-add {
+		    width: 300px;
+		    a {
+		    	font-size: 25px;
+		    	font-style: initial;
+    			font-weight: 800;
+    			color: $base_color;
+
+		    	&:hover {
+		    		text-decoration: none;
+		    	}
+		    }
+		}
+	}
+
+	tbody {
+
+		tr {
+			margin-bottom: 10px;
+			td {
+			    border: solid 0.1rem #e2dedb;
+
+			    &.add-row-pricing {
+			    	border: none;
+			    	background: none!important;
+
+			    	.add-row {
+						font-size: 14px!important;
+			    	}
+			    }
+			}
+
+		}
+	}
+
+	tfoot {
+		&.add-more {
+			&.hide {
+				display: none;
+			}
+			td {
+				background: none;
+			    border: none;
+			    text-align: center;
+
+			    a.add-row {
+				    background: $base_color;
+				    padding: 10px;
+				    font-style: normal;
+				    font-weight: bold;
+				    color: #fff;
+				    // text-transform: capitalize;
+				    text-decoration: none;
+
+				    &:hover {
+				    	opacity: 0.8;
+				    }
+			    }
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.pp-fundraising-table {
+		&.charitable-repeatable-form-field-table {
+			thead {
+				td {
+					width: 100%;
+				    display: inline-block;
+				    text-align: center;
+				}
+				// td.icon {
+				// 	display:none;
+
+				// }
+				// td.desc {
+				// 	width: 100%;
+				// 	text-align: center;
+				// }
+				td.button-add {
+				    border-bottom: solid 1px #cecece;
+				}
+			}
+
+		}
+	}
+}

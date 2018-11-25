@@ -1,0 +1,178 @@
+.pp-campaign-report {
+	background: #fff;
+	font-size: 14px;
+	padding: 10px;
+	padding-bottom: 10px!important;
+
+	.report-title {
+		background: #000;
+	    color: #fff;
+	    font-size: 2.3em;
+	    padding: 0 0.5em;
+	    height: 100%;
+	    vertical-align: middle;
+	    display: table;
+	    width: 100%;
+	    line-height: 2em;
+	}
+
+	.section-title {
+	    background: $base_color;
+	    color: #fff;
+
+	    .block-amount {
+	    	padding: 5px;
+		 	
+		 	&:before {
+			  	content: "";
+			  	display: inline-block;
+			  	vertical-align: middle;
+			  	height: 100%;
+			}
+
+		    .inner {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.icon {
+				font-size: 3em;
+				font-weight: 300;
+
+				img {
+					max-height: 50px;
+				}
+			}
+
+			.amount {
+				font-size: 2.5em;
+			}
+
+			.sub {
+				font-size: 1em;
+			    text-transform: uppercase;
+			}
+		}
+	}
+
+	.section-content {
+	    margin: 20px;
+
+	    .cf {
+	    	max-width: 400px;
+	    }
+
+
+	    .report-table {
+	    	border: none;
+		    font-size: 1.5em;
+		    line-height: 1.5em;
+		    display: inline-block;
+		    border-spacing: 10px 5px;
+    		width: 100%;
+
+	    	tr {
+				border: none;
+	    	}
+
+	    	td {
+	    		// white-space: nowrap;
+				border: none;
+				padding: 0;
+
+				&.qty,
+				&.amount {
+					color: $base_color;
+					white-space: nowrap;
+				}
+	    	}
+
+		    thead {
+				td {
+					text-decoration : underline;
+
+					&.thead-amount {
+						max-width:100px;
+					}
+
+					&.thead-campaign-name {
+						min-width:180px;
+					}
+				}
+		    }
+
+		    tfoot {
+		    	td.load-more {
+		    		text-align: right;
+
+		    		a {
+		    			color: #000;
+		    		}
+		    	} 
+		    }
+	    }
+
+	    .download-report-button {
+	    	text-transform: uppercase;
+		 	
+		 	&:before {
+			  	content: "";
+			  	display: inline-block;
+			  	vertical-align: middle;
+			  	height: 100%;
+			}
+
+		    .inner {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.icon {
+				font-size: 3em;
+				font-weight: 300;
+
+				img {
+					max-height: 50px;
+				}
+			}
+
+			a {
+				color: #000;
+				text-transform: uppercase;
+			    line-height: 1.3em;
+			    font-size: 1.3em;
+			}
+		}
+	}
+
+	.campaign-summary {
+		padding: 0;
+		border: none;
+		.campaign-stats {
+			text-align: right;
+		}
+		.report-title {
+			text-align: center;
+		}
+		// .download-all {
+		// 	display: table;
+  //   		height: 100%;
+
+  //   		.download-report-button {
+		// 	    display: table-cell;
+  //   			vertical-align: middle;
+  //   		}
+		// }
+	}
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .pp-campaign-report {
+		.report-title,
+		.block-amount {
+			text-align: center;
+    		border: solid 1px #fff;
+		}
+	}
+}

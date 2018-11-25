@@ -1,0 +1,28 @@
+<table id="custom_modules" class="plugins">
+    <caption>{{ text.__('Installed modules', 'ifw') }}</caption>
+    <colgroup>
+        <col width="0%">
+        <col width="60%">
+        <col width="40%">
+    </colgroup>
+    <tbody>
+    {% if custom_modules is empty %}
+        <tr><td colspan="3">{{ text.__('No custom modules found', 'ifw') }}</td></tr>
+    {% else %}
+    {% for mod in custom_modules %}
+        <tr class="{{ cycle(['', 'alternate'], loop.index0) }}{% if mod.isActivated()%} active{% endif %}">
+            <th scope="row" class="check-column"></th>
+            <td><span class="module_name">{{ mod.getName() }}</span><br>
+                {{ text.__('Version', 'ifw') }} {{ mod.getVersion() }} | {{ text.__('By', 'ifw') }} {% if mod.getAuthorHomepage() is not empty %}<a href="{{ mod.getAuthorHomepage() }}" target="_blank">{% endif %}{{ mod.getAuthor() }}{% if mod.getAuthorHomepage() is not empty %}</a>{% endif %}{% if mod.getHomepage() is not empty %} | <a href="{{ mod.getHomepage() }}" target="_blank">{{ text.__('Module Homepage', 'ifw') }}</a> {% endif %}<br>
+                {% if mod.getDescription() is not empty %}<span class="module_description">{{ mod.getDescription() }}</span>{% endif %}
+            </td>
+            <td>
+                {% if mod.isActivated() %}{{ text.__('Activate', 'ifw') }}{% else %}<a href="{% autoescape false %}{{ activate_url }}{% endautoescape %}&id={{ mod.getId() }}">Activate</a>{% endif %} |
+                {% if mod.isActivated() %}<a href="{% autoescape false %}{{ deactivate_url }}{% endautoescape %}&id={{ mod.getId() }}">{{ text.__('Deactivate', 'ifw') }}</a>{% else %}Deactivate{% endif %} |
+                {% if mod.isActivated() %}{{ text.__('Delete', 'ifw') }}{% else %}<a href="{% autoescape false %}{{ delete_url }}{% endautoescape %}&id={{ mod.getId() }}">Delete</a>{% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+</table>

@@ -1,0 +1,152 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PSN\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/HtmlMails\n"
+"POT-Creation-Date: 2014-03-22 19:12:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-10 17:01+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: bootstrap.php:100
+msgid "None"
+msgstr "Keiner"
+
+#: bootstrap.php:110
+msgid "Mail template"
+msgstr "E-Mail Vorlage"
+
+#: bootstrap.php:111
+msgid "Select mail template to be used as text."
+msgstr "E-Mail Vorlage auswählen, die als Text verwendet werden soll."
+
+#: bootstrap.php:130 controllers/PsnHtmlmailsController.php:72
+msgid "Mail templates"
+msgstr "E-Mail Vorlagen"
+
+#: controllers/PsnHtmlmailsController.php:98
+msgid "Mail template \"%s\" has been saved successfully."
+msgstr "E-Mail Vorlage \"%s\" wurde erfolgreich gespeichert."
+
+#: controllers/PsnHtmlmailsController.php:131
+msgid "Mail template \"%s\" has been updated successfully."
+msgstr "E-Mail Vorlage \"%s\" wurde erfolgreich aktualisiert."
+
+#: controllers/PsnHtmlmailsController.php:227
+msgid "Placeholders"
+msgstr "Platzhalter"
+
+#: controllers/PsnHtmlmailsController.php:233
+msgid "Create new mail template"
+msgstr "Neue E-Mail Vorlage erstellen"
+
+#: controllers/PsnHtmlmailsController.php:235
+msgid "Edit mail template"
+msgstr "E-Mail Vorlage bearbeiten"
+
+#: lib/Admin/Form/MailTemplate.php:40 lib/ListTable/MailTemplates.php:40
+msgid "Name"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:41
+msgid "Internal identifier"
+msgstr "Interner Bezeichner"
+
+#: lib/Admin/Form/MailTemplate.php:51
+msgid "Mail type"
+msgstr "E-Mail Typ"
+
+#: lib/Admin/Form/MailTemplate.php:57 lib/ListTable/MailTemplates.php:74
+msgid "Plain text"
+msgstr "Plain Text"
+
+#: lib/Admin/Form/MailTemplate.php:58
+msgid "HTML"
+msgstr ""
+
+#: lib/Admin/Form/MailTemplate.php:66
+msgid "Mail body"
+msgstr "E-Mail Body"
+
+#: lib/Admin/Form/MailTemplate.php:67
+msgid ""
+"The main mail body. Insert your HTML source code here if you chose type HTML."
+msgstr ""
+"Der Hauptinhalt der E-Mail. Füge hier den HTML Source Code ein, wenn als Typ "
+"HTML gewählt ist."
+
+#: lib/Admin/Form/MailTemplate.php:77
+msgid "Alternative body"
+msgstr "Alternativ Text"
+
+#: lib/Admin/Form/MailTemplate.php:78
+msgid ""
+"If you choose type HTML, insert an alternative plain text here for mail "
+"clients not capable of HTML mails."
+msgstr ""
+"Wenn als Typ HTML eingestellt ist, füge hier einen Alternativtext ein, der "
+"in E-Mail Programmen erscheint, die kein HTML darstellen können."
+
+#: lib/Admin/Form/MailTemplate.php:91
+msgid "Add template"
+msgstr "Vorlage hinzufügen"
+
+#: lib/ListTable/MailTemplates.php:41
+msgid "Type"
+msgstr "Typ"
+
+#: lib/ListTable/MailTemplates.php:176
+msgid "Are you sure you want to do this?"
+msgstr "Möchtest du das wirklich tun?"
+
+#: lib/ListTable/MailTemplates.php:184
+msgid "Do you want to copy this template?"
+msgstr "Möchtest du diese Vorlage kopieren?"
+
+#: lib/Test/MailTemplateField.php:22
+msgid "Mail template field"
+msgstr "E-Mail Vorlage Feld"
+
+#: lib/Test/MailTemplateModel.php:22
+msgid "Mail template table"
+msgstr "E-Mail Vorlage Tabelle"
+
+msgid "Looking for email templates?"
+msgstr "Auf der Suche nach E-Mail Vorlagen?"
+
+msgid "Find your email template on themeforest.net"
+msgstr "Finde deine E-Mail Vorlage auf themeforest.net"
+
+msgid ""
+"Mail template could not be deleted. It is still in use by a notification "
+"rule."
+msgstr ""
+"Die E-Mail Vorlage konnte nicht gelöscht werden. Sie wird noch von einer "
+"Benachrichtigungsregel genutzt."
+
+msgid ""
+"Some mail templates could not be deleted. They are still in use by a "
+"notification rule."
+msgstr ""
+"Einige E-Mail Vorlagen konnten nicht gelöscht werden. Sie werden noch von "
+"Benachrichtigungsregeln genutzt."
+
+msgid ""
+"To get some HTML email example templates, visit the <a href=\"%s\" class=\"%s"
+"\" target=\"_blank\">PSN resources website</a>."
+msgstr ""
+"Um einige HTML E-Mail Beispiel Vorlagen zu bekommen, besuche die <a href=\"%s"
+"\" class=\"%s\"\"\" target=\"_blank\">PSN Ressourcen Webseite</a>."
+
+msgid ""
+"Learn more about HTML emails with our list of recommendable <a href=\"%s\" "
+"class=\"%s\" target=\"_blank\">HTML email resources</a>."
+msgstr ""
+"Lerne mehr über HTML E-Mail mit unserer Liste empfehlenswerter <a href=\"%s"
+"\" class=\"%s\" target=\"_blank\">HTML E-Mail Ressourcen</a>."

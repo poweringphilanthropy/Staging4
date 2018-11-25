@@ -1,0 +1,18 @@
+<div class="wrap">
+    <h2>Post Status Notifier</h2>
+    <form method="post" name="psn_form_license" action="">
+        {% autoescape false %}{{ license_notice }}{% endautoescape %}
+        {% autoescape false %}{{ nonce_field }}{% endautoescape %}
+        <table class="form-table">
+            <tr>
+                <th scope="row"><label for="psn_license">{{ text.__('Premium license code', 'psn_prm') }}</label></th>
+                <td>
+                    <input name="psn_license" type="password" id="psn_license" value="{{ license_default }}" style="width: 400px;" /><br>
+                    <p class="hint">{% autoescape false %}{{ license_help }}{% endautoescape %}</p>
+                </td>
+            </tr>
+        </table>
+
+        <p class="submit"><input type="submit" name="submit" class="button button-primary" value="{{ text.__('Save license', 'psn_prm') }}"></p>
+    </form>
+</div>

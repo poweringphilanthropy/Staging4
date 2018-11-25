@@ -1,0 +1,5 @@
+<br><br>
+{{ text.__('Result', 'ifw') }}:
+{% if test.getResult %}<span style="color: green;">OK</span>
+{% else %}<span style="color: red;">ERROR</span><br>{{ text.__('Message', 'ifw') }}: {{ test.getErrorMessage }}{% if test.canHandle %}<br><a href="{{ key }}">{{ text.__('Fix it', 'ifw') }}</a>{% endif %}{% endif %}
+<br><br></li>

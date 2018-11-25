@@ -1,0 +1,194 @@
+<?php
+/**
+ * Leaderboard model
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+/**
+ * Campaign Model
+ *
+ * @since       1.0.0
+ */
+class PP_Dashboard_Data {
+
+	public $post_id;
+
+	private $use_deprecated = false;
+
+	/**
+	 * Class constructor.
+	 *
+	 * @param   mixed   $post       The post ID or WP_Post object for this this campaign.
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public function __construct( $post_id ) {
+		if ( is_a( $post_id, 'WP_Post' ) ) {
+			$post_id = $post_id->ID;
+		}
+
+		$this->post_id = $post_id;
+
+		$this->use_deprecated = !empty( $this->get_term_id() );
+	}
+
+	public function get_campaign_query($with_children = false){
+		$args = array(
+            'fields' => 'ids',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'campaign_group',
+                    'field' => 'id',
+                    'terms' => $this->get_term_id(),
+                    'include_children' => true
+                )
+            ),
+            'post_status' => 'publish',
+            'post_parent' => 0,
+        );
+
+        if($with_children){
+        	unset($args['post_parent']);
+        }
+
+        return Charitable_Campaigns::query($args);
+	}
+
+	public function get_campaign_ids($with_children = false){
+		$query = $this->get_campaign_query($with_children);
+		return $query->posts;
+	}
+
+	public function get_total_donors(){
+		$campaign_ids = $this->get_campaign_ids();
+		return charitable_get_table( 'campaign_donations' )->count_campaign_donors( $campaign_ids, false );
+	}
+
+	public function get_total_donations(){
+		$campaign_ids = $this->get_campaign_ids();
+		return charitable_get_table( 'campaign_donations' )->get_campaign_donated_amount( $campaign_ids, false );
+	}
+
+	public function get_term_id(){
+		if( $this->use_deprecated ){
+			return get_post_meta(  $this->post_id, '_campaign_group', true );
+		} else {
+			return pp_get_dashboard_term_id($this->post_id);
+		}
+	}
+
+	public function get_post_id(){
+		return $this->post_id;
+	}
+
+	public function get_color(){
+		if( $this->use_deprecated ){
+			return get_post_meta(  $this->post_id, '_page_color', true );
+		} else {
+			return get_term_meta( $this->get_term_id(), '_dashboard_color', true );
+		}
+	}
+
+	public function is_prepopulate_chapters_enable(){
+		$enable = get_term_meta( $this->get_term_id(), '_prepopulate_chapters', true ) == 'yes';
+
+		if($this->use_deprecated){
+			$enable = get_post_meta( $this->get_post_id(), '_prepopulate_chapters', true ) == 'yes';
+		}
+
+		return apply_filters( 'pp_dashboard_is_prepopulate_chapters_enable', $enable, $this->get_term_id(), $this->get_post_id() );
+	}
+
+	public function is_track_service_hours_enable(){
+		$enable = get_term_meta( $this->get_term_id(), '_enable_log_service_hours', true ) == 'yes';
+
+		if($this->use_deprecated){
+			$enable = get_post_meta( $this->get_post_id(), '_enable_log_service_hours', true ) == 'yes';
+		}
+
+		return apply_filters( 'pp_dashboard_is_track_service_hours_enable', $enable, $this->get_term_id(), $this->get_post_id() );
+	}
+
+	public function get_associated_chapters(){
+
+		$chapter = pp_get_dashboard_chapters($this->get_post_id());
+
+		return $chapter;
+	}
+
+	public function get_total_service_hours($include_additionals = false){
+		global $wpdb;
+
+		$query = "SELECT SUM(hr.service_hours) total FROM {$wpdb->prefix}chapter_service_hours hr
+			INNER JOIN {$wpdb->prefix}chapters ch ON hr.chapter_id = ch.id
+			WHERE ch.dashboard_id = '{$this->get_post_id()}'";
+
+		if( !$include_additionals ){
+			$query .= "AND hr.parent = 0";
+		}
+
+		$total = $wpdb->get_var($query);
+		return apply_filters( 'pp_dashboard_total_service_hours', !empty($total) ? $total : 0, $this->get_term_id(), $this->get_post_id() );
+	}
+
+	public function get_top_campaigns_by_donor(){
+
+		if(empty($this->get_campaign_ids()))
+			return array();
+
+		$query_args = array(
+			'posts_per_page' => -1,
+			'post__in' => $this->get_campaign_ids(),
+		);
+
+		$top_campaigns_query = Charitable_Campaigns::ordered_by_amount( $query_args );
+
+		return $top_campaigns_query->posts;
+	}
+
+	public function display_leaderboard(){
+
+		$display = get_term_meta( $this->get_term_id(), '_enable_leaderboard', true ) == 'yes';
+
+		if($this->use_deprecated){
+			$display = get_post_meta( $this->get_post_id(), '_enable_leaderboard', true ) == 'yes';
+		}
+
+		return apply_filters( 'pp_dashboard_display_leaderboard', $display, $this->get_term_id(), $this->get_post_id() );
+	}
+
+	public function display_top_campaigns(){
+
+		$display = get_term_meta( $this->get_term_id(), '_show_top_campaigns', true ) == 'yes';
+
+		if($this->use_deprecated){
+			$display = get_post_meta( $this->get_post_id(), '_show_top_campaigns', true ) == 'yes';
+		}
+
+		if(!$this->display_leaderboard()){
+			$display = false;
+		}
+
+		return apply_filters( 'pp_dashboard_display_top_campaigns', $display, $this->get_term_id(), $this->get_post_id() );
+	}
+
+	public function display_top_fundraisers(){
+
+		$display = get_term_meta( $this->get_term_id(), '_show_top_fundraisers', true ) == 'yes';
+
+		if($this->use_deprecated){
+			$display = get_post_meta( $this->get_post_id(), '_show_top_fundraisers', true ) == 'yes';
+		}
+
+		if(!$this->display_leaderboard()){
+			$display = false;
+		}
+
+		return apply_filters( 'pp_dashboard_display_top_fundraisers', $display, $this->get_term_id(), $this->get_post_id() );
+	}
+
+
+}

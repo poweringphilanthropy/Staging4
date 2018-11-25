@@ -1,0 +1,89 @@
+# Copyright (C) 2015 WP Mail From II
+# This file is distributed under the same license as the WP Mail From II package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Mail From II 1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-mailfrom-ii\n"
+"POT-Creation-Date: 2015-10-29 21:26:11+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/class-wp-mailfrom-ii-admin.php:92
+msgid "WP Mail From Plugin"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:93
+msgid "Mail From"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:123
+msgid "From Name"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:130
+msgid "From Email Address"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:137
+msgid "Override Emails From"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:168
+msgid ""
+"If set, these two options will override the default name and email address "
+"in the &quot;From&quot; header on emails sent by WordPress."
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:197
+msgid "Default WordPress Email"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:198
+msgid "Admin Email"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:209
+msgid "Settings"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:230
+msgid "GitHub"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:231
+msgid "http://wordpress.org/support/plugin/wp-mailfrom-ii"
+msgstr ""
+
+#: admin/class-wp-mailfrom-ii-admin.php:231
+msgid "Support"
+msgstr ""
+
+#: admin/views/admin.php:22
+msgid "Save Changes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Mail From II"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/wp-mailfrom-ii/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows you to configure the default email address and name used for emails "
+"sent by WordPress."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Ben Huson"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/benhuson/"
+msgstr ""

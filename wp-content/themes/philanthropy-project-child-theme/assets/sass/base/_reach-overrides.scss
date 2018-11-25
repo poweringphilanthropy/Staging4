@@ -1,0 +1,38 @@
+#header,
+.site-identity {
+	z-index: initial;
+}
+.menu-site {
+	z-index: initial;
+	a {
+		font-weight: 800;
+	}
+}
+.account-links {
+	.button.button-alt {
+		font-family: "Raleway";
+		font-weight: normal;
+	}
+}
+#main {
+	.site-main a.heading-button {
+		background: $base_color;
+	}
+	.feature-block {
+		background-color: $base_color;
+	}
+}
+
+.single-campaign .content-area .campaign-video {
+	border: none;
+	.fit-video {
+		width: 100%;
+	    left: 0;
+	}
+}
+
+.campaign-media {
+	iframe {
+		max-width: 100%!important;
+	}
+}

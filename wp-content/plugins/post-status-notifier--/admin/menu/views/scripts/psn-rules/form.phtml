@@ -1,0 +1,58 @@
+<?php if (!$this->dbPatcher->isValid()): ?>
+    <div class="updated error inline below-h2"><p><?php printf(__('There seems to be a <b>database mismatch</b>. This could result in problems when saving rules. Please run the selftests on the overview page. If this warning persists, <a href="%s" target="_blank">please contact the support.</a>', 'psn'), 'http://www.ifeelweb.de/contact/'); ?></p></div>
+<?php endif; ?>
+<?php if(isset($this->maxReached)): ?>
+    <div id="message" class="error">
+        <p class="message"><?php echo $this->maxReached; ?></p>
+    </div>
+<?php else: ?>
+<div id="rules_form" style="clear: both;" class="psn_form_container">
+    <div style="float: left; min-width: 400px; max-width: 760px;">
+    <h3><?php echo $this->langHeadline; ?></h3>
+    <?php
+    echo $this->form;
+    ?>
+    </div>
+    <div style="">
+        <h3><?php echo $this->langHelp; ?></h3>
+
+        <p><?php echo $this->langListOfPlaceholdersLabel; ?>:</p>
+        <a href="javascript:void(0);" class="ifw-wp-icon-help placeholder_help"><?php echo $this->langListOfPlaceholdersLink; ?></a>
+
+        <p><a href="javascript:void(0);" class="ifw-wp-icon-help conditions_help"><?php _e('Conditions', 'psn'); ?></a></p>
+
+        <p><a href="http://docs.ifeelweb.de/post-status-notifier/rules.html#category-filter" target="_blank" class="ifw-wp-icon-help"><?php _e('Category filter', 'psn'); ?></a> (<?php _e('Documentation', 'ifw'); ?>)</p>
+        <p><a href="http://docs.ifeelweb.de/post-status-notifier/rules.html#post-status" target="_blank" class="ifw-wp-icon-help"><?php _e('Post status', 'psn'); ?></a> (<?php _e('Documentation', 'ifw'); ?>)</p>
+
+        <p>&nbsp;</p>
+        <?php if ($this->actionName == 'create'): ?>
+        <h3><?php echo $this->langExamples; ?></h3>
+        <p><?php echo $this->langExamplesDesc; ?></p>
+
+        <dl class="example">
+            <dt><a href="javascript:void(0);" class="example_button" id="example_pending_post"><?php echo $this->langExamplesRuleThePendingPost; ?></a></dt>
+            <dd><?php echo $this->langExamplesRuleThePendingPostDesc; ?></dd>
+        </dl>
+
+        <dl class="example">
+            <dt><a href="javascript:void(0);" class="example_button" id="example_happy_author"><?php echo $this->langExamplesRuleTheHappyAuthor; ?></a></dt>
+            <dd><?php echo $this->langExamplesRuleTheHappyAuthorDesc; ?></dd>
+        </dl>
+
+        <dl class="example">
+            <dt><a href="javascript:void(0);" class="example_button" id="example_pedantic_admin"><?php echo $this->langExamplesRuleThePedanticAdmin; ?></a></dt>
+            <dd><?php echo $this->langExamplesRuleThePedanticAdminDesc; ?></dd>
+        </dl>
+
+        <?php if ($this->pm->isPremium()): ?><dl class="example">
+            <dt><a href="javascript:void(0);" class="example_button" id="example_debug"><?php echo $this->langExamplesRuleDebug; ?></a></dt>
+            <dd><?php echo $this->langExamplesRuleDebugDesc; ?></dd>
+        </dl><?php endif; ?>
+
+        <p><?php printf( __('For more examples visit the <a href="%s" class="%s" target="_blank">PSN resources website</a>.'), 'http://www.ifeelweb.de/post-status-notifier-psn-resources/', 'ifw-external-link' ); ?></p>
+        <?php endif; ?>
+
+    </div>
+    <div  style="clear: both;"></div>
+</div>
+<?php endif; ?>

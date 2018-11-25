@@ -1,0 +1,592 @@
+# Copyright (C) 2013 Post Status Notifier
+# This file is distributed under the same license as the Post Status Notifier package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Status Notifier 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/post-status-notifier\n"
+"POT-Creation-Date: 2013-04-17 20:01:32+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+msgid "Overview"
+msgstr ""
+
+msgid "Rules"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "This is an overview of your plugin settings"
+msgstr ""
+
+msgid "Create new rule"
+msgstr ""
+
+msgid "Rule <b>%s</b> has been saved successfully."
+msgstr ""
+
+msgid "Rule <b>%s</b> has been updated successfully."
+msgstr ""
+
+msgid "Placeholders"
+msgstr ""
+
+msgid "Show list of placeholders available for subject and text"
+msgstr ""
+
+msgid "List of placeholders"
+msgstr ""
+
+msgid "Edit notification rule"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Here you can manage your post status notification rules."
+msgstr ""
+
+msgid "List of placeholders available for notification subject and text"
+msgstr ""
+
+msgid "Ignore post status \"inherit\""
+msgstr ""
+
+msgid ""
+"Status \"inherit\" is used when post revisions get created by WordPress "
+"automatically"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "General Options"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Rule name"
+msgstr ""
+
+msgid "all types"
+msgstr ""
+
+msgid "Post type"
+msgstr ""
+
+msgid "anything"
+msgstr ""
+
+msgid "Status before"
+msgstr ""
+
+msgid "Status after"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid ""
+"Open the help menu in the upper right corner to see a list of all <a %s>supported placeholders</a>."
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "Recipient"
+msgstr ""
+
+msgid "Blog admin"
+msgstr ""
+
+msgid "Post author"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Only active rules take affect on post transition changes"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "When the rule matches, an email will be send to the recipient with subject and text"
+msgstr ""
+
+msgid "Add rule"
+msgstr ""
+
+msgid "You reached the maximum number of rules for the free version"
+msgstr ""
+
+msgid "Invalid status combination: before and after set to \"anything\" is not allowed"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Name of the rule"
+msgstr ""
+
+msgid "Activate"
+msgstr ""
+
+msgid "Deactivate"
+msgstr ""
+
+msgid "Your notification rules"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "The required database table does not exist."
+msgstr ""
+
+msgid "Post Status Notifier"
+msgstr ""
+
+msgid "http://www.ifeelweb.de/wp-plugins/post-status-notifier/"
+msgstr ""
+
+msgid "Lets you create individual notification rules to be informed about all post status transitions of your blog. Features custom email texts with many placeholders and custom post types."
+msgstr ""
+
+msgid "Add additional recipient emails. Comma separated. Supports placeholders like [author_email], [blog_admin_email], [current_user_email] or the dynamic [recipient_*] placeholders. Check the <a %s>placeholders help</a>."
+msgstr ""
+
+msgid "Limited to 1. Get the Premium version for unlimited Cc emails."
+msgstr ""
+
+msgid "Manage rules"
+msgstr ""
+
+msgid "In the \"Rules\" section you can manage your post status notification rules.<br>Just try it and <a href=\"%s\">create a new rule</a>."
+msgstr ""
+
+msgid "Examples"
+msgstr ""
+
+msgid "Click the buttons below to get an idea of how you can set up notification rules."
+msgstr ""
+
+msgid "The pending post"
+msgstr ""
+
+msgid "This rule sends a notification when a new post got submitted for review."
+msgstr ""
+
+msgid "The happy author"
+msgstr ""
+
+msgid "This rule sends an email to the author of a post when it got published."
+msgstr ""
+
+msgid "The pedantic admin"
+msgstr ""
+
+msgid "This rule is for blog admins who want to be informed about every single post status change."
+msgstr ""
+
+msgid "[blog_name]: New post is waiting for review"
+msgstr ""
+
+msgid "Howdy admin,\nthere is a new post by [author_display_name] waiting for review:\n\"[post_title]\".\n\nHere is the permalink: [post_permalink]\n\nHere is the backend edit link: [post_editlink]\n\nThe author\'s email address is [author_email]\n\n[blog_wpurl]"
+msgstr ""
+
+msgid "Your post on [blog_name] got published!"
+msgstr ""
+
+msgid "Howdy [author_display_name],\nwe are happy to tell you that your post \"[post_title]\" got published.\n\nHere is the permalink: [post_permalink]\n\nThanks for your good work,\nyour [blog_name]-Team\n\n[blog_wpurl]"
+msgstr ""
+
+msgid "[blog_name]: Post status transition from [post_status_before] to [post_status_after]"
+msgstr ""
+
+msgid "Howdy admin,\na post status transition was a detected on \"[post_title]\".\n\nStatus before: [post_status_before]\nStatus after: [post_status_after]\n\nPost permalink: [post_permalink]"
+msgstr ""
+
+msgid "Unlimited notification rules"
+msgstr ""
+
+msgid "Unlimited CC email recipients"
+msgstr ""
+
+msgid "No appendix in sent emails"
+msgstr ""
+
+msgid "Extensive logging (matching rules, sent mails ...) with dashboard widget"
+msgstr ""
+
+msgid "Premium Support"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Rule table"
+msgstr ""
+
+msgid "Checks if the database table for storing the notification rules exists"
+msgstr ""
+
+msgid "The database table could not be found"
+msgstr ""
+
+msgid "Trying to create the table..."
+msgstr ""
+
+msgid "Add bcc recipient emails. Comma separated. Supports placeholders like [author_email], [blog_admin_email], [current_user_email] or the dynamic [recipient_*] placeholders. Check the <a %s>placeholders help</a>."
+msgstr ""
+
+msgid "Activate SMTP"
+msgstr ""
+
+msgid "SMTP is a premium feature. You will get all configuration options to connect to your SMTP server."
+msgstr ""
+
+msgid "Unlimited Bcc email recipients"
+msgstr ""
+
+msgid "SMTP server support"
+msgstr ""
+
+msgid "Get additional recipients like user roles (including custom roles) or all users with the Premium version."
+msgstr ""
+
+msgid "Extended recipients"
+msgstr ""
+
+msgid "To select multiple categories hold down the control button (ctrl) on Windows or command button (cmd) on Mac.<br>If nothing is selected, all categories get included.<br>Exclude is dominant. See the <a href=\"%s\" target=\"_blank\">docs</a> for more details."
+msgstr ""
+
+msgid "Include only these categories"
+msgstr ""
+
+msgid "Exclude categories"
+msgstr ""
+
+msgid "select all"
+msgstr ""
+
+msgid "remove all"
+msgstr ""
+
+msgid "This is a <a href=\"%s\" target=\"_blank\">Premium</a> feature."
+msgstr ""
+
+msgid "Post type \"%s\" has no categories."
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category filter"
+msgstr ""
+
+msgid "Placeholders filters"
+msgstr ""
+
+msgid "Not published"
+msgstr ""
+
+msgid "Here you can define filters which will apply to the placeholders contents (One filter per line). You can use the <a href=\"%s\" target=\"_blank\">Twig filters</a>. Refer to the <a href=\"%s\" target=\"_blank\">documentation</a> for details.<br>Example: [post_date]|date(\"m/d/Y\")"
+msgstr ""
+
+msgid "Static placeholders"
+msgstr ""
+
+msgid "Dynamic placeholders"
+msgstr ""
+
+msgid "Custom Fields"
+msgstr ""
+
+msgid "To retrieve the contents of custom post fields use this placeholder"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "These placeholders are unique to this WordPress installation. They use the names of custom categories and tags."
+msgstr ""
+
+msgid "The * stands for the name of the custom field.<br>Example: If you have a custom post field \"actors\" you should call your placeholder <b>[post_custom_field-actors]</b>"
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Do you want to copy this rule?"
+msgstr ""
+
+msgid "Deactivate rule on copy"
+msgstr ""
+
+msgid "Always deactivate copied rules"
+msgstr ""
+
+msgid "Trying to create the field..."
+msgstr ""
+
+msgid "The database field could not be found"
+msgstr ""
+
+msgid "Checks if the field exists in the database"
+msgstr ""
+
+msgid "Bcc field"
+msgstr ""
+
+msgid "Categories field"
+msgstr ""
+
+msgid "Hide non-public post types"
+msgstr ""
+
+msgid "When selected, non-public post types will be excluded from rule settings form"
+msgstr ""
+
+msgid "Post status"
+msgstr ""
+
+msgid "There seems to be a <b>database mismatch</b>. This could result in problems when saving rules. Please run the selftests on the overview page. If this warning persists, <a href=\"%s\" target=\"_blank\">please contact the support.</a>"
+msgstr ""
+
+msgid "Import rules"
+msgstr ""
+
+msgid "Import file"
+msgstr ""
+
+msgid "Please select a valid .xml export file created by this plugin."
+msgstr ""
+
+msgid "Please select a valid import file."
+msgstr ""
+
+msgid "No rules found in import file."
+msgstr ""
+
+msgid "Import prefix"
+msgstr ""
+
+msgid "Prepend this text to imported item names to identify them."
+msgstr ""
+
+msgid "Deactivate imported rules."
+msgstr ""
+
+msgid "Need help? <a href=\"%s\" target=\"_blank\">Check the docs</a>."
+msgstr ""
+
+msgid "Unlimited placeholders filters"
+msgstr ""
+
+msgid "Copy notification rules"
+msgstr ""
+
+msgid "Import / export notifaciton rules"
+msgstr ""
+
+msgid "Custom sender e-mail"
+msgstr ""
+
+msgid "Unlimited placeholders filters"
+msgstr ""
+
+msgid "Copy notification rules"
+msgstr ""
+
+msgid "Import / export notifaciton rules"
+msgstr ""
+
+msgid "Custom sender e-mail"
+msgstr ""
+
+msgid "Dupliacte"
+msgstr ""
+
+msgid "Show details"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "To select multiple recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "To select multiple cc recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "To select multiple bcc recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "To select multiple recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "To select multiple cc recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "To select multiple bcc recipients hold down the control button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+
+msgid "Not private"
+msgstr ""
+
+msgid "Bcc multi selection field"
+msgstr ""
+
+msgid "Not pending"
+msgstr ""
+
+msgid "Test Email"
+msgstr ""
+
+msgid "Send a test email to check the general email functionality of your WordPress installation. Settings in the options section will be considered (e.g. SMTP)."
+msgstr ""
+
+msgid "Server environment"
+msgstr ""
+
+msgid "Check the <a href=\"%s\" target=\"_blank\">FAQ</a>"
+msgstr ""
+
+msgid "HTML emails"
+msgstr ""
+
+msgid "Send test email"
+msgstr ""
+
+msgid "Test Email from %s"
+msgstr ""
+
+msgid "Send test email"
+msgstr ""
+
+msgid "Test Email from %s"
+msgstr ""
+
+msgid "For more examples visit the <a href=\"%s\" class=\"%s\" target=\"_blank\">PSN resources website</a>."
+msgstr ""
+
+msgid "Check out the <a href=\"%s\" target=\"_blank\">Premium version</a> and all its features on CodeCanyon."
+msgstr ""
+
+msgid "The Lite version of this plugin is still activated. Please deactivate it! Refer to the <a href=\"%s\">Upgrade Howto</a>."
+msgstr ""
+
+msgid "<b>Subject</b> and <b>text</b> support conditions, loops, functions and placeholder filters. This makes it possible to create dynamic texts."
+msgstr ""
+
+msgid "This is an <b>example if-condition</b> to display the excerpt only if it is not empty"
+msgstr ""
+
+msgid "With placeholder filters and functions you can get the most unlikely values out of the placeholders attached to a post. This example retrieves the currency key out a multidimensional serialized PHP array"
+msgstr ""
+
+msgid "To learn more about conditions, loops, functions and filters please <a href=\"%s\" target=\"_blank\">check the documentation</a>."
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Supports <a %s>conditions</a> (if activated in the options)."
+msgstr ""
+
+msgid "Array placeholders"
+msgstr ""
+
+msgid "These placeholders contain PHP arrays. They can be used with filters and functions (see <a %s>Conditions</a>) to retrieve the data."
+msgstr ""
+
+msgid "Block notifications Post Status Notifier could generate for this post."
+msgstr ""
+
+msgid "Block notifications"
+msgstr ""
+
+msgid "Disable it completely"
+msgstr ""
+
+msgid "Disable the \"Block notifications\" feature in the Post submit box."
+msgstr ""
+
+msgid "For admins only"
+msgstr ""
+
+msgid "Enable the \"Block notifications\" feature for admins only."
+msgstr ""
+
+msgid "Invalid recipient"
+msgstr ""
+
+msgid "Custom CC"
+msgstr ""
+
+msgid "Custom BCC"
+msgstr ""
+
+msgid "Not trash"
+msgstr ""
+
+msgid "Not trash"
+msgstr ""
+
+msgid "Be careful with user placeholders if your blog has very much users (several hundrets or even thousands) like <b>[recipient_all_users]</b> or <b>[recipient_role_*]</b> if the role has very much members. These could cause server load!"
+msgstr ""
+
+msgid "Be careful with user placeholders if your blog has very much users (several hundrets or even thousands) like <b>[recipient_all_users_array]</b> or <b>[recipient_role_*_array]</b> if the role has very much members. These could cause server load!"
+msgstr ""
+
+msgid "If you want to use <b>PSN's conditions syntax</b> in your notification texts, you can activate this feature here. Check the <a href=\"%s\" target=\"_blank\">Conditions manual</a> to learn more about it."
+msgstr ""
+
+msgid "Options for the \"Block notifications\" feature in the post submit box."
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "For more details please check the <a href=\"%s\" target=\"_blank\">placeholders help</a>."
+msgstr ""
+
+msgid "Conditional template syntax"
+msgstr ""
+
+msgid "Block notifications feature on Post submit post"
+msgstr ""
+
+msgid "One email per TO recipient"
+msgstr ""
+
+msgid "Extensible"
+msgstr ""
+
+msgid "Services"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Rule"
+msgstr ""
+
+msgid "For more details please check the <a href=\"%s\" target=\"_blank\">documentation</a>."
+msgstr ""
+
+msgid "More details"
+msgstr ""

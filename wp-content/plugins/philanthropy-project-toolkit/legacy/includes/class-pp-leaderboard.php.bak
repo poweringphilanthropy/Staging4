@@ -1,0 +1,995 @@
+<?php
+/**
+ * PP_Leaderboard Class.
+ *
+ * @class       PP_Leaderboard
+ * @version     1.0
+ * @author lafif <hello@lafif.me>
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+
+use Gizburdt\Cuztom\Cuztom;
+use Gizburdt\Cuztom\Support\Guard;
+use Gizburdt\Cuztom\Support\Request;
+
+/**
+ * PP_Leaderboard class.
+ */
+class PP_Leaderboard {
+
+    private $post_types;
+    private $taxonomies;
+    private $metaboxes;
+    private $taxonomy_name = 'campaign_group';
+
+    /**
+     * Singleton method
+     *
+     * @return self
+     */
+    public static function init() {
+        static $instance = false;
+
+        if ( ! $instance ) {
+            $instance = new PP_Leaderboard();
+        }
+
+        return $instance;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        $this->includes();
+        
+        add_filter( 'template_include', array($this, 'load_dashboard_template'), 99, 1 );
+
+        add_action( 'init', array($this, 'add_dashboard_endpoints'));
+        add_action( 'do_meta_boxes', array($this, 'remove_dashboard_metaboxes') );
+        add_filter( 'request', array($this, 'change_dashboard_report_request'), 10, 1 );
+        add_filter( 'query_vars', array($this, 'add_dashboard_query_vars'), 10, 1);
+        add_filter( 'wp_title', array($this, 'change_wp_title_for_dashboard_report'), 100, 3 );
+        add_filter( 'the_content', array($this, 'display_dashboard_report_content'), 10, 1 );
+        add_filter( 'pp_campaign_report_item_name', array($this, 'change_item_name_on_dashboard_reports'), 10, 3 );
+
+        add_action( 'wp_enqueue_scripts', array($this, 'load_dashboard_report_scripts') );
+        add_action( 'wp_ajax_get_dashboard_report_data', array($this, 'load_dashboard_report'), 10, 1 );
+        add_action( 'wp_ajax_nopriv_get_dashboard_report_data', array($this, 'load_dashboard_report'), 10, 1  );
+        add_action( 'wp_ajax_get_report_data', array($this, 'get_report_data'), 10, 1 );
+        add_action( 'wp_ajax_nopriv_get_report_data', array($this, 'get_report_data'), 10, 1  );
+
+        add_filter( 'post_password_required', array($this, 'dashboard_password_required'), 10, 2 );
+
+        add_action( 'init', array($this, 'create_post_types_and_tax'), 0 );
+        add_filter( 'charitable_submenu_pages', array($this, 'add_to_submenu'), 10, 1 );
+
+        add_filter( 'template_include', array($this, 'leaderboard_template_include'), 1, 1 );
+        add_action( 'philanthropy_after_dashboard_content', array($this, 'display_share'), 10 );
+
+        add_filter( 'charitable_is_page_leaderboard_widget', array($this, 'is_page_leaderboard_widget'), 2 );
+        add_filter( 'body_class', array( $this, 'add_body_classes' ) );
+        add_filter( 'cuztom_field_name', array($this, 'remove_name_for_widget_input'), 10, 2 );
+    
+
+        add_action('created_'.$this->taxonomy_name, array($this, 'saveTerm'), 20);
+        add_action('edited_'.$this->taxonomy_name, array($this, 'saveTerm'), 20);
+    
+        add_action( 'init', array($this, 'download_dashboard_reports'), 10 );
+    }
+
+    public function download_dashboard_reports(){
+        if( !isset($_GET['download-dashboard-reports']) || !isset($_GET['key']) ){
+            return;
+        }
+
+        if( !wp_verify_nonce( $_GET['key'], 'pp-download-report' ) )
+            return;
+
+        $campaign_group_id = pp_get_dashboard_term_id( absint( $_GET['download-dashboard-reports'] ) );
+        
+        $type = isset($_GET['type']) ? $_GET['type'] : '';
+
+        do_action( 'pp_before_dashboard_export', $type, $campaign_group_id);
+
+        $args = array(
+            'fields' => 'ids',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'campaign_group',
+                    'field' => 'id',
+                    'terms' => $campaign_group_id,
+                    'include_children' => true
+                )
+            ),
+            'post_status' => 'publish',
+            'post_parent' => 0,
+        );
+
+        $query = Charitable_Campaigns::query($args);
+
+        $report = new PP_Campaign_Donation_Reports($query->posts, false);
+        
+        $dashboard_title = get_the_title( absint( $_GET['download-dashboard-reports'] ) );
+
+        require_once( pp_toolkit()->directory_path . 'includes/exports/class-pp-export.php' );
+        
+        switch ($type) {
+            case 'campaigns':
+
+                $_data = $report->get_campaign_data();
+                $data = $_data['data'];
+
+                $export_args = array(
+                    'filename'   => 'Campaigns - ' . $dashboard_title,
+                    'data' => $data,
+                    'columns' => array(
+                        'item_name' => 'Campaign',
+                        'count' => 'Total Donations',
+                        'amount' => 'Total Amount',
+                    )
+                );
+                break;
+
+            case 'fundraisers':
+
+                $_data = $report->get_referral_data();
+                $data = $_data['data'];
+
+                $export_args = array(
+                    'filename'   => 'Fundraisers - ' . $dashboard_title,
+                    'data' => $data,
+                    'columns' => array(
+                        'item_name' => 'Fundraiser',
+                        'count' => 'Total Donations',
+                        'amount' => 'Total Amount',
+                    )
+                );
+                break;
+
+            case 'donations':
+
+                $_data = $report->get_donation_data();
+                $data = $_data['data'];
+
+                $export_args = array(
+                    'filename'   => 'Donations - ' . $dashboard_title,
+                    'data' => $data,
+                    'columns' => array(
+                        'first_name' => 'First Name',
+                        'last_name' => 'Last Name',
+                        'campaign_name' => 'Campaign Name',
+                        'amount' => 'Amount',
+                    )
+                );
+                break;
+
+            case 'merchandises':
+
+                $data = $report->get_data_by('type', 'merchandise');
+
+                $export_args = array(
+                    'filename'   => 'Merchandises - ' . $dashboard_title,
+                    'data' => $data,
+                    'columns' => array(
+                        'purchase_detail' => 'Merchandise',
+                        'qty' => 'Quantity',
+                        'amount' => 'Amount',
+                        'shipping' => 'Shipping',
+                    )
+                );
+                break;
+
+            case 'tickets':
+
+                $data = $report->get_data_by('type', 'ticket');
+
+                $export_args = array(
+                    'filename'   => 'Tickets - ' . $dashboard_title,
+                    'data' => $data,
+                    'columns' => array(
+                        'purchase_detail' => 'Ticket',
+                        'qty' => 'Quantity',
+                        'amount' => 'Amount',
+                        'ticket_holder' => 'Ticket Holders',
+                    )
+                );
+                break;
+        }
+
+        // echo "<pre>";
+        // print_r($data);
+        // echo "</pre>";
+        // exit(); 
+        
+        new PP_Campaigns_Export( $export_args );
+
+        exit();
+    }
+
+    public function load_dashboard_template($template){
+        global $post;
+
+        if( get_post_type() != 'dashboard' ){
+            return $template;
+        }
+
+        if(!empty($post->post_parent)){
+            return $template;
+        }
+
+        if( get_query_var( 'report', false ) ){
+            return $template;
+        }
+
+        $new_template = locate_template( array( 'dashboard-templates/dashboard.php' ) );
+        if ( '' != $new_template ) {
+            return $new_template;
+        }
+
+        return $template;
+    }
+
+    public function add_dashboard_endpoints(){
+        add_rewrite_endpoint('report', EP_PERMALINK | EP_PAGES);
+    }
+
+    public function remove_dashboard_metaboxes(){
+        if( ! isset( $_GET['post'] ) )
+            return;
+
+        $post_id = absint( $_GET['post'] );
+        if(!empty(wp_get_post_parent_id( $post_id ))){
+
+            // echo "<pre>";
+            // print_r($this->metaboxes['campaign_groups']);
+            // echo "<pre>";
+            // exit(); 
+
+            remove_meta_box('report', 'dashboard', 'normal');
+        }
+    }
+
+    public function change_dashboard_report_request($vars){
+        if( isset( $vars['report'] ) ){
+            $vars['report'] = true;
+        }
+
+        return $vars;
+    }
+
+    public function add_dashboard_query_vars($vars){
+        $vars[] = "report";
+        return $vars;
+    }
+
+    public function load_dashboard_report_scripts(){
+        if( !$this->is_dashboard_report_page() ){
+            return;
+        }
+
+        wp_enqueue_script( 'pp-reports' );
+        wp_localize_script( 'pp-reports', 'PP_DASHBOARD_REPORT', array(
+            'ajax_url' => admin_url( 'admin-ajax.php' ),
+        ) );
+    }
+
+    public function load_dashboard_report(){
+
+        $campaign_ids = $_REQUEST['campaign_ids'];
+
+        $reports = new PP_Campaign_Donation_Reports($campaign_ids);
+
+        $data = $reports->get_data();
+
+        // store to session 
+        // $timestamp = $_REQUEST['timestamp'];
+        // $hash = 'dashboard-report-' . md5( maybe_serialize( $campaign_ids ) ) . '-' . $timestamp;
+        // $hash = 'dashboard-report-' . md5( maybe_serialize( $campaign_ids ) );
+        // EDD()->session->set($hash, $data);
+
+        $results = array(
+            'success' => true,
+            'data' => $data,
+            'to_process' => apply_filters( 'pp-leaderboard-report-sections', array('campaigns', 'fundraisers', 'donations', 'merchandises', 'tickets'), $campaign_ids ),
+        );
+
+        wp_send_json( $results );
+    }
+
+    public function get_report_data(){
+
+        $type = $_REQUEST['report_type'];
+        $campaign_ids = $_REQUEST['campaign_ids'];
+
+        $custom_data = apply_filters( 'pp-leaderboard-custom-report-sections-data', array(), $type, $campaign_ids );
+        if(!empty($custom_data)){
+            $results = array(
+                'success' => true,
+                'data' => $custom_data,
+            );
+
+            wp_send_json( $results );
+        }
+
+
+        $raw_data = json_decode( stripslashes($_REQUEST['data']), true);
+
+        $reports = new PP_Campaign_Donation_Reports($campaign_ids);
+
+        $reports->set_data($raw_data);
+
+        switch ($type) {
+            case 'campaigns':
+                $data = $reports->get_campaign_data();
+                break;
+                
+            case 'fundraisers':
+                $data = $reports->get_referral_data();
+                break;
+                
+            case 'donations':
+                $data = $reports->get_donation_data();
+                break;
+                
+            case 'merchandises':
+                $data = $reports->get_merchandise_data();
+                break;
+
+            case 'tickets':
+                $data = $reports->get_ticket_data();
+                break;
+            
+            default:
+                $data = $reports->get_all_donation_data();
+                break;
+        }
+
+        $results = array(
+            'success' => true,
+            'data' => $data,
+        );
+
+        wp_send_json( $results );
+    }
+
+    private function is_dashboard_report_page(){
+        global $post;
+
+        return ( get_post_type() == 'dashboard' ) && get_query_var( 'report', false );
+    }
+
+    public function change_wp_title_for_dashboard_report($wp_title, $sep, $seplocation){
+
+        if( $this->is_dashboard_report_page() ){
+            $wp_title = 'Report of ' . $wp_title;
+        }
+
+        return $wp_title;
+    }
+
+    public function change_item_name_on_dashboard_reports($item_name, $sort_key, $sort_value){
+
+        if( ($sort_key == 'campaign_id') ){
+            if(is_numeric($item_name)){
+                $item_name = html_entity_decode( get_the_title( $item_name ) );
+            } else {
+                $item_name = 'Campaigns';
+            }
+            
+        } elseif ($sort_key == 'type'){
+            $item_name = ucfirst($item_name);
+        } elseif ($sort_key == 'unique_key'){
+            $_exp = explode('-', $item_name);
+            $download_id = $_exp[0];
+            $price_id = isset($_exp[1]) ? $_exp[1] : false;
+
+            $item_name = html_entity_decode( get_the_title( $download_id ) );
+
+            if($price_id !== false){
+                $item_name .= ' - ' . edd_get_price_option_name( $download_id, $price_id );
+            }
+        } elseif($sort_key == 'referral'){
+            // $item_name = 'Fundraisers';
+        }
+
+        return $item_name;
+    }
+
+    public function display_dashboard_report_content($content){
+        global $post;
+
+        if( !$this->is_dashboard_report_page() ){
+            return $content;
+        }
+
+        // make sure this content protected
+        if( post_password_required($post) ){
+            return get_the_password_form( $post );
+        }
+
+        /**
+         * Remove ourselves as a filter to prevent eternal recursion if apply_filters('the_content')
+         * is called by one of the templates.
+         */
+        remove_filter( 'the_content', array($this, 'display_dashboard_report_content'), 10 );
+
+        if(!class_exists('PP_Dashboard_Reports')){
+            include_once( pp_toolkit()->directory_path . 'includes/reports/class-pp-dashboard-reports.php');
+        }
+
+        $campaign_group_id = pp_get_dashboard_term_id( $post->ID );
+
+        $args = array(
+            'fields' => 'ids',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'campaign_group',
+                    'field' => 'id',
+                    'terms' => $campaign_group_id,
+                    'include_children' => true
+                )
+            ),
+            'post_status' => 'publish',
+            'post_parent' => 0,
+        );
+
+        $query = Charitable_Campaigns::query($args);
+
+        $report = new PP_Campaign_Donation_Reports($query->posts);
+        $leaderboard = new PP_Charitable_Leaderboard( $post );
+
+        ob_start();
+
+        pp_toolkit_template('reports/dashboard-report.php', array(
+            'report' => $report,
+            'leaderboard' => $leaderboard,
+        ));
+
+        $content = ob_get_clean();
+
+        add_filter( 'the_content', array($this, 'display_dashboard_report_content'), 10, 1 );
+
+        return $content;
+    }
+
+    public function dashboard_password_required($required, $post){
+
+        if ( ! empty( $post->post_password ) ) {
+            return $required;
+        }
+
+        if( get_post_type() != 'dashboard' ){
+            return $required;
+        }
+
+        if( ! get_query_var( 'report', false ) ){
+            return $required;
+        }
+
+        if ( ! isset( $_COOKIE[ 'wp-postpass_' . COOKIEHASH ] ) ) {
+            /** This filter is documented in wp-includes/post.php */
+            return true;
+        }
+
+        $password = get_post_meta( $post->ID, '_report_page_password', true );
+
+        require_once ABSPATH . WPINC . '/class-phpass.php';
+        $hasher = new PasswordHash( 8, true );
+
+        $hash = wp_unslash( $_COOKIE[ 'wp-postpass_' . COOKIEHASH ] );
+        if ( 0 !== strpos( $hash, '$P$B' ) ) {
+            $required = true;
+        } else {
+            $required = ! $hasher->CheckPassword( $password, $hash );
+        }
+
+        return $required;
+    }
+
+    /**
+     * Save the term.
+     *
+     * @param int $id
+     */
+    public function saveTerm($id) {
+
+        if (! Guard::verifyNonce('cuztom_nonce', 'cuztom_meta')) {
+            return;
+        }
+
+        $values = (new Request($_POST))->getAll();
+
+        $post_id = get_term_meta( $id, '_dashboard_page', true );
+
+        $old_data = pp_get_dashboard_chapters($post_id);
+        $new_data = isset($values['_chapters']) && is_array($values['_chapters']) ? $values['_chapters'] : array();
+        
+        $removed = array_diff($old_data, $new_data);
+        $new = array_filter( array_diff($new_data, $old_data) );
+
+        if(!empty($removed)){
+            foreach ($removed as $id => $name) {
+                pp_remove_chapter($id);
+            }
+        }
+
+        if(!empty($new)){
+            foreach ($new as $name) {
+                pp_dashboard_insert_chapter($post_id, $name);
+            }
+        }
+
+        // echo $post_id;
+        // echo "<pre>";
+        // print_r($removed);
+        // echo "<pre>";
+        // echo "<pre>";
+        // print_r($new);
+        // echo "<pre>";
+        // echo "<pre>";
+        // print_r($old_data);
+        // echo "<pre>";
+        // echo "<pre>";
+        // print_r($values);
+        // echo "<pre>";
+        // exit();
+
+    }
+
+    public function create_post_types_and_tax(){
+
+        // create post type
+        $this->post_types['dashboard'] = register_cuztom_post_type('Dashboard', array(
+            // 'menu_icon' => 'dashicons-awards',
+            'show_in_menu' => false,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+            'capability_type' => 'page',
+        ) );
+
+        // $this->post_types['chapter'] = register_cuztom_post_type('Chapter', array(
+        //     'supports' => array( 'title', 'editor', 'thumbnail' ),
+        //     'menu_icon' => 'dashicons-awards',
+        //     'show_in_menu' => true,
+        //     // 'public' => false
+        // ) );
+
+        // create post type
+        $this->taxonomies[$this->taxonomy_name] = register_cuztom_taxonomy( $this->taxonomy_name, 'campaign', array(
+            // 'rewrite' => array(
+            //  'slug' => 'dashboard'
+            // ),
+            'public' => false,
+            'show_admin_column' => true,
+            'admin_column_sortable' => true,
+            'admin_column_filter' => true,
+            // 'labels' => array(
+                
+            // )
+        ) );
+
+
+        /**
+         * Register term metas for campaign_group
+         */
+        $pp_dashboard_settings_fields = array(
+            array(
+                'id'            => '_support_email',
+                'type'          => 'text',
+                'label'         => __('Support Email', 'philanthropy'),
+            ),
+            array(
+                'id'            => '_dashboard_page',
+                'label'         => __('Dashboard Page', 'philanthropy'),
+                'type'          => 'select',
+                'options'       => array('' => 'Select Page') + $this->get_parent_dashboard_pages(),
+            ),
+            array(
+                'id'            => '_dashboard_get_started_page',
+                'label'         => __('Get Started Page', 'philanthropy'),
+                'type'          => 'select',
+                'options'       => array('' => 'Select Page') + $this->get_child_dashboard_pages(),
+            ),
+            // array(
+            //     'id'            => '_dashboard_report_page',
+            //     'label'         => __('Report Page', 'philanthropy'),
+            //     'type'          => 'select',
+            //     'options'       => $this->get_dashboard_by_template('dashboard-templates/report.php'),
+            // ),
+            array(
+                'id'            => '_dashboard_color',
+                'label'         => __('Color', 'philanthropy'),
+                'type'          => 'color',
+            ),
+            array(
+                'id'                    => '_enable_leaderboard',
+                'type'                  => 'yesno',
+                'label'                 => __('Show Leaderboard'),
+                'default_value'         => 'no',
+            ),
+            array(
+                'id'                    => '_show_top_campaigns',
+                'type'                  => 'yesno',
+                'label'                 => __('Show leaderboard - TOP CAMPAIGNS'),
+                'default_value'         => 'no',
+            ),
+            array(
+                'id'                    => '_show_top_fundraisers',
+                'type'                  => 'yesno',
+                'label'                 => __('Show leaderboard - TOP FUNDRAISERS'),
+                'default_value'         => 'no',
+            ),
+            array(
+                'id'                    => '_enable_log_service_hours',
+                'type'                  => 'yesno',
+                'label'                 => __('Enable Tracking'),
+                'default_value'         => 'no',
+            ),
+            array(
+                'id'                    => '_export_service_hour',
+                'type'                  => 'export_service_hours',
+                'label'                 => __('Export Service Hour'),
+            ),
+            array(
+                'id'                    => '_prepopulate_chapters',
+                'type'                  => 'yesno',
+                'label'                 => __('Prepopulate Chapters'),
+                'default_value'         => 'no',
+            ),
+            array(
+                'id'                    => '_chapters',
+                'type'                  => 'text',
+                'label'                 => __('Chapters'),
+                'repeatable'            => true,
+            ),
+        );
+        
+        $this->taxonomies[$this->taxonomy_name]->addTermMeta( 
+            'dashboard_settings',
+            array(
+                'title'  => __('Dashboard Settings', 'philanthropy'),  
+                'fields' => apply_filters( 'pp_dashboard_settings_fields', $pp_dashboard_settings_fields )
+            ), 
+            array('add_form', 'edit_form') 
+        );
+
+        /**
+         * Add metabox
+         */
+        $this->metaboxes['campaign_groups'] = register_cuztom_meta_box(
+            'report',
+            'dashboard',
+            array(
+                'title'  => __('Report', 'philanthropy'),  
+                'fields' => array(
+                    array(
+                        'id'            => '_report_page_password',
+                        'type'          => 'text',
+                        'label'         => __('Report Page Password', 'philanthropy'),
+                        'default_value' => wp_generate_password( 10 ),
+                    )
+                )
+            ),
+            'side'
+        );
+        
+        // $this->metaboxes['campaign_groups'] = register_cuztom_meta_box(
+        //     'campaign_groups',
+        //     'dashboard',
+        //     array(
+        //         'title'  => __('Associated Groups', 'philanthropy'),  
+        //         'fields' => array(
+        //             array(
+        //                 'id'            => '_campaign_group',
+        //                 'type'          => 'select',
+        //                 'label'         => __('Campaign Group', 'philanthropy'),
+        //                 'options'       => $this->get_campaign_groups(),
+        //                 // 'show_admin_column'     => true,
+        //                 // 'admin_column_sortable' => true,
+        //                 // 'admin_column_filter'   => true,
+        //             ),
+        //             array(
+        //                 'id'            => '_support_email',
+        //                 'type'          => 'text',
+        //                 'label'         => __('Support Email', 'philanthropy'),
+        //                 // 'show_admin_column'     => true,
+        //                 // 'admin_column_sortable' => true,
+        //                 // 'admin_column_filter'   => true,
+        //             )
+        //         )
+        //     ),
+        //     'side'
+        // );
+
+        // $this->metaboxes['display'] = register_cuztom_meta_box(
+        //     'display',
+        //     'dashboard',
+        //     array(
+        //         'title'  => __('Display', 'philanthropy'),  
+        //         'fields' => array(
+        //             array(
+        //                 'id'    => '_page_color',
+        //                 'type'  => 'color',
+        //                 'label' => __('Color', 'philanthropy'),
+        //             ),
+        //         )
+        //     ),
+        //     'side'
+        // );
+
+        // Community Service Hours
+        // $this->metaboxes['service_hours'] = register_cuztom_meta_box(
+        //     'service_hours',
+        //     'dashboard',
+        //     array(
+        //         'title'  => __('Community Service Hours', 'philanthropy'),  
+        //         'fields' => array(
+        //             array(
+        //                 'id'                    => '_enable_log_service_hours',
+        //                 'type'                  => 'yesno',
+        //                 'label'                 => __('Enable Tracking'),
+        //                 'default_value'         => 'no',
+        //             ),
+        //             array(
+        //                 'id'                    => '_prepopulate_chapters',
+        //                 'type'                  => 'yesno',
+        //                 'label'                 => __('Prepopulate Chapters'),
+        //                 'default_value'         => 'no',
+        //             ),
+        //         )
+        //     ),
+        //     'normal'
+        // );
+
+        // Community Service Hours
+        // $this->metaboxes['leaderboard'] = register_cuztom_meta_box(
+        //     'leaderboard',
+        //     'dashboard',
+        //     array(
+        //         'title'  => __('Leaderboard', 'philanthropy'),  
+        //         'fields' => array(
+        //             array(
+        //                 'id'                    => '_enable_leaderboard',
+        //                 'type'                  => 'yesno',
+        //                 'label'                 => __('Show Leaderboard'),
+        //                 'default_value'         => 'no',
+        //             ),
+        //             array(
+        //                 'id'                    => '_show_top_campaigns',
+        //                 'type'                  => 'yesno',
+        //                 'label'                 => __('Show leaderboard - TOP CAMPAIGNS'),
+        //                 'default_value'         => 'no',
+        //             ),
+        //             array(
+        //                 'id'                    => '_show_top_fundraisers',
+        //                 'type'                  => 'yesno',
+        //                 'label'                 => __('Show leaderboard - TOP FUNDRAISERS'),
+        //                 'default_value'         => 'no',
+        //             ),
+        //         )
+        //     ),
+        //     'normal'
+        // );
+
+
+        if(isset($_GET['post'])){
+            $this->metaboxes['widget'] = register_cuztom_meta_box(
+                'widget',
+                'dashboard',
+                array(
+                    'title'  => __('Widget', 'philanthropy'),  
+                    'fields' => array(
+                        array(
+                            'id'                    => 'widget_embed_code',
+                            'type'                  => 'textarea',
+                            'label'                 => __('Widget embed code'),
+                            'default_value'         => pp_get_dashbaord_embed_code(intval($_GET['post'])),
+                            'args'                  => array(
+                                'class' => 'dasdasd'
+                            ),
+                            // 'show_admin_column'     => false,
+                            // 'admin_column_sortable' => false,
+                            // 'admin_column_filter'   => false,
+                        ),
+                    )
+                ),
+                'normal'
+            );
+        }
+    }
+
+    private function get_dashboard_by_template($template_location){
+
+        $options = array();
+
+        $args = array(
+            'post_type'         => 'dashboard',
+            'posts_per_page'    => -1,
+            'cache_results'     => false,
+            'no_found_rows'     => true,
+            'meta_key'          => '_wp_page_template',
+            'meta_value'        => $template_location,
+            'post_status'       => 'publish',
+        );
+
+        $posts = get_posts($args);
+        if(!empty($posts)):
+        foreach ($posts as $p) {
+            $opt_name = '';
+            if(!empty($p->post_parent)){
+                $opt_name .= get_post_field( 'post_title', $p->post_parent ) . ' - ';
+            }
+
+            $opt_name .= $p->post_title;
+
+            $options[$p->ID] = $opt_name;
+        }
+        endif;
+
+        return $options;
+    }
+
+    private function get_parent_dashboard_pages(){
+
+        $options = array();
+
+        $args = array(
+            'post_type'         => 'dashboard',
+            'posts_per_page'    => -1,
+            'cache_results'     => false,
+            'no_found_rows'     => true,
+            'post_status'       => 'publish',
+            'post_parent'       => 0,
+        );
+
+        $posts = get_posts($args);
+        if(!empty($posts)):
+        foreach ($posts as $p) {
+            $opt_name = '';
+            if(!empty($p->post_parent)){
+                $opt_name .= get_post_field( 'post_title', $p->post_parent ) . ' - ';
+            }
+
+            $opt_name .= $p->post_title;
+
+            $options[$p->ID] = $opt_name;
+        }
+        endif;
+
+        return $options;
+    }
+
+    private function get_child_dashboard_pages(){
+
+        $options = array();
+
+        $args = array(
+            'post_type'         => 'dashboard',
+            'posts_per_page'    => -1,
+            'cache_results'     => false,
+            'no_found_rows'     => true,
+            'post_status'       => 'publish',
+            'post_parent'       => null,
+        );
+
+        $posts = get_posts($args);
+        if(!empty($posts)):
+        foreach ($posts as $p) {
+
+            if(empty($p->post_parent))
+                continue;
+
+            $opt_name = '';
+            if(!empty($p->post_parent)){
+                $opt_name .= get_post_field( 'post_title', $p->post_parent ) . ' - ';
+            }
+
+            $opt_name .= $p->post_title;
+
+            $options[$p->ID] = $opt_name;
+        }
+        endif;
+
+        return $options;
+    }
+
+    public function add_to_submenu($menu){
+
+        $leaderboard_menu = array(
+            array(
+                'page_title' => __('Dashboards', 'philanthropy'),
+                'menu_title' => __('Dashboards', 'philanthropy'),
+                'menu_slug' => 'edit.php?post_type=dashboard',
+            ),
+            array(
+                'page_title' => __('Campaign Groups', 'philanthropy'),
+                'menu_title' => __('Groups', 'philanthropy'),
+                'menu_slug' => 'edit-tags.php?taxonomy='.$this->taxonomy_name.'&post_type=campaign',
+            )
+        );
+
+        array_splice( $menu, 3, 0, $leaderboard_menu ); // splice in at position 3
+
+        return $menu;
+    }
+    
+    public function get_campaign_groups(){
+        $terms = get_terms( array(
+            'taxonomy' => $this->taxonomy_name,
+            'hide_empty' => false,
+            'fields' => 'id=>name'
+        ) );
+
+        $terms = (is_array($terms) && !is_wp_error( $terms )) ? $terms : array();
+
+        return array('0' => __('Please select group', 'philanthropy') ) + $terms;
+    }
+
+    public function display_share($post){
+        echo '<div class="campaign-summary" style="border: none;padding: 0px;">';
+        echo '<div class="share-under-desc">';
+        pp_toolkit_template( 'dashboard/share.php', array('dashboard' => $post) );
+        echo '</div>';
+        echo '</div>';
+    }
+
+    public function leaderboard_template_include($template){
+
+        // disable force user dashboard template
+        if(is_tax($this->taxonomy_name)){
+            add_filter( 'charitable_force_user_dashboard_template', '__return_false', 100 );
+        }
+
+        if ( charitable_is_page( 'leaderboard_widget' ) ) {
+
+            do_action( 'charitable_is_widget' );
+
+            add_filter( 'show_admin_bar', '__return_false' );
+            add_action( 'wp_head', 'charitable_hide_admin_bar' );
+
+            $new_template = apply_filters( 'charitable_widget_page_template', 'dashboard-widget.php' );
+            $template = pp_toolkit_get_template_path( $new_template, $template );
+        }
+
+        return $template;
+    }
+
+    public function is_page_leaderboard_widget(){
+        global $wp_query;
+
+        return $wp_query->is_main_query()
+            && isset( $wp_query->query_vars['widget'] )
+            && $wp_query->is_singular( 'dashboard' );
+    }
+
+    public function add_body_classes( $classes ) {
+        if ( charitable_is_page( 'leaderboard_widget' ) ) {
+            $classes[] = 'dashboard-widget';
+            $classes[] = 'single-campaign';
+            $classes[] = 'campaign-widget';
+        }
+
+        return $classes;
+    }
+
+    public function remove_name_for_widget_input($name, $Field){
+        if($Field->id == 'widget_embed_code'){
+            $name = "";
+        }
+
+        return $name;
+    }
+
+    public function includes(){
+        require_once pp_toolkit()->directory_path . 'helpers/pp-cuztom-fields/ExportServiceHours.php';
+    }
+
+}
+
+PP_Leaderboard::init();

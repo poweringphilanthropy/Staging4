@@ -1,0 +1,961 @@
+# Copyright (C) 2017 WP Charitable
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Reach 1.0.12\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2017-06-21 02:37:40+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: 404.php:17
+msgid "Sorry, but you've hit a dead end."
+msgstr ""
+
+#: 404.php:19
+msgid "Go home"
+msgstr ""
+
+#: archive-campaign.php:36
+msgid "Older Campaigns"
+msgstr ""
+
+#: archive-campaign.php:36
+msgid "Newer Campaigns"
+msgstr ""
+
+#: author.php:27
+msgid "Joined %s"
+msgstr ""
+
+#: author.php:31
+msgid "Bio"
+msgstr ""
+
+#: author.php:37
+msgid "Visit %s's website"
+msgstr ""
+
+#: author.php:43
+msgid "Visit %s's Twitter profile"
+msgstr ""
+
+#: author.php:49
+msgid "Visit %s's Facebook profile"
+msgstr ""
+
+#: campaign-donation-page.php:45 edd-checkout.php:43
+msgid "Thank you for supporting this campaign"
+msgstr ""
+
+#: charitable/campaign/share.php:22
+msgid "Share"
+msgstr ""
+
+#: charitable/campaign/share.php:42
+msgid "Share Campaign"
+msgstr ""
+
+#: charitable/campaign/share.php:44
+msgid "Embed Code"
+msgstr ""
+
+#: charitable/campaign/share.php:48
+msgid "Preview"
+msgstr ""
+
+#: charitable/campaign/stats.php:24
+msgid "Donated"
+msgstr ""
+
+#: charitable/campaign/stats.php:29
+msgid "Goal"
+msgstr ""
+
+#: charitable/campaign/stats.php:34
+msgid "Donors"
+msgstr ""
+
+#: charitable/campaign/summary-time-left.php:24
+msgid "Time left to donate"
+msgstr ""
+
+#: charitable/campaign-loop/stats.php:42
+msgid "Funded"
+msgstr ""
+
+#: charitable/campaign-loop/stats.php:46
+msgid "Pledged"
+msgstr ""
+
+#: charitable/charitable-ambassadors/edit-campaign-link.php:30
+msgid "Edit campaign"
+msgstr ""
+
+#: comments-campaign.php:20
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments-campaign.php:42 comments.php:33
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments-campaign.php:56 comments-campaign.php:81 comments.php:47
+#: comments.php:76
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:19
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:43
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:44
+msgid "Older Comments"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Reach"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:122
+msgid ""
+"Enjoying Reach? Why not <a href=\"%s\" target=\"_blank\">leave a %s "
+"review</a> on WordPress.org? We'd really appreciate it."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:130
+msgid "Built for Fundraising"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:131
+msgid ""
+"We built Reach to help non-profits & social entrepreneurs run beautiful "
+"online fundraising campaigns. Install Charitable to start accepting "
+"donations today."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:134
+msgid "Charitable is installed"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:136
+msgid "Install Charitable"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:139
+msgid "Supported Plugins"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:140
+msgid ""
+"Below are some plugins that can help you get the most out of Reach. They're "
+"all optional; Reach will work just fine without them."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:143
+msgid ""
+"<strong>Charitable</strong> is a free WordPress donation plugin that we "
+"created to help you raise money on your website. Supports PayPal & offline "
+"donations out of the box."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:144
+msgid "Charitable WordPress.org page"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:144
+msgid "View Charitable"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:147
+msgid ""
+"<strong>Easy Digital Downloads</strong> by Pippin Williamson is a plugin "
+"that allows you to sell digital downloads through WordPress, for free. An "
+"optional add-on is the <a href=\"%s\" title=\"Charitable Easy Digital "
+"Downloads product page\" alt=\"Charitable Easy Digital Downloads product "
+"page\">Charitable Easy Digital Downloads Connect plugin</a>, which allows "
+"you to also accept donations through Easy Digital Downloads."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:148
+msgid "Easy Digital Downloads WordPress.org page"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:148
+msgid "View Easy Digital Downloads"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:151
+msgid ""
+"<strong>The Events Calendar</strong> by Modern Tribe is a brilliant event "
+"management plugin. It's available as a free, fully featured plugin, with "
+"premium upgrades that allow you to do things like sell tickets, create "
+"recurring events and import events from Facebook."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:152
+msgid "The Events Calendar WordPress.org page"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:152
+msgid "View The Events Calendar"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:155
+msgid ""
+"<strong>Ninja Forms</strong> by the WP Ninjas is a free form plugin. It "
+"features a robust form builder to allow you to create powerful forms for "
+"your site."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:156
+msgid "Ninja Forms WordPress.org page"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:156
+msgid "View Ninja Forms"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:159
+msgid "Paid Upgrades"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:161
+msgid ""
+"<a href=\"%s\"><strong>Charitable Ambassadors</strong></a> transforms your "
+"website into a peer-to-peer fundraising or crowdfunding platform, with "
+"front-end campaign submissions."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:162
+msgid ""
+"<a href=\"%s\"><strong>Charitable Stripe</strong></a> allows you to accept "
+"credit card donations securely on your website."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:163
+msgid ""
+"<a href=\"%s\"><strong>Charitable Authorize.Net</strong></a> allows your to "
+"accept donations through your Authorize.Net account, securely on your "
+"website."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:171
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:173
+msgid "Customizer settings"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:174
+msgid "How to set up the homepage"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:175
+msgid "Create the site menu"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:176
+msgid "Set up widget areas"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:177
+msgid "How to use the child theme"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:179
+msgid "Online documentation"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:179
+msgid "More online documenation"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:181
+msgid "Contribute to Reach"
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:183
+msgid ""
+"Found a bug? Want to contribute a patch or create a new feature? <a "
+"href=\"%s\">GitHub is the place to go!</a> Or would you like to translate "
+"Reach into your language? <a href=\"%s\">Get involved on WordPress.org</a>."
+msgstr ""
+
+#: inc/admin/class-reach-admin.php:246
+msgid "Logos have changed in Reach 1.0.3. <a href=\"%s\">Find out more</a>"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:267
+msgid "Hide the title"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:278
+msgid "Hide the tagline"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:298
+msgid "Layout"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:311
+msgid "Wide Layout"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:312
+msgid "Boxed Layout"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:332
+msgid "Colour"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:344
+msgid "Accent Colour"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:345
+msgid "Used for: site title, links, banner background, feature section background"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:357
+msgid "Body Background Colour"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:358
+msgid "Used for: site background"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:370
+msgid "Text Colour"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:371
+msgid "Used for: text, buttons, site navigation"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:383
+msgid "Header Text"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:384
+msgid "Used for social profile icons & button text"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:396
+msgid "Footer Text"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:416 inc/class-reach-theme.php:598
+msgid "Footer"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:422 partials/footer-notice.php:13
+msgid "Reach: A WordPress theme by WP Charitable"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:427
+msgid "Tagline"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:453
+msgid "Campaigns"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:464
+msgid "Background image for campaign summary block"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:495
+msgid "Where would you like the campaign video and featured image to be displayed?"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:498
+msgid "Featured image in summary, video before content."
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:499
+msgid "Video in summary, featured image before content."
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:518
+msgid "Social Profiles"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:519
+msgid ""
+"Enter the complete URL to your profile for each service below that you "
+"would like to share."
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:551
+msgid "Background Images"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:557
+msgid "Body"
+msgstr ""
+
+#: inc/admin/class-reach-customizer.php:575
+msgid "Blog & Page Banners"
+msgstr ""
+
+#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:61
+msgid ""
+"Reach_Customizer_Retina_Image_Control must be instantiated before or during "
+"the customize_register action."
+msgstr ""
+
+#: inc/admin/customizer-controls/class-reach-customizer-retina-image-control.php:87
+msgid "Is this image retina-ready?"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:101
+msgid "Your pledge must be at least the minimum pledge amount."
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:102
+msgid "Years"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:103
+msgid "Months"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:104
+msgid "Weeks"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:105
+msgid "Days"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:106
+msgid "Hours"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:107
+msgid "Minutes"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:108
+msgid "Seconds"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:109
+msgid "Year"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:110
+msgid "Month"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:111
+msgid "Day"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:112
+msgid "Hour"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:113
+msgid "Minute"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:114
+msgid "Second"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:206
+msgid "Donation Receipt"
+msgstr ""
+
+#: inc/charitable/class-reach-charitable.php:208
+msgid "Dashboard"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:31
+msgid "Categories"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:32
+msgid "All"
+msgstr ""
+
+#: inc/charitable/functions/template-tags.php:58
+msgid "<span>Campaign</span> has ended"
+msgstr ""
+
+#: inc/class-reach-theme.php:405
+msgid ""
+"Thanks for choosing Reach! You can read hints and tips on how get the most "
+"out of your new theme on the <a href=\"%s\">welcome screen</a>."
+msgstr ""
+
+#: inc/class-reach-theme.php:409
+msgid "Get started with Reach"
+msgstr ""
+
+#: inc/class-reach-theme.php:449
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/class-reach-theme.php:568
+msgid "Default sidebar"
+msgstr ""
+
+#: inc/class-reach-theme.php:569
+msgid "The default sidebar."
+msgstr ""
+
+#: inc/class-reach-theme.php:578
+msgid "Campaign sidebar"
+msgstr ""
+
+#: inc/class-reach-theme.php:579
+msgid "The campaign sidebar."
+msgstr ""
+
+#: inc/class-reach-theme.php:588
+msgid "Campaign below content"
+msgstr ""
+
+#: inc/class-reach-theme.php:589
+msgid "Displayed below the campaign's content, but above the comment section."
+msgstr ""
+
+#: inc/class-reach-theme.php:773
+msgid "Page %s"
+msgstr ""
+
+#: inc/class-reach-theme.php:859
+msgid "Continue Reading"
+msgstr ""
+
+#: inc/easy-digital-downloads/functions/template-tags.php:24
+msgid "Qty"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:69
+msgid "Body Text"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:70
+msgid "Please select a font for the theme's body text."
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:74
+msgid "Site Title"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:75
+msgid "Please select a font for your site title."
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:81
+msgid "Site Tagline"
+msgstr ""
+
+#: inc/easy-google-fonts/class-reach-easy-google-fonts.php:82
+msgid "Please select a font for your site tagline."
+msgstr ""
+
+#: inc/functions/comments.php:17 inc/functions/comments.php:18
+msgid "Name"
+msgstr ""
+
+#: inc/functions/comments.php:21 inc/functions/comments.php:22
+msgid "Website"
+msgstr ""
+
+#: inc/functions/comments.php:25 inc/functions/comments.php:26
+msgid "Email"
+msgstr ""
+
+#: inc/functions/comments.php:48 inc/functions/comments.php:49
+msgid "Leave your comment"
+msgstr ""
+
+#: inc/functions/comments.php:95
+msgid "Pingback:"
+msgstr ""
+
+#: inc/functions/comments.php:96
+msgid "Edit"
+msgstr ""
+
+#: inc/functions/comments.php:115
+msgid "Author"
+msgstr ""
+
+#: inc/functions/helper-functions.php:99
+msgid "Facebook"
+msgstr ""
+
+#: inc/functions/helper-functions.php:100
+msgid "Flickr"
+msgstr ""
+
+#: inc/functions/helper-functions.php:101
+msgid "Foursquare"
+msgstr ""
+
+#: inc/functions/helper-functions.php:102
+msgid "Google+"
+msgstr ""
+
+#: inc/functions/helper-functions.php:103
+msgid "Instagram"
+msgstr ""
+
+#: inc/functions/helper-functions.php:104
+msgid "Linkedin"
+msgstr ""
+
+#: inc/functions/helper-functions.php:105
+msgid "Pinterest"
+msgstr ""
+
+#: inc/functions/helper-functions.php:106
+msgid "Renren"
+msgstr ""
+
+#: inc/functions/helper-functions.php:107
+msgid "Skype"
+msgstr ""
+
+#: inc/functions/helper-functions.php:108
+msgid "Tumblr"
+msgstr ""
+
+#: inc/functions/helper-functions.php:109
+msgid "Twitter"
+msgstr ""
+
+#: inc/functions/helper-functions.php:110
+msgid "VK"
+msgstr ""
+
+#: inc/functions/helper-functions.php:111
+msgid "Weibo"
+msgstr ""
+
+#: inc/functions/helper-functions.php:112
+msgid "Windows"
+msgstr ""
+
+#: inc/functions/helper-functions.php:113
+msgid "Xing"
+msgstr ""
+
+#: inc/functions/helper-functions.php:114
+msgid "YouTube"
+msgstr ""
+
+#: inc/functions/helper-functions.php:179
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/functions/helper-functions.php:185
+msgid "Year: %s"
+msgstr ""
+
+#: inc/functions/helper-functions.php:188
+msgid "Month: %s"
+msgstr ""
+
+#: inc/functions/helper-functions.php:191
+msgid "Day: %s"
+msgstr ""
+
+#: inc/functions/template-tags.php:31
+msgid "Older Posts"
+msgstr ""
+
+#: inc/functions/template-tags.php:35
+msgid "Newer Posts"
+msgstr ""
+
+#: inc/functions/template-tags.php:40
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/functions/template-tags.php:75
+msgid "Post navigation"
+msgstr ""
+
+#: inc/functions/template-tags.php:122
+msgid "Go to homepage"
+msgstr ""
+
+#: inc/functions/template-tags.php:297
+msgid "Edit your profile"
+msgstr ""
+
+#: inc/functions/template-tags.php:298
+msgid "Edit Profile"
+msgstr ""
+
+#: partials/account-links.php:20
+msgid "Create a campaign"
+msgstr ""
+
+#: partials/account-links.php:27
+msgid "Profile"
+msgstr ""
+
+#: partials/account-links.php:30
+msgid "Log out"
+msgstr ""
+
+#: partials/account-links.php:34
+msgid "Login / Register"
+msgstr ""
+
+#: partials/author-activity-summary.php:17
+msgid "Campaigns Backed"
+msgstr ""
+
+#: partials/author-activity-summary.php:17
+msgid "Campaigns Created"
+msgstr ""
+
+#: partials/author-activity.php:19
+msgid "Activity Feed"
+msgstr ""
+
+#: partials/campaign-grid.php:17
+msgid "Latest Projects"
+msgstr ""
+
+#: partials/campaign-grid.php:31
+msgid "Previous Campaigns"
+msgstr ""
+
+#: partials/content-campaign.php:18
+msgid "About the Campaign"
+msgstr ""
+
+#: partials/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: partials/content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: partials/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: partials/content-page.php:19 partials/content-stripped.php:18
+#: partials/content-user-dashboard.php:25
+msgid "Pages:"
+msgstr ""
+
+#: partials/content-search.php:27 partials/content-video.php:37
+#: partials/content.php:34
+msgid "Pages: "
+msgstr ""
+
+#: partials/featured-image.php:18
+msgid "Go to %s"
+msgstr ""
+
+#: partials/meta-byline.php:25
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: partials/sticky.php:11
+msgid "Sticky"
+msgstr ""
+
+#: sidebar-download.php:29
+msgid "Published:"
+msgstr ""
+
+#: sidebar-download.php:37
+msgid "Categories:"
+msgstr ""
+
+#: sidebar-download.php:47
+msgid "Tags:"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.wpcharitable.com/reach/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Reach is the perfect theme for your fundraising or crowdfunding website. "
+"Designed and developed by the creators of Charitable, a WordPress donation "
+"plugin, Reach is focused on helping organisations create an attractive "
+"website with a strong focus on fundraising campaigns. It is well-suited to "
+"non-profits, charities, NGOs and other organizations who need a website "
+"that drives donations. Reach is fully responsive. Through the Customizer "
+"you can easily change colours, background images and the logo, as well as "
+"much more. Reach also has built-in support for Easy Digital Downloads, "
+"Ninja Forms and The Events Calendar. For documentation and a demo, visit "
+"http://demo.wpcharitable.com/reach/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Fullwidth"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Stripped"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "User Dashboard"
+msgstr ""
+
+#: author.php:26
+msgctxt "about person"
+msgid "About %s"
+msgstr ""
+
+#: charitable/campaign/progress-barometer.php:43
+msgctxt "x percent funded"
+msgid "<span>%s<sup>&#37;</sup></span> Funded"
+msgstr ""
+
+#: charitable/campaign-loop/creator.php:26
+msgctxt "by author"
+msgid "By <a href=\"%s\">%s</a>"
+msgstr ""
+
+#: charitable/charitable-ambassadors/edit-campaign-link.php:26
+msgctxt "status for campaign"
+msgid "Status: %s"
+msgstr ""
+
+#: inc/class-reach-theme.php:854
+msgctxt "keep reading post"
+msgid "Keep reading %s"
+msgstr ""
+
+#: inc/functions/comments.php:103
+msgctxt "reply to comment"
+msgid "Reply"
+msgstr ""
+
+#: inc/functions/comments.php:121
+msgctxt "date at time"
+msgid "%s at %s"
+msgstr ""
+
+#: inc/functions/helper-functions.php:185
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/functions/helper-functions.php:188
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/functions/helper-functions.php:191
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/functions/template-tags.php:80
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
+
+#: inc/functions/template-tags.php:84
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: partials/author-activity-campaign.php:15
+msgctxt "user created campaign"
+msgid "%1$s created %2$s"
+msgstr ""
+
+#: partials/author-activity-campaign.php:19
+#: partials/author-activity-donation.php:22
+#: partials/author-activity-post.php:15
+msgctxt "time ago"
+msgid "%s ago"
+msgstr ""
+
+#: partials/author-activity-donation.php:18
+msgctxt "user backed campaign(s)"
+msgid "%1$s backed %2$s"
+msgstr ""
+
+#: partials/author-activity-post.php:11
+msgctxt "user published post"
+msgid "%1$s published %2$s"
+msgstr ""
+
+#: partials/author-activity.php:37
+msgctxt "user has no activity"
+msgid "%s has no activity to show yet."
+msgstr ""
+
+#: partials/meta-byline.php:18
+msgctxt "posted on date by author"
+msgid "Posted on %s by %s."
+msgstr ""
+
+#: searchform.php:3 searchform.php:4
+msgctxt "search label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "search placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:6
+msgctxt "submit button"
+msgid "Search"
+msgstr ""

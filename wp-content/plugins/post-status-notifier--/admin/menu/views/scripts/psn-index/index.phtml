@@ -1,0 +1,34 @@
+<form action="admin-post.php" method="post">
+
+    <?php wp_nonce_field($this->pm->getPathinfo()->getDirname() . '-general'); ?>
+    <?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
+    <?php wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false ); ?>
+    <input type="hidden" name="action" value="save-<?php echo $this->pm->getPathinfo()->getDirname(); ?>-general" />
+    
+    <div id="dashboard-widgets" class="metabox-holder has-right-sidebar">
+    
+        <div id="post-body">
+            <div id="dashboard-widgets-main-content">
+                <div class="postbox-container" style="width: 70%;">
+                    <?php $this->metaBoxContainerLeft->render(); ?>
+                </div>
+                <div class="postbox-container" style="width: 29%;">
+                    <?php $this->metaBoxContainerRight->render(); ?>
+                </div>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+
+</form>
+
+<script type="text/javascript">
+    //<![CDATA[
+    jQuery(document).ready( function($) {
+        // close postboxes that should be closed
+        $('.if-js-closed').removeClass('if-js-closed').addClass('closed');
+        // postboxes setup
+        postboxes.add_postbox_toggles('<?php echo $this->pageHook; ?>');
+    });
+    //]]>
+</script>

@@ -1,0 +1,88 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Top Bar\n"
+"POT-Creation-Date: 2015-08-20 16:23+0800\n"
+"PO-Revision-Date: 2015-08-11 17:42+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: topbar.php:120
+msgid "options"
+msgstr ""
+
+#: topbar.php:126
+msgid "Top Bar status"
+msgstr ""
+
+#: topbar.php:127
+msgid "You can activate/deactivate your topbar at anytime."
+msgstr ""
+
+#: topbar.php:131 topbar.php:135 topbar.php:138
+msgid "Active"
+msgstr ""
+
+#: topbar.php:132 topbar.php:134 topbar.php:137
+msgid "Inactive"
+msgstr ""
+
+#: topbar.php:149
+msgid "Always visible?"
+msgstr ""
+
+#: topbar.php:150
+msgid "If this is set to 'Yes' the top bar will stick to the top of the screen."
+msgstr ""
+
+#: topbar.php:154 topbar.php:158 topbar.php:161 topbar.php:172 topbar.php:176
+#: topbar.php:179
+msgid "Yes"
+msgstr ""
+
+#: topbar.php:155 topbar.php:157 topbar.php:160 topbar.php:173 topbar.php:175
+#: topbar.php:178
+msgid "No"
+msgstr ""
+
+#: topbar.php:165
+msgid "Message"
+msgstr ""
+
+#: topbar.php:166
+msgid "eg. Check out our new product right now!"
+msgstr ""
+
+#: topbar.php:168
+msgid "Button"
+msgstr ""
+
+#: topbar.php:183
+msgid "Button text"
+msgstr ""
+
+#: topbar.php:184
+msgid "eg. See product"
+msgstr ""
+
+#: topbar.php:186
+msgid "Button URL"
+msgstr ""
+
+#: topbar.php:187
+msgid "eg. http://wpdarko.com"
+msgstr ""
+
+#: topbar.php:199
+msgid "Top Bar color"
+msgstr ""

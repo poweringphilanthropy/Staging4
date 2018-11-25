@@ -1,0 +1,18 @@
+AddHandler application/x-httpd-php56 .php .php5 .php4 .php3
+
+#ErrorDocument 403 /maintenance.html
+#Order Allow,Deny
+#Allow from 36.79.159.156
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+

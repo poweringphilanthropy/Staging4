@@ -1,0 +1,14 @@
+#charitable-campaign-advanced-metabox.ui-tabs .charitable-tabs.ui-tabs-nav li {
+	background-color: #f5f5f5;
+}
+.pp-repeatable-fields .remove-col {
+	width: 30px;
+    vertical-align: middle;
+}
+.pp-repeatable-fields .remove-col .pp-remove-row {
+	cursor: pointer;
+}
+
+.postbox-container .cuztom .cuztom-table td, .cuztom .cuztom-table th {
+	width: initial;
+}

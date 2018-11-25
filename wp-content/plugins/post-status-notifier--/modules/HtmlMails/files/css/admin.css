@@ -1,0 +1,29 @@
+.cke_maximized {
+    top: 32px !important;
+}
+
+form#psn_form_mailtemplate textarea#body, form#psn_form_mailtemplate textarea#altbody {
+    width: 100%;
+}
+
+form#psn_form_mailtemplate input[type="text"] {
+    width: 500px;
+}
+
+form#psn_form_mailtemplate label {
+    float: none;
+    display: block;
+}
+form#psn_form_mailtemplate p.hint {
+    margin: 0;
+}
+
+#psn_option_placeholders_filters {
+    width: 95%;
+    height: 200px;
+}
+#mailbody_html_editor {
+    width: 90%;
+    height: 600px;
+    border: 1px solid #ddd;
+}

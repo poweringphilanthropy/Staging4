@@ -1,0 +1,46 @@
+.donor-comment {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 400px;
+    max-width: 67%;
+    margin: -20px 20px 20px 20px;
+    padding: 1em 0 0;
+    font-style: italic;
+    background-color: #fef7f1;
+    border-left: 4px solid #d54e21;
+}
+
+.donor-comment-approved {
+    background-color: #edfaff;
+    border-left-color: #cbf0ff;
+}
+
+.donor-comment p {
+    margin: 0 0 1em;
+}
+
+.donor-comment > * {
+    padding: 0 10px;
+}
+
+.donor-comment .donor-comment-actions {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-style: normal;
+    margin: 0;
+}
+
+.donor-comment-actions a {
+    margin-right: 8px;
+}
+
+.donor-comment-status {
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 11px;
+}

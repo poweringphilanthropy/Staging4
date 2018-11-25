@@ -1,0 +1,5 @@
+<h3><?php _e('Rule matches log', 'psn_lmt'); ?></h3>
+<p class="ifw-wp-icon-info"><?php _e("This page shows PSN's limitations log data. Based on this data, PSN can decide if a rule match has reached its limit based on your limitations settings.<br>You can delete entries to reduce the limitation effect on a rule / post combination.", 'psn_lmt'); ?></p>
+<?php
+echo $this->listTable->display();
+?>

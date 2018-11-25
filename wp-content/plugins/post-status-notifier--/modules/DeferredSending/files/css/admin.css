@@ -1,0 +1,22 @@
+#mailqueue_actions {
+    padding-bottom: 10px;
+}
+#mailqueue_subnav {
+    padding-top: 10px;
+}
+#mailqueue_run_help_toggle {
+    margin-left: 10px;
+}
+table.mailqueues th#id, table.mailqueuelogs th#id {
+    width: 100px;
+}
+table.mailqueues th#added, table.mailqueuelogs th#added, table.mailqueuelogs th#sent {
+    width: 180px;
+}
+table.mailqueues th#tries, table.mailqueuelogs th#tries {
+    width: 80px;
+    text-align: center;
+}
+table.mailqueues td.column-tries, table.mailqueuelogs td.column-tries {
+    text-align: center;
+}

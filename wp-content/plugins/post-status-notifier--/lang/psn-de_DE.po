@@ -1,0 +1,847 @@
+# Copyright (C) 2013 Post Status Notifier
+# This file is distributed under the same license as the Post Status Notifier package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Status Notifier 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/post-status-notifier\n"
+"POT-Creation-Date: 2013-04-17 20:01:32+00:00\n"
+"PO-Revision-Date: 2015-04-24 19:07+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"Language: de_DE\n"
+
+#: admin/menu/controllers/PsnApplicationController.php:19
+msgid "Overview"
+msgstr "Übersicht"
+
+#: admin/menu/controllers/PsnApplicationController.php:30
+#: admin/menu/controllers/PsnRulesController.php:48
+msgid "Rules"
+msgstr "Regeln"
+
+#: admin/menu/controllers/PsnIndexController.php:40
+#: admin/menu/controllers/PsnOptionsController.php:20
+#: modules/Logger/controllers/PsnLogController.php:55
+msgid "Setup"
+msgstr "Einstellungen"
+
+#: admin/menu/controllers/PsnIndexController.php:68
+#: admin/menu/controllers/PsnOptionsController.php:31
+#: modules/Logger/controllers/PsnLogController.php:84
+msgid "This is an overview of your plugin settings"
+msgstr "Dies ist eine Übersicht über deine Plugin Einstellungen"
+
+#: admin/menu/controllers/PsnRulesController.php:51
+#: admin/menu/controllers/PsnRulesController.php:128
+#: lib/Psn/Admin/Metabox/Rules.php:51
+msgid "Create new rule"
+msgstr "Neue Regel erstellen"
+
+#: admin/menu/controllers/PsnRulesController.php:69
+msgid "Rule <b>%s</b> has been saved successfully."
+msgstr "Regel <b>%s</b> wurde erfolgreich gespeichert."
+
+#: admin/menu/controllers/PsnRulesController.php:101
+msgid "Rule <b>%s</b> has been updated successfully."
+msgstr "Regel <b>%s</b> wurde erfolgreich aktualisiert."
+
+#: admin/menu/controllers/PsnRulesController.php:118
+msgid "Placeholders"
+msgstr "Platzhalter"
+
+#: admin/menu/controllers/PsnRulesController.php:120
+msgid "Show list of placeholders available for subject and text"
+msgstr ""
+"Liste aller Platzhalter anzeigen, die für Betreff und Text verfügbar sind"
+
+#: admin/menu/controllers/PsnRulesController.php:121
+msgid "List of placeholders"
+msgstr "Liste der Platzhalter"
+
+#: admin/menu/controllers/PsnRulesController.php:130
+msgid "Edit notification rule"
+msgstr "Benachrichtigungsregel bearbeiten"
+
+#: admin/menu/controllers/PsnRulesController.php:131
+msgid "Update"
+msgstr "Update"
+
+#: admin/menu/controllers/PsnRulesController.php:186
+msgid "Here you can manage your post status notification rules."
+msgstr "Hier kannst du deine Post-Status Benachrichtigungen verwalten."
+
+#: admin/menu/controllers/PsnRulesController.php:215
+msgid "List of placeholders available for notification subject and text"
+msgstr "Liste aller Platzhalter, die für Betreff und Text verfügbar sind"
+
+#: bootstrap.php:44
+msgid "Ignore post status \"inherit\""
+msgstr "Status \"inherit\" ignorieren"
+
+#: bootstrap.php:45
+msgid ""
+"Status \"inherit\" is used when post revisions get created by WordPress "
+"automatically"
+msgstr ""
+"Status \"inherit\" wird verwendet, wenn WordPress automatische Revisionen "
+"von Posts anlegt"
+
+#: bootstrap.php:55
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: lib/IfwPsn/Wp/Options.php:80
+msgid "General Options"
+msgstr "Allgemeine Optionen"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:35
+#: lib/Psn/Admin/ListTable/Rules.php:45
+#: modules/Logger/lib/Service/Logger.php:72
+msgid "Rule name"
+msgstr "Regel Name"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:46
+msgid "all types"
+msgstr "alle Typen"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:48
+#: lib/Psn/Admin/ListTable/Rules.php:46
+#: modules/Logger/lib/Service/Logger.php:73
+msgid "Post type"
+msgstr "Post Type"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:55
+msgid "anything"
+msgstr "irgendetwas"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:60
+#: lib/Psn/Admin/ListTable/Rules.php:47
+#: modules/Logger/lib/Service/Logger.php:74
+msgid "Status before"
+msgstr "Status vorher"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:68
+#: lib/Psn/Admin/ListTable/Rules.php:48
+#: modules/Logger/lib/Service/Logger.php:75
+msgid "Status after"
+msgstr "Status nachher"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:76
+msgid "Subject"
+msgstr "Betreff"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:77
+#: lib/Psn/Admin/Form/NotificationRule.php:87
+msgid ""
+"Open the help menu in the upper right corner to see a list of all <a "
+"%s>supported placeholders</a>."
+msgstr ""
+"Öffne das Hilfemenü in der oberen rechten Ecke, um eine Liste aller <a "
+"%s>unterstützter Platzhalter</a> zu sehen."
+
+#: lib/Psn/Admin/Form/NotificationRule.php:86
+msgid "Text"
+msgstr "Text"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:98
+msgid "Recipient"
+msgstr "Empfänger"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:102
+msgid "Blog admin"
+msgstr "Blog Admin"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:103
+msgid "Post author"
+msgstr "Post Autor"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:108
+#: lib/Psn/Admin/ListTable/Rules.php:49
+msgid "Active"
+msgstr "Aktiv"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:110
+msgid "Only active rules take affect on post transition changes"
+msgstr ""
+"Nur aktive Regeln werden verwendet, wenn eine Post Status Änderung vorliegt"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:117
+#: modules/Logger/lib/ListTable/Log.php:99
+msgid "Email"
+msgstr "E-Mail"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:119
+msgid ""
+"When the rule matches, an email will be send to the recipient with subject "
+"and text"
+msgstr ""
+"Wenn die Regel zutrifft, wird eine E-Mail mit Betreff und Text an den "
+"Empfänger gesendet"
+
+#: lib/Psn/Admin/Form/NotificationRule.php:129
+msgid "Add rule"
+msgstr "Regel hinzufügen"
+
+#: lib/Psn/Admin/Form/Validate/Max.php:22
+msgid "You reached the maximum number of rules for the free version"
+msgstr "Du hast die maximale Anzahl an Regeln in der freien Version erreicht"
+
+#: lib/Psn/Admin/Form/Validate/StatusTransition.php:24
+msgid ""
+"Invalid status combination: before and after set to \"anything\" is not "
+"allowed"
+msgstr ""
+"Ungültige Status Kombination: vorher und nachher gesetzt auf \"irgendetwas\" "
+"ist nicht erlaubt"
+
+#: lib/Psn/Admin/ListTable/Rules.php:102
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: lib/Psn/Admin/ListTable/Rules.php:103 lib/Psn/Admin/ListTable/Rules.php:142
+#: modules/Logger/lib/ListTable/Log.php:176
+msgid "Delete"
+msgstr "Löschen"
+
+#: lib/Psn/Admin/ListTable/Rules.php:118
+#: modules/Logger/lib/ListTable/Log.php:152
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Name of the rule"
+msgstr "Name der Regel"
+
+#: lib/Psn/Admin/ListTable/Rules.php:143
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: lib/Psn/Admin/ListTable/Rules.php:144
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: lib/Psn/Admin/Metabox/Rules.php:28
+msgid "Your notification rules"
+msgstr "Deine Benachrichtigungsregeln"
+
+#: lib/Psn/Admin/Metabox/Status.php:25
+msgid "Status"
+msgstr "Status"
+
+#: lib/Psn/Admin/Metabox/Status.php:34
+msgid "The required database table does not exist."
+msgstr "Die benötigte Datenbank-Tabelle existiert nicht"
+
+#. Plugin Name of the plugin/theme
+msgid "Post Status Notifier"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Lets you create individual notification rules to be informed about all post "
+"status transitions of your blog. Features custom email texts with many "
+"placeholders and custom post types."
+msgstr ""
+
+msgid ""
+"Add additional recipient emails. Comma separated. Supports placeholders like "
+"[author_email], [blog_admin_email], [current_user_email] or the dynamic "
+"[recipient_*] placeholders. Check the <a %s>placeholders help</a>."
+msgstr ""
+"Füge hier zusätzliche Empfänger E-Mail Adressen ein. Unterstützte "
+"Platzhalter sind [author_email], [blog_admin_email], [current_user_email] "
+"oder die dynamischen [recipient_*] Platzhalter. Schau in die <a "
+"%s>Platzhalter Hilfe</a>."
+
+msgid "Limited to 1. Get the Premium version for unlimited Cc emails."
+msgstr "Begrenzt auf 1. Hol dir die Premium Version für unbegrenzte Cc Mails."
+
+msgid "Manage rules"
+msgstr "Verwalte deine Regeln"
+
+msgid ""
+"In the \"Rules\" section you can manage your post status notification rules."
+"<br>Just try it and <a href=\"%s\">create a new rule</a>."
+msgstr ""
+"Im Bereich \"Regeln\" kannst du deine Post Status Benachrichtigungsregeln "
+"verwalten.<br>Versuche es einfach mal und <a href=\"%s\">lege eine neue "
+"Regel an</a>."
+
+msgid "Examples"
+msgstr "Beispiele"
+
+msgid ""
+"Click the buttons below to get an idea of how you can set up notification "
+"rules."
+msgstr ""
+"Klicke die Buttons unten, um eine Idee davon zu bekommen, wie du "
+"Benachrichtigungsregeln einrichten kannst."
+
+msgid "The pending post"
+msgstr "Der freizugebende Post"
+
+msgid ""
+"This rule sends a notification when a new post got submitted for review."
+msgstr ""
+"Diese Regel sendet eine Nachricht, wenn ein neuer Post zur Kontrolle "
+"übermittelt wurde."
+
+msgid "The happy author"
+msgstr "Der glückliche Autor"
+
+msgid "This rule sends an email to the author of a post when it got published."
+msgstr ""
+"Diese Regeln sendet eine E-Mail an den Autor eines Posts, wenn dieser "
+"veröffentlicht wurde."
+
+msgid "The pedantic admin"
+msgstr "Der pedantische Admin"
+
+msgid ""
+"This rule is for blog admins who want to be informed about every single post "
+"status change."
+msgstr ""
+"Diese Regel ist für Blog Admins, die über jede einzelne Statusänderung eines "
+"Posts informiert werden wollen."
+
+msgid "[blog_name]: New post is waiting for review"
+msgstr "[blog_name]: Neuer Post wartet auf Durchsicht"
+
+msgid ""
+"Howdy admin,<br>there is a new post by [author_display_name] waiting for "
+"review:<br>\"[post_title]\".<br><br>Here is the permalink: "
+"[post_permalink]<br><br>Here is the backend edit link: "
+"[post_editlink]<br><br>The author's email address is "
+"[author_email]<br><br>[blog_wpurl]"
+msgstr ""
+"Hallo,<br>es gibt einen neuen Post von [author_display_name], der auf "
+"Durchsicht wartet:<br>\"[post_title]\".<br><br>Hier ist der Permalink: "
+"[post_permalink]<br><br>Die E-Mail Adresse des Autors ist "
+"[author_email]<br><br>[blog_wpurl]"
+
+msgid "Your post on [blog_name] got published!"
+msgstr "Dein Post auf [blog_name] wurde veröffentlicht!"
+
+msgid ""
+"Howdy [author_display_name],<br>we are happy to tell you that your post "
+"\"[post_title]\" got published.<br><br>Here is the permalink: "
+"[post_permalink]<br><br>Thanks for your good work,<br>your [blog_name]-"
+"Team<br><br>[blog_wpurl]"
+msgstr ""
+"Hallo [author_display_name],<br>wir freuen uns dir mitteilen zu können, dass "
+"dein Post \"[post_title]\" gerade veröffentlich wurde.<br><br>Hier ist der "
+"Permalink: [post_permalink]<br><br>Danke für deine gute Arbeit,<br>dein "
+"[blog_name]-Team<br><br>[blog_wpurl]"
+
+msgid ""
+"[blog_name]: Post status transition from [post_status_before] to "
+"[post_status_after]"
+msgstr ""
+"[blog_name]: Post Status Änderung von [post_status_before] zu "
+"[post_status_after]"
+
+msgid ""
+"Howdy [blog_admin_display_name],<br>a post status transition was a detected "
+"on \"[post_title]\".<br><br>Status before: [post_status_before]<br>Status "
+"after: [post_status_after]<br><br>Post permalink: [post_permalink]"
+msgstr ""
+"Hallo [blog_admin_display_name],<br>es wurde eine Blog Post Status Änderung "
+"erkannt bei \"[post_title]\".<br><br>Status vorher: "
+"[post_status_before]<br>Status danach: [post_status_after]<br><br>Post "
+"Permalink: [post_permalink]"
+
+msgid "Unlimited notification rules"
+msgstr "Unbegrenzte Benachrichtigungsregeln"
+
+msgid "Unlimited CC email recipients"
+msgstr "Unbegrenzte CC E-Mail Empfänger"
+
+msgid "No appendix in sent emails"
+msgstr "Kein Anhang in versendeten Mails"
+
+msgid ""
+"Extensive logging (matching rules, sent mails ...) with dashboard widget"
+msgstr ""
+"Umfangreiches Logging (Zutreffende Regeln, versendete Mails ...) mit "
+"Dashboard Widget"
+
+msgid "Premium Support"
+msgstr "Premium Support"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "Rule table"
+msgstr "Regel Tabelle"
+
+msgid "Checks if the database table for storing the notification rules exists"
+msgstr ""
+"Prüft ob die Datenbanktabelle zum Speichern der Benachrichtigungsregeln "
+"existiert"
+
+msgid "The database table could not be found"
+msgstr "Die Datenbanktabelle konnte nicht gefunden werden"
+
+msgid "Trying to create the table..."
+msgstr "Versuche die Tabelle zu erzeugen..."
+
+msgid ""
+"Add bcc recipient emails. Comma separated. Supports placeholders like "
+"[author_email], [blog_admin_email], [current_user_email] or the dynamic "
+"[recipient_*] placeholders. Check the <a %s>placeholders help</a>."
+msgstr ""
+"Bcc Empfänger E-Mails hinzufügen. Unterstützte Platzhalter zum Beispiel "
+"[author_email], [blog_admin_email], [current_user_email] oder die "
+"dynamischen [recipient_*] Platzhalter. Schau in die <a %s>Platzhalter Hilfe</"
+"a>."
+
+msgid "Activate SMTP"
+msgstr "SMTP aktivieren"
+
+msgid ""
+"SMTP is a premium feature. You will get all configuration options to connect "
+"to your SMTP server."
+msgstr ""
+"SMTP ist ein Premium Feature. Damit bekommst du alle "
+"Konfigurationsmöglichkeiten, um deinen SMTP Server zu verbinden."
+
+msgid "Unlimited Bcc email recipients"
+msgstr "Unbegrenzte BCC Empfänger"
+
+msgid "SMTP server support"
+msgstr "SMTP Server Support"
+
+msgid ""
+"Get additional recipients like user roles (including custom roles) or all "
+"users with the Premium version."
+msgstr ""
+"Erhalte zusätzliche Empfänger wie Benutzer Rollen (inkl. Individuelle "
+"Rollen) oder alle Benutzer mit der Premium Version."
+
+msgid "Extended recipients"
+msgstr "Erweiterte Empfänger"
+
+msgid ""
+"To select multiple categories hold down the control button (ctrl) on Windows "
+"or command button (cmd) on Mac.<br>If nothing is selected, all categories "
+"get included.<br>Exclude is dominant. See the <a href=\"%s\" target=\"_blank"
+"\">docs</a> for more details."
+msgstr ""
+"Um mehrere Kategorien auszuwählen, halte die Control Taste (Ctrl bzw. Strg) "
+"unter Windows oder die Command Taste (cmd bzw. Apfel) unter Mac gedrückt."
+"<br>Wenn nichts ausgewählt ist, werden alle Kategorien eingebunden."
+"<br>Ausschließen verhält sich dominant über Einbeziehen. Schau in die <a "
+"href=\"%s\" target=\"_blank\">Anleitung</a> für mehr Details."
+
+msgid "Include only these categories"
+msgstr "Nur diese Kategorien einbeziehen"
+
+msgid "Exclude categories"
+msgstr "Kategorien ausschließen"
+
+msgid "select all"
+msgstr "alle auswählen"
+
+msgid "remove all"
+msgstr "alle entfernen"
+
+msgid "This is a <a href=\"%s\" target=\"_blank\">Premium</a> feature."
+msgstr "Das ist ein <a href=\"%s\" target=\"_blank\">Premium</a> Feature."
+
+msgid "Post type \"%s\" has no categories."
+msgstr "Post Type \"%s\" hat keine Kategorien."
+
+msgid "Categories"
+msgstr "Kategorien"
+
+msgid "Category filter"
+msgstr "Kategorie Filter"
+
+msgid "Placeholders filters"
+msgstr "Platzhalter Filter"
+
+msgid "Not published"
+msgstr "Nicht veröffentlicht"
+
+msgid ""
+"Here you can define filters which will apply to the placeholders contents "
+"(One filter per line). You can use the <a href=\"%s\" target=\"_blank\">Twig "
+"filters</a>. Refer to the <a href=\"%s\" target=\"_blank\">documentation</a> "
+"for details.<br>Example: [post_date]|date(\"m/d/Y\")"
+msgstr ""
+"Hier kannst du Filter definieren, die sich auf die Ausgabe der Platzhalter "
+"auswirken (Ein Filter pro Zeile). Du kannst die <a href=\"%s\" target="
+"\"_blank\">Teig Filter</a> verwenden. Schau ins <a href=\"%s\" target="
+"\"_blank\">Handbuch</a> für mehr Details.<br>Beispiel:  [post_date]|date(\"m/"
+"d/Y\")"
+
+msgid "Static placeholders"
+msgstr "Statische Platzhalter"
+
+msgid "Dynamic placeholders"
+msgstr "Dynamische Platzhalter"
+
+msgid "Custom f\tields"
+msgstr "Benutzerdefinierte Felder"
+
+msgid "To retrieve the contents of custom post fields use this placeholder"
+msgstr ""
+"Um an den Inhalt von benutzerdefinierten Feldern zu gelangen, benutze diesen "
+"Platzhalter"
+
+msgid "Copy"
+msgstr "Kopieren"
+
+msgid ""
+"These placeholders are unique to this WordPress installation. They use the "
+"names of custom categories and tags."
+msgstr ""
+"Diese Platzhalter kommen nur in dieser speziellen WordPress Installation "
+"vor. Sie benutzen die Namen von benutzerdefinierten Kategorien und Tags."
+
+msgid ""
+"The * stands for the name of the custom field.<br>Example: If you have a "
+"custom post field \"actors\" you should call your placeholder "
+"<b>[post_custom_field-actors]</b>"
+msgstr ""
+"Das * steht für den Namen des benutzerdefinierten Felds.<br>Beispiel: Wenn "
+"du ein benutzerdefiniertes Feld \"actors\" hast, solltest du den Platzhalter "
+"<b>[post_custom_field-actors]</b> nennen"
+
+msgid "Duplicate"
+msgstr "Duplikat"
+
+msgid "Do you want to copy this rule?"
+msgstr "Willst du diese Regel kopieren?"
+
+msgid "Deactivate rule on copy"
+msgstr "Regel-Kopie deaktivieren"
+
+msgid "Always deactivate copied rules"
+msgstr "Kopierte Regeln immer deaktivieren"
+
+msgid "Trying to create the field..."
+msgstr "Versuche das Feld zu erstellen..."
+
+msgid "The database field could not be found"
+msgstr "Das Datenbank Feld konnte nicht gefunden werden"
+
+msgid "Checks if the field exists in the database"
+msgstr "Prüft ob das Feld in der Datenbank existiert"
+
+msgid "Bcc field"
+msgstr "Bcc Feld"
+
+msgid "Categories field"
+msgstr "Kategorien Feld"
+
+msgid "Hide non-public post types"
+msgstr "Nicht öffentliche Post Typen ausblenden"
+
+msgid ""
+"When selected, non-public post types will be excluded from rule settings form"
+msgstr ""
+"Wenn aktiviert, werden nicht öffentliche Post Typen im Regel-Formular "
+"ausgeblendet"
+
+msgid "Post status"
+msgstr "Post Status"
+
+msgid ""
+"There seems to be a <b>database mismatch</b>. This could result in problems "
+"when saving rules. Please run the selftests on the overview page. If this "
+"warning persists, <a href=\"%s\" target=\"_blank\">please contact the "
+"support.</a>"
+msgstr ""
+"Es scheint eine <b>Datenbank Diskrepanz</b> vorzuliegen. Das könnte zu "
+"Fehlern beim Speichern von Regeln führen. Bitte führe die Selbsttests auf "
+"der Übersichtsseite aus. Wenn diese Meldung wieder kommt, <a href=\"%s\" "
+"target=\"_blank\">kontaktiere bitte den Support</a>."
+
+msgid "Import rules"
+msgstr "Regeln importieren"
+
+msgid "Import file"
+msgstr "Import Datei"
+
+msgid "Please select a .xml export file created by PSN."
+msgstr "Bitte wähle eine .xml Export-Datei aus, die von PSN erstellt wurde."
+
+msgid "Please select a valid import file."
+msgstr "Bitte wähle eine gültige Import-Datei."
+
+msgid "No rules found in import file."
+msgstr "Keine Regeln in der Import-Datei gefunden."
+
+msgid "Import prefix"
+msgstr "Import Prefix"
+
+msgid "Prepend this text to imported rule names to identify them."
+msgstr ""
+"Stelle diesen Text dem Namen von importierten Regeln voran, um sie "
+"identifizieren zu können."
+
+msgid "Deactivate imported rules."
+msgstr "Importierte Regeln deaktivieren."
+
+msgid "Need help? <a href=\"%s\" target=\"_blank\">Check the docs</a>."
+msgstr ""
+"Brauchst du Hilfe? <a href=\"%s\" target=\"_blank\">Schau in die Hilfe</a>."
+
+msgid "Unlimited placeholders filters"
+msgstr "Unbegrenzte Platzhalter Filter"
+
+msgid "Copy notification rules"
+msgstr "Kopieren von Benachrichtigungsregeln"
+
+msgid "Import / export notifaciton rules"
+msgstr "Import / Export von Benachrichtigungsregeln"
+
+msgid "Custom sender e-mail"
+msgstr "Individuelle Absender"
+
+msgid "Dupliacte"
+msgstr "Duplikat"
+
+msgid "Show details"
+msgstr "Details anzeigen"
+
+msgid "None"
+msgstr "Nichts"
+
+msgid ""
+"To select multiple recipients hold down the control button (ctrl) on Windows "
+"or command button (cmd) on Mac."
+msgstr ""
+"Um mehrere Empfänger auszuwählen, halte die Control-Taste (Ctrl) unter "
+"Windows oder die Command-Taste (cmd) unter Mac."
+
+msgid ""
+"To select multiple cc recipients hold down the control button (ctrl) on "
+"Windows or command button (cmd) on Mac."
+msgstr ""
+"Um mehrere Cc Empfänger auszuwählen, halte die Control-Taste (Ctrl) unter "
+"Windows oder die Command-Taste (cmd) unter Mac."
+
+msgid ""
+"To select multiple bcc recipients hold down the control button (ctrl) on "
+"Windows or command button (cmd) on Mac."
+msgstr ""
+"Um mehrere Bcc Empfänger auszuwählen, halte die Control-Taste (Ctrl) unter "
+"Windows oder die Command-Taste (cmd) unter Mac."
+
+msgid "Not private"
+msgstr "Nicht privat"
+
+msgid "Bcc multi selection field"
+msgstr "Bcc Mehrfachauswahl Feld"
+
+msgid "Not pending"
+msgstr "Nicht ausstehend"
+
+msgid "Test Email"
+msgstr "Test E-Mail"
+
+msgid ""
+"Send a test email to check the general email functionality of your WordPress "
+"installation. Settings in the options section will be considered (e.g. SMTP)."
+msgstr ""
+"Sende eine Test E-Mail, um die generelle E-Mail Funktionalität deiner "
+"WordPress Installation zu prüfen. Die Einstellungen in den Optionen werden "
+"berücksichtigt (z.B. SMTP)."
+
+msgid "Server environment"
+msgstr "Server Umgebung"
+
+msgid "Check the <a href=\"%s\" target=\"_blank\">FAQ</a>"
+msgstr "Checke die <a href=\"%s\" target=\"_blank\">FAQ</a>"
+
+msgid "HTML emails"
+msgstr "HTML E-Mails"
+
+msgid "Send test email"
+msgstr "Test E-Mail versenden"
+
+msgid "Test Email from %s"
+msgstr "Test E-Mail von %s"
+
+msgid ""
+"For more examples visit the <a href=\"%s\" class=\"%s\" target=\"_blank"
+"\">PSN resources website</a>."
+msgstr ""
+"Besuche die <a href=\"%s\" class=\"%s\" target=\"_blank\">PSN Resources "
+"Webseite</a> für mehr Beispiele."
+
+msgid ""
+"Check out the <a href=\"%s\" target=\"_blank\">Premium version</a> and all "
+"its features on CodeCanyon."
+msgstr ""
+"Schau dir die <a href=\"%s\"\" target=\"_blank\">Premium Version</a> mit all "
+"ihren Features auf CodeCanyon an."
+
+msgid ""
+"The Lite version of this plugin is still activated. Please deactivate it! "
+"Refer to the <a href=\"%s\">Upgrade Howto</a>."
+msgstr ""
+"Die Lite Version dieses Plugins ist noch aktiviert. Bitte reaktivere sie! "
+"Schau ins <a href=\"%s\" target=\"_blank\">Upgrade Howto</a>."
+
+msgid ""
+"<b>Subject</b> and <b>text</b> support conditions, loops, functions and "
+"placeholder filters. This makes it possible to create dynamic texts."
+msgstr ""
+"<b>Betreff</b> und <b>Text</b> unterstützen Bedingungen, Schleifen, "
+"Funktionen und Platzhalter Filter. Das ermöglicht es, dynamische Texte zu "
+"erstellen."
+
+msgid ""
+"This is an <b>example if-condition</b> to display the excerpt only if it is "
+"not empty"
+msgstr ""
+"Dies ist eine <b>beispielhafte If-Bedingung</b>, die das Post Excerpt nur "
+"anzeigt, wenn Text enthalten ist"
+
+msgid ""
+"With placeholder filters and functions you can get the most unlikely values "
+"out of the placeholders attached to a post. This example retrieves the "
+"currency key out a multidimensional serialized PHP array"
+msgstr ""
+"Mit Platzhalter Filtern und Funktionen kannst du die unwahrscheinlichsten "
+"Werte aus Platzhaltern auslesen, die mit einem Post verbunden sind. Dieses "
+"Beispiel liest den Schlüssel currency aus einem mehrdimensionalen "
+"serialisiertem PHP Array aus."
+
+msgid ""
+"To learn more about conditions, loops, functions and filters please <a href="
+"\"%s\" target=\"_blank\">check the documentation</a>."
+msgstr ""
+"Um mehr über Bedingungen, Schleifen, Funktionen und Filter zu lernen, <a "
+"href=\"%s\" target=\"_blank\">öffne die Dokumentation</a>"
+
+msgid "Documentation"
+msgstr "Dokumentation"
+
+msgid "Supports <a %s>conditions</a> (if activated in the options)."
+msgstr "Unterstützt <a %s>Bedingungen</a> (falls in den Optionen aktiviert)."
+
+msgid "Array placeholders"
+msgstr "Array Platzhalter"
+
+msgid ""
+"These placeholders contain PHP arrays. They can be used with filters and "
+"functions (see <a %s>Conditions</a>) to retrieve the data."
+msgstr ""
+"Diese Platzhalter enthalten PHP Arrays. Sie können mit Filtern und "
+"Funktionen (siehe <a %s>Conditions</a>) verwendet werden, um Daten "
+"auszulesen."
+
+msgid "Block notifications Post Status Notifier could generate for this post."
+msgstr ""
+"Benachrichtigungen blockieren, die von Post Status Notifier generiert werden "
+"könnten."
+
+msgid "Block notifications"
+msgstr "Benachrichtigungen blockieren"
+
+msgid "Disable it completely"
+msgstr "Komplett abschalten"
+
+msgid "Disable the \"Block notifications\" feature in the Post submit box."
+msgstr ""
+"Das \"Benachrichtigungen blockieren\" Feature in der Post Absende Box "
+"komplett abschalten."
+
+msgid "For admins only"
+msgstr "Nur für Admins"
+
+msgid "Enable the \"Block notifications\" feature for admins only."
+msgstr ""
+"Das \"Benachrichitungen blockieren\" Feature nur für Admins aktivieren."
+
+msgid "Invalid recipient"
+msgstr "Ungültiger Empfänger"
+
+msgid "Custom CC"
+msgstr "Benutzerdefinierter CC"
+
+msgid "Custom BCC"
+msgstr "Benutzerdefinierter BCC"
+
+msgid "Not trash"
+msgstr ""
+
+msgid ""
+"Be careful with user placeholders if your blog has very much users (several "
+"hundrets or even thousands) like <b>[recipient_all_users]</b> or "
+"<b>[recipient_role_*]</b> if the role has very much members. These could "
+"cause server load!"
+msgstr ""
+"Sei vorsichtig mit Benutzer Platzhaltern wenn dein Blog sehr viele User hat "
+"(mehrere hundert oder sogar tausend) wie z.B. <b>[recipient_all_users]</b> "
+"oder <b>[recipient_role_*]</b> wenn die Rolle sehr viele Mitglieder hat. "
+"Diese Platzhalter können bei Verwendung einige Serverlast beim Auslesen der "
+"Benutzer erzeugen."
+
+msgid ""
+"Be careful with user placeholders if your blog has very much users (several "
+"hundrets or even thousands) like <b>[recipient_all_users_array]</b> or "
+"<b>[recipient_role_*_array]</b> if the role has very much members. These "
+"could cause server load!"
+msgstr ""
+"Sei vorsichtig mit Benutzer Platzhaltern wenn dein Blog sehr viele User hat "
+"(mehrere hundert oder sogar tausend) wie z.B. "
+"<b>[recipient_all_users_array]</b> oder <b>[recipient_role_*_array]</b> wenn "
+"die Rolle sehr viele Mitglieder hat. Diese Platzhalter können bei Verwendung "
+"einige Serverlast beim Auslesen der Benutzer erzeugen."
+
+msgid ""
+"If you want to use <b>PSN's conditions syntax</b> in your notification "
+"texts, you can activate this feature here. Check the <a href=\"%s\" target="
+"\"_blank\">Conditions manual</a> to learn more about it."
+msgstr ""
+"Wenn du <b>PSN's Bedingungen Syntax</b> in deinen Benachrichtigungstexten "
+"verwenden willst, kannst du dieses Feature hier aktivieren. Sieh dir das <a "
+"href=\"%s\" target=\"_blank\">Conditions Handbuch</a> an, um mehr darüber zu "
+"erfahren."
+
+msgid "Options for the \"Block notifications\" feature in the post submit box."
+msgstr ""
+"Optionen für das \"Benachrichtigungen blockieren\" Feature in der Post "
+"Absende Box."
+
+msgid "License"
+msgstr "Lizenz"
+
+msgid ""
+"For more details please check the <a href=\"%s\" target=\"_blank"
+"\">placeholders help</a>."
+msgstr ""
+"Für weitere Detail schau bitte in die <a href=\"%s\" target=\"_blank"
+"\">Platzhalter Hilfe</a>."
+
+msgid "Conditional template syntax"
+msgstr "Bedingungen, Funktionen und Schleifen in Texten"
+
+msgid "Block notifications feature on Post submit post"
+msgstr "Benachrichtigungen beim Post Update blockieren"
+
+msgid "One email per TO recipient"
+msgstr "Eine E-Mail pro TO Empfänger"
+
+msgid "Extensible"
+msgstr "Erweiterbar"
+
+msgid "Services"
+msgstr "Dienste"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Rule"
+msgstr "Regel"
+
+msgid "More details"
+msgstr "Mehr Details"

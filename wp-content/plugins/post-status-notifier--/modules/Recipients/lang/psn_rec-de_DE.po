@@ -1,0 +1,134 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"PO-Revision-Date: 2014-07-07 23:53+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+
+msgid "All members of role: "
+msgstr "Alle Mitglieder der Rolle: "
+
+msgid "All users"
+msgstr "Alle Benutzer"
+
+msgid "Individual e-mail"
+msgstr "Individuelle E-Mail"
+
+msgid ""
+"Enter an individual e-mail address as recipient here. Supports placeholders."
+msgstr ""
+"Gib hier eine individuelle E-Mail Adresse als Empfänger ein. Unterstützt "
+"Platzhalter."
+
+msgid "To field"
+msgstr "To Feld"
+
+msgid "Default From"
+msgstr "Default From"
+
+msgid ""
+"Here you can define an e-mail address which will be used as sender for the "
+"notifications. Leave this blank to use the e-mail address configured in "
+"Settings / General as sender. Note that you can define a custom sender for "
+"each rule."
+msgstr ""
+"Here kannst du eine E-Mail Adresse definieren, die als Absender für die "
+"Benachrichtigungen verwendet wird. Wenn keine eingetragen ist, wird die "
+"unter Einstellungen / Allgemein eingetragene E-Mail Adresse verwendet. Denke "
+"daran, dass jede Regel eine eigene Absender-Adresse haben kann."
+
+msgid "FROM"
+msgstr "Absender"
+
+msgid ""
+"Enter an e-mail address to use as sender. Leave blank for default sender. "
+"Supports placeholders."
+msgstr ""
+"Trage hier eine E-Mail Adresse ein, die als Absender verwendet werden soll. "
+"Trage nichts ein, wenn der Standard Absender verwendet werden soll. "
+"Platzhalter werden unterstützt."
+
+msgid "Custom recipient"
+msgstr "Individueller Empfänger"
+
+msgid "Custom recipient (text field below)"
+msgstr "Individueller Empfänger (Text-Feld unten)"
+
+msgid ""
+"If you select one or more roles, a notification will only be generated, if "
+"the editor of the post is a member of one of the selected roles. Leave blank "
+"for no editor restriction. To select multiple roles hold down the control "
+"button (ctrl) on Windows or command button (cmd) on Mac."
+msgstr ""
+"Wenn du eine oder mehrere Rollen auswählst, wird die Benachrichtigung nur "
+"generiert, wenn der Editor des Posts Mitglied in einer dieser Rollen ist. "
+"Wähle nicht für keine Beschränkung. Um mehrere Rollen auszuwählen, halte die "
+"Control Taste (Ctrl bzw. Strg) unter Windows oder die Command Taste (cmd "
+"bzw. Apfel) unter Mac gedrückt."
+
+msgid "Editor restriction field"
+msgstr "Editor Beschränkung Feld"
+
+msgid "Import recipients lists"
+msgstr "Empfängerliste importieren"
+
+msgid "Recipients lists"
+msgstr "Empfängerlisten"
+
+msgid "Recipients list"
+msgstr "Empfängerliste"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Internal identifier"
+msgstr "Interner Bezeichner"
+
+msgid "List"
+msgstr "Liste"
+
+msgid "A list of comma separated email addresses"
+msgstr "Eine Liste mit Komma getrennten E-Mail Adressen"
+
+msgid "Add recipients list"
+msgstr "Empfängerliste hinzufügen"
+
+msgid "Create new recipients list"
+msgstr "Neue Empfängerliste erstellen"
+
+msgid "Edit recipients list"
+msgstr "Empfängerliste bearbeiten"
+
+msgid "Recipient list <b>%s</b> has been saved successfully."
+msgstr "Empfängerliste <b>%s</b> wurde erfolgreich gespeichert."
+
+msgid "Recipient list <b>%s</b> has been updated successfully."
+msgstr "Empfängerliste <b>%s</b> wurde erfolgreich bearbeitet."
+
+msgid ""
+"Recipients list could not be deleted. It is still in use by a notification "
+"rule."
+msgstr ""
+"Empfängerliste konnte nicht gelöscht werden. Sie wird noch von "
+"Benachrichtigungsregeln genutzt."
+
+msgid ""
+"Some recipients lists could not be deleted. They are still in use by a "
+"notification rule."
+msgstr ""
+"Einige Empfängerlisten konnten nicht gelöscht werden. Sie werden noch von "
+"Benachrichtigungsregeln genutzt."
+
+msgid "Enter an individual e-mail address to use as recipient."
+msgstr ""
+"Gib eine individuelle Empfänger Adresse ein, die als Empfänger genutzt "
+"werden soll."

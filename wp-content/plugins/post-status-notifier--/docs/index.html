@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		img { border: 1px solid #ccc; margin-bottom: 10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Post Status Notifier&rdquo; WordPress Plugin Documentation by &ldquo;ifeelweb.de&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Post Status Notifier&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 26/5/2013<br>
+					By: Timo Reith<br>
+					Email: <a href="mailto:timo@ifeelweb.de">timo@ifeelweb.de</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please check the always up-to-date <a href="http://docs.ifeelweb.de/post-status-notifier/">online documentation</a> and feel free to email via my user page contact form <a href="http://themeforest.net/user/ifeelweb">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Plugin installation</a></li>
+			<li><a href="#firststeps">First steps</a></li>
+			<li><a href="#createrule">Create a notification rule</a></li>
+			<li><a href="#testrule">Test your notification rule</a></li>
+			<li><a href="#ruledetail">Notification rules in detail</a></li>
+			<li><a href="#logging">Logging</a></li>
+			<li><a href="#options">Options</a></li>
+			<li><a href="#placeholders">Placeholders</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			
+		</ol>
+		
+		<hr>
+
+		<h3 id="installation"><strong>A) Plugin installation</strong> - <a href="#toc">top</a></h3>
+
+		<p>The easiest way to install this plugin is through the WordPress plugin upload feature. Login with your WordPress admin account, then switch to menu “Plugins” and click “Add new”. On the next page (“Install Plugins”) select “Upload” from the horizontal menu.</p>
+
+		<img src="assets/images/install-backend.jpg" alt="Backend plugin installation" />
+
+		<p>Now use the file browser to select the file <b>post-status-notifier.zip</b> from your computer. Then click the button “Install Now”.</p>
+		<p>After the plugin was installed successfully, click the link “Activate Plugin”. You will be redirected to the plugins main page.</p>
+
+		<p>For more information about how to install WordPress plugins, read this article on the WordPress Codex: <a href="http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation">Manual Plugin Installation</a>
+
+		<hr>
+
+		<h3 id="firststeps"><strong>B) First steps</strong> - <a href="#toc">top</a></h3>
+
+		<p>After the successful installation, a new menu item <b>Post Status Notifier</b> appears in main menu section <b>Settings</b>.</p>
+
+		<img src="assets/images/menu.jpg" alt="New menu item" />
+
+		<p>If you click it, you will get to the overview page of the plugin.</p>
+		<p>There you will see some metaboxes. The upper metabox shows your notification rules. The lower metabox shows the newest log entries.</p>
+		<p>After installation there are no pre set-up notification rules. These are needed for the plugin to produce user notifications on post status changes.</p>
+
+		<hr>
+
+		<h3 id="createrule"><strong>C) Create a notification rule</strong> - <a href="#toc">top</a></h3>
+
+		<p>To get informed about a status transition of a post, you have to create a rule for it. Change to the tab “Rules” and click “Create new rule”.</p>
+
+		<img src="assets/images/link-create.jpg" alt="Create rule link" />			
+
+		<p>The form for creating new rules will be loaded.</p>
+
+		<p>To get a quick idea of ​​the possibilities you have with the notification rules, look at the three examples. These are represented by buttons to the right of the form. If you click an example button, the example values will be filled into the form automatically. You may change these values as you like.</p>
+
+		<img src="assets/images/examples.jpg" alt="Example buttons" />
+
+		<p>For the first test, click the example button "The pending post". All required values will be filled in. Customize the subject and text if you want and fill in a valid Cc email. Then click the button “Add rule” at the end of the form. That’s it, your first rule is created!</p>
+
+		<hr>
+
+		<h3 id="testrule"><strong>D) Test your notification rule</strong> - <a href="#toc">top</a></h3>
+
+		<p>To test the example rule "The pending post", log in your WordPress backend with a user who may not publish posts. If there is no such user, create a demo user with role “Contributor”. Write a new post with this user and click “Submit for Review”. Now the before created rule should send a notification email to the blog admin.</p>
+
+		<p><b>Note:</b> If you are testing on you local computer, it may be that no emails are being sent.</p>
+
+		<p>To monitor what the plugin has done, open the overview page of the plugin again. There should be log entries in the metabox “Current log entries” now. They inform you about sent emails and matching rules.</p>
+
+		<img src="assets/images/log-entries-1.jpg" alt="Log entries" />
+
+		<p>On your Dashboard home page you will find a widget which shows the last log entries too.</p>
+		
+
+		<hr>
+
+		<h3 id="ruledetail"><strong>E) Notification rules in detail</strong> - <a href="#toc">top</a></h3>
+
+
+		<h4>Creating new rules</h4>
+		<p>To create a new rule, change to tab &#8220;Rules&#8221; and click the link &#8220;Create new rule&#8221;. You will get to the form for creating a new rule.</p>
+		<p>In the following all form fields will be explained.</p>
+		<p>A rule always requires a <strong>Rule name</strong>. This name will only be used for internal purposes of administration. The name will appear in the list table of all rules.</p>
+		<img alt="Name and type" src="assets/images/form1.jpg" />
+		<p>You can decide if the rule should refer to all <strong>Post types</strong> or just to a special one. Choose &#8220;all types&#8221; or select an individual type. <strong>The plugin supports all custom post type of your blog.</strong></p>
+		<p>The main focus of a rule is on <strong>Status before</strong> and <strong>Status after</strong>.</p>
+		<img alt="Status before and Status after" src="assets/images/form2.jpg" />
+		<p>With these two settings you decide on which status transition a rule will be executed. If for example an email should be sent on publication of a post, select &#8220;Pending&#8221; for Status before and &#8220;Published&#8221; for Status after.
+		A special status is &#8220;anything&#8221;. This applies to every status. If you set both fields to &#8220;anything&#8221;, the rule will match every status transition of a post. This combination may be good for monitoring every status transition of your content.</p>
+		<p>The field <strong>Subject</strong> is for the subject text of your notification. You may fill in a maximum of 200 characters. All placeholders are supported (see <a href="#placeholders"><em>Placeholders</em></a>). Their purpose is to stand in for data that will be automatically inserted into the email notification. For a list of all placeholders, click the link &#8220;List of all placeholders&#8221; right to the form.</p>
+		<img alt="Subject and text" src="assets/images/form3.jpg" style="width: 667.0px; height: 232.0px;" />
+		<p>In the field <strong>Text</strong> you can write the text for the notification. Again all placeholders are supported.</p>
+		<p>For <strong>Recipient</strong> you can select the automatically determined recipient for the notification.</p>
+		<img alt="Recipient" src="assets/images/form4.jpg" style="width: 244.0px; height: 65.0px;" />
+		<p>For &#8220;Blog admin&#8221; the email address of the general blog settings will be used. For &#8220;Post author&#8221; the post author&#8217;s email address will be used.</p>
+		<p>Additionally you may fill in custom recipient addresses in the <strong>Cc</strong> text box. Multiple addresses must be separated by comma.</p>
+		<img alt="Cc emails" src="assets/images/form5.jpg" style="width: 653.0px; height: 52.0px;" />
+		<p>Only active rules will considered on status transitions. If you want to deactivate a rule, remove the check mark on the &#8220;Active&#8221; checkbox.</p>
+		<p>With the option <strong>Email</strong> you can determine, if this rule should send emails or not. This is handy, if you just want to log status transitions.</p>
+		<img alt="Options" src="assets/images/form6.jpg" style="width: 594.0px; height: 142.0px;" />
+		<p>If you want to create log entries, set the check mark on <strong>Log</strong>. Log entries will be written when a rule matches and when emails got sent.</p>
+		<p>When you set all options, click the button &#8220;Add rule&#8221;, to save the rule.</p>
+		<img alt="Add rule button" src="assets/images/form-add.jpg" style="width: 83.0px; height: 42.0px;" />
+
+		<h4>Rule administration</h4>
+		<p>After saving a rule, it will appear in the rule table (tab &#8220;Rules&#8221;).</p>
+		<img alt="List of all rules" src="assets/images/rules-list.jpg" />
+		<p>From here you can manage your rules. When your cursor hovers a table row, you will see the links <strong>&#8220;Edit&#8221;</strong> and <strong>&#8220;Delete&#8221;</strong>. If you click &#8220;Edit&#8221; the rule will be loaded in the above explained form. Then you can change the rule settings and confirm by clicking the button &#8220;Update&#8221;.</p>
+		<p>To edit multiple rules at the same time, you can mark the check boxes of the respective table rows and select an action of the <strong>Bulk Actions</strong>. Available actions are &#8220;Delete&#8221; (delete all marked rules), &#8220;Activate&#8221; and &#8220;Deactivate&#8221; (activate / deactivate the marked rules).</p>
+		<img alt="Bulk actions of rules list" src="assets/images/rules-list-bulk.jpg" style="width: 818.0px; height: 289.0px;" />
+
+				<h3 id="logging"><strong>F) Logging</strong> - <a href="#toc">top</a></h3>
+
+		<p>In the &#8220;Log&#8221; section you will see a table containing all log entries the plugin rules have generated.</p>
+		<img alt="Log table" src="assets/images/log1.jpg" />
+
+		<h4>List navigation</h4>
+
+		<p>If you want to navigate through the list, you may use the pagination elements in the right above or under the table. Additionally you may change the maximum items per page in the &#8220;Screen Options&#8221; tab. If you are looking for something special you can use the search box.</p>
+		<img alt="Log table navigation" src="assets/images/log5.jpg" />
+
+		<h4>Log details</h4>
+
+		<p>If you hover your mouse cursor over a row, you will see the link &#8220;Show details&#8221;.</p>
+
+		<img alt="Show details" src="assets/images/log2.jpg" />
+
+		<p>If you click it, you will see the information stored for this log entry. If the entry is of type &#8220;Email&#8221;, you will see the details about the sent email.</p>
+
+		<img alt="Email details" src="assets/images/log3.jpg" style="width: 485.0px; height: 200.0px;" />
+
+		<p>If it is of type &#8220;Info&#8221; you will see all settings of the matching rule and the list of placeholders including theirs values.</p>
+
+		<img alt="Info details" src="assets/images/log4.jpg" />
+
+		<h4>Log administration</h4>
+
+		<p>If you want to delete log entries, select the relevant list items by clicking the check box left to the row and select &#8220;Delete&#8221; from the &#8220;Bulk Actions&#8221; drop down.</p>
+		<p>There are other useful &#8220;Bulk Actions&#8221; when it comes to clean up your log entries. &#8220;Clear type &#8216;Email&#8217;&#8221; will delete all log entries of type &#8220;Email&#8221;, &#8220;Clear type &#8216;Info&#8217;&#8221; will delete all entries of type &#8220;Info&#8221; and finally &#8220;Clear complete log&#8221; will delete all log entries.</p>
+		<img alt="Log administration" src="assets/images/log6.jpg" />
+
+		
+		<h3 id="options"><strong>G) Options</strong> - <a href="#toc">top</a></h3>
+
+		<p>In the options section you can set up, if the post status &#8220;inherit&#8221; should be ignored by the plugin. This status is used by WordPress internally when revisions of posts get created automatically.</p>
+		<p>Furthermore you can activate that rule matches should be logged generally. With this option set, every time one of your rules gets executed, a log entry will be written.</p>
+		<img alt="Options" src="assets/images/options.jpg" />
+
+
+		<h3 id="placeholders"><strong>H) Placeholders</strong> - <a href="#toc">top</a></h3>
+
+		<p>This is a list of all placeholders that are supported for the fields <strong>subject</strong> and <strong>text</strong> of notification rules.</p>
+		<table border="1" class="docutils">
+		<colgroup>
+		<col width="24%" />
+		<col width="76%" />
+		</colgroup>
+		<thead valign="bottom">
+		<tr class="row-odd"><th class="head">Placeholder</th>
+		<th class="head">Description</th>
+		</tr>
+		</thead>
+		<tbody valign="top">
+		<tr class="row-even"><td>[author_ID]</td>
+		<td>User ID of the author</td>
+		</tr>
+		<tr class="row-odd"><td>[author_description]</td>
+		<td>The author&#8217;s description</td>
+		</tr>
+		<tr class="row-even"><td>[author_display_name]</td>
+		<td>The author&#8217;s display name</td>
+		</tr>
+		<tr class="row-odd"><td>[author_email]</td>
+		<td>The author&#8217;s email</td>
+		</tr>
+		<tr class="row-even"><td>[author_firstname]</td>
+		<td>The author&#8217;s firstname</td>
+		</tr>
+		<tr class="row-odd"><td>[author_lastname]</td>
+		<td>The author&#8217;s lastname</td>
+		</tr>
+		<tr class="row-even"><td>[author_login]</td>
+		<td>The author&#8217;s login name</td>
+		</tr>
+		<tr class="row-odd"><td>[author_nickname]</td>
+		<td>The author&#8217;s nickname</td>
+		</tr>
+		<tr class="row-even"><td>[author_registered]</td>
+		<td>The registration date and time of the author</td>
+		</tr>
+		<tr class="row-odd"><td>[author_url]</td>
+		<td>The author&#8217;s homepage URL</td>
+		</tr>
+		<tr class="row-even"><td>[blog_admin_email]</td>
+		<td>The email of the blog admin as defined in Settings / General</td>
+		</tr>
+		<tr class="row-odd"><td>[blog_description]</td>
+		<td>The blog description as defined in Settings / General</td>
+		</tr>
+		<tr class="row-even"><td>[blog_name]</td>
+		<td>The blog name as defined in Settings / General</td>
+		</tr>
+		<tr class="row-odd"><td>[blog_url]</td>
+		<td>The blog URL as defined in Settings / General</td>
+		</tr>
+		<tr class="row-even"><td>[blog_version]</td>
+		<td>The WordPress version</td>
+		</tr>
+		<tr class="row-odd"><td>[blog_wpurl]</td>
+		<td>The blog URL as defined in Settings / General</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_ID]</td>
+		<td>The ID of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_description]</td>
+		<td>The description of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_display_name]</td>
+		<td>The display name of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_email]</td>
+		<td>The email of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_firstname]</td>
+		<td>The firstname of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_lastname]</td>
+		<td>The lastname of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_login]</td>
+		<td>The login name of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_nicename]</td>
+		<td>The nicename of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_nickname]</td>
+		<td>The nickname of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_registered]</td>
+		<td>The registration date and time of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[current_user_status]</td>
+		<td>The status of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-odd"><td>[current_user_url]</td>
+		<td>The homepage URL of the current user (the user who changed the status)</td>
+		</tr>
+		<tr class="row-even"><td>[post_ID]</td>
+		<td>The ID of the post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_author]</td>
+		<td>User ID of the author</td>
+		</tr>
+		<tr class="row-even"><td>[post_comment_count]</td>
+		<td>Total number of comments of the post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_comment_status]</td>
+		<td>The comment status of the post (like &#8220;open&#8221;)</td>
+		</tr>
+		<tr class="row-even"><td>[post_content]</td>
+		<td>The content of the post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_content_filtered]</td>
+		<td>The filtered content of the post</td>
+		</tr>
+		<tr class="row-even"><td>[post_date]</td>
+		<td>The date of the post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_date_gmt]</td>
+		<td>The GMT date of the post</td>
+		</tr>
+		<tr class="row-even"><td>[post_excerpt]</td>
+		<td>The post&#8217;s excerpt</td>
+		</tr>
+		<tr class="row-odd"><td>[post_filter]</td>
+		<td>The post filter (like &#8220;raw&#8221;)</td>
+		</tr>
+		<tr class="row-even"><td>[post_guid]</td>
+		<td>The post&#8217;s internal URL (like http://your-wp.com/?p=193)</td>
+		</tr>
+		<tr class="row-odd"><td>[post_menu_order]</td>
+		<td>The post&#8217;s menu order (integer)</td>
+		</tr>
+		<tr class="row-even"><td>[post_mime_type]</td>
+		<td>The mime type of the post (like &#8220;image&#8221;, &#8220;audio&#8221;, &#8220;video&#8221;)</td>
+		</tr>
+		<tr class="row-odd"><td>[post_modified]</td>
+		<td>The modification date of the post</td>
+		</tr>
+		<tr class="row-even"><td>[post_modified_gmt]</td>
+		<td>The modification GMT date of the post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_name]</td>
+		<td>The post&#8217;s slug name</td>
+		</tr>
+		<tr class="row-even"><td>[post_parent]</td>
+		<td>The ID of the parent post</td>
+		</tr>
+		<tr class="row-odd"><td>[post_password]</td>
+		<td>The post&#8217;s password</td>
+		</tr>
+		<tr class="row-even"><td>[post_ping_status]</td>
+		<td>The post&#8217;s ping status</td>
+		</tr>
+		<tr class="row-odd"><td>[post_pinged]</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr class="row-even"><td>[post_status]</td>
+		<td>The post status (like &#8220;publish&#8221;, &#8220;pending&#8221; etc.)</td>
+		</tr>
+		<tr class="row-odd"><td>[post_status_after]</td>
+		<td>The post status after the transition</td>
+		</tr>
+		<tr class="row-even"><td>[post_status_before]</td>
+		<td>The post status before the transition</td>
+		</tr>
+		<tr class="row-odd"><td>[post_title]</td>
+		<td>The post title</td>
+		</tr>
+		<tr class="row-even"><td>[post_to_ping]</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr class="row-odd"><td>[post_type]</td>
+		<td>The type of the post (like &#8220;post&#8221;, &#8220;page&#8221; etc.)</td>
+		</tr>
+		</tbody>
+		</table>
+
+		<hr>
+
+		<h3 id="credits"><strong>I) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This is a list of assets used in this plugin and their licenses.</p>
+
+		<h4>PHP</h4>
+		<ul>
+			<li>Zend Framework classes: New BSD License (http://framework.zend.com/license/new-bsd)</li>
+			<li>Twig: New BSD License (http://twig.sensiolabs.org/license)</li>
+		</ul>
+
+		<h4>Images</h4>
+
+		<p>The following is a list of image paths included in this plugin with footnotes to their license.</p>
+
+		<ul>
+			<li>skin/default/icons/cross.png: (1)</li>
+			<li>skin/default/icons/mail.png: (1)</li>
+			<li>skin/default/icons/pencil.png: (1)</li>
+			<li>skin/default/icons/premium.png: (1)</li>
+			<li>skin/default/icons/tick.png: (1)</li>
+			<li>skin/default/icons/false.png: (2)</li>
+			<li>skin/default/icons/help.png: (2)</li>
+			<li>skin/default/icons/info.png: (2)</li>
+			<li>skin/default/icons/minus.png: (2)</li>
+			<li>skin/default/icons/plus.png: (2)</li>
+			<li>skin/default/icons/reload.png: (2)</li>
+			<li>skin/default/icons/true.png: (2)</li>
+			<li>skin/default/icons/warning_16.png: (3)</li>
+			<li>skin/default/icons/warning_16.png: (3)</li>
+			<li>skin/default/icons/ajax-loader.gif: (5)</li>
+			<li>skin/default/icons/ajax-loader-bar.gif: (5)</li>
+			<li>skin/default/icons/external-link.png: (6)</li>
+			<li>skin/default/icons/handshake.png: (7)</li>
+			<li>skin/default/icons/lifesaver.png: (8)</li>
+			<li>admin/img/icon-32-grey.png: (9)</li>
+			<li>admin/img/happy_author.png (10)</li>
+			<li>admin/img/pedantic_admin.png (10)</li>
+			<li>admin/img/pending_post.png (10)</li>
+		</ul>
+
+		<p>(1): Pixlsby.me (http://pixlsby.me/): All sets can be used both commercially and for personal use.<br>
+		(2): Icons4Coffee (http://www.icons4coffee.com/): All icons are Royalty Free and can be used for both commercial and personal purposes.<br>
+		(3): WooFunction: 178 Amazing Web Design Icons (http://www.woothemes.com/2009/09/woofunction-178-amazing-web-design-icons/): GNU General Public License.<br>
+		(4): WooCons #1: 170 Free Web Icons (http://www.woothemes.com/2010/08/woocons1/): GNU General Public License.<br>
+		(5): http://www.ajaxload.info/ Generated gifs are totally free for use<br>
+		(6): Shapes4FREE: 100 External Link Web Icons (http://www.shapes4free.com/vector-icons/external-link-icons/): free for personal and commercial use (http://www.shapes4free.com/license/)<br>
+		(7): 24x24 Free Pixel Icons by IP Ivlichev Victor Petrovich, License: Creative Commons (Attribution 3.0 Unported) (http://www.iconfinder.com/icondetails/132302/24/handshake_icon)<br>
+		(8): Elegant Themes Icon Pack (http://www.elegantthemes.com/blog/resources/elegant-themes-icon-pack-for-free): dual licensed under the GPL and MIT<br>
+		(9): Communication icons by Dutch Icon (http://www.dutchicon.com/): Basic License (http://www.iconfinder.com/licenses/basic)<br>
+		(10): Lin by Everaldo Coelho (http://www.iconfinder.com/iconsets/lin#readme): GPL
+		</p>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this plugin. As I said at the beginning, I'd be glad to help you if you have any questions relating to this plugin. No guarantees, but I'll do my best to assist. If you have a more general question relating to the plugins on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Timo Reith</strong></p>
+		<p><a href="http://www.ifeelweb.de/" target="_blank">www.ifeelweb.de</a></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

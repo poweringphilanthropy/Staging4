@@ -1,0 +1,113 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Limitations\n"
+"POT-Creation-Date: 2014-12-14 16:29:09+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-14 17:53+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: controllers/PsnLimitationsController.php:72 lib/Manager.php:81
+#: lib/Options.php:31
+msgid "Limitations"
+msgstr "Beschränkungen"
+
+#: lib/ListTable/Limitations.php:40
+msgid "Rule name"
+msgstr "Regelname"
+
+#: lib/Manager.php:101
+msgid "Limitation type"
+msgstr "Beschränkungsart"
+
+#: lib/Manager.php:103
+msgid ""
+"Select a type if you want to limit how often this rule may match a post "
+"status transition per post."
+msgstr ""
+"Wähle eine Art wenn du beschränken möchtest, wie oft eine Regel bei einer "
+"Post Status Änderung pro Post greifen soll."
+
+#: lib/Manager.php:114 lib/Options.php:70
+msgid "Limit count"
+msgstr "Beschränkungsanzahl"
+
+#: lib/Manager.php:115 lib/Options.php:71
+msgid "Set the limit count. Numeric. Default: 1"
+msgstr "Setze die Beschränkungsanzahl. Numerisch. Default: 1"
+
+#: lib/Mapper.php:144
+msgid "By Rule + Post"
+msgstr "Nach Regel + Post"
+
+#: lib/Mapper.php:147
+msgid "By Rule + Post + Status After"
+msgstr "Nach Regel + Post + Status nachher"
+
+#: lib/Options.php:37
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: lib/Options.php:38
+msgid ""
+"Activates the notification limitations functionality.<br>A new section "
+"\"Limitations\" will be available which gives insight in the limitation "
+"records."
+msgstr ""
+"Aktiviert die Beschränkungsfunktion für Benachrichtigungen.<br>Ein neuer "
+"Bereich \"Beschränkungen\" wird verfügbar, der Einsicht in die Datensätze "
+"zur Berechnung der Beschränkungen gibt."
+
+#: lib/Options.php:44
+msgid "Global limitations"
+msgstr "Globale Beschränkung"
+
+#: lib/Options.php:45
+msgid ""
+"The notification limitations settings on this page will be used for all "
+"rules that have no custom limitations settings."
+msgstr ""
+"Die Einstellungen für die Beschränkung der Benachrichtigungen von dieser "
+"Seite werden für alle Regeln genutzt, die keine individuellen "
+"Beschränkungseinstellungen haben."
+
+#: lib/Options.php:56
+msgid "Type"
+msgstr "Art"
+
+#: lib/Options.php:57
+msgid "Select the limitation type."
+msgstr "Wähle die Beschränkungsart."
+
+#: lib/Test/LimitCountField.php:32
+msgid "Limitation count field on rules table"
+msgstr "Beschränkungsanzahl Feld auf der Regel Tabelle"
+
+#: lib/Test/LimitTypeField.php:32
+msgid "Limitation type field on rules table"
+msgstr "Beschränkungsart Feld auf der Regel Tabelle"
+
+#: lib/Test/LimitationsModel.php:22
+msgid "Limitations table"
+msgstr "Beschränkungs Tabelle"
+
+msgid ""
+"This page shows PSN's limitations log data. Based on this data, PSN can "
+"decide if a rule match has reached its limit based on your limitations "
+"settings.<br>You can delete entries to reduce the limitation effect on a "
+"rule / post combination."
+msgstr ""
+"Diese Seite zeigt PSNs Beschränkungs-Logdaten an. Basierend auf diesen Daten "
+"ermittelt PSN, ob eine Regel das konfigurierte Benachrichtigungslimit "
+"erreicht hat.<br>Um die Beschränkung auf einer Regel / Post Verbindung "
+"zurückzusetzen, kannst du die jeweiligen Datensätze löschen."
+
+msgid "Rule matches log"
+msgstr "Regel Treffer Log"

@@ -1,0 +1,11 @@
+<p><a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'htmlmails', 'mod' => 'htmlmails', 'action' => 'create'), 'requestVars', true) ?>" class="button button-dashicons" id="create_new_mailtemplate"><span class="dashicons dashicons-plus"></span> <?php _e('Create new mail template', 'psn_htm'); ?></a>
+    <?php echo IfwPsn_Zend_Controller_ModelBinding::getImportItemsButton(__('Import mail templates', 'psn_htm')); ?>
+</p>
+<?php echo PsnApplicationController::getImportForm('mail_template',
+    __('Import mail templates', 'psn_htm'),
+    'mail_templates.html',
+    admin_url('options-general.php?page=post-status-notifier&mod=htmlmails&controller=htmlmails&appaction=import'));
+?>
+<?php
+echo $this->listTable->display();
+?>

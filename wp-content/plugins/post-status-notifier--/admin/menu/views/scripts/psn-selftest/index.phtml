@@ -1,0 +1,94 @@
+<html>
+<head>
+    <style type="text/css">
+        html, body, div, form, fieldset, legend, label, ol, ul {
+            margin: 0;
+            padding: 0;
+            color: #444;
+            font-family: "Open Sans",sans-serif;
+            font-size: 13px;
+            line-height: 1.4em;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td {
+            text-align: left;
+            vertical-align: top;
+        }
+        h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+        img { border: 0; }
+        .result-good {
+            background-color: #32cd32;
+            color: #ffffff;
+            padding: 4px 6px;
+        }
+        .result-bad {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 4px 6px;
+        }
+        ol#test-results li {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        .result-bad-msg {
+            margin-top: 8px;
+        }
+        .fix-link {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 26px;
+            height: 28px;
+            margin: 0;
+            padding: 0 10px 1px;
+            cursor: pointer;
+            border-width: 1px;
+            border-style: solid;
+            -webkit-appearance: none;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            white-space: nowrap;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            color: #555;
+            border-color: #ccc;
+            background: #f7f7f7;
+            -webkit-box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08);
+            box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08);
+            vertical-align: top;
+
+            margin-top: 10px;
+        }
+        body {
+            padding: 20px 35px;
+        }
+    </style>
+</head>
+<body>
+<ol>
+<?php foreach($this->tests as $key => $test) : ?>
+    <li><?php _e('Test', 'ifw'); ?>: <b><?php echo $test->getName(); ?></b><br>
+        <em><?php echo $test->getDescription(); ?></em>
+        <br><br>
+        <?php _e('Result', 'ifw'); ?>:
+        <?php if($test->getResult()): ?>
+            <span class="result-good"><?php _e('OK', 'ifw'); ?></span>
+        <?php else: ?>
+            <span class="result-bad"><?php _e('ERROR', 'ifw'); ?></span>
+            <div class="result-bad-msg"><?php _e('Reason', 'ifw'); ?>: <?php echo $test->getErrorMessage(); ?><?php if($test->canHandle()): ?></div>
+            <a href="<?php echo $this->urlHandle; ?>&id=<?php echo $key; ?>" class="fix-link">Fix it</a><?php endif ?>
+        <?php endif ?>
+        <br><br></li>
+<?php endforeach; ?>
+</ol>
+
+<script type="text/javascript">
+    parent.metabox_plugin_status_reload();
+</script>
+</body>
+</html>

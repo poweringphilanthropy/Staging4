@@ -1,0 +1,415 @@
+.charitable-form-fields #fundraising .charitable-fieldset .charitable-fieldset {
+	border-top: none;
+}
+
+@media (min-width: 800px) and (max-width: 1400px){
+   .user-dashboard-content .entry-block {
+      margin-left: 50px;
+   }
+}
+
+.campaign-actions {
+	li.campaign-id {
+		font-weight: bold;
+		.val {
+			font-size: 18px;
+		}
+	}
+}
+
+#avatar-dragdrop-images li {
+	border: none;
+	.avatar {
+		border-radius: 100%;
+	}
+}
+
+#main {
+	&.user-dashboard-content {
+		background: $base_color;
+
+		.content-area {
+			padding: 2.4rem 1.4rem 0rem 1.4rem;
+
+			.dashboard-title {
+				color: #fff;
+				font-weight: 800;
+			}
+
+			.entry-block {
+				margin-top: 20px;
+			  	font-family: Raleway;
+			  	padding: 2.8rem;
+			  	border-radius: 0;
+
+			  	input, textarea, #lang-sel, .alt, .banner-subtitle, .mce-content-body {
+			  		font-family: Raleway;
+			  	}
+
+			  	.charitable-form-fields {
+			  		.charitable-fieldset:before {
+				  		background: none;
+				  		content: none;
+				  	}
+
+				  	label,
+				  	.charitable-form-header {
+				  		color: $base_color;
+				  		text-transform: uppercase;
+			  		    font-weight: 800;
+						letter-spacing: 1px;
+				  	}
+
+				  	input, textarea {
+				  		border: none;
+				  	}
+					.larger-font {
+						label {
+							font-size: 1.6rem;
+						}
+					}
+				  	.black_text {
+				  		label {
+				  			color: #000;
+				  		}
+				  	}
+
+				  	.header_black_text {
+						.charitable-form-header {
+							color: #000;
+						}
+				  	}
+				  	.header_larger-font {
+						.charitable-form-header {
+							font-size: 1.6rem;
+						}
+				  	}
+			  	}
+
+
+			    .button:not(.remove-image) {
+			    	background: $base_color;
+			    	border:none;
+			    	color: #fff;
+			    	border-radius: 0;
+		    	    font-family: "Raleway Bold", Raleway, monospace;
+	    	        margin: 0 5px;
+					font-weight: bold;
+					padding: 10px 20px;
+
+			    	&:hover {
+			    		color: #fff;
+			    		opacity: .8;
+			    	}
+
+				    &.insert-media {
+			    	    padding: 0 5px;
+				    }
+			    }
+				
+				.entry {
+					padding: 0px;
+				}
+			}
+		}
+
+		#charitable-campaign-submission-form {
+		  	padding-top: 0px;
+
+		  	.charitable-form-errors.charitable-notice {
+		  		border: none;
+				background: #fff;
+		  	}
+
+		  	.charitable-submit-field.step-content {
+		  		.button {
+		  			margin: 5px;
+		  		}
+		  	}
+
+		  	.pp-edd-variable-prices tbody tr:first-child td {
+		  		border: none;
+		  		margin-top: -40px;
+			    display: block;
+			    padding-left: 0;
+			    padding-right: 0;
+
+		  		.remove {
+		  			display:none;
+		  		}
+		  	}
+
+		  	.add-row-pricing {
+	  		    background: $base_color;
+			    color: #fff;
+			    text-align: center;
+			    // cursor: pointer;
+
+			  	a {
+			  		color: #f9f9f9;
+				    font-style: initial;
+				    font-size: 18px;
+			  	}
+		  	}
+
+		  	.pp-things-to-know {
+		  		h3 {
+		  			margin-top: 0px;
+		  			margin-bottom: 0px;
+		  			font-size: 1.8rem;
+					font-weight: 800;
+		  		}
+		  		p {
+		  			font-weight: 500;
+		  			font-family: "Raleway";
+		  		}
+		  	}
+
+		  	.step-details,
+			.step-details.section-content {
+				display: block;
+				padding: 10px 0;
+				color: #fff;
+				padding-bottom: 30px;
+
+				.step-label,
+				.step-label.section-content {
+					display: inline-block;
+				    background: none;
+				    font-size: 4rem;
+					line-height: 4rem;
+					font-weight: 800;
+				}
+
+				.form-action,
+				.form-action.section-content {
+					display: inline-block;
+				    float: right;
+				    background: none;
+
+				    .button {
+				    	border: none;
+					    background: #fff;
+					    border-radius: 0;
+					    color: $base_color;
+				        font-family: "Raleway Bold", Raleway, monospace;
+				        font-weight: bold;
+			            padding: 10px 20px;
+
+					    &:hover {
+					    	opacity: 0.8;
+					    }
+				    }
+				}
+			}
+
+			.sw-theme-default > ul.step-anchor > li > a, 
+			.sw-theme-default > ul.step-anchor > li > a:hover {
+				color: #fff;
+				text-transform: uppercase;
+			}
+
+			.sw-theme-default > ul.step-anchor > li.active > a, 
+			.sw-theme-default > ul.step-anchor > li.active > a:hover {
+				color: $base_color;
+			}
+
+			.nav-tabs {
+				border-bottom: none;
+				margin-bottom: -9px;
+
+				li {
+				    margin-bottom: -2px;
+
+				    a {
+				    	font-weight: 800;
+						letter-spacing: 1px;
+				    }
+
+				    &.active {
+				    	background: #fff;
+
+				    	a {
+				    		
+				    	}
+				    }
+				}
+			}
+
+			.section-content {
+				background: #fff;
+				padding: 2.8rem;
+
+				.pp-login-signup-button {
+					#login-button-on-create-campaign {
+						background: $base_color;
+					    border: none;
+					    color: #fff;
+					    border-radius: 0;
+					    font-family: "Raleway Bold", Raleway, monospace;
+					    margin: 0 5px;
+					    font-weight: bold;
+					    padding: 10px 20px;
+
+					    &:hover {
+					    	color: #fff;
+							opacity: .8;
+					    }
+					}
+
+					#charitable_field_login_button {
+						text-align: center;
+					    height: 150px;
+					    border: dashed 2px #b9b2af;
+					    border-radius: 7px;
+					    display: table;
+					    margin-top: 47px;
+					    font-size: 22px;
+
+					    .container-signup-button-on-create-campaign {
+						    vertical-align: middle;
+							display: table-cell;
+						}
+					}
+				}
+			}
+			.section-button-container {
+				padding: 10px;
+			    background: #fff;
+			    text-align: right;
+			    padding-bottom: 20px;
+			}
+
+			table.pp-tickets.charitable-repeatable-form-field-table {
+				.add-row {
+					font-style: initial;
+					text-transform: uppercase;
+					color: #000;
+					font-weight: 800;
+					font-size: 16px;
+				}
+			}
+		}
+
+		#charitable-profile-form {
+			.charitable-submit-field {
+				// margin-bottom: 30px;
+			}
+		}
+
+		&.campaign_submission_page {
+			#account {
+				p {
+					font-weight: bold;
+				}
+			}
+			.dashboard-title {
+				display: none;
+			}
+			.user-dashboard-menu {
+	    		padding-top: 150px;
+			}
+			.entry-block {
+				background-color: $base_color;
+				padding:0px;
+				box-shadow: none;
+			}
+		}
+
+		.user-dashboard-menu {
+		    float: right;
+		    width: 300px;
+		    height: 100%;
+
+		    li {
+		    	width: 100%;
+		    	a {
+		    		background-color: $base_color;
+		    		border: none;
+		    		width: 100%;
+		    		color: #fff;
+		    		z-index: initial;
+
+		    		.icon {
+						float: left;
+					    background: #fff;
+					    border-radius: 50%;
+					    width: 60px;
+					    height: 60px;
+					    padding: 10px;
+    					margin-right: 10px;
+    					text-align: center;
+
+    					&.profile img {
+    						width: 37px;
+    					}
+
+    					&.create-campaign img {
+    						width:30px;
+    						padding: 4px 0 0 0;
+    					}
+
+    					&.your-campaigns img {
+    						width: 35px;
+    					}
+		    		}
+
+		    		.text {
+						line-height: 60px;
+		    		}
+
+		    		.clear {
+		    			float: none; 
+		    			clear: both;
+		    		}
+		    	}
+		    }
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	#main {
+		&.user-dashboard-content {
+			&.campaign_submission_page {
+				.user-dashboard-menu {
+		    		padding-top: 30px;
+				}
+
+				.entry-block {
+					#charitable-campaign-submission-form {
+						.step-details {
+							text-align: center;
+
+							.form-action {
+								float: none;
+    							margin-top: 20px;
+							}
+						}
+
+						.wizard-nav {
+							width: 100%;
+    						text-align: center;
+						}
+					}
+				}
+			}
+			.user-dashboard-menu {
+			    float: none;
+			    width: 100%;
+			    text-align:center;
+
+			    li {
+			    	max-width: 300px;
+			    	// a {
+			    	// 	background-color: initial;
+			    	// 	border: none;
+			    	// 	width: inherit;
+			    	// 	color: #fff;
+			    	// }
+			    }
+			}
+		}
+	}
+}

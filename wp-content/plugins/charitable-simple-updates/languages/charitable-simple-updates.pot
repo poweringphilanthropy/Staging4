@@ -1,0 +1,102 @@
+# Copyright (C) 2015 Studio 164a
+# This file is distributed under the same license as the Charitable - Simple Updates package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Simple Updates 1.0.0-20150717\n"
+"Report-Msgid-Bugs-To: "
+"http://wordpress.org/support/plugin/charitable-simple-updates\n"
+"POT-Creation-Date: 2015-07-17 11:53:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: includes/admin/class-charitable-simple-updates-admin.php:90
+#: includes/ambassadors/class-charitable-simple-updates-campaign-form.php:62
+msgid "Updates"
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-updates.php:13
+msgid "Write updates about your campaign..."
+msgstr ""
+
+#: includes/admin/views/metaboxes/campaign-updates.php:32
+msgid ""
+"You can use this area to write updates about your campaign. HTML is "
+"supported."
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:45
+msgid "This plugin"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:81
+msgid "activate it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:84
+msgid "install it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:87
+msgid " requires Charitable! Please %s to continue!"
+msgstr ""
+
+#: includes/class-charitable-simple-updates.php:296
+#: includes/class-charitable-simple-updates.php:307
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:31
+msgid "Campaign Updates"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:32
+msgid "Display a campaign`s updates."
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:69
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:73
+msgid "Show updates by campaign:"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:75
+msgid "Campaign currently viewed"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:76
+msgid "Specific campaign"
+msgstr ""
+
+#: includes/widgets/class-charitable-simple-updates-widget.php:85
+msgid "Hide if there are no updates"
+msgstr ""
+
+#: tests/helpers/edd/class-helper-payment.php:120
+msgid "PayPal Transaction ID: %s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Charitable - Simple Updates"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://164a.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds an Updates section to your campaigns. Integrated with Charitable "
+"Ambassadors to allow your campaign creators to post updates about their "
+"campaign."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Studio 164a"
+msgstr ""

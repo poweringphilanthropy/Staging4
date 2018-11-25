@@ -1,0 +1,50 @@
+#charitable-team-fundraising-form {
+	padding-top: 4.2rem;
+	padding-bottom: 4.2rem;
+
+	.switch-button {
+		text-align: right;
+		label {
+			width: 50px;
+    		height: 30px;
+
+    		&:after {
+    			width: 20px;
+    			height: 20px;
+    		}
+		}
+	}
+
+	.charitable-form-field {
+		label {
+			color: $base_color;
+			text-transform: uppercase;
+		    font-weight: 800;
+		    letter-spacing: 1px;
+		    font-size: 1.6rem;
+		}
+
+		input,
+		textarea {
+			border: none;
+		}
+	}
+
+	.button-wrapper {
+		margin-top: 30px;
+    	text-align: center;
+
+    	.button:not(.remove-image) {
+		    background: $base_color;
+		    border: none;
+		    color: #fff;
+		    border-radius: 0;
+		    font-family: "Raleway Bold", Raleway, monospace;
+		    margin: 0 5px;
+		    font-weight: bold;
+		    padding: 15px 25px;
+		    letter-spacing: 1px;
+		    font-size: 2rem;
+		}
+	}
+}

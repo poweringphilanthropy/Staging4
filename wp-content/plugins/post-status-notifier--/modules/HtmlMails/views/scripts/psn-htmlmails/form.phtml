@@ -1,0 +1,26 @@
+<div id="mail_template_form" style="clear: both;" class="psn_form_container">
+    <div style="float: left; width: 77%;">
+    <h3><?php echo $this->langHeadline; ?></h3>
+    <?php
+    echo $this->form;
+    ?>
+    </div>
+    <div style="width: 20%; float: left; padding-left: 20px;">
+        <h3><?php _e('Help', 'ifw'); ?></h3>
+        <p><a href="javascript:void(0);" class="ifw-wp-icon-help placeholder_help"><?php _e('List of placeholders', 'psn'); ?></a></p>
+        <p><a href="javascript:void(0);" class="ifw-wp-icon-help conditions_help"><?php _e('Conditions', 'psn'); ?></a></p>
+
+        <h3><?php _e('Looking for email templates?', 'psn_htm'); ?></h3>
+        <p><?php _e('Find your email template on themeforest.net', 'psn_html'); ?></p>
+        <div style="text-align: center;">
+            <a href="http://themeforest.net/category/marketing/email-templates/?ref=ifeelweb" target="_blank"><img src="<?php echo $this->pm->getEnv()->getUrlAdminImg(); ?>themeforest_banner.jpg" /></a>
+        </div>
+
+        <h3><?php _e('HTML email resources', 'psn_htm'); ?></h3>
+        <p><?php printf( __('Learn more about HTML emails with our list of recommendable <a href="%s" class="%s" target="_blank">HTML email resources</a>.'), 'http://docs.ifeelweb.de/post-status-notifier/html_email_resources.html', 'ifw-external-link'); ?></p>
+
+        <h3><?php _e('Examples', 'psn'); ?></h3>
+        <p><?php printf( __('To get some HTML email example templates, visit the <a href="%s" class="%s" target="_blank">PSN resources website</a>.'), 'http://www.ifeelweb.de/post-status-notifier-psn-resources/', 'ifw-external-link' ); ?></p>
+    </div>
+    <div  style="clear: both;"></div>
+</div>

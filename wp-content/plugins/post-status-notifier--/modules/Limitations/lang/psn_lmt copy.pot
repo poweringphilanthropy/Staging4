@@ -1,0 +1,95 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Limitations\n"
+"POT-Creation-Date: 2014-12-14 16:29:09+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: controllers/PsnLimitationsController.php:72 lib/Manager.php:81
+#: lib/Options.php:31
+msgid "Limitations"
+msgstr ""
+
+#: lib/ListTable/Limitations.php:40
+msgid "Rule name"
+msgstr ""
+
+#: lib/Manager.php:101
+msgid "Limitation type"
+msgstr ""
+
+#: lib/Manager.php:103
+msgid ""
+"Select a type if you want to limit how often this rule may match a post "
+"status transition per post."
+msgstr ""
+
+#: lib/Manager.php:114 lib/Options.php:70
+msgid "Limit count"
+msgstr ""
+
+#: lib/Manager.php:115 lib/Options.php:71
+msgid "Set the limit count. Numeric. Default: 1"
+msgstr ""
+
+#: lib/Mapper.php:144
+msgid "By Rule + Post"
+msgstr ""
+
+#: lib/Mapper.php:147
+msgid "By Rule + Post + Status After"
+msgstr ""
+
+#: lib/Options.php:37
+msgid "Activate"
+msgstr ""
+
+#: lib/Options.php:38
+msgid ""
+"Activates the notification limitations functionality.<br>A new section "
+"\"Limitations\" will be available which gives insight in the limitation "
+"records."
+msgstr ""
+
+#: lib/Options.php:44
+msgid "Global limitations"
+msgstr ""
+
+#: lib/Options.php:45
+msgid ""
+"The notification limitations settings on this page will be used for all rules that have no custom limitations settings."
+msgstr ""
+
+#: lib/Options.php:56
+msgid "Type"
+msgstr ""
+
+#: lib/Options.php:57
+msgid "Select the limitation type."
+msgstr ""
+
+#: lib/Test/LimitCountField.php:32
+msgid "Limitation count field on rules table"
+msgstr ""
+
+#: lib/Test/LimitTypeField.php:32
+msgid "Limitation type field on rules table"
+msgstr ""
+
+#: lib/Test/LimitationsModel.php:22
+msgid "Limitations table"
+msgstr ""
+
+msgid "This page shows PSN's limitations log data. Based on this data, PSN can decide if a rule match has reached its limit based on your limitations settings.<br>You can delete entries to reduce the limitation effect on a rule / post combination."
+msgstr ""
+
+msgid "Rule matches log"
+msgstr ""
+

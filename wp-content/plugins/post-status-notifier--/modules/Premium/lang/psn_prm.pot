@@ -1,0 +1,62 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/Smtp\n"
+"POT-Creation-Date: 2013-08-21 18:29:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+
+msgid "Default From"
+msgstr ""
+
+msgid "Here you can define an email address which will be used as sender for the notifications. Leave this blank to use the e-mail address configured in Settings / General as sender. Note that you can define a custom sender for each rule."
+msgstr ""
+
+msgid "Format: Sender Name <sender@domain.com>"
+msgstr ""
+
+msgid "This will check the block feature by default meaning that <b %s>no notifications will be sent</b> unless you deselect the checkbox before saving or updating a post."
+msgstr ""
+
+msgid "Premium license code"
+msgstr ""
+
+msgid "Insert your CodeCanyon license code for this plugin here to be able to use the auto-update feature. Refer to the <a href=\"%s\" target=\"_blank\">documentation</a> for details."
+msgstr ""
+
+msgid "Selected by default"
+msgstr ""
+
+msgid "Enable for subject"
+msgstr ""
+
+msgid "Enables support for conditions, loops and filters for email subject. Check the <a href=\"%s\" target=\"_blank\">Conditions manual</a> to learn more about it."
+msgstr ""
+
+msgid "Enable for body"
+msgstr ""
+
+msgid "Enables support for conditions, loops and filters for email body. Check the <a href=\"%s\" target=\"_blank\">Conditions manual</a> to learn more about it."
+msgstr ""
+
+msgid "Log errors"
+msgstr ""
+
+msgid "Create error logs if an error occurs while parsing the template code. Helps debugging the conditions syntax."
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Default FROM"
+msgstr ""
+
+msgid "Here you can define an email address which will be used as sender for the notifications. Leave this blank to use the e-mail address configured in Settings / General as sender. Note that you can define a custom sender for each rule."
+msgstr ""

@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"Language: de_DE\n"
+
+#: modules/Logger/bootstrap.php:75 modules/Logger/bootstrap.php:90
+msgid "Log"
+msgstr "Log"
+
+#: modules/Logger/bootstrap.php:77
+msgid "A log entry will be written using subject as log title"
+msgstr "Es wird ein Log Eintrag erstellt der Betreff und Text verwendet"
+
+#: modules/Logger/bootstrap.php:105
+msgid "Logger"
+msgstr "Logger"
+
+#: modules/Logger/bootstrap.php:109
+msgid "Log rule matches"
+msgstr "Logge Regel Treffer"
+
+#: modules/Logger/bootstrap.php:110
+msgid "Create informational log entry when a rule matches a status transition"
+msgstr "Informativen Log-Eintrag erstellen, wenn eine Regel zutrifft"
+
+#: modules/Logger/lib/ListTable/Log.php:45
+msgid "Timestamp"
+msgstr "Zeitstempel"
+
+#: modules/Logger/lib/ListTable/Log.php:46
+msgid "Type"
+msgstr "Typ"
+
+#: modules/Logger/lib/ListTable/Log.php:47
+msgid "Title"
+msgstr "Titel"
+
+#: modules/Logger/lib/ListTable/Log.php:48
+msgid "Priority"
+msgstr "Priorit?t"
+
+#: modules/Logger/lib/ListTable/Log.php:95
+msgid "Info"
+msgstr "Info"
+
+#: modules/Logger/lib/ListTable/Log.php:135
+msgid "Show details"
+msgstr "Details anzeigen"
+
+#: modules/Logger/lib/ListTable/Log.php:177
+msgid "Clear type \"Email\""
+msgstr "Typ \"Email\" löschen"
+
+#: modules/Logger/lib/ListTable/Log.php:178
+msgid "Clear type \"Info\""
+msgstr "Typ \"Info\" löschen"
+
+#: modules/Logger/lib/ListTable/Log.php:179
+msgid "Clear complete log"
+msgstr "Alle Log-Einträge löschen"
+
+#: modules/Logger/lib/Metabox/Logs.php:28
+msgid "Current logs entries"
+msgstr "Aktuelle Log-Einträge"
+
+#: modules/Logger/lib/Service/Logger.php:71
+msgid "Rule settings"
+msgstr "Regel Einstellungen"
+
+#: modules/Logger/lib/Service/Logger.php:77
+msgid "Additional post info"
+msgstr "Zusätzliche Post Informationen"
+
+msgid "Checks if the database table for storing the logging data exists"
+msgstr "Prüft ob die Datenbanktabelle zum Speichern der Log Daten existiert"
+
+msgid "Widget for admins only"
+msgstr "Widget nur für Admins"
+
+msgid "Show the dashboard widget for admins only"
+msgstr "Das Widget im Dashboard nur für Admins anzeigen"
+
+msgid "Disable widget"
+msgstr "Widget abschalten"
+
+msgid "Disable the log widget on the dashboard"
+msgstr "Das Widget im Dashboard abschalten"
+
+msgid "Success"
+msgstr "Erfolg"
+
+msgid "Failure"
+msgstr "Fehler"
+
+msgid "Array details"
+msgstr "Array Details"
+
+msgid ""
+"Show array contents in log entries instead of just \"Array\". Use only when "
+"you need it as this can litter up your log table e.g. in case of placeholder "
+"[recipient_all_users]."
+msgstr ""
+"Zeige den Inhalt von Array in Log Einträgen anstelle von einfach \"Array\". "
+"Benutze diese Option nur, wenn du sie benötigst, da sie sonst "
+"unnötigerweise deine Log-Tabelle füllen würde, z.B. mit dem Inhalt des "
+"Platzhalters [recipient_all_users]."
+
+msgid "Placeholder details"
+msgstr "Platzhalter Details."
+
+msgid ""
+"Here you can adjust PSN's logging behaviour. Check the <a href=\"%s\" target="
+"\"_blank\">Log manual</a> to learn more about logging."
+msgstr ""
+"Hier kannst du PSN's Logging Verwalten einstellen. Sieh ins <a href=\"%s\" "
+"target=\"_blank\">Log Handbuch</a> um mehr zu erfahren."
+
+msgid "Notification limit reached on Post \"%s\" with rule \"%s\""
+msgstr "Beschr�nkungslimit erreicht f�r Post \"%s\" mit Regel \"%s\""
+
+msgid "Limitations settings"
+msgstr "Beschr�nkungseinstellungen"
+
+msgid "Post data"
+msgstr "Post Daten"

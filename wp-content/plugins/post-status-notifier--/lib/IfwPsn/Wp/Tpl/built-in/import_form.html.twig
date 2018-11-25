@@ -1,0 +1,20 @@
+<div id="import_items_container" style="display: none;">
+    <h3>{{ headline }}</h3>
+    <p class="ifw-wp-icon-help">{% autoescape false %}{{ help_text }}{% endautoescape %}</p>
+    <form action="{{ action_url }}" name="import_{{ identifier }}_form" id="import_{{ identifier }}_form" class="ifw_import_form" method="post" enctype="multipart/form-data">
+        <label for="importfile">{{ import_file_label }}:</label>
+        <input type="file" name="importfile" id="importfile" accept="text/xml" /><br>
+        <p class="description">{{ import_file_description }}</p>
+        <label for="import_prefix">{{ import_prefix_label }}:</label>
+        <input type="text" name="import_prefix" id="import_prefix" />
+        <p class="description">{{ import_prefix_description }}</p>
+        <br>
+        <input type="hidden" name="nonce" value="{{ nonce }}">
+        <input type="submit" name="submit" value="{{ text.__('Submit') }}" class="button button-primary">
+    </form>
+    <div id="ifw_import_form_loading_modal" style="display:none;">
+        <h3>{{ wait_text_headline }}</h3>
+        <p><b>{{ wait_text_description }}</b></p>
+        <div class="ifw_wp_metabox_loading"></div>
+    </div>
+</div>

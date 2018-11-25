@@ -1,0 +1,18 @@
+{% autoescape false %}
+
+<h3>{{ text.__('Conditions', 'psn') }}</h3>
+{% if pm.isPremium == false %}{{ text.__('This is a <a href=\"%s\" target=\"_blank\">Premium</a> feature.', 'psn')|replace({ '%s': pm.getConfig.plugin.premiumUrl }) }}{% endif %}
+
+<p>{{ text.__('<b>Subject</b> and <b>text</b> support conditions, loops, functions and placeholder filters. This makes it possible to create dynamic texts.', 'psn') }}</p>
+<p>{{ text.__('This is an <b>example if-condition</b> to display the excerpt only if it is not empty', 'psn') }}:</p>
+
+<pre>{&#37; if "[post_excerpt]" is not empty &#37;}This is the excerpt: [post_excerpt]{&#37; endif &#37;}</pre>
+
+<p>{{ text.__('With placeholder filters and functions you can get the most unlikely values out of the placeholders attached to a post. This example retrieves the currency key out a multidimensional serialized PHP array', 'psn') }}:</p>
+
+<pre>&#123;{ [post_custom_field-_edd_payment_meta]|unserialize|get_key("currency") }&#125;</pre>
+
+<h3>{{ text.__('Documentation', 'psn') }}</h3>
+<p>{{ text.__('To learn more about conditions, loops, functions and filters please <a href="%s" target="_blank">check the documentation</a>.', 'psn')|replace({'%s': 'http://docs.ifeelweb.de/post-status-notifier/conditional_templates.html'}) }}</p>
+
+{% endautoescape %}

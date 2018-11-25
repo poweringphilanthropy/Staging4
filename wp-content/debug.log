@@ -1,0 +1,159 @@
+[21-Nov-2018 17:48:56 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:48:56 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:29 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:29 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:49 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:49 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:53 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:49:53 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:50:45 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:50:45 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:52:27 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 17:52:56 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:52:56 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:52:56 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:52:56 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:58:46 UTC] PHP Notice:  Array to string conversion in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 17:58:46 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php:184
+Stack trace:
+#0 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php(78): Psn_Notification_Service_Email->_prepareRecipients(Object(Psn_Model_Rule), Object(WP_Post))
+#1 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Manager.php(185): Psn_Notification_Service_Email->execute(Object(Psn_Model_Rule), Object(WP_Post))
+#2 /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Postponed.php(87): Psn_Notification_Manager->handlePostStatusTransition('future', 'new', Object(WP_Post))
+#3 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(286): Psn_Notification_Postponed->handle('')
+#4 /home/poweri33/staging/4/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /home/poweri33/staging/4/wp-includes/plugin.php(453): WP_Hoo in /home/poweri33/staging/4/wp-content/plugins/post-status-notifier/lib/Psn/Notification/Service/Email.php on line 184
+[21-Nov-2018 18:00:26 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:00:31 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:01:08 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1236
+[21-Nov-2018 18:01:27 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:01:27 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:02:55 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:02:59 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:03:24 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:03:39 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:03:39 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:09:43 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:09:48 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:10:30 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:10:39 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:10:39 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:13:56 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 684
+[21-Nov-2018 18:14:05 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:14:12 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:14:36 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:14:46 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:14:46 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:17:56 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:17:59 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 684
+[21-Nov-2018 18:17:59 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 684
+[21-Nov-2018 18:18:18 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:18:31 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:18:31 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:19:25 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'PP_Charitable_Campaign_Form' not found in /home/poweri33/staging/4/wp-includes/class-wp-hook.php on line 286
+[21-Nov-2018 18:19:41 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:19:46 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:20:00 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:20:15 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:20:15 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[21-Nov-2018 18:20:51 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'PP_Charitable_Campaign_Form' not found in /home/poweri33/staging/4/wp-includes/class-wp-hook.php on line 286
+[21-Nov-2018 18:21:06 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:21:10 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:21:21 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:21:29 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:21:29 UTC] PHP Warning:  checkdate() expects parameter 1 to be integer, string given in /home/poweri33/staging/4/wp-includes/functions.php on line 5264
+[21-Nov-2018 18:21:29 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/charitable/includes/campaigns/class-charitable-campaign.php on line 959
+[21-Nov-2018 18:21:53 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:21:58 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:22:22 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:22:31 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:22:31 UTC] PHP Warning:  checkdate() expects parameter 1 to be integer, string given in /home/poweri33/staging/4/wp-includes/functions.php on line 5264
+[21-Nov-2018 18:22:31 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/charitable/includes/campaigns/class-charitable-campaign.php on line 959
+[21-Nov-2018 18:24:25 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 347
+[21-Nov-2018 18:24:39 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:24:42 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:24:57 UTC] PHP Notice:  Undefined variable: filename in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-charitable-campaign-form.php on line 1237
+[21-Nov-2018 18:25:08 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/pp-g4g-toolkit/includes/class-g4g-campaign-submissions.php on line 128
+[21-Nov-2018 18:25:08 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[22-Nov-2018 12:35:34 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/members/inc/template.php on line 95
+[22-Nov-2018 12:35:34 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[22-Nov-2018 12:35:37 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/members/inc/template.php on line 95
+[22-Nov-2018 12:35:37 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[22-Nov-2018 12:35:40 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/members/inc/template.php on line 95
+[22-Nov-2018 12:35:40 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[22-Nov-2018 12:35:41 UTC] PHP Notice:  Trying to get property of non-object in /home/poweri33/staging/4/wp-content/plugins/members/inc/template.php on line 95
+[22-Nov-2018 12:35:41 UTC] PHP Notice:  Undefined index: crm_id in /home/poweri33/staging/4/wp-content/themes/philanthropy-project-child-theme/functions.php on line 287
+[22-Nov-2018 12:38:22 UTC] PHP Notice:  Undefined index: label in /home/poweri33/staging/4/wp-content/plugins/philanthropy-project-toolkit/legacy/includes/class-pp-users.php on line 100
+[23-Nov-2018 13:38:51 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_posts' doesn't exist for query 
+		SELECT ID, post_name, post_parent, post_type
+		FROM wpxj_posts
+		WHERE post_name IN ('faq')
+		AND post_type IN ('page','attachment')
+	 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), include_once('/plugins/q-and-a/q-and-a.php'), require('/plugins/q-and-a/admin/q-a-plus-admin.php'), get_page_by_path
+[23-Nov-2018 13:38:54 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_users' doesn't exist for query SELECT * FROM wpxj_users WHERE user_login = 'Greeks4Good' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, Tribe__Tickets__Main->plugins_loaded, Tribe__Main::instance, Tribe__Main->__construct, Tribe__Main->load_text_domain, load_plugin_textdomain, get_user_locale, wp_get_current_user, _wp_get_current_user, apply_filters('determine_current_user'), WP_Hook->apply_filters, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by
+[23-Nov-2018 13:38:54 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_users' doesn't exist for query SELECT * FROM wpxj_users WHERE user_login = 'Greeks4Good' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, Tribe__Tickets__Main->plugins_loaded, Tribe__Main::instance, Tribe__Main->__construct, Tribe__Main->load_text_domain, load_plugin_textdomain, get_user_locale, wp_get_current_user, _wp_get_current_user, apply_filters('determine_current_user'), WP_Hook->apply_filters, wp_validate_logged_in_cookie, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by
+[23-Nov-2018 13:38:54 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_users' doesn't exist for query SELECT * FROM wpxj_users WHERE user_login = 'Greeks4Good' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, sg_cachepress_start, SG_CachePress->run, SG_CachePress->set_headers_cookies, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by
+[23-Nov-2018 13:38:54 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_posts' doesn't exist for query SELECT * FROM wpxj_posts WHERE ID = 1 LIMIT 1 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, Charitable->campaign_fields, include('/plugins/charitable/includes/fields/default-fields/campaign-fields.php'), get_edit_post_link, get_post, WP_Post::get_instance
+[23-Nov-2018 13:38:54 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_posts' doesn't exist for query SELECT   wpxj_posts.* FROM wpxj_posts  WHERE 1=1  AND wpxj_posts.post_type = 'get_started_page' AND ((wpxj_posts.post_status = 'publish'))  ORDER BY wpxj_posts.post_date DESC  made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, PP_Cpt->create_post_types_and_tax, PP_Cpt->get_get_started_pages, get_posts, WP_Query->query, WP_Query->get_posts
+[23-Nov-2018 13:38:55 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_posts' doesn't exist for query SELECT   wpxj_posts.* FROM wpxj_posts  WHERE 1=1  AND wpxj_posts.post_type = 'get_started_page' AND ((wpxj_posts.post_status = 'publish'))  ORDER BY wpxj_posts.post_date DESC  made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, G4G_College->create_post_types_and_tax, G4G_College->get_get_started_pages, get_posts, WP_Query->query, WP_Query->get_posts
+[23-Nov-2018 13:38:55 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_posts' doesn't exist for query SELECT * FROM wpxj_posts  WHERE (post_type = 'page' AND post_status = 'publish')     ORDER BY wpxj_posts.post_title ASC made by do_action('admin_init'), WP_Hook->do_action, WP_Hook->apply_filters, ninja_forms_register_form_settings_basic_metabox, get_pages
+[23-Nov-2018 13:38:57 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_users' doesn't exist for query SELECT * FROM wpxj_users WHERE user_login = 'Greeks4Good' made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, Tribe__Tickets__Main->plugins_loaded, Tribe__Tickets__Main->bind_implementations, Tribe__Tickets__RSVP->__construct, Tribe__Tickets__RSVP->hooks, is_user_logged_in, wp_get_current_user, _wp_get_current_user, apply_filters('determine_current_user'), WP_Hook->apply_filters, wp_validate_logged_in_cookie, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by
+[23-Nov-2018 13:38:57 UTC] WordPress database error Table 'poweri33_wp306_st4.wpxj_users' doesn't exist for query SELECT * FROM wpxj_users WHERE user_login = 'Greeks4Good' made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, sg_cachepress_start, SG_CachePress->run, SG_CachePress->set_headers_cookies, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by
+[23-Nov-2018 15:07:08 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; faqpageorder_Widget has a deprecated constructor in /home/poweri33/staging/4/wp-content/plugins/q-and-a/inc/reorder.php on line 265
+[23-Nov-2018 15:43:14 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; faqpageorder_Widget has a deprecated constructor in /home/poweri33/staging/4/wp-content/plugins/q-and-a/inc/reorder.php on line 265
+[23-Nov-2018 19:16:59 UTC] PHP Notice:  Undefined variable: de in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/includes/connect-actions.php on line 67
+[24-Nov-2018 09:56:34 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 09:57:25 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 09:58:18 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 09:59:56 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 10:16:28 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 10:18:05 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189
+[24-Nov-2018 10:18:34 UTC] PHP Notice:  Undefined variable: data_total in /home/poweri33/staging/4/wp-content/plugins/pp-edd-stripe/pp-edd-stripe.php on line 189

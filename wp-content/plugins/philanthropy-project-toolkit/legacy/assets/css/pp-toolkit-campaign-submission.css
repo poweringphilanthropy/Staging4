@@ -1,0 +1,883 @@
+/**
+ * SmartWizard Basic CSS
+ */
+/* We hide step anchor display by js after page fully loaded to avoid mess content */
+.wizard-nav {
+  display: none; }
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.nav > li {
+  position: relative;
+  display: block; }
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px; }
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: #eee; }
+
+.nav > li.disabled > a {
+  color: #777; }
+
+.nav > li.disabled > a:focus,
+.nav > li.disabled > a:hover {
+  color: #777;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent; }
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: #eee;
+  border-color: #337ab7; }
+
+.nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5; }
+
+.nav > li > a > img {
+  max-width: none; }
+
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+  /*display: inline-block; we hide this and wait page fully loaded*/
+  margin-bottom: 10px; }
+
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px; }
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0; }
+
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd; }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent; }
+
+.sw-main {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.sw-main .sw-container {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+.sw-main .step-content {
+  display: none;
+  position: relative;
+  margin: 0; }
+
+.sw-main .sw-toolbar {
+  margin-left: 0; }
+
+/* SmartWizard Theme: White */
+.sw-theme-default {
+  /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);*/ }
+
+/*.sw-theme-default .sw-container {
+    min-height: 250px;
+}
+.sw-theme-default .sw-container {
+    min-height: inherit;
+}*/
+.sw-theme-default .step-content {
+  /*padding: 10px;*/
+  border: 0px solid #D4D4D4;
+  background-color: #FFF;
+  text-align: left; }
+
+.sw-theme-default .sw-toolbar {
+  /*background: #f9f9f9;*/
+  border-radius: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0; }
+
+.sw-theme-default .sw-toolbar-top {
+  border-bottom-color: #ddd; }
+
+.sw-theme-default .sw-toolbar-bottom {
+  border-top-color: #ddd; }
+
+.sw-theme-default > ul.step-anchor > li > a, .sw-theme-default > ul.step-anchor > li > a:hover {
+  border: none;
+  color: #bbb;
+  text-decoration: none;
+  outline-style: none;
+  background: transparent;
+  border: none; }
+
+.sw-theme-default > ul.step-anchor > li.clickable > a:hover {
+  color: #4285F4;
+  background: transparent; }
+
+.sw-theme-default > ul.step-anchor > li > a::after {
+  content: "";
+  background: #4285F4;
+  /* #5bc0de #4285F4*/
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  transition: all 250ms ease 0s;
+  transform: scale(0); }
+
+.sw-theme-default > ul.step-anchor > li.active > a {
+  border: none;
+  color: #4285F4;
+  background: transparent; }
+
+.sw-theme-default > ul.step-anchor > li.active > a::after {
+  transform: scale(1); }
+
+.sw-theme-default > ul.step-anchor > li.done > a {
+  border: none;
+  color: #000;
+  background: transparent; }
+
+.sw-theme-default > ul.step-anchor > li.done > a::after {
+  background: #5cb85c;
+  transform: scale(1); }
+
+.sw-theme-default > ul.step-anchor > li.danger > a {
+  border: none;
+  color: #d9534f;
+  background: transparent; }
+
+.sw-theme-default > ul.step-anchor > li.danger > a::after {
+  background: #d9534f;
+  transform: scale(1); }
+
+.sw-theme-default > ul.step-anchor > li.disabled > a, .sw-theme-default > ul.step-anchor > li.disabled > a:hover {
+  color: #eee; }
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+  .sw-theme-default > .nav-tabs > li {
+    float: none; } }
+/* Loader Animation
+Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
+*/
+@-webkit-keyframes ld {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(1.1); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@-moz-keyframes ld {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(1.1); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@-o-keyframes ld {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(1.1); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@keyframes ld {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(1.1); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+.sw-theme-default > ul.step-anchor > li.loading:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: #4285f4;
+  border-right-color: #4285f4;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  -webkit-animation: ld 1s ease-in-out infinite;
+  -moz-animation: ld 1s ease-in-out infinite;
+  -o-animation: ld 1s ease-in-out infinite;
+  animation: ld 1s ease-in-out infinite; }
+
+.sw-theme-default .step-details .show_campaign_id {
+  display: block;
+  background: transparent;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold; }
+  .sw-theme-default .step-details .show_campaign_id .show_campaign_id_wrapper {
+    width: 100%;
+    float: right; }
+
+@media screen and (max-width: 900px) {
+  .sw-theme-default .step-details .show_campaign_id {
+    text-align: center; }
+    .sw-theme-default .step-details .show_campaign_id .show_campaign_id_wrapper {
+      float: none; } }
+/**
+ * Cropit
+ */
+.charitable-form-field-image-crop .image-crop {
+  /**
+   * Placeholder
+   */
+  /**
+   * EDITOR
+   */
+  /**
+   * CROPIT
+   */ }
+  .charitable-form-field-image-crop .image-crop .cropit-placeholder {
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    z-index: 1;
+    cursor: pointer;
+    display: table;
+    left: 5px;
+    top: 12px;
+    border: solid 1px #e0dbdb;
+    margin: auto; }
+    .charitable-form-field-image-crop .image-crop .cropit-placeholder.loaded {
+      border: none; }
+      .charitable-form-field-image-crop .image-crop .cropit-placeholder.loaded img.cropit-result {
+        border: solid 1px #e0dbdb; }
+    .charitable-form-field-image-crop .image-crop .cropit-placeholder .placeholder-content {
+      display: table-cell;
+      vertical-align: middle; }
+      .charitable-form-field-image-crop .image-crop .cropit-placeholder .placeholder-content .input-file {
+        text-transform: uppercase; }
+        .charitable-form-field-image-crop .image-crop .cropit-placeholder .placeholder-content .input-file i {
+          background: #000;
+          padding: 5px;
+          border-radius: 100%;
+          text-align: center;
+          width: 24px;
+          height: 24px;
+          font-size: 15px;
+          color: #fff; }
+      .charitable-form-field-image-crop .image-crop .cropit-placeholder .placeholder-content .placeholder-text {
+        font-style: italic;
+        font-weight: 300; }
+    .charitable-form-field-image-crop .image-crop .cropit-placeholder img.cropit-result {
+      width: 100%; }
+  .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper {
+    display: none; }
+    .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      visibility: visible;
+      opacity: 1;
+      z-index: 100; }
+      .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .imgcrop-content {
+        margin: 70px auto;
+        padding: 50px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 650px;
+        position: relative;
+        visibility: visible;
+        opacity: 1; }
+      .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .cancel-wrapper {
+        display: block; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .cancel-wrapper .imgcrop-title {
+          display: inline-block;
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          font-size: 18px;
+          font-family: "Raleway Bold", Raleway, monospace;
+          color: #00AFD8;
+          text-transform: uppercase; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .cancel-wrapper .imgcrop-cancel {
+          width: 30px;
+          height: 30px;
+          padding-top: 4px;
+          display: inline-block;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          transition: ease 0.25s all;
+          border-radius: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          font-family: Arial, Sans-Serif;
+          font-size: 20px;
+          text-align: center;
+          line-height: 100%;
+          color: #fff; }
+          .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .cancel-wrapper .imgcrop-cancel:hover {
+            text-decoration: none;
+            opacity: .8; }
+      .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper {
+        margin-top: 0px;
+        text-align: center;
+        position: relative; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .rotation-btns,
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .slider-wrapper,
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .process-wrapper {
+          display: inline-block; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .rotation-btns {
+          font-size: 16px;
+          margin-right: 40px; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .rotation-btns .icon.flip {
+          -moz-transform: scale(-1, 1);
+          -webkit-transform: scale(-1, 1);
+          -o-transform: scale(-1, 1);
+          -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .rotation-btns .icon {
+          cursor: pointer; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper span,
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper input,
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .rotation-btns span {
+          vertical-align: middle; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper span.small-icon {
+          font-size: 16px; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper {
+          -webkit-transition: opacity 0.25s;
+          -moz-transition: opacity 0.25s;
+          -o-transition: opacity 0.25s;
+          -ms-transition: opacity 0.25s;
+          transition: opacity 0.25s;
+          display: inline-block; }
+          .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom {
+            /*removes default webkit styles*/
+            -webkit-appearance: none;
+            /*fix for FF unable to apply focus style bug */
+            border: 1px solid white;
+            /*required for proper track sizing in FF*/
+            width: 250px;
+            /*hide the outline behind the border*/ }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-webkit-slider-runnable-track {
+              width: 250px;
+              height: 3px;
+              background: #969595;
+              border: none;
+              border-radius: 3px; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              border: none;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              background: #ccc;
+              margin-top: -6px;
+              cursor: pointer; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom:focus {
+              outline: none; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom:focus::-webkit-slider-runnable-track {
+              background: #969595; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-moz-range-track {
+              width: 250px;
+              height: 3px;
+              background: #969595;
+              border: none;
+              border-radius: 3px; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-moz-range-thumb {
+              border: none;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              background: #ccc;
+              cursor: pointer; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom:-moz-focusring {
+              outline: 1px solid white;
+              outline-offset: -1px; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-ms-track {
+              width: 250px;
+              height: 3px;
+              /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+              background: transparent;
+              /*leave room for the larger thumb to overflow with a transparent border */
+              border-color: transparent;
+              border-width: 6px 0;
+              /*remove default tick marks*/
+              color: transparent; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-ms-fill-lower {
+              background: #969595;
+              border-radius: 10px; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-ms-fill-upper {
+              background: #969595;
+              border-radius: 10px; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom::-ms-thumb {
+              border: none;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              background: #ccc;
+              cursor: pointer; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom:focus::-ms-fill-lower {
+              background: #969595; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .editor-wrapper .slider-wrapper .cropit-image-zoom-input.custom:focus::-ms-fill-upper {
+              background: #969595; }
+        .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper {
+          margin-top: 10px; }
+          .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper .cropit-image-input {
+            display: none; }
+          .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper .editor-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            font-size: 1.4rem;
+            line-height: 1em;
+            font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            cursor: pointer;
+            position: relative;
+            background: #a5b5c4;
+            color: #fff;
+            text-decoration: none; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper .editor-button.focused {
+              background: #00AFD8; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper .editor-button.disabled {
+              opacity: 0.8;
+              cursor: not-allowed; }
+            .charitable-form-field-image-crop .image-crop .imgcrop-popup-wrapper.pop .controls-wrapper .input-wrapper .editor-button:hover {
+              text-decoration: none;
+              opacity: 0.8; }
+  .charitable-form-field-image-crop .image-crop .cropit-preview {
+    background-color: #f8f8f8;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 7px;
+    width: 100%;
+    height: 250px;
+    margin: auto; }
+  .charitable-form-field-image-crop .image-crop .cropit-preview-image-container {
+    cursor: move; }
+    .charitable-form-field-image-crop .image-crop .cropit-preview-image-container img {
+      max-width: none;
+      height: auto; }
+  .charitable-form-field-image-crop .image-crop .image-size-label {
+    margin-top: 10px; }
+  .charitable-form-field-image-crop .image-crop input, .charitable-form-field-image-crop .image-crop .export {
+    display: block; }
+  .charitable-form-field-image-crop .image-crop button {
+    margin-top: 10px; }
+
+table.pp-edd-variable-prices {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 1em; }
+
+.pp-fundraising-table.charitable-repeatable-form-field-table {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 1em; }
+.pp-fundraising-table .charitable-form-content {
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+.pp-fundraising-table thead td {
+  vertical-align: middle;
+  border: none; }
+.pp-fundraising-table thead td.icon {
+  width: 100px; }
+  .pp-fundraising-table thead td.icon img {
+    max-width: 100px; }
+.pp-fundraising-table thead td.desc {
+  display: inline-block; }
+  .pp-fundraising-table thead td.desc h3 {
+    text-transform: uppercase;
+    color: #00AFD8;
+    margin: 0px;
+    font-weight: 800;
+    letter-spacing: 0.7px; }
+  .pp-fundraising-table thead td.desc p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 5px; }
+.pp-fundraising-table thead td.button-add {
+  width: 300px; }
+  .pp-fundraising-table thead td.button-add a {
+    font-size: 25px;
+    font-style: initial;
+    font-weight: 800;
+    color: #00AFD8; }
+    .pp-fundraising-table thead td.button-add a:hover {
+      text-decoration: none; }
+.pp-fundraising-table tbody tr {
+  margin-bottom: 10px; }
+  .pp-fundraising-table tbody tr td {
+    border: solid 0.1rem #e2dedb; }
+    .pp-fundraising-table tbody tr td.add-row-pricing {
+      border: none;
+      background: none !important; }
+      .pp-fundraising-table tbody tr td.add-row-pricing .add-row {
+        font-size: 14px !important; }
+.pp-fundraising-table tfoot.add-more.hide {
+  display: none; }
+.pp-fundraising-table tfoot.add-more td {
+  background: none;
+  border: none;
+  text-align: center; }
+  .pp-fundraising-table tfoot.add-more td a.add-row {
+    background: #00AFD8;
+    padding: 10px;
+    font-style: normal;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none; }
+    .pp-fundraising-table tfoot.add-more td a.add-row:hover {
+      opacity: 0.8; }
+
+@media (max-width: 600px) {
+  .pp-fundraising-table.charitable-repeatable-form-field-table thead td {
+    width: 100%;
+    display: inline-block;
+    text-align: center; }
+  .pp-fundraising-table.charitable-repeatable-form-field-table thead td.button-add {
+    border-bottom: solid 1px #cecece; } }
+.payout-options-wrapper .loading {
+  text-align: center;
+  padding: 10px; }
+
+#charitable_field_payout_options .charitable-fieldset {
+  border: none; }
+
+.charitable-form-field .payout-form .charitable-fieldset .charitable-form-header {
+  color: #000;
+  font-family: "Raleway"; }
+
+.payout-options-fields-wrapper .selectize-control.single .selectize-input:after {
+  display: none; }
+
+.pp-image-radio {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .pp-image-radio input {
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  .pp-image-radio input:active + .pp-image-radio-icon {
+    opacity: .9; }
+  .pp-image-radio input:checked + .pp-image-radio-icon {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none; }
+  .pp-image-radio .pp-image-radio-icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #00AFD8;
+    border-radius: 100%;
+    -webkit-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+    -moz-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+    filter: brightness(1.2) grayscale(0.5) opacity(0.9); }
+    .pp-image-radio .pp-image-radio-icon.label-check img {
+      width: 90px;
+      margin-top: 20px; }
+    .pp-image-radio .pp-image-radio-icon.label-venmo img {
+      width: 90px;
+      margin-top: 10px;
+      margin-left: 10px; }
+    .pp-image-radio .pp-image-radio-icon.label-direct img {
+      width: 130px; }
+  .pp-image-radio .pp-image-radio-icon:hover,
+  .pp-image-radio .payout-option-container.hovered .pp-image-radio-icon {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none; }
+  .pp-image-radio .description {
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer; }
+    .pp-image-radio .description .payment-to {
+      font-size: 22px;
+      color: #00AFD8;
+      font-weight: bolder; }
+    .pp-image-radio .description .via {
+      text-transform: uppercase; }
+
+/* Extras */
+#charitable-team-fundraising-form {
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem; }
+  #charitable-team-fundraising-form .switch-button {
+    text-align: right; }
+    #charitable-team-fundraising-form .switch-button label {
+      width: 50px;
+      height: 30px; }
+      #charitable-team-fundraising-form .switch-button label:after {
+        width: 20px;
+        height: 20px; }
+  #charitable-team-fundraising-form .charitable-form-field label {
+    color: #00AFD8;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.6rem; }
+  #charitable-team-fundraising-form .charitable-form-field input,
+  #charitable-team-fundraising-form .charitable-form-field textarea {
+    border: none; }
+  #charitable-team-fundraising-form .button-wrapper {
+    margin-top: 30px;
+    text-align: center; }
+    #charitable-team-fundraising-form .button-wrapper .button:not(.remove-image) {
+      background: #00AFD8;
+      border: none;
+      color: #fff;
+      border-radius: 0;
+      font-family: "Raleway Bold", Raleway, monospace;
+      margin: 0 5px;
+      font-weight: bold;
+      padding: 15px 25px;
+      letter-spacing: 1px;
+      font-size: 2rem; }
+
+#form-wizard .form-action .button {
+  margin-left: 5px;
+  margin-right: 5px; }
+
+/**
+ * Validation
+ */
+.charitable-form-field.error input:not(.cropit-image-zoom-input),
+.charitable-form-field.error textarea,
+.charitable-form-field.error .wp-editor-container,
+.charitable-form-field.error .image_image-editor {
+  border: solid 1px red !important; }
+
+.p-info {
+  color: #00AFD8; }
+
+.p-bolder {
+  font-weight: 800; }
+
+/**
+ * Switch
+ */
+.switch-button input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden; }
+.switch-button label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  display: inline-block; }
+.switch-button label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s; }
+.switch-button input:checked + label {
+  background: #00AFD8; }
+.switch-button input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%); }
+
+#charitable-campaign-team-fundraising .switch-button {
+  float: right;
+  margin-right: 40px; }
+
+/**
+ * datepicker
+ */
+#ui-datepicker-div {
+  background-color: #f1efee; }
+
+.ui-datepicker-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center; }
+
+.ui-datepicker-prev {
+  padding: 10px;
+  display: inline-block;
+  color: #fff; }
+
+.ui-datepicker-next {
+  padding: 10px;
+  float: right;
+  display: inline-block;
+  color: #fff; }
+
+.ui-datepicker-year,
+.ui-datepicker-month {
+  width: 50%; }
+
+.ui-datepicker-header {
+  background: #d95b43; }
+
+.ui-datepicker-buttonpane button {
+  box-shadow: none;
+  border: 2px solid #7d6e63;
+  background: transparent;
+  color: #7d6e63;
+  margin: 0 4px; }
+
+.ui-datepicker-buttonpane {
+  padding: 6px 0; }
+
+/**
+ * Repeatable
+ */
+.charitable-repeatable-form-field-table .loading-row {
+  display: none; }
+
+.charitable-repeatable-form-field-table.loading > tbody > .loading-row {
+  display: table-row;
+  background: transparent url(../img/spinner_22x22.gif) no-repeat 50% 50%; }
+
+.charitable-repeatable-form-field-table.loading > tbody > .loading-row td {
+  padding: 24px 0; }
+
+.event-form .charitable-form-field-datetime .datepicker,
+.event-form .charitable-form-field-datetime select,
+.merchandise-form .charitable-form-field-datetime .datepicker,
+.merchandise-form .charitable-form-field-datetime select {
+  display: inline-block; }
+
+/**
+ * Picture
+ */
+#avatar-dragdrop-images li {
+  border: none; }
+  #avatar-dragdrop-images li img {
+    border-radius: 100%; }
+
+.charitable-form-fields .charitable-fieldset .charitable-form-header {
+  font-family: "Raleway"; }
+
+.charitable-form-fields #account .charitable-fieldset .charitable-fieldset {
+  border: none; }
+  .charitable-form-fields #account .charitable-fieldset .charitable-fieldset p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: #00AFD8; }
+
+.pp-charitable-picture .pp-picture-placeholder {
+  color: #000;
+  font-size: 18px;
+  text-decoration: none; }
+  .pp-charitable-picture .pp-picture-placeholder i {
+    background: #000;
+    padding: 5px;
+    border-radius: 100%;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+    color: #fff; }
+.pp-charitable-picture .charitable-drag-drop-dropzone {
+  border-style: solid; }
+
+/**
+ * Datetime
+ */
+.charitable-form-field-datetime .input-date-container {
+  position: relative; }
+  .charitable-form-field-datetime .input-date-container span.at {
+    position: absolute;
+    top: 5px;
+    right: -25px; }
+.charitable-form-field-datetime .input-time-container {
+  margin-left: 0;
+  margin-top: 5px; }
+  .charitable-form-field-datetime .input-time-container .select-container:first-child {
+    padding-left: 0; }
+  .charitable-form-field-datetime .input-time-container .select-container {
+    padding-left: 5px; }
+    .charitable-form-field-datetime .input-time-container .select-container select {
+      width: 100%; }
+
+/**
+ * Finished Tab
+ */
+.finished-buttons-container {
+  margin-top: 50px; }
+  .finished-buttons-container .button-container {
+    text-align: center; }
+    .finished-buttons-container .button-container .trigger-submit {
+      display: inline-block; }
+      .finished-buttons-container .button-container .trigger-submit:hover {
+        text-decoration: none;
+        opacity: .7; }
+    .finished-buttons-container .button-container .icon img {
+      width: 200px; }
+    .finished-buttons-container .button-container .label {
+      color: black;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: "Raleway";
+      font-weight: 800;
+      text-transform: uppercase; }
+
+@media (min-width: 37.5em) {
+  .charitable-form-fields .charitable-form-field.three-columns {
+    width: 33%;
+    padding: 0 10px; } }
+@media (max-width: 600px) {
+  #form-wizard .form-action {
+    text-align: center; }
+    #form-wizard .form-action .button {
+      margin-top: 10px; } }
+@media (min-width: 48em) {
+  .pp-fundraising-table.charitable-repeatable-form-field-table .repeatable-field-wrapper {
+    padding: 0px; }
+    .pp-fundraising-table.charitable-repeatable-form-field-table .repeatable-field-wrapper::before,
+    .pp-fundraising-table.charitable-repeatable-form-field-table .repeatable-field-wrapper .cf::before {
+      display: none; } }
+
+/*# sourceMappingURL=pp-toolkit-campaign-submission.css.map */

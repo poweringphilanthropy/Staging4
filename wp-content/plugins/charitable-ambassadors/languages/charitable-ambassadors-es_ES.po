@@ -1,0 +1,553 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - Ambassadors 1.1.8\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2016-10-12 05:21+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-12 11:48+0200\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid " requires Charitable! Please %s to continue!"
+msgstr "requiere Charitable! ¡Por favor, %s para continuar!"
+
+msgid "%d campaign"
+msgid_plural "%d campaigns"
+msgstr[0] "%d campaña"
+msgstr[1] "%d campañas"
+
+msgid "<strong>Summary</strong>"
+msgstr "<strong>Síntesis</strong>"
+
+msgid "A new campaign has been submitted"
+msgstr "Se ha enviado una nueva campaña"
+
+msgid "A short, snappy description of your campaign"
+msgstr "Una descripción corta y ágil de su campaña"
+
+msgid "Add a suggested amount"
+msgstr "Agregue una cantidad sugerida"
+
+msgid "Admin: New Campaign Notification"
+msgstr "Admin: Nueva Notificación de Campaña"
+
+msgid "Allow Campaign Creators to Export Donation History"
+msgstr "Permite a los creadores de campaña exportar historial de donación"
+
+msgid ""
+"Allow campaign creators to export a CSV file containing the donor name, "
+"email address and amount of all donations made to their campaign."
+msgstr ""
+"Permitir a los creadores de la campaña exportar un archivo CSV que contiene "
+"el nombre del donante, dirección de correo electrónico y cantidad de todas "
+"las donaciones hechas a su campaña."
+
+msgid "Ambassadors"
+msgstr "Embajadores"
+
+msgid "Amount"
+msgstr "Cantidad"
+
+msgid "Automatically Approve Campaigns"
+msgstr "Aprobar automáticamente las campañas"
+
+msgid "Bio"
+msgstr "Biografía"
+
+msgid "Campaign"
+msgstr "Campaña"
+
+msgid "Campaign Creator"
+msgstr "Creador de la campaña"
+
+msgid "Campaign Creator: Campaign Ending"
+msgstr "Creador de la campaña: Finalizar Campaña"
+
+msgid "Campaign Creator: Donation Notification"
+msgstr "Creador de la campaña: Notificación de donación"
+
+msgid "Campaign Creator: New Campaign"
+msgstr "Creador de la campaña: Nueva campaña"
+
+msgid "Campaign Details"
+msgstr "Detalles de la campaña"
+
+msgid "Campaign Name"
+msgstr "Nombre de la Campaña"
+
+msgid "Campaign Parent"
+msgstr "Campaña padre"
+
+msgid "Campaign Submission Form"
+msgstr "Formulario de envío de campaña"
+
+msgid "Campaign Submission Page"
+msgstr "Página de envío de campaña"
+
+msgid "Campaign Submission Success Page"
+msgstr "Página de envío exitoso de campaña"
+
+msgid ""
+"Campaign creators raise money for their own cause. You will send them the "
+"funds raised by their campaign."
+msgstr ""
+"Creadores de la campaña recaudan dinero para su propia causa. Se les enviará "
+"los fondos recaudados por su campaña."
+
+msgid ""
+"Campaign creators raise money for your organization. Every donation they "
+"receive will support your cause."
+msgstr ""
+"Creadores de la campaña recaudan dinero para tu organización. Cada donación "
+"que reciben apoyará tu causa."
+
+msgid "Campaign currently viewed"
+msgstr "Campaña ya visitada"
+
+msgid "Campaign:"
+msgstr "Campaña:"
+
+msgid "Categories"
+msgstr "Categorias"
+
+msgid "Cheatin&#8217; huh?"
+msgstr "Haciendo trampa&#8217; ¿eh?"
+
+msgid "Check it out:"
+msgstr "Compruébelo:"
+
+msgid "Choose a Static Page"
+msgstr "Selecciona una Página Estática"
+
+msgid "City"
+msgstr "Ciudad"
+
+msgid ""
+"Congratulations! [charitable_email show=donor] has just made a donation to "
+"your campaign."
+msgstr ""
+"¡Felicidades! [charitable_email show=donor]  acaba de hacer una donación "
+"para tu campaña."
+
+msgid "Country"
+msgstr "País"
+
+msgid "Create a new campaign"
+msgstr "Crear nueva campaña"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Dear [charitable_email show=campaign_creator],"
+msgstr "Estimado [charitable_email show=campaign_creator],"
+
+msgid "Description (optional)"
+msgstr "Descripción (opcional)"
+
+msgid "Display the campaign creator's details."
+msgstr "Mostrar detalles del creador de la campaña."
+
+msgid "Donation Options"
+msgstr "Opciones de donación"
+
+msgid "Donor"
+msgstr "Donante"
+
+msgid "Edit Campaign"
+msgstr "Editar Campaña"
+
+msgid "Edit campaign"
+msgstr "Editar campaña"
+
+msgid "Email"
+msgstr "Correo electronico"
+
+msgid "Export CSV file with the donations made to this campaign."
+msgstr "Exportar archivo CSV con las donaciones hechas a esta campaña."
+
+msgid "Export Donations (csv)"
+msgstr "Exportar donaciones (csv)"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Featured Image"
+msgstr "Imagen destacada"
+
+msgid "First name"
+msgstr "Nombre"
+
+msgid "Full Description"
+msgstr "Descripción completa"
+
+msgid "Fundraising Goal"
+msgstr "Objetivo de la recaudación"
+
+msgid "Funds Recipient"
+msgstr "destinatario de fondos"
+
+msgid "General Settings"
+msgstr "Configuración general"
+
+msgid ""
+"Give your campaign a final push by sharing it with your network. Your "
+"campaign is online at %s."
+msgstr ""
+"Dar a su campaña un último impulso compartiéndola con su red. Su campaña "
+"está en línea en %s."
+
+msgid "Homepage"
+msgstr "Página de inicio"
+
+msgid "How Will You Send Money to Ambassadors"
+msgstr "¿Cómo va a enviar dinero a los Embajadores"
+
+msgid ""
+"If you enable this, campaigns will be automatically published once the user "
+"has submitted it."
+msgstr ""
+"Si se activa esta opción, las campañas se publicarán de forma automática una "
+"vez que el usuario las ha enviado."
+
+msgid ""
+"If you would like to edit it, go to <a href=\"[charitable_email "
+"show=campaign_edit_url]\">[charitable_email show=campaign_edit_url]</a>,"
+msgstr ""
+"Si desea editarlo, vaya a <a href=\"[charitable_email "
+"show=campaign_edit_url]\">[charitable_email show=campaign_edit_url]</a>,"
+
+msgid "Last name"
+msgstr "Apellido"
+
+msgid "Length in Days"
+msgstr "Duración en días:"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Maximum Campaign Length"
+msgstr "Longitud máxima de la campaña"
+
+msgid "Minimum Campaign Length"
+msgstr "Longitud mínima de la Campaña"
+
+msgid "New Campaign"
+msgstr "Nueva campaña"
+
+msgid "New Donation"
+msgstr "Nueva donación"
+
+msgid "No"
+msgstr "No."
+
+msgid "No parent campaign"
+msgstr "Ninguna campaña padre"
+
+msgid "Not set"
+msgstr "No establecido"
+
+msgid "Number of Days Before Campaign Ends"
+msgstr "Número de días antes de que termine la campaña"
+
+msgid "Organization"
+msgstr "Organización"
+
+msgid "Our Organization"
+msgstr "nuestra Organización"
+
+msgid "PayPal"
+msgstr "PayPal"
+
+msgid "PayPal Account"
+msgstr "Cuenta de PayPal"
+
+msgid "Payment Details"
+msgstr "Detalles de pago"
+
+msgid "Personal Causes"
+msgstr "Causas personales"
+
+msgid "Require User Account"
+msgstr "Cuenta de usuario requerida"
+
+msgid "Require users to be logged in before they can submit a campaign."
+msgstr ""
+"Pedir a los usuarios que se registran antes de que puedan presentar una "
+"campaña."
+
+msgid "Save & Continue"
+msgstr "Guardar y continuar"
+
+msgid "Save &amp; Preview"
+msgstr "Guardar y Vista previa"
+
+msgid "Settings"
+msgstr "Ajustes"
+
+msgid "Short Description"
+msgstr "Descripción breve"
+
+msgid ""
+"So far, you have raised [charitable_email show=campaign_donated_amount]."
+msgstr ""
+"Hasta ahora, usted ha conseguido [charitable_email "
+"show=campaign_donated_amount]."
+
+msgid "Specific campaigns"
+msgstr "campañas específicas"
+
+msgid "State"
+msgstr "Estado"
+
+msgid "Status"
+msgstr "Estatus"
+
+msgid "Submit Campaign"
+msgstr "Enviar Campaña"
+
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgid "Thank you for submitting your campaign"
+msgstr "Gracias por enviar su campaña"
+
+msgid ""
+"Thank you for submitting your campaign, &ldquo;[charitable_email "
+"show=campaign_title]&rdquo;."
+msgstr ""
+"Gracias por enviar su campaña, &ldquo;[charitable_email show=campaign_title]"
+"&rdquo;."
+
+msgid "Thanks for Submitting Your Campaign"
+msgstr "Gracias por enviar su campaña"
+
+msgid ""
+"The email will be sent this number of days <em>before</em> the end of the "
+"campaign. Set it to 0 to send it on the day the campaign ends."
+msgstr ""
+"El correo electrónico se enviará este número de días <em>antes</em> del "
+"final de la campaña. Ponerlo a 0 para enviar en el día en que termina la "
+"campaña."
+
+msgid "The link to edit the campaign"
+msgstr "El enlace para editar la campaña"
+
+msgid ""
+"The maximum number of days that a user-submitted campaign can run for. Leave "
+"blank to allow users to choose any end date."
+msgstr ""
+"El número máximo de días en que correrá una campaña enviado por el usuario. "
+"Dejar en blanco para permitir a los usuarios elegir cualquier fecha de "
+"finalización."
+
+msgid ""
+"The minimum number of days that a user-submitted campaign can run for. Leave "
+"empty or set to 0 for no minimum length."
+msgstr ""
+"El número mínimo de días en que correrá una campaña enviado por el usuario. "
+"Dejar en blanco o establecer en 0 para que no haya longitud mínima."
+
+msgid "The name of the campaign creator"
+msgstr "El nombre del creador de la campaña"
+
+msgid ""
+"The static page should contain the <code>[charitable_submit_campaign]</code> "
+"shortcode."
+msgstr ""
+"La página estática debe contener el shortcode <code>"
+"[charitable_submit_campaign]</code>."
+
+msgid "There was an error uploading your campaign image."
+msgstr "Se ha producido un error al subir la imagen de su campaña."
+
+msgid ""
+"This is the page to which users are redirected after submitting a campaign."
+msgstr ""
+"Esta es la página a la que los usuarios son redirigidos después de la "
+"presentación de una campaña."
+
+msgid "This plugin"
+msgstr "Este plugin"
+
+msgid "This setting is only applied when funds are raised for Personal Causes."
+msgstr ""
+"Este ajuste sólo se aplica cuando los fondos son conseguidos para causas "
+"personales."
+
+msgid "Title:"
+msgstr "﻿Título:"
+
+msgid ""
+"Transform your website into a platform for peer to peer fundraising or "
+"crowdfunding."
+msgstr ""
+"Transformar su sitio web en una plataforma para la recaudación de fondos "
+"peer-to-peer o crowdfunding."
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "Type of Campaign"
+msgstr "Tipo de campaña"
+
+msgid "Update Campaign"
+msgstr "Actualizar Campaña"
+
+msgid "Visit %s's Facebook profile"
+msgstr "Visita el perfil de Facebook de%s"
+
+msgid "Visit %s's Twitter profile"
+msgstr "Visita el perfil de Twitter% de s"
+
+msgid "Visit %s's website"
+msgstr "Visita el sitio web de%s"
+
+msgid "Website"
+msgstr "Sitio web"
+
+msgid "Well done for already surpassing your fundraising target!"
+msgstr "¡Bien hecho: ya ha superando su meta de recaudación de fondos!"
+
+msgid "What Can Ambassadors Raise Money For?"
+msgstr "¿Para qué pueden recaudar dinero los Embajadores?"
+
+msgid ""
+"When people make a donation to your campaign, they will be able to donate "
+"any amount they choose. You can also provide suggested donation amounts in "
+"the table below."
+msgstr ""
+"Cuando la gente hace una donación a su campaña, será capaz de donar "
+"cualquier cantidad que desee. También puede sugerir cantidades específicas "
+"de donación en la tabla de abajo."
+
+msgid ""
+"When the campaign is finished, you will be paid with your PayPal account."
+msgstr "Una vez finalizada la campaña, se le pagará a su cuenta PayPal."
+
+msgid "Who Are You Raising Money For?"
+msgstr "¿Para quién recauda dinero?"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid ""
+"You are raising money for a personal cause. You will receive the donations."
+msgstr ""
+"Está recaudando dinero para una causa personal. Usted recibirá las "
+"donaciones."
+
+msgid ""
+"You are raising money for us. All donations to your fundraising campaign "
+"will help our cause."
+msgstr ""
+"Usted recauda dinero para nosotros. Todas las donaciones a su campaña de "
+"recaudación de fondos ayudará a nuestra causa."
+
+msgid ""
+"You can view your campaign online at <a href=\"[charitable_email "
+"show=campaign_url]\">[charitable_email show=campaign_url]</a>,"
+msgstr ""
+"Puede ver su campaña en línea en <a href=\"[charitable_email "
+"show=campaign_url]\">[charitable_email show=campaign_url]</a>,"
+
+msgid ""
+"You cannot send a creator donation notification without a Charitable_User "
+"object for the campaign creator."
+msgstr ""
+"No se puede enviar una notificación al creador de la donación sin un objeto "
+"Charitable_User para el creador de la campaña."
+
+msgid ""
+"You cannot send a creator donation notification without an array of campaign "
+"donations."
+msgstr ""
+"No se puede enviar una notificación al creador de la donación sin una serie "
+"de donaciones de campaña."
+
+msgid "You do not have permission to edit this campaign."
+msgstr "Usted no tiene permiso para modificar esta campaña."
+
+msgid "You have not created any campaigns yet."
+msgstr "No ha creado ninguna campaña todavía."
+
+msgid "You have not received any donations yet."
+msgstr "No ha recibido ninguna donación todavía."
+
+msgid "You have received a new donation"
+msgstr "Has recibido una nueva donación"
+
+msgid ""
+"You haven't quite reached your fundraising target yet, but there's still "
+"time!"
+msgstr ""
+"Usted no ha alcanzado su meta de recaudación de fondos, sin embargo, todavía "
+"hay tiempo."
+
+msgid "Your Campaign is Ending Soon"
+msgstr "Su campaña Finaliza Pronto"
+
+msgid "Your Cause"
+msgstr "Su Causa"
+
+msgid "Your Details"
+msgstr "Detalles de su Perfil"
+
+msgid "Your Organization"
+msgstr "Su Organización"
+
+msgid "Your PayPal Account"
+msgstr "Su cuenta de PayPal"
+
+msgid "Your campaign is ending soon"
+msgstr "Su campaña llegará a su fin muy pronto"
+
+msgid ""
+"Your campaign, &ldquo;[charitable_email show=campaign_title]&rdquo;, is "
+"ending on [charitable_email show=campaign_end_date]."
+msgstr ""
+"Su campaña, \"[charitable_email espectáculo = campaign_title]\", finaliza en "
+"[charitable_email show=campaign_end_date]."
+
+msgid ""
+"[charitable_email show=campaign_creator] has just submitted a new campaign: "
+"&ldquo;[charitable_email show=campaign_title]&rdquo;."
+msgstr ""
+"[charitable_email show=campaign_creator] acaba de presentar una nueva "
+"campaña: \"&ldquo;[charitable_email show=campaign_title]&rdquo;."
+
+msgid "activate it"
+msgstr "activarlo"
+
+msgctxt "amount donated"
+msgid "%s Donated"
+msgstr "%s donado"
+
+msgctxt "amount donated of goal"
+msgid "%s donated of %s goal"
+msgstr "%s donado de una meta de %s"
+
+msgid "install it"
+msgstr "instalarlo"
+
+msgctxt "number of donors"
+msgid "%s Donors"
+msgstr "%s Donantes"
+
+msgctxt "percentage raised"
+msgid "%s Raised"
+msgstr "%s Recaudado"
+
+msgid "profile"
+msgstr "perfil"

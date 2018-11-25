@@ -1,0 +1,156 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/DeferredSending\n"
+"POT-Creation-Date: 2014-12-08 21:54:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-08 23:53+0100\n"
+"Last-Translator: Timo Reith <timo@hhesse.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: bootstrap.php:143
+msgid "Deferred sending (Mail queue)"
+msgstr "Verzögerter Versand (E-Mail Queue)"
+
+#: bootstrap.php:145
+msgid ""
+"If you are facing page loading issues on post updates due to large amounts "
+"of emails sent in realtime, use the deferred sending feature."
+msgstr ""
+"Wenn du lange Ladezeiten beim Updaten von Posts hast, weil in diesem Moment "
+"viele Benachrichtigungen in Echtzeit versendet werden, benutze dieses "
+"Feature."
+
+#: bootstrap.php:152
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: bootstrap.php:153
+msgid ""
+"Activates the deferred sending functionallity (new section \"Mail queue\" "
+"will show up)"
+msgstr ""
+"Aktiviert die Verzögerte Versenden-Funktion (ein neuer Reiter \"Mail queue\" "
+"wird erscheinen)"
+
+#: bootstrap.php:157
+msgid "Max amount"
+msgstr "Maximale Menge"
+
+#: bootstrap.php:159
+msgid ""
+"Determines how many emails should be processed on each mail queue run "
+"(Integer, default: 10).<br>Read the <a href=\"%s\" target=\"_blank\">manual "
+"page</a> for an example."
+msgstr ""
+"Legt die maximale Menge an E-Mails fest, die einem Durchlauf der Mail Queue "
+"bearbeitet werden soll (Integer, Default: 10). <br>Schau in die <a href=\"%s"
+"\" target=\"_blank\">Anleitung</a> für ein Beispiel."
+
+#: bootstrap.php:174 bootstrap.php:182
+msgid "Manually"
+msgstr "Manuell"
+
+#: bootstrap.php:178
+msgid "Recurrence"
+msgstr "Wiederholung"
+
+#: bootstrap.php:179
+msgid ""
+"How often the mail queue should be run. Uses WordPress's built-in cron API "
+"(default: Once Hourly). To create custom intervals (like every 5 minutes) "
+"please use a Cronjob plugin like <a href=\"%s\" target=\"_blank\">WP "
+"Crontrol</a> (read the <a href=\"%s\" target=\"_blank\">manual page</a>)."
+"<br>Select \"%s\" if you just want to run the mail queue manually by hitting "
+"the button."
+msgstr ""
+"Wie oft die Mail Queue ausgeführt werden soll. Verwendet die WordPress "
+"eigene Cron API (Default: Once Hourly). Um individuelle Zeiträume (z.B. alle "
+"5 Minuten) zu verwenden, benutze bitte ein Cronjob Plugin wie <a href=\"%s\" "
+"target=\"_blank\">WP Crontrol</a> (Lies die <a href=\"%s\" target=\"_blank"
+"\">Handbuch Seite</a>).<br>Wähle \"%s\" wenn du die Mail Queue manuell "
+"ausführen möchtest, indem du den Button klickst."
+
+#: bootstrap.php:192
+msgid "Max tries"
+msgstr "Maximale Versuche"
+
+#: bootstrap.php:193
+msgid ""
+"Determines how often the mail queue should try to send an email in case of "
+"an error (Integer, default: 10)."
+msgstr ""
+"Stellt ein wie oft die Mail Queue versuchen soll eine E-Mail im Fehlerfall "
+"zu versenden (Integer, Default: 10)."
+
+#: bootstrap.php:201
+msgid "Log sent emails"
+msgstr "Logge versendete Mails"
+
+#: bootstrap.php:202
+msgid ""
+"Successfully sent emails get deleted from the mail queue to keep the "
+"database table lean. You may activate this option to store successfully sent "
+"emails in another table to obtain insight in outgoing emails."
+msgstr ""
+"Erfolgreich versendete E-Mails werden aus der Mail Queue gelöscht, um die "
+"Datenbank Tabelle schlank zu halten. Du kannst diese Option aktivieren, um "
+"erfolgreich versendete E-Mails in einer anderen Tabelle zu speichern, um "
+"Einblick in die versendeten E-Mails zu erhalten."
+
+#: bootstrap.php:207
+msgid "Run after add"
+msgstr "Ausführen nach Hinzufügen"
+
+#: bootstrap.php:208
+msgid ""
+"If you want the mail queue to be run once immediately after emails got "
+"added, select this option. This will send the first bunch of the configured "
+"max amount directly without having to wait for the next scheduled cron run."
+msgstr ""
+"Wenn du willst, dass die Mail Queue ausgeführt wird, direkt nachdem E-Mails "
+"hinzugefügt wurden, wähle diese Option. Das wird den ersten Stapel der "
+"eingestellen maximalen Menge direkt versenden ohne auf den nächsten "
+"geplanten Durchlauf warten zu müssen."
+
+#: bootstrap.php:233 controllers/PsnDeferredsendingController.php:34
+#: controllers/PsnDeferredsendinglogController.php:48
+msgid "Mail queue"
+msgstr "Mail Queue"
+
+#: controllers/PsnDeferredsendingAbstractController.php:55
+msgid "Items per page"
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:107
+#: controllers/PsnDeferredsendinglogController.php:94
+msgid ""
+"Please consider the documentation page <a href=\"%s\" target=\"_blank\">%s</"
+"a> for more information."
+msgstr ""
+
+#: controllers/PsnDeferredsendingController.php:109
+#: controllers/PsnDeferredsendinglogController.php:96
+msgid "Mailqueue"
+msgstr "Mail Queue"
+
+msgid "Run mail queue now!"
+msgstr "Mail Queue jetzt ausführen!"
+
+msgid "Hit the button to send the next %d scheduled emails."
+msgstr "Klicke den Button um die nächsten %d geplanten E-Mails zu versenden."
+
+msgid "Scheduled"
+msgstr "Geplant"
+
+msgid "Mail queue: Scheduled items"
+msgstr "Mail Queue: Geplante Objekte"
+
+msgid "Mail queue: Sent log"
+msgstr "Mail Queue: Versand-Log "

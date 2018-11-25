@@ -1,0 +1,61 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+
+$report = $view_args['report'];
+$leaderboard = $view_args['leaderboard'];
+
+global $post;
+
+$dashboard_link = trailingslashit( get_permalink( $post ) ) . 'report/';
+$report_url = add_query_arg( array(
+	'download-dashboard-reports' => $post->ID,
+), wp_nonce_url( $dashboard_link, 'pp-download-report', 'key' ) );
+
+
+$currency_helper = charitable_get_currency_helper();
+?>
+
+<div id="dashboard-report" class="layout-wrapper">
+	<div class="charitable-user-campaigns pp-campaign-report">
+		<div class="report-summary campaign-summary report-section">
+			<div class="report-title">
+				<?php echo get_the_title(); ?>
+			</div>
+			<div class="section-content ld-content">
+				<div class="uk-grid ld-stats">
+					<div class="uk-width-small-5-10 ld-icon uk-text-center uk-vertical-align">
+						<div class="uk-vertical-align-middle dashboard-report-stat-image">
+							<img class="ld-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/media/black_Impact.png" alt="">
+						</div>
+					</div>
+					<div class="uk-width-small-5-10">
+						<ul class="stats">
+							<li><span class="count"><?php echo count( $report->get_campaign_ids() ); ?></span> Campaigns</li>
+							<li><span class="count"><?php echo charitable_get_table( 'campaign_donations' )->count_campaign_donors( $report->get_campaign_ids(), false ); ?></span> Supporters</li>
+							<li><span class="count"><?php echo $currency_helper->get_monetary_amount( charitable_get_table( 'campaign_donations' )->get_campaign_donated_amount( $report->get_campaign_ids(), false ), 0 ); ?></span> Raised</li>
+							<?php if($leaderboard->is_track_service_hours_enable()): ?>
+							<li><span class="count"><?php echo $leaderboard->get_total_service_hours(true); ?></span> Service Hours</li>
+							<?php endif; ?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dashboard-report-wrapper" data-timestamp="<?php echo current_time( 'timestamp' ); ?>" data-campaigns="<?php echo implode(',', $report->get_campaign_ids() ); ?>"> </div>
+		<div class="loading-report" style="text-align: center;">
+			<img src="<?php echo pp_toolkit()->directory_url . 'assets/img/spinner_22x22.gif'; ?>" alt="">
+			<br>
+			<h4>Generating report data..</h4>
+		</div>
+	</div>
+</div><!-- .layout-wrapper -->
+
+<?php do_action( 'after_dashboard_report_template', $post->ID ); ?>
+
+<?php pp_toolkit_template('reports/dashboard/js-templates/report-campaigns.php', array('report' => $report, 'download_report_url' => $report_url)); ?>
+<?php pp_toolkit_template('reports/dashboard/js-templates/report-fundraisers.php', array('report' => $report, 'download_report_url' => $report_url)); ?>
+<?php pp_toolkit_template('reports/dashboard/js-templates/report-donations.php', array('report' => $report, 'download_report_url' => $report_url)); ?>
+<?php pp_toolkit_template('reports/dashboard/js-templates/report-tickets.php', array('report' => $report, 'download_report_url' => $report_url)); ?>
+<?php pp_toolkit_template('reports/dashboard/js-templates/report-merchandises.php', array('report' => $report, 'download_report_url' => $report_url)); ?>

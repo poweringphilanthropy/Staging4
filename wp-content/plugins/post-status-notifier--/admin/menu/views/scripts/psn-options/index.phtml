@@ -1,0 +1,4 @@
+<div id="psn-options-page"><?php $this->options->render(); ?></div>
+<?php if (!$this->pm->isPremium()): ?>
+    <a class="button button-default" href="<?php echo $this->pm->getConfig()->plugin->docUrl ?>options.html" target="_blank"><?php _e('See the complete options list of the premium version.'); ?></a>
+<?php endif; ?>

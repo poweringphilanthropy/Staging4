@@ -1,0 +1,11 @@
+<p><a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'recipientslists', 'mod' => 'recipients', 'action' => 'create'), 'requestVars', true) ?>" class="button button-dashicons" id="create_new_recipientslist"><span class="dashicons dashicons-plus"></span> <?php _e('Create new recipients list', 'psn_rec'); ?></a>
+    <?php echo IfwPsn_Zend_Controller_ModelBinding::getImportItemsButton(__('Import recipients lists', 'psn_htm')); ?>
+</p>
+<?php echo PsnApplicationController::getImportForm('recipientslist',
+    __('Import recipients lists', 'psn_rec'),
+    'recipients_lists.html',
+    admin_url('options-general.php?page=post-status-notifier&mod=recipients&controller=recipientslists&appaction=import'));
+?>
+<?php
+echo $this->listTable->display();
+?>

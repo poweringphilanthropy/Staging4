@@ -1,0 +1,5 @@
+<h1><?php _e('Patches executed with errors', 'ifw'); ?></h1>
+
+<p><?php echo sprintf(__('You may now proceed working. If you run into errors, please contact the <a href="%s" target="_blank">plugin support</a>.', 'ifw'), $this->pm->getConfig()->plugin->premiumUrl); ?></p>
+
+<a href="<?php echo $this->continueUrl; ?>" class="button button-primary"><?php _e('Continue', 'ifw'); ?></a>

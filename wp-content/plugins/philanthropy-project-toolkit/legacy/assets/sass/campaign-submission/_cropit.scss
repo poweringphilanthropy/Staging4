@@ -1,0 +1,358 @@
+/**
+ * Cropit
+ */
+.charitable-form-field-image-crop {
+	
+	.image-crop {
+		
+		/**
+		 * Placeholder
+		 */
+	   	.cropit-placeholder {
+		   	line-height: normal;
+		   	text-align: center;
+   		    // position: absolute;
+    		width: 100%;
+    		height: 250px;
+		    z-index: 1;
+		    // background: red;
+    		cursor: pointer;
+    		display: table;
+    		left: 5px;
+    		top: 12px;
+    		border: solid 1px #e0dbdb;
+		    margin: auto;
+
+		    &.loaded {
+		    	border: none;
+
+		    	img.cropit-result {
+    				border: solid 1px #e0dbdb;
+	    		}
+		    }
+
+    		.placeholder-content {
+			    display: table-cell;
+    			vertical-align: middle;
+
+	    		.input-file {
+	    			text-transform: uppercase;
+
+	    			i {
+	    				background: #000;
+					    padding: 5px;
+					    border-radius: 100%;
+					    text-align: center;
+					    width: 24px;
+					    height: 24px;
+					    font-size: 15px;
+					    color: #fff;
+	    			}
+	    		}
+	    		.placeholder-text {
+    			    font-style: italic;
+    				font-weight: 300;
+	    		}
+    		}
+
+    		img.cropit-result {
+    			width:100%;
+    		}
+	   	}
+
+
+	   	/**
+	   	 * EDITOR
+	   	 */
+	   	.imgcrop-popup-wrapper {
+	   		display:none;
+			
+			// displayed
+	   		&.pop {
+		   		display:block;
+				position: fixed;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    background: rgba(0, 0, 0, 0.7);
+			    // transition: opacity 50ms;
+			    visibility: visible;
+			    opacity: 1;
+			    z-index: 100;
+
+				.imgcrop-content {
+			          margin: 70px auto;
+			          padding: 50px 10px 10px 10px;
+			          background: #fff;
+			          border-radius: 5px;
+			          width: 90%;
+			          max-width: 650px;
+			          position: relative;
+			          visibility: visible;
+			          opacity: 1;
+				}
+
+				.cancel-wrapper {
+					display: block;
+					.imgcrop-title {
+					    display: inline-block;
+					    position: absolute;
+					    top: 15px;
+					    left: 10px;
+					    font-size: 18px;
+				        font-family: "Raleway Bold", Raleway, monospace;
+					    color: $base_color;
+					    text-transform: uppercase;
+					}
+					.imgcrop-cancel {
+						width: 30px;
+					    height: 30px;
+					    padding-top: 4px;
+					    display: inline-block;
+					    position: absolute;
+					    top: 5px;
+					    right: 5px;
+					    transition: ease 0.25s all;
+					    border-radius: 100%;
+					    background: rgba(0, 0, 0, 0.8);
+					    font-family: Arial, Sans-Serif;
+					    font-size: 20px;
+					    text-align: center;
+					    line-height: 100%;
+					    color: #fff;
+
+					    &:hover {
+					    	text-decoration: none;
+					    	opacity: .8;
+					    }
+					}
+				}
+
+				.controls-wrapper {
+				    margin-top: 0px;
+				    text-align: center;
+				    position: relative;
+
+					.rotation-btns, 
+					.slider-wrapper,
+					.process-wrapper {
+					    display: inline-block;
+					}
+					.rotation-btns {
+					    font-size: 16px;
+					    margin-right: 40px;
+					}
+					.rotation-btns .icon.flip {
+					    -moz-transform: scale(-1, 1);
+					    -webkit-transform: scale(-1, 1);
+					    -o-transform: scale(-1, 1);
+					    -ms-transform: scale(-1, 1);
+					    transform: scale(-1, 1);
+					}
+					.rotation-btns .icon {
+					    cursor: pointer;
+					}
+
+					.editor-wrapper {
+
+						.slider-wrapper span,
+						.slider-wrapper input,
+						.rotation-btns span {
+							vertical-align: middle;
+						}
+						span.small-icon {
+							font-size: 16px;
+						}
+
+						.slider-wrapper {
+						    -webkit-transition: opacity 0.25s;
+						    -moz-transition: opacity 0.25s;
+						    -o-transition: opacity 0.25s;
+						    -ms-transition: opacity 0.25s;
+						    transition: opacity 0.25s;
+						    display: inline-block;
+
+						    .cropit-image-zoom-input.custom {
+						    // -webkit-appearance: none;
+						    // -moz-appearance: none;
+						    // appearance: none;
+						    // height: 3px;
+					    	// background: #969595;
+					    	// cursor: pointer;
+						    // -webkit-border-radius: 3px;
+						    // border-radius: 3px;
+						    // outline: none;
+						    // display: inline-block;
+						    
+						    /*removes default webkit styles*/
+						    -webkit-appearance: none;
+						    
+						    /*fix for FF unable to apply focus style bug */
+						    border: 1px solid white;
+						    
+						    /*required for proper track sizing in FF*/
+						    width: 250px;
+
+						    &::-webkit-slider-runnable-track {
+							    width: 250px;
+							    height: 3px;
+							    background: #969595;
+							    border: none;
+							    border-radius: 3px;
+							}
+
+							&::-webkit-slider-thumb {
+							    -webkit-appearance: none;
+							    border: none;
+							    height: 16px;
+							    width: 16px;
+							    border-radius: 50%;
+							    background: #ccc;
+							    margin-top: -6px;
+							    cursor: pointer;
+							}
+
+							&:focus {
+							    outline: none;
+							}
+
+							&:focus::-webkit-slider-runnable-track {
+							    background: #969595;
+							}
+
+							&::-moz-range-track {
+							    width: 250px;
+							    height: 3px;
+							    background: #969595;
+							    border: none;
+							    border-radius: 3px;
+							}
+							&::-moz-range-thumb {
+							    border: none;
+							    height: 16px;
+							    width: 16px;
+							    border-radius: 50%;
+							    background: #ccc;
+							    cursor: pointer;
+							}
+							/*hide the outline behind the border*/
+							&:-moz-focusring{
+							    outline: 1px solid white;
+							    outline-offset: -1px;
+							}
+							&::-ms-track {
+							    width: 250px;
+							    height: 3px;
+							    
+							    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+							    background: transparent;
+							    
+							    /*leave room for the larger thumb to overflow with a transparent border */
+							    border-color: transparent;
+							    border-width: 6px 0;
+
+							    /*remove default tick marks*/
+							    color: transparent;
+							}
+
+							&::-ms-fill-lower {
+							    background: #969595;
+							    border-radius: 10px;
+							}
+							&::-ms-fill-upper {
+							    background: #969595;
+							    border-radius: 10px;
+							}
+							&::-ms-thumb {
+							    border: none;
+							    height: 16px;
+							    width: 16px;
+							    border-radius: 50%;
+							    background: #ccc;
+							    cursor: pointer;
+							}
+							&:focus::-ms-fill-lower {
+							    background: #969595;
+							}
+							&:focus::-ms-fill-upper {
+							    background: #969595;
+							}
+						}
+						}
+					}
+
+					.input-wrapper {
+					  	margin-top: 10px;
+						.cropit-image-input {
+							display: none;
+						}
+					  	.editor-button {
+						    display: inline-block;
+						    padding: 0.8rem 2rem;
+						    font-size: 1.4rem;
+						    line-height: 1em;
+						    font-family: Oswald, "Helvetica Neue", Helvetica, sans-serif;
+						    text-transform: uppercase;
+						    letter-spacing: 0.2rem;
+						    cursor: pointer;
+						    position: relative;
+						    background: #a5b5c4;
+						    color: #fff;
+						    text-decoration: none;
+
+						    &.focused {
+						    	background: $base_color;
+						    }
+
+						    &.disabled {
+							  	opacity: 0.8;
+							  	cursor: not-allowed;
+							}
+							&:hover {
+							  	text-decoration: none;
+							  	opacity: 0.8;
+							}
+						}
+					}
+				}
+	   		}
+	   	}
+
+	   	/**
+	   	 * CROPIT
+	   	 */
+	   	.cropit-preview {
+          background-color: #f8f8f8;
+          background-size: cover;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          margin-top: 7px;
+          width: 100%;
+          height: 250px;
+          margin: auto;
+        }
+
+        .cropit-preview-image-container {
+          cursor: move;
+
+          img {
+          	max-width: none;
+    		height: auto;
+          }
+        }
+
+        .image-size-label {
+          margin-top: 10px;
+        }
+
+        input, .export {
+          display: block;
+        }
+
+        button {
+          margin-top: 10px;
+        }
+	}
+	
+}

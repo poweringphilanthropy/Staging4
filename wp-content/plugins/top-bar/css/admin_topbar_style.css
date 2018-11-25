@@ -1,0 +1,22 @@
+.tpbr_wrap {background:white; width:98%; margin-top:20px;}
+.tpbr_wrap h2 {font-family: Helvetica, Arial, sans-serif; font-weight:300; font-size: 37px; margin-bottom:44px; margin-top:40px;}
+.tpbr_wrap h3 {border-bottom: 8px solid whitesmoke;font-size: 23px;padding-bottom: 10px;margin-top:40px;font-weight: 400;color: steelblue;}
+.tpbr_wrap h4 {font-family: Helvetica, Arial, sans-serif; font-weight:300; font-size: 18px; margin-bottom:10px; margin-top:30px;}
+.tpbr_wrap h5 {font-family: Helvetica, Arial, sans-serif; font-weight:300; font-size: 15px; margin-bottom:10px; margin-top:0;}
+.tpbr_wrap p {color:#888888; font-family: Helvetica, Arial, sans-serif; font-weight:300; font-size: 14px; margin-bottom:10px; margin-top:0px;}
+.tpbr_inner {padding:10px 30px;}
+.tpbr_big_btnbox {padding-top:1px; margin-top:40px; margin-bottom:-10px;} 
+.tpbr_button_content {margin-top:10px; background:whitesmoke; padding:20px; border-radius:4px;}
+
+.tpbr_led_green {background: url('../images/yeah.png') no-repeat 50% 50%;
+display:inline-block; height:20px; width:20px;
+position:relative; top:7px; left:5px;}
+
+.tpbr_led_red {background: url('../images/nope.png') no-repeat 50% 50%;
+display:inline-block; height:20px; width:20px;
+position:relative; top:7px; left:5px;}
+
+.tpbr_tx_field {width:100%; font-size:17px; font-weight:300; padding:6px;}
+
+.tpbr_button_content { width:50%; box-sizing:border-box; float:left;}
+.tpbr_button_content:first-child {padding-right: 20px;}

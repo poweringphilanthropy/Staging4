@@ -1,0 +1,6 @@
+form#psn_form_recipientslist input[type="text"] {
+    width: 500px;
+}
+form#psn_form_rule div#to_dyn_editor {
+    height: 250px;
+}

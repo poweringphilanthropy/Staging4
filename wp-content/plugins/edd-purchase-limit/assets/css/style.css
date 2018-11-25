@@ -1,0 +1,38 @@
+#edd_settings_extensions\[edd_purchase_limit_g_start_date\], #edd_settings_extensions\[edd_purchase_limit_g_end_date\] { width: 117px; }
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+
+.divclearable {
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+	vertical-align:middle;
+	position: relative;
+}
+
+.clearlink {
+	position: absolute;
+	top: 5px;
+	right: 7px;
+	cursor: pointer;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+	height: 12px;
+	width: 12px;
+	border: 0px solid;
+}
+

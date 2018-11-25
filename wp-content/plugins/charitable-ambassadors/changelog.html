@@ -1,0 +1,146 @@
+<h3>1.1.18</h3>
+<em>December 12, 2017</em>
+<ul>
+    <li>Fixed bug preventing donation notifications from sending to Ambassadors.</li>
+    <li>Fixed a bug that prevented the form from redirecting to the campaign submission success page.</li>
+</ul>
+<h3>1.1.17</h3>
+<em>November 30, 2017</em>
+<ul>
+    <li>Allow donation notifications for campaign creators to be resent via the donation details page. Requires Charitable 1.5.6.</li>
+    <li>Added "Status" column to the creator donations table.</li>    
+    <li>Fixed notice on campaign form.</li>
+    <li>Fixed incorrect redirects after logging in.</li>
+    <li>Prevent fatal error on Relevanssi build index.</li>
+    <li>Prevent an issue where redirecting to the homepage after submitting a campaign results in the wrong template being loaded.</li>
+    <li>Fixed several HTML validation errors.</li>
+</ul>
+<h3>1.1.16</h3>
+<em>August 1, 2017</em>
+<ul>
+    <li>Prevent Charitable from using its end date sanitization for public campaign submissions. Ambassadors does its own sanitization for these.</li>
+    <li>Pre-emptively fixing a bug that will break the Donors widget in Charitable 1.5.</li>
+</ul>
+<h3>1.1.15</h3>
+<em>June 23, 2017</em>
+<ul>
+    <li>Send the campaign notification emails to the admin and campaign creator after the campaign has been added completely, including the meta and taxonomies. Previously, emails were sent before the campaign meta and taxonomies were saved, which resulted in some shortcode values (like the campaign goal) not being available in the email.</li>
+    <li>Fixed a bug that in some cases resulted in the campaign creator name was shown in the Donation Notification email.</li>
+    <li>Switch to `prop()` in Javascript to avoid use of deprecated `attr()` function.</li>
+</ul>
+<h3>1.1.14</h3>
+<em>April 25, 2017</em>
+<ul>
+    <li>Added support for recurring donations. Go to Charitable > Settings > Ambassadors to enable the option for your campaign creators to add campaigns with recurring donation support. Requires Recurring Donations.</li>
+    <li>Fixed a bug that made it impossible to remove a featured image without replacing it.</li>
+    <li>Improved the campaign form UI to make it clearer how ongoing campaigns can be added.</li>
+    <li>Ensure that the campaign creator donation notification always goes to their primary email address, rather than the email address used when they first donated.</li>
+</ul>
+<h3>1.1.13</h3>
+<em>April 8, 2017</em>
+<ul>
+    <li>Removes testing code left over in 1.1.12 release.</li>
+</ul>
+<h3>1.1.12</h3>
+<em>April 7, 2017</em>
+<ul>
+    <li>Fixed a bug that prevented campaign creators from submitting endless campaigns by entering 0 for the length.</li>
+</ul>
+<h3>1.1.11</h3>
+<em>February 23, 2017</em>
+<ul>
+    <li>Make sure the campaign's short description is picked up in the campaign form, even if the campaign was created via the WordPress dashboard.</li>
+</ul>
+<h3>1.1.10</h3>
+<em>January 16, 2017</em>
+<ul>
+    <li>Show the campaign creator's display name to avoid issues with showing the donor name.</li>
+    <li>Sanitize the donated amount for campaigns.</li>
+</ul>
+<h3>1.1.9</h3>
+<em>January 5, 2017</em>
+<ul>
+    <li>Fixes a bug in campaign saving form that prevents campaigns being updated when no core fields are kept in the form</li>
+    <li>Fixes an issue that broke customized campaign forms that use an end date field instead of a length field. This use-case now works correctly.</li>
+</ul>
+<h3>1.1.8</h3>
+<em>September 14, 2016</em>
+<ul>
+    <li>Fixes up an issue that caused campaign end dates to be lost when a campaign is edited via the front-end campaign form.</li>
+</ul>
+<h3>1.1.7</h3>
+<em>September 6, 2016</em>
+<ul>
+    <li>The latest version of Charitable changed the way campaign end dates are sanitized before being saved, but this inadvertently broke campaigns submitted via Charitable Ambassadors. We have tidied up that bug.</li>
+    <li>We also resolved an edge case scenario where campaigns submitted via a campaign form missing a length or end date field would not show up in the `[campaigns]` output until they were saved/updated via the WordPress dashboard.</li>
+</ul>
+<h3>1.1.6</h3>
+<em>August 16, 2016</em>
+<ul>
+    <li>Follow-up fix for 1.1.5. Yesterday's release contained out-dated minified Javascript. This fix has updated the minified Javascript files.</li>
+</ul>
+<h3>1.1.5</h3>
+<em>August 15, 2016</em>
+<ul>
+    <li>Fixes a Javascript error that prevented suggested donations from being added related to changes in Charitable 1.4.</li>
+    <li>Improves how tags/categories are saved, so that it's possible to convert them to select fields without problems.</li>
+    <li>Improves how the user fields are saved when a campaign is submitted; if you have customized the form to completely remove all user fields, the campaign creator will still be set correctly.</li>
+</ul>
+<h3>1.1.4</h3>
+<em>July 8, 2016</em>
+<ul>
+    <li>Tags were never showing up as a field in the campaign submission form -- even when you have tags. Bug squashed.</li>
+</ul>
+<h3>1.1.3</h3>
+<em>June 21, 2016</em>
+<ul>
+    <li>Fixed a fatal error that occurred on campaigns with campaign <strong>grand</strong>children.</li>
+</ul>
+<h3>1.1.2</h3>
+<em>June 3, 2016</em>
+<ul>
+    <li>When editing campaign, correctly display the featured image, instead of just showing the photo ID.</li>
+    <li>Avoid a fatal error when editing pages with Ambassadors' shortcodes encountered if you have both Divi and Yoast SEO installed.</li>
+</ul>
+<h3>1.1.1</h3>
+<em>May 25, 2016</em>
+<ul>    
+    <li>Added minified stylesheet.</li>
+    <li>Fixes a bug that prevented the funds recipient details from being recorded when only one of the recipient types (Your Organization or Personal Causes) is enabled.</li>
+    <li>Prevent the campaign form from proceeding to the next stage if no recipient type has been selected.</li>
+    <li>Changed "Length" label to "Length in days" to make it clearer how the length is measured.</li>
+    <li>Use the correct currency symbol in the campaign form. <strong>NOTE:</strong> This relies on changes in Charitable 1.3.7. If you are using 1.3.6 or earlier, you will not see any difference.</li>
+    <li>Improved inline documentation in template files to clarify how you can override templates.</li>
+    <li>Switch to using <code>transition_post_status</code> hook to send new campaign and campaign creator submission emails.</li>
+    <li>Fixed up the default text of the <em>Campaign Creator: New Campaign</em> email</li>
+</ul>
+<h3>1.1.0</h3>
+<em>April 4, 2016</em>
+<ul>
+    <li>NEW: Three new emails! Send your campaign creators a notification when they receive a donation, an email after they submit their campaign and an email a few days before their campaign ends (you can choose how many days ahead of time the email should go out). Go to <em>Charitable</em> > <em>Emails</em> to enable and configure your new email options!</li>
+    <li>NEW: Auto-approve campaigns when they are submitted. No more code snippets required! Just enable the feature and you're done.</li>
+    <li>NEW: <code>[charitable_creator_donations]</code> shortcode, which displays a list of a campaign creator's received donations when they are logged in.</li>
+    <li>NEW: Choose the payout method you use for campaign creators submitting personal campaigns. By default, PayPal is the only option, but stay tuned for a Stripe Connect extension that will be included in the Charitable Pro package.</li>
+    <li>Makes the Category a non-required field by default, and fixes a bug that made it impossible to submit campaigns when no campaign categories have been created.</li>
+    <li>Fixes a bug that prevented the new campaign email from getting sent when a campaign is submitted.</li>
+    <li>Fixes a bug that stopped mo/po translations from being used correctly.</li>
+    <li>Fixes a bug in the <code>[charitable_my_campaigns]</code> shortcode that prevented the global <code>$post</code> variable from being reset properly after the shortcode.</li>
+    <li>Deprecated certain hooks:
+        <ul>
+            <li><code>charitable_ambassadors_admin_start</code> -- Use <code>Charitable_Ambassadors_Admin::get_instance()</code> instead.</li>
+        </ul>
+    </li>
+</ul>
+<h3>1.0.1</h3>
+<em>October 13, 2015</em>
+<ul>
+    <li>Fixes a bug that caused the user profile information not to pre-populate in the campaign form for users that had filled out their profile.</li>
+    <li>Fixes a bug that caused the recipient type of the campaign to be lost when updating a campaign via the frontend submission form.</li>
+    <li>Added quick link to the Ambassadors settings tab from the Plugins page.</li>
+    <li>Minor documentation improvements.</li>
+</ul>
+<h3>1.0.0</h3>
+<em>October 2, 2015</em>
+<ul>
+    <li>Initial release</li>
+</ul>

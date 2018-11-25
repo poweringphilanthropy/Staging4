@@ -1,0 +1,12 @@
+form#logs th#timestamp {
+    width: 180px;
+}
+form#logs th#type {
+    width: 100px;
+}
+form#logs th#priority {
+    width: 150px;
+}
+.log-detail-dialog {
+    padding: 5px;
+}

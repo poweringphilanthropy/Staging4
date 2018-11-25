@@ -1,0 +1,1035 @@
+<?php
+/**
+ * Class that is responsible for augmenting the main Charitable Campaign Form with additional fields.
+ *
+ * @package     Philanthropy Project/Classes/PP_Charitable_Campaign_Form
+ * @version     1.0.0
+ * @author      Eric Daams
+ * @copyright   Copyright (c) 2014, Studio 164a
+ * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ */
+
+// Exit if accessed directly
+if (!defined('ABSPATH')) exit;
+
+if (!class_exists('PP_Charitable_Campaign_Form')) :
+
+    /**
+     * PP_Charitable_Campaign_Form
+     *
+     * @since       1.0.0
+     */
+    class PP_Charitable_Campaign_Form {
+
+        /**
+         * The one and only way to create an object instance.
+         *
+         * @param   Philanthropy_Project $pp
+         *
+         * @return  PP_Charitable_Campaign_Form
+         * @access  public
+         * @static
+         * @since   1.0.0
+         */
+
+        public static function start(Philanthropy_Project $pp) {
+            if (!$pp->is_start()) {
+                return;
+            }
+
+            charitable()->register_object(new PP_Charitable_Campaign_Form());
+        }
+
+        /**
+         * Private constructor.
+         *
+         * @access  protected
+         * @since   1.0.0
+         */
+        protected function __construct() {
+            $this->includes();
+
+            $this->attach_hooks_and_filters();
+        }
+
+        /**
+         * Set up callback methods for actions & filters.
+         *
+         * @return  void
+         * @access  protected
+         * @since   1.0.0
+         */
+        protected function attach_hooks_and_filters() {
+
+            /**
+             * Ajax load template
+             */
+            add_action('wp_ajax_add_merchandise_form', [$this, 'render_merchandise_form']);
+            add_action('wp_ajax_nopriv_add_merchandise_form', [$this, 'render_merchandise_form']);
+
+            add_action('wp_ajax_add_event_form', [$this, 'render_event_form']);
+            add_action('wp_ajax_nopriv_add_event_form', [$this, 'render_event_form']);
+
+            add_action('wp_ajax_add_ticket_form', [$this, 'render_ticket_form']);
+            add_action('wp_ajax_nopriv_add_ticket_form', [$this, 'render_ticket_form']);
+
+            add_action('wp_ajax_save_imagedata', [$this, 'save_imagedata']);
+            add_action('wp_ajax_nopriv_save_imagedata', [$this, 'save_imagedata']);
+
+
+            add_filter('charitable_campaign_submission_campaign_fields', [$this, 'customise_campaign_fields'], 10, 2);
+            add_filter('charitable_campaign_submission_user_fields', [$this, 'customise_user_fields'], 10, 2);
+            // add_filter( 'charitable_campaign_submission_payment_fields', array( $this, 'customise_payment_fields' ), 10, 2 );
+            add_filter('charitable_campaign_submission_core_data', [$this, 'campaign_core_date'], 10, 3);
+
+            // fix for end date not saving when update campaign from front end, because field length already unset
+            add_filter( 'charitable_campaign_submission_fields_map', array( $this, 'save_end_date' ), 10, 2 );
+            
+            //* GUM - code edit 
+            add_filter('charitable_campaign_submission_fields', [$this, 'addon_section'], 10, 3);
+
+            /**
+             * Custom forms actions
+             */
+            add_action( 'charitable_campaign_submission_save', array( 'PP_Merchandise_Form', 'save_merchandise' ), 10, 3 );
+            add_action( 'charitable_campaign_submission_save', array( 'PP_Event_Form', 'save_event' ), 10, 3 );
+
+            add_filter( 'charitable_form_missing_fields', ['PP_Event_Form', 'check_event_required_fields'], 10, 4);
+
+            add_action( 'charitable_campaign_submission_save_page_campaign_details', array($this, 'maybe_create_user'), 10, 1 );
+
+        }
+
+        /**
+         * Add end_date to the campaign meta fields to be saved.
+         * 
+         */
+        public function save_end_date( $fields, $submitted ) {
+
+            /* If the campaign is already published and
+             * a length is not submitted, we're not changing
+             * the end date.
+             */
+            // if ( ! $context['is_already_published'] || array_key_exists( 'length', $submitted ) ) {
+                $fields['meta']['end_date'] = 'date';
+            // }
+
+            return $fields;
+        }
+
+        /**
+         * Return the current user's Charitable_User object.
+         *
+         * @return  Charitable_User
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_user() {
+            if (!isset($this->user)) {
+                $this->user = new Charitable_User(wp_get_current_user());
+            }
+
+            return $this->user;
+        }
+
+        /**
+         * Return the current campaign's Charitable_Campaign object.
+         *
+         * @return  Charitable_Campaign|false
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_campaign() {
+            if (!isset($this->campaign)) {
+                $campaign_id = get_query_var('campaign_id', false);
+                $this->campaign = $campaign_id ? new Charitable_Campaign($campaign_id) : false;
+            }
+
+            return $this->campaign;
+        }
+        
+        /**
+         * Return any products that have been created that are linked to this campaign as "benefactors".
+         *
+         * @return  array       Empty array if no merchandise.
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_merchandise() {
+            /**
+             * If the submitted data was set in the session, grab it.
+             */
+            if (is_array(charitable_get_session()->get('submitted_merchandise'))) {
+                $submitted = charitable_get_session()->get('submitted_merchandise');
+
+                charitable_get_session()->set('submitted_merchandise', false);
+            } elseif (isset($_POST['merchandise'])) {
+                $submitted = $_POST['merchandise'];
+            }
+
+            if (isset($submitted)) {
+                $merchandise = [];
+
+                foreach ($submitted as $merch) {
+                    $merchandise[] = ['POST' => $merch];
+                }
+
+                return $merchandise;
+            }
+
+            if (false === $this->get_campaign()) {
+                return [];
+            }
+
+            $merchandise = [];
+            
+            $downloads = charitable()->get_db_table('edd_benefactors')->get_single_download_campaign_benefactors($this->get_campaign()->ID);
+            $download_ids = wp_list_pluck($downloads, 'edd_download_id');
+
+            foreach ($download_ids as $key => $download_id) {
+                if (has_term('Merchandise', 'download_category', $download_id)) {
+                    $merchandise[ $download_id ] = $downloads[ $key ];
+                }
+            }
+           
+
+            return $merchandise;
+        }
+
+        /**
+         * Return any events that have been created that are linked to this campaign.
+         *
+         * @return  array       Empty array if no events.
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_events() {
+            /**
+             * If the submitted data was set in the session, grab it.
+             */
+            if (is_array(charitable_get_session()->get('submitted_events'))) {
+                $submitted = charitable_get_session()->get('submitted_events');
+
+                charitable_get_session()->set('submitted_events', false);
+            } /**
+             * Otherwise check in the $_POST array.
+             */
+            elseif (isset($_POST['event'])) {
+                $submitted = $_POST['event'];
+            }
+
+            if (isset($submitted)) {
+                $events = [];
+
+                foreach ($submitted as $event) {
+                    $events[] = ['POST' => $event];
+                }
+
+                return $events;
+            }
+
+            if (false === $this->get_campaign()) {
+                return [];
+            }
+
+            $events = get_post_meta($this->get_campaign()->ID, '_campaign_events', true);
+
+            if (!is_array($events)) {
+                $events = [$events];
+            }
+
+            return $events;
+        }
+
+        /**
+         * Return the value for a particular field.
+         *
+         * @param   string $key
+         *
+         * @return  mixed
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_field_value($key) {
+            if (isset($_POST[ $key ])) {
+                return $_POST[ $key ];
+            }
+
+            $value = "";
+
+            switch ($key) {
+                case 'post_date' :
+                    if ($this->get_campaign()) {
+                        $value = date('F j, Y', strtotime($this->get_campaign()->post_date));
+                    }
+                    break;
+
+                case 'end_date' :
+                    if ($this->get_campaign()) {
+                        //$value = date('F j, Y', strtotime($this->get_campaign()->get('end_date')));
+                         //* GUM code edit
+                        //$value = date( 'F j, Y', strtotime($this->get_campaign()->get( 'end_date' )));
+                        $end_date = get_post_meta( $this->get_campaign()->ID, '_campaign_end_date', true );
+                        $value = date( 'F j, Y', strtotime($end_date));
+                    }
+                    break;
+
+                case 'impact_goal' :
+                    if ($this->get_campaign()) {
+                        $value = $this->get_campaign()->get('impact_goal');
+                    }
+                    break;
+
+                case 'volunteers' :
+                    if ($this->get_campaign()) {
+                        $value = $this->get_campaign()->get('volunteers');
+                    }
+                    break;
+
+            }
+
+            return $value;
+        }
+
+        /**
+         * Returns the array of fields that are displayed at first (not the form fields).
+         *
+         * @return  array[]
+         * @access  public
+         * @since   1.0.0
+         */
+        public function get_parent_fields() {
+            $fields = apply_filters('pp_product_submission_parent_fields', [
+                'explanation' => [
+                    'type'     => 'paragraph',
+                    'content'  => __('On Greeks4Good, you can also sell <strong>merchandise</strong> and <strong>event tickets</strong> to raise money for your campaign goal.', 'pp-toolkit'),
+                    'priority' => 52
+                ],
+                'merchandise' => [
+                    'type'     => 'merchandise',
+                    'priority' => 54,
+                    'value'    => $this->get_merchandise()
+                ],
+                'event'       => [
+                    'type'     => 'event',
+                    'priority' => 56,
+                    'value'    => $this->get_events()
+                ],
+
+            ], $this);
+
+            uasort($fields, 'charitable_priority_sort');
+
+            return $fields;
+        }
+
+        /**
+         * Add custom fields to the campaign form and customise some of the existing ones.
+         *
+         * @param   array[] $fields
+         * @param   Charitable_FES_Campaign_Form $form
+         *
+         * @return  array[]
+         * @access  public
+         * @since   1.0.0
+         *
+         */
+         
+        public function customise_campaign_fields($fields, $form) {
+            if(isset($fields['length'])) 
+                unset($fields['length']);
+
+            if(isset($fields['campaign_category'])) 
+                unset($fields['campaign_category']);
+
+            // $fields['campaign_category']['required'] = false;
+            
+            if(isset($fields['post_title'])){
+                $fields['post_title']['placeholder'] = "Also used to generate your campaign page URL (greeks4good.com/campaigns/campaign-name).";
+            }
+
+            if(isset($fields['goal'])){
+                $fields['goal']['label'] = __('Fundraising Goal (enter a numerical value without "$").', 'pp-toolkit');
+                $fields['goal']['required'] = true;
+                $fields['goal']['fullwidth'] = true;
+                $fields['goal']['priority'] = 2;
+                $fields['goal']['editable'] = true;
+            }
+
+            // if(isset($fields['image'])){
+                $fields['image']['required'] = true;
+                $fields['image']['label'] = __('Featured Image (.jpg or .png). Ideal size is 1200px wide by 400px high.', 'pp-toolkit');
+                $fields['image']['type'] = 'image-crop';
+                $fields['image']['editor-setting'] = array(
+                    'expected-height' => 400,
+                    'expected-width' => 1200,
+                    'max-preview-width' => '1200px'
+                );
+            // }
+
+            if(isset($fields['video'])){
+                $fields['video']['label'] = __('Featured Video (enter the video URL: https://youtu.be/videoID or https://vimeo.com/videoID).', 'pp-toolkit');
+                $fields['video']['placeholder'] = "";
+            }
+
+            if(isset($fields['description'])){
+                $fields['description']['placeholder'] = "A short description of your campaign that appears at the top of your campaign page (no paragraphs).";
+            }
+
+            // if(isset($fields['post_date'])){
+                $fields['post_date'] = [
+                    'label'         => __('Start Date', 'pp-toolkit'),
+                    'type'          => 'datepicker',
+                    'priority'      => 9,
+                    'required'      => true,
+                    'fullwidth'     => false,
+                    'value'         => $this->get_field_value('post_date'),
+                    'data_type'     => 'core',
+                    'editable'      => true
+                ];
+            // }
+
+            // if(isset($fields[ 'end_date' ])){
+                $fields[ 'end_date' ] = [
+                    'label'         => __( 'End Date', 'pp-toolkit' ), 
+                    'type'          => 'datepicker',
+                    'priority'      => 9.1, 
+                    'required'      => true,
+                    'fullwidth'     => false,
+                    'value'         => $this->get_field_value('end_date'),
+                    //'value'       => date( 'F j, Y', strtotime($this->get_campaign()->get( 'end_date' ))), //works from db
+                    //'value'       => $this->get_campaign()->get( '_campaign_end_date' ),
+                    //'value'       => $form->get_campaign_value( 'end_date' ),
+                    'data_type'     => 'core',
+                    'editable'      => true
+                ];
+            // }
+
+            // echo "<pre>";
+            // print_r($fields);
+            // echo "</pre>";
+            
+            
+            if ( $form->get_campaign() ) {
+                //$fields[ 'end_date' ][ 'value' ] = date( 'm/d/y', strtotime( $this->get_campaign()->get( 'end_date' ) ) );
+            }
+            
+            
+            //* GUM code edit END
+
+            return $fields;
+            
+        }
+
+        /**
+         * Customises the user fields.
+         *
+         * @param   array[]                      $fields
+         * @param   Charitable_FES_Campaign_Form $form
+         *
+         * @return  array[]
+         * @access  public
+         * @since   1.0.0
+         */
+        public function customise_user_fields($fields, $form) {
+            
+            unset( $fields[ 'city' ] );
+            unset( $fields[ 'state' ] );
+            unset( $fields[ 'country' ] );
+
+            if(!is_user_logged_in()):
+
+            $fields[ 'user_login' ] = array(
+                'legend'   => 'Your Account',
+                'type'     => 'fieldset',
+                'priority' => 52,
+                'page'     => 'campaign_details',
+                'fields'   => [
+                    'user_login' => [
+                        'label'         => __('Username', 'pp-toolkit') ,
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => true,
+                        'fullwidth'     => false,
+                        // 'value'         => $form->get_campaign_value( 'payout_payable_name' ),
+                        // 'data_type'     => 'meta',
+                        // 'editable'      => true
+                    ],
+                    'user_pass' => [
+                        'label'         => __('Password', 'pp-toolkit') ,
+                        'type'          => 'password',
+                        'priority'      => 43,
+                        'required'      => true,
+                        'fullwidth'     => false,
+                        // 'value'         => $form->get_campaign_value( 'payout_payable_name' ),
+                        // 'data_type'     => 'meta',
+                        // 'editable'      => true
+                    ],
+                ]
+            );
+
+            endif;
+            
+            /* GUM Edit 
+            $fields['chapter'] = [
+                'label' => 'Fraternity/Sorority Name',
+                'type' => 'text',
+                'priority' => 53,
+                'required' => true,
+            ];
+            */
+            
+            /* GUM New Custom Field */
+            $fields[ 'chapter' ] = array(
+                'label'         => __( 'Fraternity/Sorority Name', 'pp-toolkit' ),
+                'type'          => 'text',
+                'required'      => true, 
+                'fullwidth'     => false,
+                //'rows'          => 4,//use with textarea
+                'priority'      => 53,
+                'value'         => $form->get_user_value('chapter'),
+                'content'       => __( 'Fraternity/Sorority Name', 'pp-toolkit' ),
+                'data_type'     => 'user'
+            );
+            
+            $fields['organisation']['label'] = 'University/College';
+            $fields['organisation']['required'] = true;
+            $fields['organisation']['priority'] = 53;
+            $fields['organisation']['fullwidth'] = false;
+            
+            $fields[ 'avatar' ][ 'priority' ] = 56;
+
+    /**            
+            $fields['city']['required'] = true;
+            $fields['state']['type'] = 'select';
+            $fields['state']['options'] = charitable_get_location_helper()->get_states_for_country( 'US' );
+            $fields['state']['required'] = true;
+            $fields['country']['required'] = true;
+            $fields['country']['default'] = 'US';
+       */
+
+            /* GUM Edit */
+            $fields['user_description']['label'] = __('About Your Chapter', 'pp-toolkit');
+            $fields['user_description']['placeholder'] = " ";
+            $fields['user_description']['priority'] = 57;
+            $fields['user_description']['fullwidth'] = true;
+  
+            $fields['referral_source'] = [
+                'label'     => __('How did you hear about us?', 'pp-toolkit'),
+                'type'      => 'text',
+                'priority'  => 58,
+                'required'  => false,
+                'value'     => $form->get_user_value('referral_source'),
+                'data_type' => 'user'
+            ];
+
+            return $fields;
+        }
+
+     
+           
+
+        /**
+         * Add the EDD product and event sections to the campaign form.
+         *
+         * @param   array                        $sections
+         * @param   Charitable_FES_Campaign_Form $form
+         *
+         * @return  array
+         * @access  public
+         * @since   1.0.0
+         */
+        public function addon_section($sections, $form) {
+
+            if(isset($sections[ 'payment_fields' ])){
+                unset( $sections[ 'payment_fields' ] );
+            }
+
+            /**
+             * Attach desc
+             */
+            // if(isset($sections[ 'campaign_fields' ])){
+            //     $sections[ 'campaign_fields' ]['desc'] = __('this', 'textdomain')
+            // }
+            
+            $sections['merchandise_fields'] = [
+                'legend'   => __('Merchandise', 'pp-toolkit'),
+                'type'     => 'fieldset',
+                'priority' => 50,
+                'page'     => 'campaign_details',
+                'fields'   => [
+                    'explanation' => [
+                        'type'     => 'paragraph',
+                        'content'  => __('You can sell <strong>merchandise</strong> to raise money for your campaign goal.', 'pp-toolkit'),
+                        'priority' => 32
+                    ],
+                    'merchandise' => [
+                        'type'     => 'merchandise',
+                        'priority' => 34,
+                        'value'    => $this->get_merchandise()
+                    ]
+                ]
+            ];
+
+            $sections['event_fields'] = [
+                'legend'   => __('Events', 'pp-toolkit'),
+                'type'     => 'fieldset',
+                'priority' => 55,
+                'page'     => 'campaign_details',
+                'fields'   => [
+                    'explanation' => [
+                        'type'     => 'paragraph',
+                        'content'  => __('You can create <strong>events</strong> and sell tickets to raise money for your campaign goal.', 'pp-toolkit'),
+                        'priority' => 42
+                    ],
+                    'event'       => [
+                        'type'     => 'event',
+                        'priority' => 44,
+                        'value'    => $this->get_events()
+                    ]
+                ]
+            ];
+
+            $sections['volunteers_need'] = [
+                'legend'   => 'Volunteers',
+                'type'     => 'fieldset',
+                'priority' => 56,
+                'page'     => 'campaign_details',
+                'fields'   => [
+                    'explanation' => [
+                        'type'     => 'paragraph',
+                        'content'  => __('You can recruit and organize participants to help with specific tasks through out your campaign. You receive emails from interested participants.', 'pp-toolkit'),
+                        'priority' => 50
+                    ],
+                    'volunteers'  => [
+                        'type'     => 'volunteers',
+                        'priority' => 50,
+                        'value'    => $this->get_field_value('volunteers'),
+                    ]
+                ]
+            ];
+            
+            //* GUM - code edit 
+            $sections['payout_fields'] = [
+                'legend'   => 'Payout',
+                'type'     => 'fieldset',
+                'priority' => 57,
+                'page'     => 'campaign_details',
+                'fields'   => [
+                    'explanation' => [
+                        'type'     => 'paragraph',
+                        'content'  => __('Enter your campaign payout recipient information.', 'pp-toolkit'),
+                        'priority' => 50
+                    ],
+                    /*
+                    'recipient'  => [
+                        'type'     => 'recipient',
+                        'priority' => 50,
+                        'value'    => $this->get_field_value('payout'),
+                    ]
+                    */
+                    'payout_payable_name' => [
+                        'label'         => __('Make check payable to:', 'pp-toolkit') ,
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => true,
+                        'value'         => $form->get_campaign_value( 'payout_payable_name' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_email' => [
+                        'label'         => __('Email Address', 'pp-toolkit') ,
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_email' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_blank' => [
+                        'label'         => __('') ,
+                        'type'          => 'hidden',
+                        'priority'      => 43,
+                        //'required'    => false,
+                        //'fullwidth'     => true,
+                        //'value'       => $form->get_campaign_value( 'payout_email' ),
+                        //'data_type'   => 'meta',
+                        //'editable'    => true
+                    ],
+                    
+                    'payout_first_name' => [
+                        'label'         => __('First Name', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_first_name' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_last_name' => [
+                        'label'         => __('Last Name', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_last_name' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_address' => [
+                        'label'         => __('Address', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_address' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_address2' => [
+                        'label'         => __('Address 2', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_address2' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_city' => [
+                        'label'         => __('City', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_city' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_state' => [
+                        'label'         => __('State', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_state' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_zipcode' => [
+                        'label'         => __('Zip Code', 'pp-toolkit'),
+                        'type'          => 'text',
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_zipcode' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    'payout_country' => [
+                        'label'         => __('Country', 'pp-toolkit'),
+                        'type'          => 'select',
+                        'options'       => charitable_get_location_helper()->get_countries(), 
+                        'priority'      => 43,
+                        'required'      => false,
+                        'fullwidth'     => false,
+                        'value'         => $form->get_campaign_value( 'payout_country' ),
+                        'data_type'     => 'meta',
+                        'editable'      => true
+                    ],
+                    
+                    
+                    
+                ]
+            ];
+
+
+            return $sections;
+        }
+
+        /**
+         * Filter core campaign data before saving.
+         *
+         * @param   array $values
+         * @param   int   $user_id
+         * @param   array $submitted
+         *
+         * @return  array
+         * @access  public
+         * @since   1.0.0
+         */
+        public function campaign_core_date($values, $user_id, $submitted) {
+            if (isset($submitted['post_date'])) {
+                $values['post_date'] = date('Y-m-d 00:00:00', strtotime($submitted['post_date']));
+                $values['edit_date'] = $values['post_date'];
+                //$values['end_date'] = date('Y-m-d 00:00:00', strtotime($submitted['end_date']));
+                $values['post_date_gmt'] = get_gmt_from_date($values['post_date']);
+            }
+
+            return $values;
+        }
+
+
+        /**
+         * Display the merchandise form. This is called by an AJAX action.
+         *
+         * @return  void
+         * @access  public
+         * @since   1.0.0
+         */
+        public function render_merchandise_form() {
+            /* Run a security check first to ensure we initiated this action. */
+            check_ajax_referer('pp-merchandise-form', 'nonce');
+
+            $template = new PP_Toolkit_Template('form-fields/merchandise-form.php', false);
+            $template->set_view_args([
+                                         'form'  => new PP_Merchandise_Form(),
+                                         'index' => $_POST['index']
+                                     ]);
+            $template->render();
+
+            wp_die();
+        }
+
+        /**
+         * Display the event form. This is called by an AJAX action.
+         *
+         * @return  void
+         * @access  public
+         * @since   1.0.0
+         */
+        public function render_event_form() {
+            /* Run a security check first to ensure we initiated this action. */
+            check_ajax_referer('pp-event-form', 'nonce');
+
+            $template = new PP_Toolkit_Template('form-fields/event-form.php', false);
+            $template->set_view_args([
+                                         'form'  => new PP_Event_Form(),
+                                         'index' => $_POST['index']
+                                     ]);
+            $template->render();
+
+            wp_die();
+        }
+
+        /**
+         * Display the ticket form. This is called by an AJAX action.
+         *
+         * @return  void
+         * @access  public
+         * @since   1.0.0
+         */
+        public function render_ticket_form() {
+            /* Run a security check first to ensure we initiated this action. */
+            check_ajax_referer('pp-ticket-form', 'nonce');
+
+            $template = new PP_Toolkit_Template('form-fields/ticket-form.php', false);
+            $template->set_view_args([
+                                         'form'  => new PP_Ticket_Form($_POST['namespace'], $_POST['event_id']),
+                                         'index' => $_POST['index']
+                                     ]);
+            $template->render();
+
+            wp_die();
+        }
+
+        public function save_imagedata(){
+            $result = array(
+                'success' => false,
+                'message' => __('Failed to save image.', 'pp-toolkit'),
+                'result' => array()
+            );
+
+            if ( ! wp_verify_nonce( $_REQUEST['nonce'], 'save_imagedata' ) ) {
+                wp_send_json( $result );
+            }
+
+            // $fileName = $_FILES['imgfile']['name'];
+            // $fileType = $_FILES['imgfile']['type'];
+            $attach_id = absint( $_REQUEST['image_id'] );
+            if(empty($attach_id)){
+                $filename = md5( $filename . microtime() ) . '_' . uniqid() . '.jpeg'; // add extension, we will upload later
+            } else {
+                $filename = basename( get_attached_file( $attach_id ) );
+            }
+            
+            $_FILES['imgfile']['name'] = $filename;
+
+            require_once( ABSPATH . 'wp-admin/includes/file.php' );
+            $uploaded      = wp_handle_upload(  $_FILES['imgfile'], array( 'test_form' => false, 'unique_filename_callback' => 'pp_unique_filename_callback' ) ); // prevent duplicate, to save storage
+
+            if ( isset( $uploaded['error'] ) ) {
+
+                $result['success'] = false;
+                $result['message'] = $uploaded['error'];
+                $result['result'] = $_FILES['imgfile'];
+
+            } else {
+                $upload_dir = wp_upload_dir();
+                $filename = $uploaded['file'];
+                $attachment = array(
+                    'post_mime_type' => $uploaded['type'],
+                    'post_title' => preg_replace('/\.[^.]+$/', '', basename($filename)),
+                    'post_content' => '',
+                    'post_status' => 'inherit',
+                    'guid' => $upload_dir['url'] . '/' . basename($filename)
+                );
+
+                if(empty($attach_id)){
+                    $attach_id = wp_insert_attachment( $attachment, $filename, 0 );
+                }
+                
+                require_once(ABSPATH . 'wp-admin/includes/image.php');
+                $attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
+                wp_update_attachment_metadata( $attach_id, $attach_data );
+
+                $result['success'] = true;
+                $result['message'] = __('Image saved.', 'pp-toolkit');
+                $result['result'] = array(
+                    'id' => $attach_id,
+                    'url' => $uploaded['url']
+                );
+            }
+
+            wp_send_json( $result );
+        }
+
+        /**
+         * Save image from datauri (not used now)
+         * we changed to use blob and formdata to avoin error to long post data
+         * @param  [type] $datauri  [description]
+         * @param  [type] $filename [description]
+         * @return [type]           [description]
+         */
+        private function save_image_from_datauri($datauri, $filename = false ){
+
+            @ini_set( 'upload_max_size' , '64M' );
+            @ini_set( 'post_max_size', '64M');
+            @ini_set( 'max_execution_time', '300' );
+            
+            if(!$filename)
+                $filename = uniqid();
+
+            $filename         .= '.jpeg'; // add extension
+            $img = str_replace('data:image/jpeg;base64,', '', $datauri);
+            $img = str_replace(' ', '+', $img);
+            $decoded          = base64_decode($img) ;
+
+            $upload_dir       = wp_upload_dir();
+            $upload_path      = str_replace( '/', DIRECTORY_SEPARATOR, $upload_dir['path'] ) . DIRECTORY_SEPARATOR;
+
+            $hashed_filename  = md5( $filename . microtime() ) . '_' . $filename;
+
+            $image_upload     = file_put_contents( $upload_path . $hashed_filename, $decoded );
+
+            //HANDLE UPLOADED FILE
+            if( !function_exists( 'wp_handle_sideload' ) ) {
+              require_once( ABSPATH . 'wp-admin/includes/file.php' );
+            }
+
+            // generate $file
+            $file             = array();
+            $file['error']    = '';
+            $file['tmp_name'] = $upload_path . $hashed_filename;
+            $file['name']     = $hashed_filename;
+            $file['type']     = 'image/png';
+            $file['size']     = filesize( $upload_path . $hashed_filename );
+
+            // upload file to server
+            $file_return      = wp_handle_sideload( $file, array( 'test_form' => false ) );
+
+            $filename = $file_return['file'];
+            $attachment = array(
+                'post_mime_type' => $file_return['type'],
+                'post_title' => preg_replace('/\.[^.]+$/', '', basename($filename)),
+                'post_content' => '',
+                'post_status' => 'inherit',
+                'guid' => $upload_dir['url'] . '/' . basename($filename)
+            );
+
+            $attach_id = wp_insert_attachment( $attachment, $filename, 0 );
+
+            require_once(ABSPATH . 'wp-admin/includes/image.php');
+            $attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
+            wp_update_attachment_metadata( $attach_id, $attach_data );
+
+            return $attach_id;
+        }
+
+        /**
+         * Redirect the form submission to the edit page (used when some required fields are missing in the event/merchandise forms).
+         *
+         * @return  string
+         * @access  public
+         * @static
+         * @since   1.1.0
+         */
+        public static function redirect_submission_to_edit_page($url, $submitted, $campaign_id) {
+            /**
+             * Set notices to the session so they persist to the next page load.
+             */
+            charitable_get_session()->add_notices();
+
+            return charitable_get_permalink('campaign_editing_page', ['campaign_id' => $campaign_id]);
+        }
+
+        public function maybe_create_user(Charitable_Ambassadors_Campaign_Form $form){
+
+            // echo "<pre>";
+            // print_r($_POST);
+            // echo "</pre>";
+            // exit();
+
+            if ( ! $form->check_required_fields( $form->get_merged_fields() ) ) {
+                return;
+            }
+
+            $user = new Charitable_User();
+            $user_submitted = $_POST;
+
+            /**
+             * Unset ID from post to avoid ambiguous with user id
+             */
+            if(isset($user_submitted['ID']))
+                unset($user_submitted['ID']);
+
+            // create user and sign in it
+            $user->update_core_user($user_submitted);
+        }
+
+        /**
+         * Load all required custom campaign forms
+         * @return [type] [description]
+         */
+        public function includes(){
+
+            // Load Events
+            include_once( 'charitable-forms/events/class-pp-event-form.php' );
+
+            // Load Tickets
+            include_once( 'charitable-forms/tickets/class-pp-ticket-form.php' );
+
+            // Load Collaborators
+            include_once( 'charitable-forms/collaborators/class-pp-collaborators-form.php' );
+
+            // Load Merchandise
+            include_once( 'charitable-forms/merchandise/class-pp-merchandise-form.php' );
+            
+            // Load EDD Downloads (not sure, because on old code it was not included, but the class called from shortcode)
+            include_once( 'charitable-forms/edd-product/class-pp-edd-product-form.php' );
+        }
+    }
+    
+endif; // End class_exists check

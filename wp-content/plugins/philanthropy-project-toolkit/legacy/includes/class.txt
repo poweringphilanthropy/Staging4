@@ -1,0 +1,47 @@
+<?php
+/**
+ * PP_Toolkit_Admin Class.
+ *
+ * @class       PP_Toolkit_Admin
+ * @version     1.0
+ * @author lafif <hello@lafif.me>
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+
+/**
+ * PP_Toolkit_Admin class.
+ */
+class PP_Toolkit_Admin {
+
+    /**
+     * Singleton method
+     *
+     * @return self
+     */
+    public static function init() {
+        static $instance = false;
+
+        if ( ! $instance ) {
+            $instance = new PP_Toolkit_Admin();
+        }
+
+        return $instance;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        $this->includes();
+    }
+
+    public function includes(){
+
+    }
+
+}
+
+PP_Toolkit_Admin::init();

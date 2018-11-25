@@ -1,0 +1,10 @@
+<?php if (!$this->dbPatcher->isValid()): ?>
+    <div class="updated error inline below-h2"><p><?php printf(__('There seems to be a <b>database mismatch</b>. This could result in problems when saving rules. Please run the selftests on the overview page. If this warning persists, <a href="%s" target="_blank">please contact the support.</a>', 'psn'), $this->pm->getConfig()->plugin->supportUrl); ?></p></div>
+<?php endif; ?>
+<p><a href="<?php echo $this->url(array('page' => $this->pm->getPathinfo()->getDirname(), 'controller' => 'rules', 'action' => 'create'), 'requestVars', true) ?>" class="button button-dashicons" id="create_new_rule"><span class="dashicons dashicons-plus"></span> <?php echo $this->langCreateNewRule; ?></a>
+    <?php do_action('psn_rules_toolbar'); ?>
+</p>
+<?php do_action('psn_rules_toolbar_after'); ?>
+<?php
+echo $this->listTable->display();
+?>

@@ -1,0 +1,38 @@
+<p>
+    <a style="width: 14em;" href="{{ premium_url }}" target="_blank" class="premiumad-button">
+        <span class="title">Go Premium!</span>
+    </a>
+</p>
+
+<p>{% autoescape false %}{{ text.__('<b>Before upgrading</b>, please consider the <a href="%s" target="_blank">Uprade-HowTo</a>', 'ifw')|replace({'%s': 'http://docs.ifeelweb.de/post-status-notifier/upgrade_howto.html'}) }}{% endautoescape %}</p>
+<p>{{ text.__('Features of the Premium version', 'ifw') }}:</p>
+
+<ul id="premium_features">
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/mail_templates.html" target="_blank">{{ text.__('HTML emails', 'psn') }}</a></li>
+    <li>{{ text.__('Unlimited notification rules', 'psn') }}</li>
+    <li>{{ text.__('Unlimited CC email recipients', 'psn') }}</li>
+    <li>{{ text.__('Unlimited Bcc email recipients', 'psn') }}</li>
+    <li>{{ text.__('Category filter', 'psn') }}</li>
+    <li>{{ text.__('SMTP server support', 'psn') }}</li>
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/conditional_templates.html" target="_blank">{{ text.__('Conditional template syntax', 'psn') }}</a></li>
+    <li>{{ text.__('One email per TO recipient', 'psn') }}</li>
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/mailqueue.html" target="_blank">{{ text.__('Mail queue / Deferred sending', 'psn') }}</a></li>
+    <li>{{ text.__('Block notifications feature on Post submit post', 'psn') }}</li>
+    <li>{{ text.__('Extended recipients', 'psn') }}</li>
+    <li>{{ text.__('No appendix in sent emails', 'psn') }}</li>
+    <li>{{ text.__('Unlimited placeholders filters', 'psn') }}</li>
+    <li>{{ text.__('Copy notification rules', 'psn') }}</li>
+    <li>{{ text.__('Import / export notifaciton rules', 'psn') }}</li>
+    <li>{{ text.__('Custom sender e-mail', 'psn') }} (FROM)</li>
+    <li>{{ text.__('Support for', 'psn') }} <a href="https://www.mandrill.com/" target="_blank">Mandrill</a></li>
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/dynamic_recipients.html" target="_blank">{{ text.__('Dynamic recipients', 'psn') }}</a></li>
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/options.html#late-execution" target="_blank">{{ text.__('Late execution', 'psn') }}</a> {{ text.__('to support frontend submission plugins as well as possible', 'psn') }}</li>
+    <li><a href="http://docs.ifeelweb.de/post-status-notifier/limitations.html" target="_blank">{{ text.__('Rule trigger limitations', 'psn') }}</a></li>
+    <li>{{ text.__('Extensive logging (matching rules, sent mails ...) with dashboard widget', 'psn') }}</li>
+    <li>{{ text.__('Premium Support', 'psn') }}</li>
+    <li>{{ text.__('Extensible', 'psn') }}</li>
+</ul>
+
+<p class="ifw-keep-alive">{{ text.__('With your purchase you will keep this plugin alive. Thankyou.', 'ifw') }}</p>
+
+<a href="{{ premium_url }}" target="_blank" class="ifw-external-link">{{ text.__('More information', 'ifw') }}</a> | <a href="{{ plugin_homepage }}" target="_blank" class="ifw-external-link">{{ text.__('Plugin homepage', 'ifw') }}</a>

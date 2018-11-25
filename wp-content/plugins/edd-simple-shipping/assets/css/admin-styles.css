@@ -1,0 +1,19 @@
+.edd-ss-send-tracking-wrapper {
+	float: right;
+}
+
+.edd-tracking-info-email-message {
+	display: block;
+}
+
+#edd-payment-tracking .spinner {
+	vertical-align: top;
+}
+
+.edd-ti-success,
+.edd-ti-fail {
+	font-weight: 600;
+}
+
+.edd-ti-success { color: #339933; }
+.edd-ti-fail { color: #993333; }

@@ -1,0 +1,297 @@
+# Copyright (C) 2012 ifeelweb.de
+msgid ""
+msgstr ""
+"Project-Id-Version: ifeelweb.de WordPress Plugin Framework 1.0\n"
+"Report-Msgid-Bugs-To: http://www.ifeelweb.de\n"
+"POT-Creation-Date: 2012-07-29 10:43:22+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Timo Reith <timo@ifeelweb.de>\n"
+"Language-Team: German <timo@ifeelweb.de>\n"
+
+msgid "For more information:"
+msgstr ""
+
+msgid "Plugin homepage"
+msgstr ""
+
+msgid "The plugin is up to date."
+msgstr ""
+
+msgid "There is a new version available."
+msgstr ""
+
+msgid "Error while loading: %s"
+msgstr ""
+
+msgid "Error while loading newsfeed: %s"
+msgstr ""
+
+msgid "Plugin is ready."
+msgstr ""
+
+msgid "Plugin is not ready."
+msgstr ""
+
+msgid "Plugin info"
+msgstr ""
+
+msgid "http://www.ifeelweb.de/"
+msgstr ""
+
+msgid "Timo Reith"
+msgstr ""
+
+msgid "http://www.ifeelweb.de"
+msgstr ""
+
+msgid "Timestamp"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Current log entries"
+msgstr ""
+
+msgid "Reload"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Go Premium!"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Help"
+msgstr "Hilfe"
+
+msgid "No options available."
+msgstr ""
+
+msgid "Invalid access"
+msgstr ""
+
+msgid "Untitled"
+msgstr ""
+
+msgid "Need help?"
+msgstr ""
+
+msgid "Visit the <a href=\"%s\" target=\"_blank\">plugin homepage</a>"
+msgstr ""
+
+msgid "Premium"
+msgstr ""
+
+msgid "You are using the premium version of this plugin."
+msgstr ""
+
+msgid "Visit the <a href=\"%s\" target=\"_blank\">premium homepage</a> for the latest news."
+msgstr ""
+
+msgid "Features of the premium version"
+msgstr ""
+
+msgid "More information"
+msgstr ""
+
+msgid "With your purchase you will keep this plugin alive. Thankyou."
+msgstr ""
+
+msgid "Read the <a href=\"%s\" target=\"_blank\">plugin documentation</a>"
+msgstr ""
+
+msgid "There is a new version of %1$s available. <a href=\"%2$s\">Open Download Page of Version %3$s</a>."
+msgstr ""
+
+msgid "Jump to Plugin menu"
+msgstr ""
+
+msgid "Please consider the documentation page <a href=\"%s\" target=\"_blank\">%s</a> for more information."
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Items per page"
+msgstr ""
+
+msgid "This plugin requires WordPress version %s for full functionality. Your version is %s. <a href=\"%s\">Please upgrade</a>."
+msgstr ""
+
+msgid "Perform selftests"
+msgstr ""
+
+msgid "Everything is in order"
+msgstr ""
+
+msgid "A problem was recognized"
+msgstr ""
+
+msgid "Not tested yet"
+msgstr ""
+
+msgid "Last test performed"
+msgstr ""
+
+msgid "WP Version"
+msgstr ""
+
+msgid "Checks if the WordPress version is supported"
+msgstr ""
+
+msgid "Your WordPress version is not supported. Please upgrade to at least version %s"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "ERROR"
+msgstr ""
+
+msgid "Perform selftest again"
+msgstr ""
+
+msgid "An error occured in patch \"%s\""
+msgstr ""
+
+msgid "An unexpected error occured in patch \"%s\""
+msgstr ""
+
+msgid "Patches available"
+msgstr ""
+
+msgid "You have to execute the patches before you can continue work with this plugin."
+msgstr ""
+
+msgid "Execute patches"
+msgstr ""
+
+msgid "Patches executed"
+msgstr ""
+
+msgid "Error(s) occured"
+msgstr ""
+
+msgid "You should report the error(s) to the <a href=\"%s\" target=\"_blank\">plugin support</a>. Proceeding could lead to errors during the working process."
+msgstr ""
+
+msgid "Proceed anyway"
+msgstr ""
+
+msgid "Patches have been executed successfully!"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Nothing to patch"
+msgstr ""
+
+msgid "Patches executed with errors"
+msgstr ""
+
+msgid "You may now proceed working. If you run into errors, please contact the <a href=\"%s\" target=\"_blank\">plugin support</a>."
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Enter license code"
+msgstr ""
+
+msgid "Please enter the plugin license code in the <a href=\"%s\">options panel</a> to be able to receive <b>auto-updates</b> via the WordPress backend."
+msgstr ""
+
+msgid "You have to enter your plugin <b>license code</b> in the <a href=\"%s\">plugin options</a> to be able to download this update!"
+msgstr ""
+
+msgid "<b>Before upgrading</b>, please consider the <a href=\"%s\" target=\"_blank\">Uprade-HowTo</a>"
+msgstr ""
+
+msgid "\"%s\" is a Premium feature."
+msgstr ""
+
+msgid "Upload module"
+msgstr ""
+
+msgid "Module installed."
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Could not find module bootstrap."
+msgstr ""
+
+msgid "Installed modules"
+msgstr ""
+
+msgid "No custom modules found"
+msgstr ""
+
+msgid "By"
+msgstr ""
+
+msgid "Module Homepage"
+msgstr ""
+
+msgid "Activate"
+msgstr ""
+
+msgid "Deactivate"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Learn how to extend %s"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Reason"
+msgstr ""
+
+msgid "Items have been deleted successfully"
+msgstr ""
+
+msgid "Item %s has been deleted successfully"
+msgstr ""
+
+msgid "Item could not be deleted"
+msgstr ""
+
+msgid "Item %s has been copied successfully"
+msgstr ""
+
+msgid "Item %s could not be copied"
+msgstr ""

@@ -1,0 +1,62 @@
+# Plugin
+
+Name: {{ plugin_name }}
+Version: {{ plugin_version }}
+Build: {% if plugin_build_number is not empty %}{{ plugin_build_number }}{% else %}unknown{% endif %}
+
+Loaded modules:
+{% for mod in plugin_modules_initialized %}
+    - {{ mod.getName() }} ({{ mod.getLocationName() }})
+{% endfor %}
+Custom modules dir: {{ plugin_modules_custom_dir }}
+
+# Server:
+
+OS: {{ PHP_OS }} ({{ uname }})
+
+# WordPress
+
+Version: {{ wp_version }}
+Charset: {{ wp_charset }}
+Users: {{ wp_count_users }}
+WP_DEBUG: {{ wp_debug }}
+WP_DEBUG_LOG: {{ wp_debug_log }}
+WP_DEBUG_DISPLAY: {{ wp_debug_display }}
+
+Plugins:
+{% for plugin in plugins %}
+    - {{ plugin.Name }} {{ plugin.Version }} ({{ plugin.PluginURI }})
+{% endfor %}
+
+Theme: {{ theme_name }} {{ theme_version }} by {{ theme_author }} ({{ theme_uri }})
+
+# PHP
+
+Version: {{ php_version }}
+
+memory_limit: {{ php_memory_limit }}
+include_path: {{ php_include_path }}
+open_basedir: {{ php_open_basedir }}
+autoload functions:
+{% for function in php_autoload_functions %}
+  - {{ function }}
+{% endfor %}
+
+Extensions:
+{% for ext in php_extensions %}
+    - {{ ext }}
+{% endfor %}
+
+# MySQL
+
+Version: {{ mysql_version }}
+
+Client info: {{ mysql_client }}
+
+# Webserver
+
+Software: {{ server_software }}
+{% if apache_version != false %}Apache modules:
+{% for apache_mod in apache_modules %}
+    - {{ apache_mod }}
+{% endfor %}{% endif %}

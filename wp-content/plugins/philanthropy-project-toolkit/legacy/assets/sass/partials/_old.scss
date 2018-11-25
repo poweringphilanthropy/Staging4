@@ -1,0 +1,197 @@
+.campaign-summary .campaign-details { position: relative; }
+
+body .p_popup-inner .p_popup-footer .button {
+  background: $base_color;
+}
+body .p_popup-inner .p_popup-notices .notice.notice-success {
+  border-color: $base_color;
+}
+
+.widget_wpb_fp_widget .block-title {
+    color: #7D6E63;
+    font-size: 2rem;
+}
+.widget_wpb_fp_widget .qus {
+    font-weight:700;
+}
+
+.impact-goal-field {
+    width: 100% !important;
+    margin-top: 0px !important;
+    font-size:18px !important;
+}
+.compaign-target-head {
+    font-size: 24px !important;
+}
+
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+.volunteers-form input, .volunteers-form textarea {
+    border-bottom: 1px solid #7D6E63;
+    background:#FFF !important;
+}   
+.volunteers-form > p{
+    display:none;
+    }
+.volunteers-form li.donation-amount.custom-donation-amount{
+    display:inline-block;
+    }
+li#needswrapper {
+    max-height: 200px;
+    overflow-y: auto;
+}
+div.wpcf7-mail-sent-ok {
+    border: none !important;
+}   
+.volunteers-form .charitable-fieldset{
+    margin-bottom:0px !important;
+    padding-bottom:0px !important;
+    }
+
+
+/**
+ * FROM philanthropy-project plugin
+ */
+/**
+ * HEADING CONTENT SINGLE CAMPAIGN
+ */
+.sidebar.sidebar-heading {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (max-width: 450px){
+  .sidebar.sidebar-heading.barometer-added .campaign-countdown > span:last-child {
+      display: none;
+  }
+  .sidebar.sidebar-heading.barometer-added .campaign-countdown .countdown {
+      width: 100%;
+  }
+}
+
+.campaign-summary .campaign-stats li span {
+  font-weight: bold;
+  font-family: "Raleway Bold", Raleway, monospace;
+}
+.campaign-summary .barometer span span {
+  font-family: "Raleway Bold", Raleway, monospace;
+}
+.section-heading-content.campaign-summary .campaign-stats li {
+  font-style: normal;
+}
+.loop-stats {
+    margin-left: -14px;
+    width: -webkit-calc( 100% + 28px );
+    width: -moz-calc( 100% + 28px );
+    width: calc( 100% + 28px );
+}
+.loop-stats ul.pp_ul {
+  width: 100%;
+  list-style-type: none;
+  display: table;
+  margin: 0;
+  padding: 0;
+}
+.loop-stats ul.pp_ul li {
+  float: left; /* fix ie */
+  display: table-cell;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-left: 2px;
+  padding-right: 4px;
+  position: relative;
+  width: 25%;
+  vertical-align: middle;
+}
+.loop-stats ul.pp_ul li:last-child {
+    border-right: none;
+    padding-right: 2px;
+}
+.loop-stats ul.pp_ul li:after {
+    content: '';
+    width: 2px;
+    background: #e2dedb;
+    display: inline-block;
+    top: 20px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+.loop-stats ul.pp_ul li:last-child:after {
+  content: none;
+}
+
+.loop-stats .pp_li_left {
+  font-size:28px;
+  float:none;
+  width:100%;
+  max-width:20px;
+  display:inline-block;
+  margin-right: 5px;
+  color: $base_color;
+}
+.loop-stats .pp_li_left.w_barometer {
+  max-width:40px;
+}
+.loop-stats .pp_li_left.w_barometer .barometer-added {
+  height: 30px;
+  position: relative;
+  margin-top: -5px;
+}
+.loop-stats .pp_li_left.w_barometer span.barometer {
+  // margin-top: -5px;
+  //   display: block;
+  //   position:relative;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.loop-stats .pp_li_left.w_barometer svg {
+  height: 42px;
+/*  position: absolute!important;
+  bottom: -15px;
+    margin: auto;*/
+}
+.loop-stats .pp_li_right {
+  float: none;
+  display:inline-block;
+  min-width: 50px;
+}
+.loop-stats .li_barometer .pp_li_right {
+  min-width: 30px;
+}
+.loop-stats .pp_li_right .percent {
+  width: 100%;
+    display: block;
+    color: $base_color;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    line-height: 28px;
+}
+.loop-stats .pp_li_right .text {
+  font-size: 11px;
+  color: #000;
+}
+
+.pp_li_left .fa-hourglass-half {
+  -webkit-transform: scale(0.8,1);
+  -moz-transform:    scale(0.8,1);
+  -ms-transform:     scale(0.8,1);
+  -o-transform:      scale(0.8,1);
+  transform:         scale(0.8,1);
+}

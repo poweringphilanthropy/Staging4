@@ -1,0 +1,10 @@
+<div class="rss-widget">
+    <ul>
+    {% for item in items %}
+        <li>
+            <a class="rsswidget" title="" href="{{ item.url }}" target="_blank">{{ item.title }}</a><span class="rss-date">{{ item.data }}</span> 
+            <div class="rssSummary"><strong>{{ item.diff }}</strong> - {{ item.desc }}</div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>

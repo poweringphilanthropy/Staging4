@@ -1,0 +1,138 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "WP Mail From II"
+msgstr ""
+
+#. Short description.
+msgid "Allows you to configure the default email address and name used for emails sent by WordPress."
+msgstr ""
+
+#. Screenshot description.
+msgid "The settings page"
+msgstr ""
+
+#. Found in description list item.
+msgid "Adds a \"Mail From\" section in the \"Settings\" menu."
+msgstr ""
+
+#. Found in description list item.
+msgid "The plugin uses the filter hooks <code>wp_mail_from</code> and <code>wp_mail_from_name</code>."
+msgstr ""
+
+#. Found in description list item.
+msgid "The priority for the hooks is set to 1 to allow for other plugins that may hook these with the default priority of 10 to override this plugin."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin allows you to set the email address and name used on email sent by WordPress by setting the <em>From:</em> header."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "It is an updated and fully re-worked version of the <a href=\"http://wordpress.org/extend/plugins/wp-mailfrom/\">WP Mail From</a> plugin by Tristan Aston and now works with the latest versions of WordPress."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Danish translation by Frederik Svarre (<a href=\"http://www.fslab.dk/\">www.fslab.dk</a>)"
+msgstr ""
+
+#. Found in installation header.
+msgid "Upgrading from the old WP Mail From plugin"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Unzip <code>wp-mailfrom-ii.zip</code> in the <code>/wp-content/plugins/</code> directory, making sure the folder is called <code>wp-mailfrom-ii</code>."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Visit the admin settings page <code>Settings &gt; Mail From</code> and save your preferred name and email address."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "Either install via the WordPress admin plugin installer or..."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "This version is pretty much a complete re-write, fixes loads of bugs and works with the most recent versions of WordPress."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid ""
+"If upgrading from the <a href=\"http://wordpress.org/extend/plugins/wp-mailfrom/\">WP Mail From</a> plugin your current name an email settings should be copied across but please check.\n"
+"To upgrade simply activate this plugin then deactivate the old WP Mail From plugin."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid ""
+"Option naming conventions have changed in this version of the plugin.\n"
+"If you accessed either of the options directly for any reason you will need to re-factor you code as support for the old options will be removed in a future version."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "The old options could be retrieved as follows:"
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "You should now use:"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add options to override default WordPress email address and admin email address."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'wp_mailfrom_ii_default_from' filter so you can add compatibility if the pluggable wp_mail() function is altered to use a different default email address."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Delete plugin options when uninstalled."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Reworked as a singleton class."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Remove filter support for original WP MailFrom plugin."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Only set email address and name if overwriting the default WordPress values."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Correctly style save settings button."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Pretty much re-coded from scratch - now based around a core WP_MailFrom_II class."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Uses the <a href=\"http://codex.wordpress.org/Settings_API\">WordPress Settings API</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Stores name and email as <code>wp_mailfrom_ii_name</code> and <code>wp_mailfrom_ii_email</code> options. Upgrade support provided for old options."
+msgstr ""
+
+#. Found in faq header.
+msgid "Why does the From address still show as the default or show up as 'sent on behalf of' the default address?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Why are emails not being sent?"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Possibly your mail server has added a <em>Sender:</em> header or is configured to always set the <em>envelope sender</em> to the user calling it."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Some hosts may refuse to relay mail from an unknown domain. See <a href=\"http://trac.wordpress.org/ticket/5007\">http://trac.wordpress.org/ticket/5007</a> for more details."
+msgstr ""
